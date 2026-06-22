@@ -97,13 +97,6 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            {/* CTA Button */}
-            <Link
-              href="/info-kkn"
-              className="ml-2 lg:ml-4 px-4 lg:px-5 py-2 bg-gradient-to-r from-primary-600 to-primary-700 text-white text-sm font-semibold rounded-xl shadow-md hover:shadow-lg hover:from-primary-700 hover:to-primary-800 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
-            >
-              Info KKN
-            </Link>
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -156,12 +149,6 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            <Link
-              href="/info-kkn"
-              className="block mx-4 mt-2 px-4 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white text-sm font-semibold rounded-xl text-center shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              Info KKN →
-            </Link>
           </div>
         </div>
       </nav>
