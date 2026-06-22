@@ -5,12 +5,6 @@
 **Portal informasi resmi Dusun Tlogomulyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan, Jawa Timur.**
 
 Dibangun dengan ❤️ oleh Tim KKN untuk Dusun Tlogomulyo.
-
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss)](https://tailwindcss.com/)
-[![Vercel](https://img.shields.io/badge/Deploy-Vercel-000?logo=vercel)](https://vercel.com/)
-
 </div>
 
 ---
