@@ -1,15 +1,297 @@
-export const metadata = {
-  title: "Tentang Dusun & Info KKN — Dusun Tlogomulyo",
-  description:
-    "Informasi lengkap tentang Dusun Tlogomulyo, Desa Candi, Kab. Pacitan. Termasuk panduan KKN, prosedur perizinan, persyaratan, dan kontak resmi perangkat desa.",
+"use client";
+
+import { useState } from "react";
+
+/* ============================
+   DATA — Ganti dengan data asli
+   ============================ */
+
+const kelompokData = {
+  nama: "KKN Kelompok 12",
+  universitas: "Universitas Negeri Surabaya",
+  fakultas: "Lintas Fakultas",
+  periode: "1 Juli — 14 Agustus 2026",
+  lokasi: "Dusun Tlogomulyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan",
+  dpl: {
+    nama: "Dr. Budi Santoso, M.Pd.",
+    nip: "198501012010011001",
+  },
+  tema: "Pemberdayaan Masyarakat dan Pengembangan Potensi Desa Berbasis Teknologi Informasi",
 };
 
+const anggota = [
+  {
+    nama: "James Marvin S.",
+    nim: "2310101001",
+    prodi: "Teknik Informatika",
+    jabatan: "Ketua Kelompok",
+    foto: null,
+    prokerIndividu: [
+      {
+        judul: "Pembuatan Website Portal Informasi Desa",
+        deskripsi:
+          "Merancang dan mengembangkan website portal informasi untuk Dusun Tlogomulyo sebagai media digitalisasi profil desa, potensi alam, dan informasi publik.",
+        target: "1 website responsif aktif dan terdaftar domain",
+        status: "Selesai",
+      },
+      {
+        judul: "Pelatihan Dasar Komputer untuk Perangkat Desa",
+        deskripsi:
+          "Mengadakan pelatihan penggunaan komputer dasar dan Microsoft Office bagi perangkat desa untuk menunjang administrasi desa.",
+        target: "10 peserta perangkat desa mengikuti pelatihan",
+        status: "Selesai",
+      },
+    ],
+  },
+  {
+    nama: "Anisa Rahmawati",
+    nim: "2310102002",
+    prodi: "Pendidikan Bahasa Indonesia",
+    jabatan: "Sekretaris",
+    foto: null,
+    prokerIndividu: [
+      {
+        judul: "Bimbingan Belajar Anak SD",
+        deskripsi:
+          "Menyelenggarakan program bimbingan belajar rutin bagi anak-anak usia sekolah dasar di Dusun Tlogomulyo dengan fokus pada literasi membaca dan menulis.",
+        target: "15 anak SD mengikuti bimbel 3x seminggu",
+        status: "Selesai",
+      },
+      {
+        judul: "Pojok Baca Dusun",
+        deskripsi:
+          "Mendirikan pojok baca di balai dusun dengan mengumpulkan donasi buku bacaan anak dan ensiklopedia umum sebagai sarana edukasi masyarakat.",
+        target: "100 buku terkumpul dan pojok baca aktif",
+        status: "Selesai",
+      },
+    ],
+  },
+  {
+    nama: "Rizky Aditya Pratama",
+    nim: "2310103003",
+    prodi: "Ilmu Ekonomi",
+    jabatan: "Bendahara",
+    foto: null,
+    prokerIndividu: [
+      {
+        judul: "Sosialisasi Literasi Keuangan",
+        deskripsi:
+          "Memberikan edukasi mengenai pengelolaan keuangan rumah tangga, pentingnya menabung, dan perencanaan keuangan sederhana kepada ibu-ibu PKK.",
+        target: "20 peserta ibu-ibu PKK",
+        status: "Selesai",
+      },
+      {
+        judul: "Pendampingan Pencatatan Keuangan UMKM",
+        deskripsi:
+          "Membantu pelaku UMKM lokal dalam membuat pembukuan sederhana dan pencatatan transaksi harian untuk meningkatkan manajemen usaha.",
+        target: "5 UMKM terdampingi",
+        status: "Selesai",
+      },
+    ],
+  },
+  {
+    nama: "Siti Nurhaliza",
+    nim: "2310104004",
+    prodi: "Kesehatan Masyarakat",
+    jabatan: "Koordinator Divisi Kesehatan",
+    foto: null,
+    prokerIndividu: [
+      {
+        judul: "Posyandu dan Cek Kesehatan Gratis",
+        deskripsi:
+          "Mengadakan kegiatan posyandu dengan pemeriksaan tekanan darah, gula darah, dan tinggi badan bagi warga lansia dan balita di Dusun Tlogomulyo.",
+        target: "30 warga mengikuti cek kesehatan",
+        status: "Selesai",
+      },
+      {
+        judul: "Sosialisasi Pola Hidup Bersih dan Sehat (PHBS)",
+        deskripsi:
+          "Mengadakan penyuluhan mengenai PHBS, cuci tangan pakai sabun, dan pengelolaan sampah rumah tangga yang benar.",
+        target: "25 peserta dari warga dusun",
+        status: "Selesai",
+      },
+    ],
+  },
+  {
+    nama: "Dimas Arya Wijaya",
+    nim: "2310105005",
+    prodi: "Teknik Sipil",
+    jabatan: "Koordinator Divisi Infrastruktur",
+    foto: null,
+    prokerIndividu: [
+      {
+        judul: "Pembuatan Papan Nama Jalan Dusun",
+        deskripsi:
+          "Merancang dan memasang papan nama jalan dan penunjuk arah di titik-titik strategis Dusun Tlogomulyo untuk memudahkan navigasi.",
+        target: "8 papan nama terpasang",
+        status: "Selesai",
+      },
+      {
+        judul: "Perbaikan Saluran Drainase",
+        deskripsi:
+          "Melakukan kerja bakti bersama warga untuk memperbaiki dan membersihkan saluran drainase di RT 01 dan RT 02 untuk mencegah banjir.",
+        target: "200 meter saluran diperbaiki",
+        status: "Selesai",
+      },
+    ],
+  },
+  {
+    nama: "Putri Ayu Lestari",
+    nim: "2310106006",
+    prodi: "Pendidikan Luar Sekolah",
+    jabatan: "Koordinator Divisi Pendidikan",
+    foto: null,
+    prokerIndividu: [
+      {
+        judul: "Pelatihan Kerajinan Tangan",
+        deskripsi:
+          "Mengadakan pelatihan membuat kerajinan tangan dari bahan daur ulang bagi ibu-ibu dan remaja dusun sebagai peluang usaha kreatif.",
+        target: "15 peserta menghasilkan minimal 2 produk",
+        status: "Selesai",
+      },
+      {
+        judul: "English Fun Learning untuk Anak-Anak",
+        deskripsi:
+          "Menyelenggarakan kelas bahasa Inggris yang menyenangkan melalui games, lagu, dan storytelling bagi anak-anak usia sekolah.",
+        target: "20 anak mengikuti 6 sesi pertemuan",
+        status: "Selesai",
+      },
+    ],
+  },
+  {
+    nama: "Fajar Dwi Nugroho",
+    nim: "2310107007",
+    prodi: "Agribisnis",
+    jabatan: "Koordinator Divisi Pertanian",
+    foto: null,
+    prokerIndividu: [
+      {
+        judul: "Sosialisasi Pertanian Organik",
+        deskripsi:
+          "Memberikan penyuluhan mengenai teknik pertanian organik, pembuatan pupuk kompos, dan pestisida alami kepada petani di Dusun Tlogomulyo.",
+        target: "20 petani mengikuti sosialisasi",
+        status: "Selesai",
+      },
+      {
+        judul: "Demplot Budidaya Empon-Empon",
+        deskripsi:
+          "Membuat demplot (demonstrasi plot) budidaya empon-empon organik (jahe, kunyit, lengkuas) sebagai komoditas unggulan dusun.",
+        target: "1 lahan demplot 50m² aktif",
+        status: "Selesai",
+      },
+    ],
+  },
+];
+
+const prokerKelompok = [
+  {
+    judul: "Kerja Bakti dan Bersih Desa",
+    deskripsi:
+      "Kegiatan gotong royong membersihkan lingkungan dusun, termasuk pembersihan jalan, selokan, dan fasilitas umum bersama warga masyarakat.",
+    kategori: "Lingkungan",
+    icon: "leaf",
+  },
+  {
+    judul: "Sosialisasi Potensi Wisata Desa",
+    deskripsi:
+      "Mengidentifikasi dan mempromosikan potensi wisata alam di Dusun Tlogomulyo melalui media sosial dan pembuatan konten kreatif.",
+    kategori: "Pariwisata",
+    icon: "camera",
+  },
+  {
+    judul: "Festival Budaya dan Pentas Seni",
+    deskripsi:
+      "Menyelenggarakan acara festival budaya yang menampilkan kesenian lokal, kuliner khas, dan produk UMKM dusun sebagai ajang promosi dan hiburan.",
+    kategori: "Budaya",
+    icon: "music",
+  },
+  {
+    judul: "Senam Sehat Bersama Warga",
+    deskripsi:
+      "Mengadakan kegiatan senam pagi rutin setiap minggu bersama warga dusun untuk meningkatkan kesadaran hidup sehat dan kebersamaan.",
+    kategori: "Kesehatan",
+    icon: "heart",
+  },
+  {
+    judul: "Pelatihan Digital Marketing UMKM",
+    deskripsi:
+      "Memberikan pelatihan pemanfaatan media sosial dan marketplace digital bagi pelaku UMKM lokal untuk memperluas jangkauan pemasaran produk.",
+    kategori: "Ekonomi",
+    icon: "shop",
+  },
+];
+
+/* ============================
+   ICON COMPONENTS
+   ============================ */
+
+function IconLeaf({ className }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 8.25 4.69a7.5 7.5 0 0 1 3.75-1.69z" />
+    </svg>
+  );
+}
+function IconCamera({ className }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" />
+    </svg>
+  );
+}
+function IconMusic({ className }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V4.846a2.25 2.25 0 0 0-1.632-2.163l-5.25-1.5A2.25 2.25 0 0 0 6 3.346v11.557" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 14.903v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 6 14.903Z" />
+    </svg>
+  );
+}
+function IconHeart({ className }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+    </svg>
+  );
+}
+function IconShop({ className }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
+    </svg>
+  );
+}
+
+const iconMap = { leaf: IconLeaf, camera: IconCamera, music: IconMusic, heart: IconHeart, shop: IconShop };
+
+const jabatanColors = {
+  "Ketua Kelompok": "from-amber-400 to-amber-600",
+  Sekretaris: "from-violet-400 to-violet-600",
+  Bendahara: "from-emerald-400 to-emerald-600",
+  default: "from-primary-400 to-primary-600",
+};
+
+const kategoriColors = {
+  Lingkungan: { bg: "bg-emerald-100", text: "text-emerald-700", border: "border-emerald-200" },
+  Pariwisata: { bg: "bg-sky-100", text: "text-sky-700", border: "border-sky-200" },
+  Budaya: { bg: "bg-violet-100", text: "text-violet-700", border: "border-violet-200" },
+  Kesehatan: { bg: "bg-rose-100", text: "text-rose-700", border: "border-rose-200" },
+  Ekonomi: { bg: "bg-amber-100", text: "text-amber-700", border: "border-amber-200" },
+};
+
+/* ============================
+   MAIN COMPONENT
+   ============================ */
+
 export default function InfoKKNPage() {
+  const [activeTab, setActiveTab] = useState(0);
+  const activeMember = anggota[activeTab];
+
   return (
     <>
       {/* ===== PAGE HEADER ===== */}
       <section className="relative bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 overflow-hidden">
-        {/* Decorative */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-24 -right-24 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl" />
           <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-accent-400/10 rounded-full blur-3xl" />
@@ -18,314 +300,335 @@ export default function InfoKKNPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
           <div className="animate-fade-in-up">
-            {/* Breadcrumb */}
             <nav className="mb-6" aria-label="Breadcrumb">
               <ol className="flex items-center gap-2 text-sm text-slate-300">
                 <li>
-                  <a href="/" className="hover:text-white transition-colors">
-                    Beranda
-                  </a>
+                  <a href="/" className="hover:text-white transition-colors">Beranda</a>
                 </li>
                 <li>
                   <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                   </svg>
                 </li>
-                <li className="text-white font-medium">Tentang & KKN</li>
+                <li className="text-white font-medium">Tentang &amp; KKN</li>
               </ol>
             </nav>
 
             <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 tracking-tight">
-              Tentang Dusun & Info KKN
+              Tentang KKN <span className="gradient-text">Tlogomulyo</span>
             </h1>
             <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
-              Halaman ini berisi informasi bagi Anda yang ingin mengenal
-              lebih dalam tentang Dusun Tlogomulyo, termasuk panduan
-              Kuliah Kerja Nyata (KKN) bagi perguruan tinggi.
+              Profil kelompok, program kerja kelompok, dan program kerja individu
+              Tim KKN di Dusun Tlogomulyo.
             </p>
+
+            {/* Quick Stats */}
+            <div className="mt-8 flex flex-wrap gap-4 sm:gap-6">
+              {[
+                { value: "7", label: "Anggota" },
+                { value: "5", label: "Proker Kelompok" },
+                { value: "14", label: "Proker Individu" },
+                { value: "45 Hari", label: "Durasi" },
+              ].map((stat, i) => (
+                <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/10">
+                  <p className="text-lg sm:text-xl font-extrabold text-white">{stat.value}</p>
+                  <p className="text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider">{stat.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ===== CONTENT ===== */}
+      {/* ===== SECTION 1: PROFIL KELOMPOK ===== */}
       <section className="py-12 sm:py-16 lg:py-20 bg-earth-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8 sm:space-y-10">
-            {/* Card 1: Tentang KKN */}
-            <article className="bg-white rounded-2xl border border-slate-200/80 shadow-[var(--shadow-card)] overflow-hidden animate-fade-in-up">
-              <div className="bg-gradient-to-r from-primary-600 to-primary-700 px-6 sm:px-8 py-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-                    </svg>
-                  </div>
-                  <h2 className="text-lg sm:text-xl font-bold text-white">
-                    Tentang KKN di Dusun Tlogomulyo
-                  </h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
+            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
+              Profil Kelompok
+            </span>
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
+              Kenali <span className="gradient-text">Tim Kami</span>
+            </h2>
+            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+              Kelompok KKN yang bertugas di Dusun Tlogomulyo terdiri dari 7 mahasiswa lintas
+              jurusan yang siap berkolaborasi dengan masyarakat.
+            </p>
+          </div>
+
+          {/* Info Card */}
+          <div className="bg-white rounded-2xl border border-slate-200/80 shadow-[var(--shadow-card)] overflow-hidden mb-10 sm:mb-14 animate-fade-in-up">
+            <div className="bg-gradient-to-r from-primary-600 to-primary-700 px-6 sm:px-8 py-5">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-white">{kelompokData.nama}</h3>
+                  <p className="text-sm text-white/70">{kelompokData.universitas}</p>
                 </div>
               </div>
-              <div className="p-6 sm:p-8">
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
-                  Dusun Tlogomulyo menyambut baik program Kuliah Kerja Nyata
-                  (KKN) dari berbagai perguruan tinggi. Kami percaya bahwa
-                  kolaborasi antara akademisi dan masyarakat desa dapat
-                  menciptakan dampak positif yang berkelanjutan.
-                </p>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                  Program KKN di dusun kami difokuskan pada beberapa bidang
-                  prioritas:
-                </p>
-                <ul className="mt-4 space-y-2.5">
-                  {[
-                    "Pemberdayaan UMKM & digitalisasi pemasaran komoditas desa",
-                    "Pendampingan literasi keuangan untuk pelaku usaha lokal",
-                    "Pengembangan infrastruktur informasi desa",
-                    "Edukasi kesehatan dan lingkungan kepada masyarakat",
-                    "Pendampingan pendidikan anak usia sekolah",
-                  ].map((item, i) => (
-                    <li
-                      key={i}
-                      className="flex items-start gap-3 text-sm sm:text-base text-slate-600"
-                    >
-                      <svg className="w-5 h-5 text-primary-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                      </svg>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </article>
-
-            {/* Card 2: Prosedur Perizinan */}
-            <article className="bg-white rounded-2xl border border-slate-200/80 shadow-[var(--shadow-card)] overflow-hidden animate-fade-in-up">
-              <div className="bg-gradient-to-r from-accent-500 to-accent-600 px-6 sm:px-8 py-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
-                    </svg>
+            </div>
+            <div className="p-6 sm:p-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                {[
+                  { label: "Universitas", value: kelompokData.universitas, icon: "🏫" },
+                  { label: "Periode", value: kelompokData.periode, icon: "📅" },
+                  { label: "Lokasi", value: kelompokData.lokasi, icon: "📍" },
+                  { label: "DPL", value: kelompokData.dpl.nama, icon: "👨‍🏫" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
+                    <span className="text-xl shrink-0">{item.icon}</span>
+                    <div className="min-w-0">
+                      <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">{item.label}</p>
+                      <p className="text-sm font-semibold text-slate-700 mt-0.5">{item.value}</p>
+                    </div>
                   </div>
-                  <h2 className="text-lg sm:text-xl font-bold text-white">
-                    Prosedur Perizinan KKN
-                  </h2>
+                ))}
+              </div>
+              {/* Tema */}
+              <div className="mt-6 bg-gradient-to-r from-primary-50 to-accent-400/10 rounded-xl p-5 border border-primary-100">
+                <p className="text-xs font-semibold text-primary-600 uppercase tracking-wider mb-1">Tema KKN</p>
+                <p className="text-sm sm:text-base font-bold text-slate-800 leading-relaxed">
+                  &ldquo;{kelompokData.tema}&rdquo;
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* ===== ANGGOTA GRID ===== */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+            {anggota.map((member, i) => {
+              const gradientColor = jabatanColors[member.jabatan] || jabatanColors.default;
+              return (
+                <div
+                  key={i}
+                  className="group bg-white rounded-2xl border border-slate-200/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 overflow-hidden animate-fade-in-up"
+                  style={{ animationDelay: `${i * 80}ms`, animationFillMode: "both" }}
+                >
+                  {/* Colored top bar */}
+                  <div className={`h-1.5 bg-gradient-to-r ${gradientColor}`} />
+                  <div className="p-5">
+                    {/* Avatar */}
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className={`w-11 h-11 bg-gradient-to-br ${gradientColor} rounded-xl flex items-center justify-center shadow-md shrink-0`}>
+                        <span className="text-white font-bold text-sm">
+                          {member.nama.split(" ").map(n => n[0]).slice(0, 2).join("")}
+                        </span>
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-sm font-bold text-slate-800 truncate">{member.nama}</p>
+                        <p className="text-[11px] text-slate-400">{member.nim}</p>
+                      </div>
+                    </div>
+                    {/* Details */}
+                    <div className="space-y-1.5">
+                      <p className="text-xs text-slate-500">{member.prodi}</p>
+                      <span className={`inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-gradient-to-r ${gradientColor} text-white`}>
+                        {member.jabatan}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== SECTION 2: PROGRAM KERJA KELOMPOK ===== */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-200 to-transparent" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
+            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
+              Program Kerja
+            </span>
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
+              Proker <span className="gradient-text">Kelompok</span>
+            </h2>
+            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+              Program kerja bersama yang dilaksanakan oleh seluruh anggota kelompok
+              KKN selama periode penugasan di Dusun Tlogomulyo.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            {prokerKelompok.map((proker, i) => {
+              const IconComp = iconMap[proker.icon] || IconLeaf;
+              const colors = kategoriColors[proker.kategori] || kategoriColors.Lingkungan;
+              return (
+                <div
+                  key={i}
+                  className="group bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up"
+                  style={{ animationDelay: `${i * 120}ms`, animationFillMode: "both" }}
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className={`w-11 h-11 ${colors.bg} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      <IconComp className={`w-5 h-5 ${colors.text}`} />
+                    </div>
+                    <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${colors.bg} ${colors.text} border ${colors.border}`}>
+                      {proker.kategori}
+                    </span>
+                  </div>
+                  <h3 className="font-heading text-base sm:text-lg font-bold text-slate-800 mb-2">
+                    {proker.judul}
+                  </h3>
+                  <p className="text-sm text-slate-500 leading-relaxed">
+                    {proker.deskripsi}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== SECTION 3: PROGRAM KERJA INDIVIDU ===== */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-earth-50 hero-pattern">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
+            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
+              Proker Individu
+            </span>
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
+              Program Kerja <span className="gradient-text">Individu</span>
+            </h2>
+            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+              Setiap anggota memiliki program kerja individu sesuai bidang keahlian
+              masing-masing. Pilih anggota untuk melihat detail prokernya.
+            </p>
+          </div>
+
+          {/* Tabs — Member Selector */}
+          <div className="mb-8 sm:mb-10">
+            {/* Desktop tabs */}
+            <div className="hidden sm:flex flex-wrap justify-center gap-2 sm:gap-3">
+              {anggota.map((member, i) => {
+                const isActive = activeTab === i;
+                const gradientColor = jabatanColors[member.jabatan] || jabatanColors.default;
+                return (
+                  <button
+                    key={i}
+                    onClick={() => setActiveTab(i)}
+                    className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 border ${
+                      isActive
+                        ? "bg-white shadow-lg border-primary-200 text-primary-700 scale-[1.03]"
+                        : "bg-white/60 border-slate-200/60 text-slate-500 hover:bg-white hover:border-slate-300 hover:text-slate-700"
+                    }`}
+                  >
+                    <div className={`w-7 h-7 bg-gradient-to-br ${gradientColor} rounded-lg flex items-center justify-center shrink-0`}>
+                      <span className="text-white font-bold text-[10px]">
+                        {member.nama.split(" ").map(n => n[0]).slice(0, 2).join("")}
+                      </span>
+                    </div>
+                    <span className="truncate max-w-[120px]">{member.nama.split(" ").slice(0, 2).join(" ")}</span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Mobile dropdown */}
+            <div className="sm:hidden">
+              <select
+                value={activeTab}
+                onChange={(e) => setActiveTab(Number(e.target.value))}
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm font-medium text-slate-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              >
+                {anggota.map((member, i) => (
+                  <option key={i} value={i}>
+                    {member.nama} — {member.jabatan}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Active Member Content */}
+          <div className="animate-fade-in-up" key={activeTab}>
+            {/* Member header card */}
+            <div className="bg-white rounded-2xl border border-slate-200/80 shadow-[var(--shadow-card)] overflow-hidden mb-6">
+              <div className={`h-2 bg-gradient-to-r ${jabatanColors[activeMember.jabatan] || jabatanColors.default}`} />
+              <div className="p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div className={`w-14 h-14 bg-gradient-to-br ${jabatanColors[activeMember.jabatan] || jabatanColors.default} rounded-2xl flex items-center justify-center shadow-lg shrink-0`}>
+                  <span className="text-white font-bold text-lg">
+                    {activeMember.nama.split(" ").map(n => n[0]).slice(0, 2).join("")}
+                  </span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-slate-800">
+                    {activeMember.nama}
+                  </h3>
+                  <div className="flex flex-wrap items-center gap-2 mt-1">
+                    <span className="text-sm text-slate-500">{activeMember.nim}</span>
+                    <span className="text-slate-300">•</span>
+                    <span className="text-sm text-slate-500">{activeMember.prodi}</span>
+                    <span className="text-slate-300">•</span>
+                    <span className={`inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-gradient-to-r ${jabatanColors[activeMember.jabatan] || jabatanColors.default} text-white`}>
+                      {activeMember.jabatan}
+                    </span>
+                  </div>
+                </div>
+                <div className="text-right shrink-0">
+                  <p className="text-2xl sm:text-3xl font-extrabold text-primary-600">{activeMember.prokerIndividu.length}</p>
+                  <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Proker</p>
                 </div>
               </div>
-              <div className="p-6 sm:p-8">
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">
-                  Berikut adalah alur resmi pengajuan izin pelaksanaan KKN di
-                  Dusun Tlogomulyo. Pastikan semua persyaratan dipenuhi sebelum
-                  mengajukan permohonan.
-                </p>
+            </div>
 
-                {/* Steps */}
-                <div className="space-y-6">
-                  {[
-                    {
-                      step: "01",
-                      title: "Surat Permohonan Resmi",
-                      desc: "Universitas menerbitkan surat permohonan KKN resmi yang ditujukan kepada Kepala Desa/Lurah. Surat harus mencantumkan: nama universitas, jumlah mahasiswa, rencana periode pelaksanaan, dan bidang fokus KKN.",
-                    },
-                    {
-                      step: "02",
-                      title: "Pengajuan ke Kelurahan / Kantor Desa",
-                      desc: "Surat permohonan diserahkan ke kantor desa melalui Dosen Pembimbing Lapangan (DPL). Pihak desa akan melakukan verifikasi dan meneruskan ke Kepala Dusun Tlogomulyo.",
-                    },
-                    {
-                      step: "03",
-                      title: "Koordinasi dengan Kepala Dusun",
-                      desc: "Setelah surat disetujui oleh desa, DPL wajib melakukan koordinasi langsung dengan Kepala Dusun untuk membahas detail program, lokasi penginapan, dan jadwal kegiatan.",
-                    },
-                    {
-                      step: "04",
-                      title: "Rapat Teknis Pra-KKN",
-                      desc: "Dilaksanakan minimal 2 minggu sebelum KKN dimulai. Rapat membahas pembagian wilayah, program kerja prioritas, norma dan adat setempat, serta mekanisme pelaporan kegiatan.",
-                    },
-                    {
-                      step: "05",
-                      title: "Pelaksanaan & Pelaporan",
-                      desc: "KKN dilaksanakan sesuai jadwal yang disepakati. Tim KKN wajib membuat laporan mingguan kepada Kepala Dusun dan menyerahkan laporan akhir setelah program selesai.",
-                    },
-                  ].map((item, i) => (
-                    <div key={i} className="flex gap-4 sm:gap-5 group">
-                      {/* Step number */}
-                      <div className="shrink-0">
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center border border-primary-200 group-hover:from-primary-200 group-hover:to-primary-300 transition-colors duration-300">
-                          <span className="text-sm sm:text-base font-extrabold text-primary-700">
-                            {item.step}
-                          </span>
+            {/* Proker list */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+              {activeMember.prokerIndividu.map((proker, i) => (
+                <div
+                  key={i}
+                  className="group bg-white rounded-2xl border border-slate-200/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 overflow-hidden"
+                >
+                  <div className="p-6 sm:p-7">
+                    {/* Number badge */}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-10 h-10 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl flex items-center justify-center border border-primary-200 group-hover:from-primary-200 group-hover:to-primary-300 transition-colors duration-300">
+                        <span className="text-sm font-extrabold text-primary-700">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                      </div>
+                      <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
+                        proker.status === "Selesai"
+                          ? "bg-emerald-100 text-emerald-700 border border-emerald-200"
+                          : proker.status === "Sedang Berjalan"
+                          ? "bg-blue-100 text-blue-700 border border-blue-200"
+                          : "bg-slate-100 text-slate-600 border border-slate-200"
+                      }`}>
+                        {proker.status}
+                      </span>
+                    </div>
+
+                    <h4 className="font-heading text-base sm:text-lg font-bold text-slate-800 mb-2">
+                      {proker.judul}
+                    </h4>
+                    <p className="text-sm text-slate-500 leading-relaxed mb-4">
+                      {proker.deskripsi}
+                    </p>
+
+                    {/* Target */}
+                    <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                      <div className="flex items-start gap-2">
+                        <svg className="w-4 h-4 text-primary-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+                        </svg>
+                        <div>
+                          <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Target Capaian</p>
+                          <p className="text-sm font-medium text-slate-600 mt-0.5">{proker.target}</p>
                         </div>
                       </div>
-                      {/* Content */}
-                      <div className="flex-1 pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                        <h3 className="text-base sm:text-lg font-bold text-slate-800 mb-1.5">
-                          {item.title}
-                        </h3>
-                        <p className="text-sm text-slate-500 leading-relaxed">
-                          {item.desc}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </article>
-
-            {/* Card 3: Persyaratan Dokumen */}
-            <article className="bg-white rounded-2xl border border-slate-200/80 shadow-[var(--shadow-card)] overflow-hidden animate-fade-in-up">
-              <div className="bg-gradient-to-r from-slate-700 to-slate-800 px-6 sm:px-8 py-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-                    </svg>
-                  </div>
-                  <h2 className="text-lg sm:text-xl font-bold text-white">
-                    Persyaratan Dokumen
-                  </h2>
-                </div>
-              </div>
-              <div className="p-6 sm:p-8">
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-5">
-                  Dokumen berikut wajib disiapkan oleh pihak universitas
-                  sebelum mengajukan permohonan KKN:
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {[
-                    "Surat Permohonan KKN dari Universitas",
-                    "Surat Tugas Dosen Pembimbing Lapangan",
-                    "Daftar Nama Mahasiswa Peserta KKN",
-                    "Fotokopi KTP / Kartu Mahasiswa",
-                    "Proposal Rencana Program Kerja",
-                    "Surat Keterangan Sehat dari Dokter",
-                    "Surat Pernyataan Menaati Peraturan Desa",
-                    "Polis Asuransi Kecelakaan (jika ada)",
-                  ].map((doc, i) => (
-                    <div
-                      key={i}
-                      className="flex items-start gap-3 bg-slate-50 rounded-xl p-3 border border-slate-100"
-                    >
-                      <svg className="w-4 h-4 text-primary-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                      </svg>
-                      <span className="text-sm text-slate-600">{doc}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </article>
-
-            {/* Card 4: Kontak Resmi */}
-            <article className="bg-white rounded-2xl border border-slate-200/80 shadow-[var(--shadow-card)] overflow-hidden animate-fade-in-up">
-              <div className="bg-gradient-to-r from-primary-700 to-primary-800 px-6 sm:px-8 py-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-                    </svg>
-                  </div>
-                  <h2 className="text-lg sm:text-xl font-bold text-white">
-                    Kontak Resmi Dusun
-                  </h2>
-                </div>
-              </div>
-              <div className="p-6 sm:p-8">
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">
-                  Untuk pertanyaan lebih lanjut atau pengajuan KKN, silakan
-                  hubungi kontak resmi berikut:
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {/* Contact Card 1 */}
-                  <div className="bg-gradient-to-br from-primary-50 to-white rounded-xl p-5 border border-primary-100">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
-                        <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <p className="font-bold text-slate-800 text-sm">
-                          Kepala Dusun Tlogomulyo
-                        </p>
-                        <p className="text-xs text-slate-500">
-                          Koordinator Penerimaan KKN
-                        </p>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <p className="flex items-center gap-2 text-sm text-slate-600">
-                        <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-                        </svg>
-                        +62 812-XXXX-XXXX
-                      </p>
-                      <p className="flex items-center gap-2 text-sm text-slate-600">
-                        <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-                        </svg>
-                        kadus.tlogomulyo@desa.id
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Contact Card 2 */}
-                  <div className="bg-gradient-to-br from-accent-400/10 to-white rounded-xl p-5 border border-accent-400/20">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 bg-accent-400/20 rounded-full flex items-center justify-center">
-                        <svg className="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
-                        </svg>
-                      </div>
-                      <div>
-                        <p className="font-bold text-slate-800 text-sm">
-                          Kantor Kelurahan / Desa
-                        </p>
-                        <p className="text-xs text-slate-500">
-                          Administrasi & Surat Menyurat
-                        </p>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <p className="flex items-center gap-2 text-sm text-slate-600">
-                        <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-                        </svg>
-                        +62 813-XXXX-XXXX
-                      </p>
-                      <p className="flex items-center gap-2 text-sm text-slate-600">
-                        <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
-                        Senin—Jumat, 08.00—15.00 WIB
-                      </p>
                     </div>
                   </div>
                 </div>
-
-                {/* Important Note */}
-                <div className="mt-6 bg-amber-50 rounded-xl p-4 sm:p-5 border border-amber-200">
-                  <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-amber-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
-                    </svg>
-                    <div>
-                      <p className="text-sm font-bold text-amber-800 mb-1">
-                        Penting Diperhatikan
-                      </p>
-                      <p className="text-sm text-amber-700 leading-relaxed">
-                        Pengajuan KKN minimal dilakukan{" "}
-                        <strong>1 bulan sebelum</strong> tanggal pelaksanaan
-                        yang direncanakan. Pihak dusun berhak menolak permohonan
-                        jika dokumen tidak lengkap atau jadwal berbenturan
-                        dengan agenda desa lainnya.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
