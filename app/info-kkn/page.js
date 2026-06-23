@@ -8,13 +8,16 @@ import { useState } from "react";
 
 const kelompokData = {
   nama: "KKN Kelompok 12",
-  universitas: "Universitas Negeri Surabaya",
+  universitas: "Universitas Kristen Duta Wacana",
   fakultas: "Lintas Fakultas",
-  periode: "1 Juli — 14 Agustus 2026",
+  periode: "24 Juni - 23 Juli 2026",
   lokasi: "Dusun Tlogomulyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan",
   dpl: {
-    nama: "Dr. Budi Santoso, M.Pd.",
-    nip: "198501012010011001",
+    nama: "Eka Adhi Wibowo, SE, M.Sc",
+    nip: "-",
+  },
+  apl: {
+    nama: "Stefanus Andy Kurniawan",
   },
   tema: "Pemberdayaan Masyarakat dan Pengembangan Potensi Desa Berbasis Teknologi Informasi",
 };
@@ -249,6 +252,7 @@ export default function InfoKKNPage() {
                   { label: "Periode", value: kelompokData.periode, icon: "📅" },
                   { label: "Lokasi", value: kelompokData.lokasi, icon: "📍" },
                   { label: "DPL", value: kelompokData.dpl.nama, icon: "👨‍🏫" },
+                  { label: "APL", value: kelompokData.apl.nama, icon: "🧑‍💼" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
                     <span className="text-xl shrink-0">{item.icon}</span>
