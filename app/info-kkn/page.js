@@ -190,7 +190,7 @@ export default function InfoKKNPage() {
                 { value: "7", label: "Anggota" },
                 { value: "1", label: "Proker Kelompok" },
                 { value: "7", label: "Proker Individu" },
-                { value: "45 Hari", label: "Durasi" },
+                { value: "29 Hari", label: "Durasi" },
               ].map((stat, i) => (
                 <div
                   key={i}
