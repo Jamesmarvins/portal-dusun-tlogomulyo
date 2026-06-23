@@ -15,6 +15,14 @@ const outfit = Outfit({
   display: "swap",
 });
 
+/* Viewport — responsivitas mobile */
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#15803d",
+};
+
 export const metadata = {
   title: "Portal Informasi Dusun Tlogomulyo — Desa Candi, Pacitan",
   description:
@@ -35,6 +43,10 @@ export const metadata = {
     type: "website",
     locale: "id_ID",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -43,7 +55,7 @@ export default function RootLayout({ children }) {
       lang="id"
       className={`${inter.variable} ${outfit.variable} antialiased`}
     >
-      <body className="min-h-screen flex flex-col bg-earth-50 text-slate-800">
+      <body className="min-h-screen flex flex-col bg-earth-50 text-slate-800 overflow-x-hidden">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

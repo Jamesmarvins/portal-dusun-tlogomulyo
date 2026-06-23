@@ -516,18 +516,6 @@ export default function ProfilDusunPage() {
                 </p>
               </div>
 
-              {/* CTA to Info KKN */}
-              <div className="mt-8">
-                <Link
-                  href="/info-kkn"
-                  className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-sm sm:text-base"
-                >
-                  Lihat Info KKN
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                  </svg>
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -611,15 +599,15 @@ export default function ProfilDusunPage() {
             Tertarik Mengenal Lebih Dekat?
           </h2>
           <p className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed mb-8">
-            Kunjungi Dusun Tlogomulyo atau ajukan program KKN dari perguruan
-            tinggi Anda. Kami siap menyambut kedatangan Anda dengan tangan terbuka.
+            Kenali lebih jauh tentang kegiatan kemahasiswaan dan program kerja (Proker) KKN 
+            yang telah dan sedang berlangsung di Dusun Tlogomulyo.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link
               href="/info-kkn"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-sm sm:text-base"
             >
-              Info & Panduan KKN
+              Tentang KKN & Proker Kami
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
               </svg>
