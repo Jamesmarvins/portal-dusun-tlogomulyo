@@ -42,7 +42,7 @@ export default function Navbar() {
           <Link
             href="/"
             className="flex items-center gap-2 sm:gap-3 group"
-            aria-label="Beranda Portal Informasi Tlogomulyo"
+            aria-label="Beranda Portal Informasi Tlogomoyo"
           >
             {/* Leaf Icon */}
             <div className="relative w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
@@ -68,7 +68,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="font-heading text-base sm:text-lg font-bold text-primary-800 leading-tight tracking-tight">
-                Tlogomulyo
+                Tlogomoyo
               </span>
               <span className="text-[10px] sm:text-xs text-slate-500 font-medium tracking-wide uppercase">
                 Portal Informasi

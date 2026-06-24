@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Profil Dusun Tlogomulyo — Geografi, Budaya & Potensi Desa",
+  title: "Profil Dusun Tlogomoyo — Geografi, Budaya & Potensi Desa",
   description:
-    "Informasi lengkap tentang Dusun Tlogomulyo, Desa Candi, Kecamatan Pringkuku, Kabupaten Pacitan. Geografi, demografi, potensi pertanian, budaya & tradisi, serta destinasi wisata sekitar.",
+    "Informasi lengkap tentang Dusun Tlogomoyo, Desa Candi, Kecamatan Pringkuku, Kabupaten Pacitan. Geografi, demografi, potensi pertanian, budaya & tradisi, serta destinasi wisata sekitar.",
 };
 
 export default function ProfilDusunPage() {
@@ -40,10 +40,10 @@ export default function ProfilDusunPage() {
 
             <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 tracking-tight">
               Profil Dusun{" "}
-              <span className="text-accent-400">Tlogomulyo</span>
+              <span className="text-accent-400">Tlogomoyo</span>
             </h1>
             <p className="text-base sm:text-lg text-primary-100 max-w-2xl leading-relaxed">
-              Mengenal lebih dekat Dusun Tlogomulyo — geografi, sejarah,
+              Mengenal lebih dekat Dusun Tlogomoyo — geografi, sejarah,
               kekayaan budaya, potensi pertanian, serta destinasi wisata
               di sekitarnya. Sebuah dusun yang asri di jantung Pacitan selatan.
             </p>
@@ -87,11 +87,11 @@ export default function ProfilDusunPage() {
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-5">
                 Letak Geografis{" "}
-                <span className="gradient-text">Tlogomulyo</span>
+                <span className="gradient-text">Tlogomoyo</span>
               </h2>
               <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed">
                 <p>
-                  Dusun Tlogomulyo terletak di <strong>Desa Candi</strong>, Kecamatan Pringkuku,
+                  Dusun Tlogomoyo terletak di <strong>Desa Candi</strong>, Kecamatan Pringkuku,
                   Kabupaten Pacitan, Provinsi Jawa Timur. Desa Candi sendiri berjarak sekitar{" "}
                   <strong>10 km dari ibu kota kecamatan</strong> dan merupakan salah satu desa
                   yang memiliki cakupan wilayah cukup luas di Kecamatan Pringkuku.
@@ -168,7 +168,7 @@ export default function ProfilDusunPage() {
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
               Kekayaan Alam{" "}
-              <span className="gradient-text">Tlogomulyo</span>
+              <span className="gradient-text">Tlogomoyo</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
               Topografi perbukitan yang subur menjadikan wilayah ini kaya akan beragam
@@ -260,7 +260,7 @@ export default function ProfilDusunPage() {
               <span className="gradient-text">yang Terjaga</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
-              Masyarakat Tlogomulyo memiliki tradisi dan kesenian yang kaya — warisan leluhur
+              Masyarakat Tlogomoyo memiliki tradisi dan kesenian yang kaya — warisan leluhur
               yang masih hidup dan terus dilestarikan dari generasi ke generasi.
             </p>
           </div>
@@ -290,7 +290,7 @@ export default function ProfilDusunPage() {
               },
               {
                 title: "Gotong Royong",
-                desc: "Tradisi kerja bersama yang sangat kuat di Tlogomulyo. Masyarakat rutin bergotong royong dalam kegiatan pembangunan infrastruktur dusun, perbaikan jalan, bersih-bersih lingkungan, hingga membantu tetangga yang mengadakan hajatan.",
+                desc: "Tradisi kerja bersama yang sangat kuat di Tlogomoyo. Masyarakat rutin bergotong royong dalam kegiatan pembangunan infrastruktur dusun, perbaikan jalan, bersih-bersih lingkungan, hingga membantu tetangga yang mengadakan hajatan.",
                 gradient: "from-blue-100 to-blue-200",
                 iconColor: "text-blue-700",
                 icon: <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />,
@@ -496,7 +496,7 @@ export default function ProfilDusunPage() {
               </h2>
               <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed">
                 <p>
-                  Masyarakat Dusun Tlogomulyo dan Desa Candi secara umum hidup harmonis
+                  Masyarakat Dusun Tlogomoyo dan Desa Candi secara umum hidup harmonis
                   dengan alam. Pertanian tetap menjadi tulang punggung ekonomi — terutama
                   budidaya singkong, empon-empon, kelapa, serta tanaman hortikultura.
                 </p>
@@ -511,7 +511,7 @@ export default function ProfilDusunPage() {
                   Kecamatan Pringkuku tercatat memiliki penduduk sekitar{" "}
                   <strong>32.347 jiwa</strong> (data 2024), tersebar di 13 desa dengan
                   karakteristik demografis yang beragam. Desa Candi sendiri terdiri dari{" "}
-                  <strong>15 dusun</strong>, dengan Tlogomulyo sebagai salah satu dusun
+                  <strong>15 dusun</strong>, dengan Tlogomoyo sebagai salah satu dusun
                   yang aktif dalam berbagai program pembangunan dan pemberdayaan.
                 </p>
               </div>
@@ -533,7 +533,7 @@ export default function ProfilDusunPage() {
               <span className="gradient-text">Pemerintahan Dusun</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
-              Pemerintahan Dusun Tlogomulyo berada di bawah naungan Desa Candi. Perangkat dusun
+              Pemerintahan Dusun Tlogomoyo berada di bawah naungan Desa Candi. Perangkat dusun
               dipilih secara demokratis untuk melayani dan membangun masyarakat.
             </p>
           </div>
@@ -544,12 +544,12 @@ export default function ProfilDusunPage() {
                 {[
                   {
                     jabatan: "Kepala Desa Candi",
-                    desc: "Pemimpin tertinggi di tingkat desa yang membawahi seluruh dusun, termasuk Tlogomulyo. Bertanggung jawab atas pemerintahan, pembangunan, dan pelayanan masyarakat desa.",
+                    desc: "Pemimpin tertinggi di tingkat desa yang membawahi seluruh dusun, termasuk Tlogomoyo. Bertanggung jawab atas pemerintahan, pembangunan, dan pelayanan masyarakat desa.",
                     color: "from-primary-500 to-primary-700",
                     icon: "🏛️",
                   },
                   {
-                    jabatan: "Kepala Dusun (Kadus) Tlogomulyo",
+                    jabatan: "Kepala Dusun (Kadus) Tlogomoyo",
                     desc: "Koordinator di tingkat dusun yang menjadi ujung tombak pelayanan masyarakat. Bertugas mengelola administrasi dusun, menjadi mediator warga, dan mengkoordinasikan program pembangunan.",
                     color: "from-emerald-500 to-emerald-700",
                     icon: "👤",
@@ -600,7 +600,7 @@ export default function ProfilDusunPage() {
           </h2>
           <p className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed mb-8">
             Kenali lebih jauh tentang kegiatan kemahasiswaan dan program kerja (Proker) KKN 
-            yang telah dan sedang berlangsung di Dusun Tlogomulyo.
+            yang telah dan sedang berlangsung di Dusun Tlogomoyo.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link

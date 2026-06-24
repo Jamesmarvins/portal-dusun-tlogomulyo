@@ -1,17 +1,17 @@
-# 🌿 Portal Informasi Dusun Tlogomulyo
+# 🌿 Portal Informasi Dusun Tlogomoyo
 
 <div align="center">
 
-**Portal informasi resmi Dusun Tlogomulyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan, Jawa Timur.**
+**Portal informasi resmi Dusun Tlogomoyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan, Jawa Timur.**
 
-Dibangun dengan ❤️ oleh Tim KKN untuk Dusun Tlogomulyo.
+Dibangun dengan ❤️ oleh Tim KKN untuk Dusun Tlogomoyo.
 </div>
 
 ---
 
 ## 📖 Tentang Proyek
 
-Portal digital ini menyajikan informasi lengkap tentang **Dusun Tlogomulyo** — sebuah dusun yang kaya akan potensi alam, budaya, dan semangat gotong royong di Kabupaten Pacitan, Jawa Timur. Website ini dibuat sebagai upaya digitalisasi informasi desa dan menjadi jembatan komunikasi antara masyarakat dusun dengan dunia luar.
+Portal digital ini menyajikan informasi lengkap tentang **Dusun Tlogomoyo** — sebuah dusun yang kaya akan potensi alam, budaya, dan semangat gotong royong di Kabupaten Pacitan, Jawa Timur. Website ini dibuat sebagai upaya digitalisasi informasi desa dan menjadi jembatan komunikasi antara masyarakat dusun dengan dunia luar.
 
 ### ✨ Fitur Utama
 
@@ -45,7 +45,7 @@ Portal digital ini menyajikan informasi lengkap tentang **Dusun Tlogomulyo** —
 ## 📁 Struktur Proyek
 
 ```
-portal-dusun-tlogomulyo/
+portal-dusun-tlogomoyo/
 ├── app/
 │   ├── globals.css           # Design system & animasi
 │   ├── layout.js             # Layout utama (navbar + footer)
@@ -76,10 +76,10 @@ portal-dusun-tlogomulyo/
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/Jamesmarvins/portal-dusun-tlogomulyo.git
+git clone https://github.com/Jamesmarvins/portal-dusun-tlogomoyo.git
 
 # 2. Masuk ke direktori proyek
-cd portal-dusun-tlogomulyo
+cd portal-dusun-tlogomoyo
 
 # 3. Install dependensi
 npm install
@@ -103,7 +103,7 @@ npm start
 
 | | Detail |
 |---|--------|
-| **Dusun** | Tlogomulyo |
+| **Dusun** | Tlogomoyo |
 | **Desa** | Candi |
 | **Kecamatan** | Pringkuku |
 | **Kabupaten** | Pacitan |
@@ -123,13 +123,13 @@ npm start
 
 ## 📄 Lisensi
 
-Proyek ini dibuat untuk kepentingan informasi publik Dusun Tlogomulyo dan program KKN.
+Proyek ini dibuat untuk kepentingan informasi publik Dusun Tlogomoyo dan program KKN.
 
 ---
 
 <div align="center">
 
-**🏡 Dusun Tlogomulyo — Desa Candi, Pringkuku, Pacitan**
+**🏡 Dusun Tlogomoyo — Desa Candi, Pringkuku, Pacitan**
 
 *Dibangun dengan semangat gotong royong untuk digitalisasi desa* 🌾
 

@@ -34,7 +34,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="font-heading text-lg font-bold text-white">
-                  Dusun Tlogomulyo
+                  Dusun Tlogomoyo
                 </h3>
                 <p className="text-xs text-slate-400 tracking-wide uppercase">
                   Portal Informasi Dusun
@@ -42,7 +42,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm leading-relaxed text-slate-400 max-w-sm">
-              Portal informasi resmi Dusun Tlogomulyo, Desa Candi, Kecamatan
+              Portal informasi resmi Dusun Tlogomoyo, Desa Candi, Kecamatan
               Pringkuku, Kabupaten Pacitan. Menyediakan informasi tentang
               potensi dusun, kegiatan masyarakat, dan panduan KKN bagi
               perguruan tinggi.
@@ -97,7 +97,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 </svg>
                 <span className="text-slate-400">
-                  Dusun Tlogomulyo, Desa Candi,<br />
+                  Dusun Tlogomoyo, Desa Candi,<br />
                   Kec. Pringkuku, Kab. Pacitan,<br />
                   Jawa Timur, Indonesia
                 </span>
@@ -106,7 +106,7 @@ export default function Footer() {
                 <svg className="w-4 h-4 text-primary-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                 </svg>
-                <span className="text-slate-400">dusun.tlogomulyo@desa.id</span>
+                <span className="text-slate-400">dusun.tlogomoyo@desa.id</span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <svg className="w-4 h-4 text-primary-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -121,7 +121,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="py-5 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
           <p>
-            &copy; {currentYear} Pemerintah Dusun Tlogomulyo. Hak cipta
+            &copy; {currentYear} Pemerintah Dusun Tlogomoyo. Hak cipta
             dilindungi.
           </p>
           <p className="flex items-center gap-1">
@@ -129,7 +129,7 @@ export default function Footer() {
             <svg className="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24">
               <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
             </svg>
-            oleh Tim KKN untuk Tlogomulyo
+            oleh Tim KKN untuk Tlogomoyo
           </p>
         </div>
       </div>

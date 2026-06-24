@@ -24,22 +24,22 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "Portal Informasi Dusun Tlogomulyo — Desa Candi, Pacitan",
+  title: "Portal Informasi Dusun Tlogomoyo — Desa Candi, Pacitan",
   description:
-    "Portal informasi resmi Dusun Tlogomulyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan, Jawa Timur. Kenali potensi dusun, informasi KKN, dan hubungi perangkat desa.",
+    "Portal informasi resmi Dusun Tlogomoyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan, Jawa Timur. Kenali potensi dusun, informasi KKN, dan hubungi perangkat desa.",
   keywords: [
-    "dusun tlogomulyo",
+    "dusun tlogomoyo",
     "desa candi pacitan",
     "pringkuku pacitan",
     "informasi dusun",
-    "KKN tlogomulyo",
+    "KKN tlogomoyo",
     "profil desa pacitan",
     "portal desa",
   ],
   openGraph: {
-    title: "Portal Informasi Dusun Tlogomulyo",
+    title: "Portal Informasi Dusun Tlogomoyo",
     description:
-      "Portal informasi resmi Dusun Tlogomulyo — kenali potensi dusun dan informasi penting lainnya.",
+      "Portal informasi resmi Dusun Tlogomoyo — kenali potensi dusun dan informasi penting lainnya.",
     type: "website",
     locale: "id_ID",
   },

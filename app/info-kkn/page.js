@@ -11,7 +11,7 @@ const kelompokData = {
   universitas: "Universitas Kristen Duta Wacana",
   fakultas: "Lintas Fakultas",
   periode: "24 Juni - 23 Juli 2026",
-  lokasi: "Dusun Tlogomulyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan",
+  lokasi: "Dusun Tlogomoyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan",
   dpl: {
     nama: "Eka Adhi Wibowo, SE, M.Sc",
     nip: "-",
@@ -41,7 +41,7 @@ const anggota = [
     prokerIndividu: {
       judul: "Pembuatan Website Portal Informasi Desa",
       deskripsi:
-        "Merancang dan mengembangkan website portal informasi untuk Dusun Tlogomulyo sebagai media digitalisasi profil desa, potensi alam, dan informasi publik.",
+        "Merancang dan mengembangkan website portal informasi untuk Dusun Tlogomoyo sebagai media digitalisasi profil desa, potensi alam, dan informasi publik.",
       target: "1 website responsif aktif dan terdaftar domain",
       status: "Selesai",
     },
@@ -54,7 +54,7 @@ const anggota = [
     prokerIndividu: {
       judul: "Bimbingan Belajar Anak SD",
       deskripsi:
-        "Menyelenggarakan program bimbingan belajar rutin bagi anak-anak usia sekolah dasar di Dusun Tlogomulyo dengan fokus pada literasi membaca dan menulis.",
+        "Menyelenggarakan program bimbingan belajar rutin bagi anak-anak usia sekolah dasar di Dusun Tlogomoyo dengan fokus pada literasi membaca dan menulis.",
       target: "15 anak SD mengikuti bimbel 3x seminggu",
       status: "Selesai",
     },
@@ -80,7 +80,7 @@ const anggota = [
     prokerIndividu: {
       judul: "Posyandu dan Cek Kesehatan Gratis",
       deskripsi:
-        "Mengadakan kegiatan posyandu dengan pemeriksaan tekanan darah, gula darah, dan tinggi badan bagi warga lansia dan balita di Dusun Tlogomulyo.",
+        "Mengadakan kegiatan posyandu dengan pemeriksaan tekanan darah, gula darah, dan tinggi badan bagi warga lansia dan balita di Dusun Tlogomoyo.",
       target: "30 warga mengikuti cek kesehatan",
       status: "Selesai",
     },
@@ -93,7 +93,7 @@ const anggota = [
     prokerIndividu: {
       judul: "Pembuatan Papan Nama Jalan Dusun",
       deskripsi:
-        "Merancang dan memasang papan nama jalan dan penunjuk arah di titik-titik strategis Dusun Tlogomulyo untuk memudahkan navigasi.",
+        "Merancang dan memasang papan nama jalan dan penunjuk arah di titik-titik strategis Dusun Tlogomoyo untuk memudahkan navigasi.",
       target: "8 papan nama terpasang",
       status: "Selesai",
     },
@@ -119,7 +119,7 @@ const anggota = [
     prokerIndividu: {
       judul: "Sosialisasi Pertanian Organik",
       deskripsi:
-        "Memberikan penyuluhan mengenai teknik pertanian organik, pembuatan pupuk kompos, dan pestisida alami kepada petani di Dusun Tlogomulyo.",
+        "Memberikan penyuluhan mengenai teknik pertanian organik, pembuatan pupuk kompos, dan pestisida alami kepada petani di Dusun Tlogomoyo.",
       target: "20 petani mengikuti sosialisasi",
       status: "Selesai",
     },
@@ -177,11 +177,11 @@ export default function InfoKKNPage() {
             </nav>
 
             <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 tracking-tight">
-              Tentang KKN <span className="gradient-text">Tlogomulyo</span>
+              Tentang KKN <span className="gradient-text">Tlogomoyo</span>
             </h1>
             <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
               Profil kelompok, program kerja kelompok, dan program kerja individu
-              Tim KKN di Dusun Tlogomulyo.
+              Tim KKN di Dusun Tlogomoyo.
             </p>
 
             {/* Quick Stats */}
@@ -221,7 +221,7 @@ export default function InfoKKNPage() {
               Kenali <span className="gradient-text">Tim Kami</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
-              Kelompok KKN yang bertugas di Dusun Tlogomulyo terdiri dari 7
+              Kelompok KKN yang bertugas di Dusun Tlogomoyo terdiri dari 7
               mahasiswa lintas jurusan yang siap berkolaborasi dengan masyarakat.
             </p>
           </div>
@@ -345,7 +345,7 @@ export default function InfoKKNPage() {
             </h2>
             <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
               Program kerja bersama yang dilaksanakan oleh seluruh anggota
-              kelompok KKN selama periode penugasan di Dusun Tlogomulyo.
+              kelompok KKN selama periode penugasan di Dusun Tlogomoyo.
             </p>
           </div>
 
