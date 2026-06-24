@@ -19,7 +19,7 @@ const kelompokData = {
   apl: {
     nama: "Stefanus Andy Kurniawan",
   },
-  tema: "Pemberdayaan Masyarakat dan Pengembangan Potensi Desa Berbasis Teknologi Informasi",
+  tema: "Penguatan Kapasitas Masyarakat di Bidang Pariwisata, Digitalisasi, dan Kesehatan Lingkungan Berbasis Potensi Lokasi",
 };
 
 /* 1 Program Kerja Kelompok */
