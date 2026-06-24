@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { href: "/", label: "Beranda" },
   { href: "/profil-dusun", label: "Profil Dusun" },
+  { href: "/potensi", label: "Potensi & UMKM" },
   { href: "/info-kkn", label: "Tentang & KKN" },
 ];
 

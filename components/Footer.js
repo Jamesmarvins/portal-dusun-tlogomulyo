@@ -58,6 +58,7 @@ export default function Footer() {
               {[
                 { href: "/", label: "Beranda" },
                 { href: "/profil-dusun", label: "Profil Dusun" },
+                { href: "/potensi", label: "Potensi & UMKM" },
                 { href: "/info-kkn", label: "Tentang & Info KKN" },
               ].map((link) => (
                 <li key={link.href}>
