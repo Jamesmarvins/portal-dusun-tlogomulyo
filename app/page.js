@@ -357,7 +357,7 @@ export default function HomePage() {
 
               {/* Google Maps Button */}
               <a
-                href="https://maps.app.goo.gl/CCH2LmsgphDZtVu57"
+                href="https://maps.app.goo.gl/d1bm4QADshWJQS2b7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-sm"
