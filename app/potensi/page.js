@@ -121,33 +121,7 @@ export default function PotensiUMKM() {
         </div>
       </section>
 
-      {/* Call to Action for Buyers / Investors */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900" />
-          <div className="absolute inset-0 opacity-10 dot-pattern" />
-          
-          <div className="relative p-10 sm:p-16 lg:p-20 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-10">
-            <div className="max-w-2xl">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Tertarik dengan Produk Kami?
-              </h2>
-              <p className="text-primary-100 text-lg leading-relaxed">
-                Masyarakat Dusun Tlogomoyo terbuka untuk kerja sama pembelian hasil panen, pemasaran produk UMKM, maupun kemitraan jangka panjang lainnya.
-              </p>
-            </div>
-            <a 
-              href="mailto:dusun.tlogomoyo@desa.id"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-900 font-semibold rounded-xl hover:bg-primary-50 transition-colors shadow-lg hover:shadow-xl shrink-0"
-            >
-              Hubungi Kami
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
+
     </main>
   );
 }
