@@ -203,7 +203,7 @@ export default function ProfilDusunPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className={`${item.bg} rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up`}
+                className={`${item.bg} dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up`}
                 style={{ animationDelay: `${i * 150}ms`, animationFillMode: "both" }}
               >
                 <div className={`inline-flex items-center justify-center px-3 py-1 rounded-lg bg-gradient-to-r ${item.gradient} mb-4`}>
@@ -441,7 +441,7 @@ export default function ProfilDusunPage() {
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left: Info Card */}
             <div className="animate-fade-in-up">
-              <div className="bg-gradient-to-br from-slate-50 to-primary-50/30 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)]">
+              <div className="bg-gradient-to-br from-slate-50 to-primary-50/30 dark:from-slate-800 dark:to-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)]">
                 <h3 className="font-heading text-lg sm:text-xl font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2">
                   <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -487,7 +487,7 @@ export default function ProfilDusunPage() {
 
             {/* Right: Text */}
             <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
+              <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-widest mb-3 bg-primary-50 dark:bg-primary-900/30 px-4 py-1.5 rounded-full">
                 Sosial & Ekonomi
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-5">

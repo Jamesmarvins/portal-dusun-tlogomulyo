@@ -271,7 +271,7 @@ export default function InfoKKNPage() {
                 ))}
               </div>
               {/* Tema */}
-              <div className="mt-6 bg-gradient-to-r from-primary-50 to-accent-400/10 rounded-xl p-5 border border-primary-100">
+              <div className="mt-6 bg-gradient-to-r from-primary-50 to-accent-400/10 dark:from-slate-800 dark:to-slate-800 rounded-xl p-5 border border-primary-100 dark:border-slate-700">
                 <p className="text-xs font-semibold text-primary-600 uppercase tracking-wider mb-1">
                   Tema KKN
                 </p>
@@ -384,7 +384,7 @@ export default function InfoKKNPage() {
 
               {/* Target & Participants */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-emerald-50 rounded-xl p-4 border border-emerald-100">
+                <div className="bg-emerald-50 dark:bg-slate-800 rounded-xl p-4 border border-emerald-100 dark:border-slate-700">
                   <div className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
@@ -399,7 +399,7 @@ export default function InfoKKNPage() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-primary-50 rounded-xl p-4 border border-primary-100">
+                <div className="bg-primary-50 dark:bg-slate-800 rounded-xl p-4 border border-primary-100 dark:border-slate-700">
                   <div className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-primary-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
