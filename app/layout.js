@@ -50,6 +50,7 @@ export const metadata = {
 };
 
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { LanguageProvider } from "@/components/LanguageProvider";
 
 export default function RootLayout({ children }) {
   return (
@@ -60,9 +61,11 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-screen flex flex-col overflow-x-hidden">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <LanguageProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

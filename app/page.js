@@ -1,6 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/components/LanguageProvider";
+import WeatherWidget from "@/components/WeatherWidget";
+import InteractiveMap from "@/components/InteractiveMap";
 
 export default function HomePage() {
+  const { t } = useLanguage();
+
   return (
     <>
       {/* ===== HERO SECTION ===== */}
@@ -24,22 +31,20 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 bg-white dark:bg-slate-800/70 backdrop-blur-sm px-4 py-2 rounded-full border border-primary-200 shadow-sm mb-6 sm:mb-8">
                 <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
                 <span className="text-xs sm:text-sm font-semibold text-primary-700 tracking-wide">
-                  Desa Candi, Kec. Pringkuku, Kab. Pacitan
+                  {t.hero.badge}
                 </span>
               </div>
 
               {/* Heading */}
               <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-extrabold leading-[1.1] tracking-tight mb-5 sm:mb-6">
-                <span className="text-slate-900 dark:text-white">Selamat Datang di</span>
+                <span className="text-slate-900 dark:text-white">{t.hero.welcome}</span>
                 <br />
-                <span className="gradient-text">Dusun Tlogomoyo</span>
+                <span className="gradient-text">{t.hero.hamletName}</span>
               </h1>
 
               {/* Description */}
               <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl mb-8 sm:mb-10 text-justify">
-                Kenali lebih dekat Dusun Tlogomoyo sebuah dusun yang kaya
-                akan potensi alam, budaya, dan semangat gotong royong.
-                Temukan informasi lengkap mengenai dusun kami di sini.
+                {t.hero.desc}
               </p>
 
               {/* CTA Buttons */}
@@ -48,16 +53,16 @@ export default function HomePage() {
                   href="#tentang"
                   className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-sm sm:text-base"
                 >
-                  Kenali Dusun Kami
+                  {t.hero.btnPotential}
                   <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
                   </svg>
                 </a>
                 <Link
-                  href="/profil-dusun"
+                  href="/berita"
                   className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white dark:bg-slate-800 text-primary-700 font-bold rounded-2xl border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50 shadow-sm hover:shadow-md transition-all duration-300 text-sm sm:text-base"
                 >
-                  Profil Dusun
+                  {t.hero.btnNews}
                   <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                   </svg>
@@ -67,9 +72,9 @@ export default function HomePage() {
               {/* Stats Row */}
               <div className="mt-10 sm:mt-12 flex items-center gap-6 sm:gap-8">
                 {[
-                  { value: "Pacitan", label: "Kabupaten" },
-                  { value: "Pringkuku", label: "Kecamatan" },
-                  { value: "Candi", label: "Desa" },
+                  { value: "1.200+", label: t.hero.stats.pop },
+                  { value: "350+", label: t.hero.stats.kk },
+                  { value: "2 Spot", label: t.hero.stats.wisata },
                 ].map((stat, i) => (
                   <div key={i} className="text-center sm:text-left">
                     <p className="text-xl sm:text-2xl font-extrabold text-primary-700">
@@ -147,6 +152,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ===== WEATHER WIDGET SECTION ===== */}
+      <WeatherWidget />
 
       {/* ===== TENTANG DUSUN SECTION ===== */}
       <section id="tentang" className="relative py-16 sm:py-20 lg:py-24 bg-white dark:bg-slate-800">
@@ -282,95 +290,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== LOCATION / MAP SECTION ===== */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-slate-800">
-        {/* Section decoration */}
-        <div className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-200 to-transparent" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
-            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              Lokasi
-            </span>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-              Temukan Kami di{" "}
-              <span className="gradient-text">Tlogomoyo</span>
-            </h2>
-            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
-              Dusun Tlogomoyo terletak di Desa Candi, Kecamatan Pringkuku,
-              Kabupaten Pacitan, Jawa Timur. Mudah diakses dan siap menyambut
-              kedatangan Anda.
-            </p>
-          </div>
-
-          {/* Map & Info Grid */}
-          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-            {/* Map Embed */}
-            <div className="lg:col-span-2 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-shadow duration-500">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2865.362219080696!2d111.0171998!3d-8.2239559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bde642f66d46f%3A0xd988cfd297cf7eff!2sTlogomoyo%2C%20Candi%2C%20Kec.%20Pringkuku%2C%20Kabupaten%20Pacitan%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1718976000000"
-                width="100%"
-                height="400"
-                style={{ border: 0, minHeight: "350px" }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Lokasi Dusun Tlogomoyo di Google Maps"
-                className="w-full h-full"
-              />
-            </div>
-
-            {/* Location Info Card */}
-            <div className="bg-gradient-to-br from-slate-50 to-primary-50/30 dark:from-slate-800 dark:to-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-5 shadow-lg">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                  </svg>
-                </div>
-                <h3 className="font-heading text-lg font-bold text-slate-800 dark:text-white mb-3">
-                  Alamat Lengkap
-                </h3>
-                <div className="space-y-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
-                  <div className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-primary-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                    </svg>
-                    <span>
-                      Dusun Tlogomoyo, Desa Candi,<br />
-                      Kec. Pringkuku, Kab. Pacitan,<br />
-                      Jawa Timur, Indonesia
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-primary-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
-                    </svg>
-                    <span>
-                      Koordinat: -8.2239°S, 111.0172°E
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Google Maps Button */}
-              <a
-                href="https://maps.app.goo.gl/d1bm4QADshWJQS2b7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-sm"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                </svg>
-                Buka di Google Maps
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ===== INTERACTIVE MAP SECTION ===== */}
+      <InteractiveMap />
     </>
   );
 }

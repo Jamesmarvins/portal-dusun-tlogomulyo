@@ -4,16 +4,19 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "./LanguageProvider";
 
 const navLinks = [
-  { href: "/", label: "Beranda" },
-  { href: "/profil-dusun", label: "Profil Dusun" },
-  { href: "/potensi", label: "Potensi & UMKM" },
-  { href: "/berita", label: "Berita" },
-  { href: "/info-kkn", label: "Tentang & KKN" },
+  { href: "/", key: "beranda" },
+  { href: "/profil-dusun", key: "profil" },
+  { href: "/potensi", key: "potensi" },
+  { href: "/berita", key: "berita" },
+  { href: "/info-kkn", key: "infokkn" },
 ];
 
 export default function Navbar() {
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -93,7 +96,7 @@ export default function Navbar() {
                       : "text-slate-600 dark:text-slate-300 hover:text-primary-700 dark:hover:text-primary-400 hover:bg-primary-50/50 dark:hover:bg-slate-800"
                   }`}
                 >
-                  {link.label}
+                  {t.nav[link.key]}
                   {isActive && (
                     <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-0.5 bg-primary-500 rounded-full" />
                   )}
@@ -102,7 +105,8 @@ export default function Navbar() {
             })}
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <LanguageToggle />
             <ThemeToggle />
 
             {/* Mobile Hamburger Button */}
@@ -152,7 +156,7 @@ export default function Navbar() {
                       : "text-slate-600 dark:text-slate-300 hover:text-primary-700 dark:hover:text-primary-400 hover:bg-primary-50/50 dark:hover:bg-slate-800"
                   }`}
                 >
-                  {link.label}
+                  {t.nav[link.key]}
                 </Link>
               );
             })}
