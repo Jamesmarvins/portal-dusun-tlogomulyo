@@ -24,10 +24,10 @@ const kelompokData = {
 
 /* 1 Program Kerja Kelompok */
 const prokerKelompok = {
-  judul: "KREASI Tlogo Moyo (Kreativitas Ekonomi & Akselerasi Digital)",
+  judul: "Inovasi Tungku Sampah Minim Asap (Rocket Stove Ramah Lingkungan)",
   deskripsi:
-    "Program edukasi dan pendampingan UMKM yang mencakup digitalisasi pendaftaran toko online, penyusunan nilai gizi produk, perancangan desain kemasan melalui Canva, serta edukasi pembukuan.",
-  target: "UMKM dusun terdigitalisasi dan memiliki pembukuan yang baik",
+    "Pembuatan dan sosialisasi tungku pembakar sampah bermetode Rocket Stove bagi rumah tangga di Dusun Tlogomoyo. Program ini dirancang sebagai solusi atas kebiasaan masyarakat membakar sampah secara terbuka di halaman rumah, guna mengurangi polusi uap/asap berbahaya serta menjaga kualitas udara perbukitan tetap bersih dan sehat.",
+  target: "Mengurangi emisi asap pembakaran sampah rumah tangga dan memasyarakatkan metode pembakaran minim polusi",
   status: "Selesai",
 };
 
