@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/", label: "Beranda" },
   { href: "/profil-dusun", label: "Profil Dusun" },
   { href: "/potensi", label: "Potensi & UMKM" },
+  { href: "/berita", label: "Berita" },
   { href: "/info-kkn", label: "Tentang & KKN" },
 ];
 
