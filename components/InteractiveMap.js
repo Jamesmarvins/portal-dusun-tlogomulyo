@@ -8,9 +8,9 @@ export default function InteractiveMap() {
   const [activeSpot, setActiveSpot] = useState("srau");
 
   const mapEmbedUrls = {
-    balai: "https://maps.google.com/maps?q=Desa+Candi+Pringkuku+Pacitan&t=&z=14&ie=UTF8&iwloc=&output=embed",
-    srau: "https://maps.google.com/maps?q=Pantai+Srau+Desa+Candi+Pacitan&t=&z=14&ie=UTF8&iwloc=&output=embed",
-    barong: "https://maps.google.com/maps?q=Sungai+Barong+Candi+Pacitan&t=&z=14&ie=UTF8&iwloc=&output=embed",
+    srau: "https://maps.google.com/maps?q=Pantai+Srau+Desa+Candi+Pacitan&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    balai: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2865.362219080696!2d111.0171998!3d-8.2239559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bde642f66d46f%3A0xd988cfd297cf7eff!2sTlogomoyo%2C%20Candi%2C%20Kec.%20Pringkuku%2C%20Kabupaten%20Pacitan%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1718976000000",
+    barong: "https://maps.google.com/maps?q=Sungai+Barong+Candi+Pacitan&t=&z=15&ie=UTF8&iwloc=&output=embed",
   };
 
   const spotInfo = t.map.locations[activeSpot];
@@ -89,17 +89,16 @@ export default function InteractiveMap() {
           </div>
 
           {/* Map Embed iframe */}
-          <div className="lg:col-span-2 bg-white dark:bg-slate-800 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-[var(--shadow-card)] h-[350px] sm:h-[450px] relative group">
+          <div className="lg:col-span-2 bg-slate-100 dark:bg-slate-800 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-[var(--shadow-card)] h-[380px] sm:h-[450px] relative">
             <iframe
+              key={activeSpot}
               src={mapEmbedUrls[activeSpot]}
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
+              className="absolute inset-0 w-full h-full block border-0"
+              style={{ width: "100%", height: "100%" }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Interactive Village Map"
-              className="w-full h-full filter dark:brightness-90 transition-all duration-700"
             />
           </div>
         </div>
