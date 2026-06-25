@@ -1,10 +1,7 @@
-import RocketStoveShowcase from "@/components/RocketStoveShowcase";
-import UmkmCatalog from "@/components/UmkmCatalog";
-
 export const metadata = {
   title: "Potensi & UMKM Dusun Tlogomoyo Pacitan",
   description:
-    "Jelajahi potensi luar biasa dari Dusun Tlogomoyo, mulai dari inovasi tungku sampah Rocket Stove, hasil pertanian organik, hingga produk UMKM unggulan.",
+    "Jelajahi potensi luar biasa dari Dusun Tlogomoyo, mulai dari hasil pertanian organik, kerajinan tangan lokal, hingga produk UMKM unggulan yang menggerakkan ekonomi warga.",
 };
 
 export default function PotensiUMKM() {
@@ -123,11 +120,6 @@ export default function PotensiUMKM() {
           ))}
         </div>
       </section>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <RocketStoveShowcase />
-        <UmkmCatalog />
-      </div>
 
     </main>
   );
