@@ -82,7 +82,7 @@ export default function PotensiUMKM() {
             Potensi & UMKM <br className="hidden sm:block" />
             <span className="gradient-text">Dusun Tlogomoyo</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-lg text-slate-600 leading-relaxed animate-fade-in-up" style={{ animationDelay: "200ms" }}>
+          <p className="max-w-2xl mx-auto text-lg text-slate-600 leading-relaxed text-justify animate-fade-in-up" style={{ animationDelay: "200ms" }}>
             Jelajahi kekayaan alam dan kreativitas masyarakat Dusun Tlogomoyo. Dari hasil bumi yang melimpah hingga kerajinan tangan yang memukau.
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function PotensiUMKM() {
                 </h3>
               </div>
               <div className="px-6 pb-8 flex-1">
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed text-justify">
                   {item.desc}
                 </p>
               </div>
