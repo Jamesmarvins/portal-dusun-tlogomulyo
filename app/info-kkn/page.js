@@ -36,8 +36,8 @@ const anggota = [
   {
     nama: "Giovanni",
     nim: "41220663",
-    prodi: "Lintas Fakultas",
-    jabatan: "Ketua Kelompok",
+    prodi: "Kedokteran",
+    jabatan: "Ketua",
     prokerIndividu: {
       judul: "Sosialisasi Pertanian Organik",
       deskripsi:
@@ -49,8 +49,8 @@ const anggota = [
   {
     nama: "Skolastika Puspa Wulandari",
     nim: "81230167",
-    prodi: "Lintas Fakultas",
-    jabatan: "Sekretaris",
+    prodi: "PBI",
+    jabatan: "Sekre",
     prokerIndividu: {
       judul: "Bimbingan Belajar Anak SD",
       deskripsi:
@@ -62,7 +62,7 @@ const anggota = [
   {
     nama: "Sarniati Simon",
     nim: "11231408",
-    prodi: "Lintas Fakultas",
+    prodi: "Manajemen",
     jabatan: "Bendahara",
     prokerIndividu: {
       judul: "Sosialisasi Literasi Keuangan",
@@ -75,8 +75,8 @@ const anggota = [
   {
     nama: "Kadek Nadya",
     nim: "11221249",
-    prodi: "Lintas Fakultas",
-    jabatan: "Koordinator Divisi Kesehatan",
+    prodi: "Manajemen",
+    jabatan: "Humas",
     prokerIndividu: {
       judul: "Posyandu dan Cek Kesehatan Gratis",
       deskripsi:
@@ -88,8 +88,8 @@ const anggota = [
   {
     nama: "Rachel Sry Bunga Redjeki",
     nim: "61230816",
-    prodi: "Lintas Fakultas",
-    jabatan: "Koordinator Divisi Pendidikan",
+    prodi: "Arsitek",
+    jabatan: "PDD",
     prokerIndividu: {
       judul: "Pelatihan Kerajinan Tangan",
       deskripsi:
@@ -101,8 +101,8 @@ const anggota = [
   {
     nama: "James Marvin Santoso",
     nim: "71230971",
-    prodi: "Teknik Informatika",
-    jabatan: "Koordinator Divisi IT",
+    prodi: "Informatika",
+    jabatan: "PDD",
     prokerIndividu: {
       judul: "Pembuatan Website Portal Informasi Desa",
       deskripsi:
@@ -114,8 +114,8 @@ const anggota = [
   {
     nama: "Sadrakh Satria Wibowo",
     nim: "71220939",
-    prodi: "Lintas Fakultas",
-    jabatan: "Koordinator Divisi Infrastruktur",
+    prodi: "Informatika",
+    jabatan: "Perlengkapan",
     prokerIndividu: {
       judul: "Pembuatan Papan Nama Jalan Dusun",
       deskripsi:
@@ -131,9 +131,12 @@ const anggota = [
    ============================ */
 
 const jabatanColors = {
-  "Ketua Kelompok": "from-amber-400 to-amber-600",
-  Sekretaris: "from-violet-400 to-violet-600",
+  Ketua: "from-amber-400 to-amber-600",
+  Sekre: "from-violet-400 to-violet-600",
   Bendahara: "from-emerald-400 to-emerald-600",
+  Humas: "from-blue-400 to-blue-600",
+  PDD: "from-rose-400 to-rose-600",
+  Perlengkapan: "from-orange-400 to-orange-600",
   default: "from-primary-400 to-primary-600",
 };
 
