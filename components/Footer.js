@@ -41,7 +41,7 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <p className="text-sm leading-relaxed text-slate-400 max-w-sm">
+            <p className="text-sm leading-relaxed text-slate-400 max-w-sm text-justify">
               Portal informasi resmi Dusun Tlogomoyo, Desa Candi, Kecamatan
               Pringkuku, Kabupaten Pacitan. Menyediakan informasi tentang
               potensi dusun, kegiatan masyarakat, dan panduan KKN bagi

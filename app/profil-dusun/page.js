@@ -42,7 +42,7 @@ export default function ProfilDusunPage() {
               Profil Dusun{" "}
               <span className="text-accent-400">Tlogomoyo</span>
             </h1>
-            <p className="text-base sm:text-lg text-primary-100 max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-lg text-primary-100 max-w-2xl leading-relaxed text-justify">
               Mengenal lebih dekat Dusun Tlogomoyo geografi, sejarah,
               kekayaan budaya, potensi pertanian, serta destinasi wisata
               di sekitarnya. Sebuah dusun yang asri di jantung Pacitan selatan.
@@ -89,7 +89,7 @@ export default function ProfilDusunPage() {
                 Letak Geografis{" "}
                 <span className="gradient-text">Tlogomoyo</span>
               </h2>
-              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed">
+              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed text-justify">
                 <p>
                   Dusun Tlogomoyo terletak di <strong>Desa Candi</strong>, Kecamatan Pringkuku,
                   Kabupaten Pacitan, Provinsi Jawa Timur. Desa Candi sendiri berjarak sekitar{" "}
@@ -170,7 +170,7 @@ export default function ProfilDusunPage() {
               Kekayaan Alam{" "}
               <span className="gradient-text">Tlogomoyo</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
               Topografi perbukitan yang subur menjadikan wilayah ini kaya akan beragam
               komoditas pertanian dan hasil bumi. Masyarakat Tlogomoyo juga aktif berorganisasi dalam bidang agraris, salah satunya melalui keberadaan kelompok tani (seperti Kelompok Tani Nuju Makmur XII) yang menjadi motor penggerak ketahanan pangan dan ekonomi warga setempat.
             </p>
@@ -210,7 +210,7 @@ export default function ProfilDusunPage() {
                   <span className="text-xl sm:text-2xl font-extrabold text-white">{item.value}</span>
                 </div>
                 <h3 className="font-heading text-lg font-bold text-slate-800 mb-2">{item.label}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                <p className="text-sm text-slate-500 leading-relaxed text-justify">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -259,7 +259,7 @@ export default function ProfilDusunPage() {
               Kearifan Lokal{" "}
               <span className="gradient-text">yang Terjaga</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
               Masyarakat Tlogomoyo memiliki tradisi dan kesenian yang kaya warisan leluhur
               yang masih hidup dan terus dilestarikan dari generasi ke generasi.
             </p>
@@ -321,7 +321,7 @@ export default function ProfilDusunPage() {
                   </svg>
                 </div>
                 <h3 className="font-heading text-lg font-bold text-slate-800 mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                <p className="text-sm text-slate-500 leading-relaxed text-justify">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -339,7 +339,7 @@ export default function ProfilDusunPage() {
               Destinasi Wisata di{" "}
               <span className="gradient-text">Sekitar Dusun</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
               Desa Candi dan sekitarnya menyimpan destinasi wisata alam yang memukau 
               dari pantai berpasir putih hingga sungai di tengah hutan yang sejuk.
             </p>
@@ -361,7 +361,7 @@ export default function ProfilDusunPage() {
                 </div>
               </div>
               <div className="p-6 sm:p-8">
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-5">
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-5 text-justify">
                   Pantai Srau merupakan destinasi wisata unggulan Kabupaten Pacitan yang terletak di
                   Desa Candi. Kawasan pantai ini terbagi menjadi <strong>tiga area</strong> yang dipisahkan
                   oleh bukit karang, masing-masing dengan karakteristik unik.
@@ -404,7 +404,7 @@ export default function ProfilDusunPage() {
                 </div>
               </div>
               <div className="p-6 sm:p-8">
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-5">
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-5 text-justify">
                   Wisata alam berbasis sungai yang menawarkan kesegaran aliran air jernih di tengah
                   pepohonan rindang dan tebing-tebing alami. Kali Barong juga menjadi rumah bagi
                   kesenian unik <strong>&quot;Ceklukan&quot;</strong> musik alami dari suara air sungai.
@@ -477,7 +477,7 @@ export default function ProfilDusunPage() {
                       </div>
                       <div>
                         <p className="text-sm font-semibold text-slate-700">{item.title}</p>
-                        <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mt-0.5">{item.desc}</p>
+                        <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mt-0.5 text-justify">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -494,7 +494,7 @@ export default function ProfilDusunPage() {
                 Kehidupan{" "}
                 <span className="gradient-text">Masyarakat</span>
               </h2>
-              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed">
+              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed text-justify">
                 <p>
                   Masyarakat Dusun Tlogomoyo dan Desa Candi secara umum hidup harmonis
                   dengan alam. Pertanian tetap menjadi tulang punggung ekonomi terutama
@@ -532,7 +532,7 @@ export default function ProfilDusunPage() {
               Struktur{" "}
               <span className="gradient-text">Pemerintahan Dusun</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
               Pemerintahan Dusun Tlogomoyo berada di bawah naungan Desa Candi. Perangkat dusun
               dipilih secara demokratis untuk melayani dan membangun masyarakat.
             </p>
@@ -577,7 +577,7 @@ export default function ProfilDusunPage() {
                       <h3 className="text-base sm:text-lg font-bold text-slate-800 mb-1.5">
                         {item.jabatan}
                       </h3>
-                      <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                      <p className="text-sm text-slate-500 leading-relaxed text-justify">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -598,7 +598,7 @@ export default function ProfilDusunPage() {
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-4">
             Tertarik Mengenal Lebih Dekat?
           </h2>
-          <p className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed mb-8">
+          <p className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed mb-8 text-center">
             Kenali lebih jauh tentang kegiatan kemahasiswaan dan program kerja (Proker) KKN 
             yang telah dan sedang berlangsung di Dusun Tlogomoyo.
           </p>

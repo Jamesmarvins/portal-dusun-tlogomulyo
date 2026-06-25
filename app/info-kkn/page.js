@@ -182,7 +182,7 @@ export default function InfoKKNPage() {
             <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 tracking-tight">
               Tentang KKN <span className="gradient-text">Tlogomoyo</span>
             </h1>
-            <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed text-justify">
               Profil kelompok, program kerja kelompok, dan program kerja individu
               Tim KKN di Dusun Tlogomoyo.
             </p>
@@ -223,7 +223,7 @@ export default function InfoKKNPage() {
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
               Kenali <span className="gradient-text">Tim Kami</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
               Kelompok KKN yang bertugas di Dusun Tlogomoyo terdiri dari 7
               mahasiswa lintas jurusan yang siap berkolaborasi dengan masyarakat.
             </p>
@@ -275,7 +275,7 @@ export default function InfoKKNPage() {
                 <p className="text-xs font-semibold text-primary-600 uppercase tracking-wider mb-1">
                   Tema KKN
                 </p>
-                <p className="text-sm sm:text-base font-bold text-slate-800 leading-relaxed">
+                <p className="text-sm sm:text-base font-bold text-slate-800 leading-relaxed text-justify">
                   &ldquo;{kelompokData.tema}&rdquo;
                 </p>
               </div>
@@ -346,7 +346,7 @@ export default function InfoKKNPage() {
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
               Proker <span className="gradient-text">Kelompok</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
               Program kerja bersama yang dilaksanakan oleh seluruh anggota
               kelompok KKN selama periode penugasan di Dusun Tlogomoyo.
             </p>
@@ -378,7 +378,7 @@ export default function InfoKKNPage() {
               <h4 className="font-heading text-xl sm:text-2xl font-bold text-slate-800 mb-3">
                 {prokerKelompok.judul}
               </h4>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6 text-justify">
                 {prokerKelompok.deskripsi}
               </p>
 
@@ -430,7 +430,7 @@ export default function InfoKKNPage() {
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
               Program Kerja <span className="gradient-text">Individu</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
               Setiap anggota memiliki satu program kerja individu sesuai bidang
               keahlian masing-masing.
             </p>
