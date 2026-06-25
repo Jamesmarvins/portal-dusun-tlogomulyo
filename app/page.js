@@ -36,7 +36,7 @@ export default function HomePage() {
               </h1>
 
               {/* Description */}
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed text-justify max-w-xl mb-8 sm:mb-10">
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mb-8 sm:mb-10">
                 Kenali lebih dekat Dusun Tlogomoyo sebuah dusun yang kaya
                 akan potensi alam, budaya, dan semangat gotong royong.
                 Temukan informasi lengkap mengenai dusun kami di sini.
@@ -163,7 +163,7 @@ export default function HomePage() {
               Mengenal{" "}
               <span className="gradient-text">Tlogomoyo</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-justify">
+            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
               Dusun Tlogomoyo merupakan bagian dari Desa Candi, Kecamatan
               Pringkuku, Kabupaten Pacitan, Jawa Timur. Dusun ini memiliki
               beragam potensi yang menjadikannya unik dan menarik.
@@ -214,7 +214,7 @@ export default function HomePage() {
                 <h3 className="font-heading text-lg font-bold text-slate-800 mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-slate-500 leading-relaxed text-justify">
+                <p className="text-sm text-slate-500 leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -273,7 +273,7 @@ export default function HomePage() {
                 <h3 className="font-heading text-lg font-bold text-slate-800 mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-slate-500 leading-relaxed text-justify">
+                <p className="text-sm text-slate-500 leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -297,7 +297,7 @@ export default function HomePage() {
               Temukan Kami di{" "}
               <span className="gradient-text">Tlogomoyo</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-justify">
+            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
               Dusun Tlogomoyo terletak di Desa Candi, Kecamatan Pringkuku,
               Kabupaten Pacitan, Jawa Timur. Mudah diakses dan siap menyambut
               kedatangan Anda.
@@ -333,7 +333,7 @@ export default function HomePage() {
                 <h3 className="font-heading text-lg font-bold text-slate-800 mb-3">
                   Alamat Lengkap
                 </h3>
-                <div className="space-y-3 text-sm text-slate-600 leading-relaxed text-justify">
+                <div className="space-y-3 text-sm text-slate-600 leading-relaxed">
                   <div className="flex items-start gap-3">
                     <svg className="w-4 h-4 text-primary-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
