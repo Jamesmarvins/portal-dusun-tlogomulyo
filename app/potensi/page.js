@@ -78,7 +78,7 @@ export default function PotensiUMKM() {
             </svg>
             Ekonomi Kreatif & Agrikultur
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 animate-fade-in-up" style={{ animationDelay: "100ms" }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6 animate-fade-in-up" style={{ animationDelay: "100ms" }}>
             Potensi & UMKM <br className="hidden sm:block" />
             <span className="gradient-text">Dusun Tlogomoyo</span>
           </h1>

@@ -85,7 +85,7 @@ export default function ProfilDusunPage() {
               <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
                 Geografi & Topografi
               </span>
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-5">
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-5">
                 Letak Geografis{" "}
                 <span className="gradient-text">Tlogomoyo</span>
               </h2>
@@ -166,7 +166,7 @@ export default function ProfilDusunPage() {
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
               Pertanian & Sumber Daya Alam
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
               Kekayaan Alam{" "}
               <span className="gradient-text">Tlogomoyo</span>
             </h2>
@@ -255,7 +255,7 @@ export default function ProfilDusunPage() {
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
               Budaya & Tradisi
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
               Kearifan Lokal{" "}
               <span className="gradient-text">yang Terjaga</span>
             </h2>
@@ -335,7 +335,7 @@ export default function ProfilDusunPage() {
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
               Wisata Sekitar
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
               Destinasi Wisata di{" "}
               <span className="gradient-text">Sekitar Dusun</span>
             </h2>
@@ -490,7 +490,7 @@ export default function ProfilDusunPage() {
               <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
                 Sosial & Ekonomi
               </span>
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-5">
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-5">
                 Kehidupan{" "}
                 <span className="gradient-text">Masyarakat</span>
               </h2>
@@ -528,7 +528,7 @@ export default function ProfilDusunPage() {
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
               Pemerintahan
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
               Struktur{" "}
               <span className="gradient-text">Pemerintahan Dusun</span>
             </h2>

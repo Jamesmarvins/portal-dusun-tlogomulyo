@@ -30,7 +30,7 @@ export default function HomePage() {
 
               {/* Heading */}
               <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-extrabold leading-[1.1] tracking-tight mb-5 sm:mb-6">
-                <span className="text-slate-900">Selamat Datang di</span>
+                <span className="text-slate-900 dark:text-white">Selamat Datang di</span>
                 <br />
                 <span className="gradient-text">Dusun Tlogomoyo</span>
               </h1>
@@ -159,7 +159,7 @@ export default function HomePage() {
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
               Profil Dusun
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
               Mengenal{" "}
               <span className="gradient-text">Tlogomoyo</span>
             </h2>
@@ -230,7 +230,7 @@ export default function HomePage() {
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
               Keunggulan
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
               Mengapa{" "}
               <span className="gradient-text">Tlogomoyo?</span>
             </h2>
@@ -293,7 +293,7 @@ export default function HomePage() {
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
               Lokasi
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
               Temukan Kami di{" "}
               <span className="gradient-text">Tlogomoyo</span>
             </h2>
