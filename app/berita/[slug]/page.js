@@ -3,8 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 // Generate metadata dynamically
-export function generateMetadata({ params }) {
-  const berita = daftarBerita.find((b) => b.id === params.slug);
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
+  const berita = daftarBerita.find((b) => b.id === resolvedParams.slug);
   
   if (!berita) {
     return {
@@ -18,8 +19,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function BeritaDetail({ params }) {
-  const berita = daftarBerita.find((b) => b.id === params.slug);
+export default async function BeritaDetail({ params }) {
+  const resolvedParams = await params;
+  const berita = daftarBerita.find((b) => b.id === resolvedParams.slug);
 
   if (!berita) {
     notFound();
