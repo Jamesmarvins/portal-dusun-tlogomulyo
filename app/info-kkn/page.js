@@ -34,22 +34,22 @@ const prokerKelompok = {
 /* 7 anggota — masing-masing 1 proker individu */
 const anggota = [
   {
-    nama: "James Marvin S.",
-    nim: "2310101001",
-    prodi: "Teknik Informatika",
+    nama: "Giovanni",
+    nim: "41220663",
+    prodi: "Lintas Fakultas",
     jabatan: "Ketua Kelompok",
     prokerIndividu: {
-      judul: "Pembuatan Website Portal Informasi Desa",
+      judul: "Sosialisasi Pertanian Organik",
       deskripsi:
-        "Merancang dan mengembangkan website portal informasi untuk Dusun Tlogomoyo sebagai media digitalisasi profil desa, potensi alam, dan informasi publik.",
-      target: "1 website responsif aktif dan terdaftar domain",
+        "Memberikan penyuluhan mengenai teknik pertanian organik, pembuatan pupuk kompos, dan pestisida alami kepada petani di Dusun Tlogomoyo.",
+      target: "20 petani mengikuti sosialisasi",
       status: "Selesai",
     },
   },
   {
-    nama: "Anisa Rahmawati",
-    nim: "2310102002",
-    prodi: "Pendidikan Bahasa Indonesia",
+    nama: "Skolastika Puspa Wulandari",
+    nim: "81230167",
+    prodi: "Lintas Fakultas",
     jabatan: "Sekretaris",
     prokerIndividu: {
       judul: "Bimbingan Belajar Anak SD",
@@ -60,9 +60,9 @@ const anggota = [
     },
   },
   {
-    nama: "Rizky Aditya Pratama",
-    nim: "2310103003",
-    prodi: "Ilmu Ekonomi",
+    nama: "Sarniati Simon",
+    nim: "11231408",
+    prodi: "Lintas Fakultas",
     jabatan: "Bendahara",
     prokerIndividu: {
       judul: "Sosialisasi Literasi Keuangan",
@@ -73,9 +73,9 @@ const anggota = [
     },
   },
   {
-    nama: "Siti Nurhaliza",
-    nim: "2310104004",
-    prodi: "Kesehatan Masyarakat",
+    nama: "Kadek Nadya",
+    nim: "11221249",
+    prodi: "Lintas Fakultas",
     jabatan: "Koordinator Divisi Kesehatan",
     prokerIndividu: {
       judul: "Posyandu dan Cek Kesehatan Gratis",
@@ -86,22 +86,9 @@ const anggota = [
     },
   },
   {
-    nama: "Dimas Arya Wijaya",
-    nim: "2310105005",
-    prodi: "Teknik Sipil",
-    jabatan: "Koordinator Divisi Infrastruktur",
-    prokerIndividu: {
-      judul: "Pembuatan Papan Nama Jalan Dusun",
-      deskripsi:
-        "Merancang dan memasang papan nama jalan dan penunjuk arah di titik-titik strategis Dusun Tlogomoyo untuk memudahkan navigasi.",
-      target: "8 papan nama terpasang",
-      status: "Selesai",
-    },
-  },
-  {
-    nama: "Putri Ayu Lestari",
-    nim: "2310106006",
-    prodi: "Pendidikan Luar Sekolah",
+    nama: "Rachel Sry Bunga Redjeki",
+    nim: "61230816",
+    prodi: "Lintas Fakultas",
     jabatan: "Koordinator Divisi Pendidikan",
     prokerIndividu: {
       judul: "Pelatihan Kerajinan Tangan",
@@ -112,15 +99,28 @@ const anggota = [
     },
   },
   {
-    nama: "Fajar Dwi Nugroho",
-    nim: "2310107007",
-    prodi: "Agribisnis",
-    jabatan: "Koordinator Divisi Pertanian",
+    nama: "James Marvin Santoso",
+    nim: "71230971",
+    prodi: "Teknik Informatika",
+    jabatan: "Koordinator Divisi IT",
     prokerIndividu: {
-      judul: "Sosialisasi Pertanian Organik",
+      judul: "Pembuatan Website Portal Informasi Desa",
       deskripsi:
-        "Memberikan penyuluhan mengenai teknik pertanian organik, pembuatan pupuk kompos, dan pestisida alami kepada petani di Dusun Tlogomoyo.",
-      target: "20 petani mengikuti sosialisasi",
+        "Merancang dan mengembangkan website portal informasi untuk Dusun Tlogomoyo sebagai media digitalisasi profil desa, potensi alam, dan informasi publik.",
+      target: "1 website responsif aktif dan terdaftar domain",
+      status: "Selesai",
+    },
+  },
+  {
+    nama: "Sadrakh Satria Wibowo",
+    nim: "71220939",
+    prodi: "Lintas Fakultas",
+    jabatan: "Koordinator Divisi Infrastruktur",
+    prokerIndividu: {
+      judul: "Pembuatan Papan Nama Jalan Dusun",
+      deskripsi:
+        "Merancang dan memasang papan nama jalan dan penunjuk arah di titik-titik strategis Dusun Tlogomoyo untuk memudahkan navigasi.",
+      target: "8 papan nama terpasang",
       status: "Selesai",
     },
   },
