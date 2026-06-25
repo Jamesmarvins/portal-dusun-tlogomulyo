@@ -50,7 +50,7 @@ const anggota = [
     nama: "Skolastika Puspa Wulandari",
     nim: "81230167",
     prodi: "PBI",
-    jabatan: "Sekre",
+    jabatan: "Sekretaris",
     prokerIndividu: {
       judul: "English Fun for Kids",
       deskripsi:
@@ -132,7 +132,7 @@ const anggota = [
 
 const jabatanColors = {
   Ketua: "from-amber-400 to-amber-600",
-  Sekre: "from-violet-400 to-violet-600",
+  Sekretaris: "from-violet-400 to-violet-600",
   Bendahara: "from-emerald-400 to-emerald-600",
   Humas: "from-blue-400 to-blue-600",
   PDD: "from-rose-400 to-rose-600",
