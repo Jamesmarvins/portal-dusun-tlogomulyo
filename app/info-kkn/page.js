@@ -171,7 +171,7 @@ export default function InfoKKNPage() {
                   </a>
                 </li>
                 <li>
-                  <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                  <svg className="w-4 h-4 text-slate-500 dark:text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                   </svg>
                 </li>
@@ -197,7 +197,7 @@ export default function InfoKKNPage() {
               ].map((stat, i) => (
                 <div
                   key={i}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/10"
+                  className="bg-white bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/10"
                 >
                   <p className="text-lg sm:text-xl font-extrabold text-white">
                     {stat.value}
@@ -223,17 +223,17 @@ export default function InfoKKNPage() {
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
               Kenali <span className="gradient-text">Tim Kami</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
               Kelompok KKN yang bertugas di Dusun Tlogomoyo terdiri dari 7
               mahasiswa lintas jurusan yang siap berkolaborasi dengan masyarakat.
             </p>
           </div>
 
           {/* Info Card */}
-          <div className="bg-white rounded-2xl border border-slate-200/80 shadow-[var(--shadow-card)] overflow-hidden mb-10 sm:mb-14 animate-fade-in-up">
+          <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] overflow-hidden mb-10 sm:mb-14 animate-fade-in-up">
             <div className="bg-gradient-to-r from-primary-600 to-primary-700 px-6 sm:px-8 py-5">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-white dark:bg-slate-800/20 rounded-xl flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                   </svg>
@@ -257,13 +257,13 @@ export default function InfoKKNPage() {
                   { label: "DPL", value: kelompokData.dpl.nama, icon: "👨‍🏫" },
                   { label: "APL", value: kelompokData.apl.nama, icon: "🧑‍💼" },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <div key={i} className="flex items-start gap-3 bg-slate-50 dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-700">
                     <span className="text-xl shrink-0">{item.icon}</span>
                     <div className="min-w-0">
                       <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
                         {item.label}
                       </p>
-                      <p className="text-sm font-semibold text-slate-700 mt-0.5">
+                      <p className="text-sm font-semibold text-slate-700 dark:text-slate-100 mt-0.5">
                         {item.value}
                       </p>
                     </div>
@@ -275,7 +275,7 @@ export default function InfoKKNPage() {
                 <p className="text-xs font-semibold text-primary-600 uppercase tracking-wider mb-1">
                   Tema KKN
                 </p>
-                <p className="text-sm sm:text-base font-bold text-slate-800 leading-relaxed text-justify">
+                <p className="text-sm sm:text-base font-bold text-slate-800 dark:text-white leading-relaxed text-justify">
                   &ldquo;{kelompokData.tema}&rdquo;
                 </p>
               </div>
@@ -290,7 +290,7 @@ export default function InfoKKNPage() {
               return (
                 <div
                   key={i}
-                  className="group bg-white rounded-2xl border border-slate-200/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 overflow-hidden animate-fade-in-up"
+                  className="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 overflow-hidden animate-fade-in-up"
                   style={{
                     animationDelay: `${i * 80}ms`,
                     animationFillMode: "both",
@@ -309,7 +309,7 @@ export default function InfoKKNPage() {
                         </span>
                       </div>
                       <div className="min-w-0">
-                        <p className="text-sm font-bold text-slate-800 truncate">
+                        <p className="text-sm font-bold text-slate-800 dark:text-white truncate">
                           {member.nama}
                         </p>
                         <p className="text-[11px] text-slate-400">
@@ -319,7 +319,7 @@ export default function InfoKKNPage() {
                     </div>
                     {/* Details */}
                     <div className="space-y-1.5">
-                      <p className="text-xs text-slate-500">{member.prodi}</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400">{member.prodi}</p>
                       <span
                         className={`inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-gradient-to-r ${gradientColor} text-white`}
                       >
@@ -335,7 +335,7 @@ export default function InfoKKNPage() {
       </section>
 
       {/* ===== SECTION 2: PROGRAM KERJA KELOMPOK (1 proker) ===== */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-white relative">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-slate-800 relative">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-200 to-transparent" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -346,17 +346,17 @@ export default function InfoKKNPage() {
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
               Proker <span className="gradient-text">Kelompok</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
               Program kerja bersama yang dilaksanakan oleh seluruh anggota
               kelompok KKN selama periode penugasan di Dusun Tlogomoyo.
             </p>
           </div>
 
           {/* Single Proker Kelompok Featured Card */}
-          <div className="bg-white rounded-2xl border border-slate-200/80 shadow-[var(--shadow-card)] overflow-hidden animate-fade-in-up">
+          <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] overflow-hidden animate-fade-in-up">
             <div className="bg-gradient-to-r from-emerald-500 to-emerald-700 px-6 sm:px-8 py-5">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-white dark:bg-slate-800/20 rounded-xl flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
                   </svg>
@@ -369,16 +369,16 @@ export default function InfoKKNPage() {
                     Dilaksanakan oleh seluruh anggota
                   </p>
                 </div>
-                <span className="ml-auto text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full bg-white/20 text-white border border-white/20">
+                <span className="ml-auto text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full bg-white dark:bg-slate-800/20 text-white border border-white/20">
                   {prokerKelompok.status}
                 </span>
               </div>
             </div>
             <div className="p-6 sm:p-8">
-              <h4 className="font-heading text-xl sm:text-2xl font-bold text-slate-800 mb-3">
+              <h4 className="font-heading text-xl sm:text-2xl font-bold text-slate-800 dark:text-white mb-3">
                 {prokerKelompok.judul}
               </h4>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6 text-justify">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-6 text-justify">
                 {prokerKelompok.deskripsi}
               </p>
 
@@ -393,7 +393,7 @@ export default function InfoKKNPage() {
                       <p className="text-[10px] font-semibold text-emerald-600 uppercase tracking-wider">
                         Target Capaian
                       </p>
-                      <p className="text-sm font-medium text-slate-700 mt-0.5">
+                      <p className="text-sm font-medium text-slate-700 dark:text-slate-100 mt-0.5">
                         {prokerKelompok.target}
                       </p>
                     </div>
@@ -408,7 +408,7 @@ export default function InfoKKNPage() {
                       <p className="text-[10px] font-semibold text-primary-600 uppercase tracking-wider">
                         Pelaksana
                       </p>
-                      <p className="text-sm font-medium text-slate-700 mt-0.5">
+                      <p className="text-sm font-medium text-slate-700 dark:text-slate-100 mt-0.5">
                         Seluruh 7 anggota kelompok KKN
                       </p>
                     </div>
@@ -430,7 +430,7 @@ export default function InfoKKNPage() {
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">
               Program Kerja <span className="gradient-text">Individu</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
               Setiap anggota memiliki satu program kerja individu sesuai bidang
               keahlian masing-masing.
             </p>
@@ -447,7 +447,7 @@ export default function InfoKKNPage() {
               return (
                 <div
                   key={i}
-                  className="group bg-white rounded-2xl border border-slate-200/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 overflow-hidden animate-fade-in-up flex flex-col"
+                  className="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 overflow-hidden animate-fade-in-up flex flex-col"
                   style={{
                     animationDelay: `${i * 100}ms`,
                     animationFillMode: "both",
@@ -467,7 +467,7 @@ export default function InfoKKNPage() {
                         </span>
                       </div>
                       <div className="min-w-0 flex-1">
-                        <p className="text-sm font-bold text-slate-800 truncate">
+                        <p className="text-sm font-bold text-slate-800 dark:text-white truncate">
                           {member.nama}
                         </p>
                         <p className="text-[11px] text-slate-400">
@@ -482,17 +482,17 @@ export default function InfoKKNPage() {
                     </div>
 
                     {/* Proker content */}
-                    <h3 className="font-heading text-base sm:text-lg font-bold text-slate-800 mb-2">
+                    <h3 className="font-heading text-base sm:text-lg font-bold text-slate-800 dark:text-white mb-2">
                       {proker.judul}
                     </h3>
 
-                    <p className="text-sm text-slate-500 leading-relaxed text-justify mb-4 flex-1">
+                    <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify mb-4 flex-1">
                       {proker.deskripsi}
                     </p>
 
                     {/* Target + Status */}
                     <div className="mt-auto space-y-3">
-                      <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                      <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-3 border border-slate-100 dark:border-slate-700">
                         <div className="flex items-start gap-2">
                           <svg className="w-4 h-4 text-primary-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
@@ -501,7 +501,7 @@ export default function InfoKKNPage() {
                             <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
                               Target
                             </p>
-                            <p className="text-xs font-medium text-slate-600 mt-0.5">
+                            <p className="text-xs font-medium text-slate-600 dark:text-slate-300 mt-0.5">
                               {proker.target}
                             </p>
                           </div>
@@ -518,7 +518,7 @@ export default function InfoKKNPage() {
                               ? "bg-emerald-100 text-emerald-700 border border-emerald-200"
                               : proker.status === "Sedang Berjalan"
                               ? "bg-blue-100 text-blue-700 border border-blue-200"
-                              : "bg-slate-100 text-slate-600 border border-slate-200"
+                              : "bg-slate-100 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700"
                           }`}
                         >
                           {proker.status}

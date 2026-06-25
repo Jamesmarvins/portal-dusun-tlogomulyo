@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-slate-900 text-slate-300 overflow-hidden">
+    <footer className="relative bg-slate-900 dark:bg-slate-950 text-slate-300 overflow-hidden">
       {/* Decorative top border */}
       <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-primary-500 via-accent-400 to-primary-600" />
 

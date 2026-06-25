@@ -57,11 +57,11 @@ export default function PotensiUMKM() {
   ];
 
   return (
-    <main className="min-h-screen bg-slate-50 selection:bg-primary-200 selection:text-primary-900 pb-20">
+    <main className="min-h-screen bg-slate-50 dark:bg-slate-900 selection:bg-primary-200 selection:text-primary-900 pb-20">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
         {/* Decorative Background */}
-        <div className="absolute inset-0 bg-white" />
+        <div className="absolute inset-0 bg-white dark:bg-slate-800" />
         <div className="absolute top-0 w-full h-[500px] bg-gradient-to-b from-primary-50/50 to-transparent" />
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary-200/40 rounded-full blur-3xl" />
         <div className="absolute top-40 -left-20 w-72 h-72 bg-accent-200/40 rounded-full blur-3xl" />
@@ -82,7 +82,7 @@ export default function PotensiUMKM() {
             Potensi & UMKM <br className="hidden sm:block" />
             <span className="gradient-text">Dusun Tlogomoyo</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-lg text-slate-600 leading-relaxed animate-fade-in-up text-center" style={{ animationDelay: "200ms" }}>
+          <p className="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-300 leading-relaxed animate-fade-in-up text-center" style={{ animationDelay: "200ms" }}>
             Jelajahi kekayaan alam dan kreativitas masyarakat Dusun Tlogomoyo. Dari hasil bumi yang melimpah hingga kerajinan tangan yang memukau.
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function PotensiUMKM() {
           {potensiList.map((item, index) => (
             <div 
               key={item.id}
-              className="group bg-white rounded-3xl p-2 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 border border-slate-100 flex flex-col overflow-hidden animate-fade-in-up"
+              className="group bg-white dark:bg-slate-800 rounded-3xl p-2 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 border border-slate-100 dark:border-slate-700 flex flex-col overflow-hidden animate-fade-in-up"
               style={{ animationDelay: `${(index + 3) * 100}ms` }}
             >
               <div className="relative h-64 sm:h-72 w-full rounded-2xl overflow-hidden mb-6">
@@ -112,7 +112,7 @@ export default function PotensiUMKM() {
                 </h3>
               </div>
               <div className="px-6 pb-8 flex-1">
-                <p className="text-slate-600 leading-relaxed text-justify">
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                   {item.desc}
                 </p>
               </div>

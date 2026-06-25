@@ -21,7 +21,7 @@ export default function HomePage() {
             {/* Left Content */}
             <div className="animate-fade-in-up">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full border border-primary-200 shadow-sm mb-6 sm:mb-8">
+              <div className="inline-flex items-center gap-2 bg-white dark:bg-slate-800/70 backdrop-blur-sm px-4 py-2 rounded-full border border-primary-200 shadow-sm mb-6 sm:mb-8">
                 <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
                 <span className="text-xs sm:text-sm font-semibold text-primary-700 tracking-wide">
                   Desa Candi, Kec. Pringkuku, Kab. Pacitan
@@ -36,7 +36,7 @@ export default function HomePage() {
               </h1>
 
               {/* Description */}
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mb-8 sm:mb-10 text-justify">
+              <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl mb-8 sm:mb-10 text-justify">
                 Kenali lebih dekat Dusun Tlogomoyo sebuah dusun yang kaya
                 akan potensi alam, budaya, dan semangat gotong royong.
                 Temukan informasi lengkap mengenai dusun kami di sini.
@@ -55,7 +55,7 @@ export default function HomePage() {
                 </a>
                 <Link
                   href="/profil-dusun"
-                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-primary-700 font-bold rounded-2xl border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50 shadow-sm hover:shadow-md transition-all duration-300 text-sm sm:text-base"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white dark:bg-slate-800 text-primary-700 font-bold rounded-2xl border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50 shadow-sm hover:shadow-md transition-all duration-300 text-sm sm:text-base"
                 >
                   Profil Dusun
                   <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -75,7 +75,7 @@ export default function HomePage() {
                     <p className="text-xl sm:text-2xl font-extrabold text-primary-700">
                       {stat.value}
                     </p>
-                    <p className="text-[10px] sm:text-xs text-slate-500 font-medium uppercase tracking-wider mt-0.5">
+                    <p className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider mt-0.5">
                       {stat.label}
                     </p>
                   </div>
@@ -90,7 +90,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-400/20 to-accent-400/20 rounded-3xl blur-2xl scale-110" />
 
                 {/* Main card */}
-                <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 border border-primary-100 shadow-2xl">
+                <div className="relative bg-white dark:bg-slate-800/80 backdrop-blur-xl rounded-3xl p-8 border border-primary-100 shadow-2xl">
                   {/* Top decoration */}
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center">
@@ -100,8 +100,8 @@ export default function HomePage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-slate-800">Profil Dusun</p>
-                      <p className="text-xs text-slate-500">Tlogomoyo, Pacitan</p>
+                      <p className="text-sm font-bold text-slate-800 dark:text-white">Profil Dusun</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400">Tlogomoyo, Pacitan</p>
                     </div>
                   </div>
 
@@ -114,7 +114,7 @@ export default function HomePage() {
                     ].map((item, i) => (
                       <div
                         key={i}
-                        className="flex items-center gap-3 bg-slate-50 rounded-xl p-3 border border-slate-100 hover:bg-primary-50/50 transition-colors duration-200"
+                        className="flex items-center gap-3 bg-slate-50 dark:bg-slate-900 rounded-xl p-3 border border-slate-100 dark:border-slate-700 hover:bg-primary-50/50 transition-colors duration-200"
                       >
                         <div className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center shrink-0`}>
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
@@ -122,7 +122,7 @@ export default function HomePage() {
                           </svg>
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="text-sm font-semibold text-slate-700 truncate">{item.name}</p>
+                          <p className="text-sm font-semibold text-slate-700 dark:text-slate-100 truncate">{item.name}</p>
                           <p className="text-xs text-slate-400">{item.detail}</p>
                         </div>
                       </div>
@@ -130,7 +130,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Bottom stat */}
-                  <div className="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
+                  <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex justify-between items-center">
                     <div>
                       <p className="text-xs text-slate-400">Terbuka untuk</p>
                       <p className="text-lg font-extrabold text-primary-700">KKN<span className="text-sm font-normal text-slate-400"> & Kunjungan</span></p>
@@ -149,7 +149,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== TENTANG DUSUN SECTION ===== */}
-      <section id="tentang" className="relative py-16 sm:py-20 lg:py-24 bg-white">
+      <section id="tentang" className="relative py-16 sm:py-20 lg:py-24 bg-white dark:bg-slate-800">
         {/* Section decoration */}
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary-200 to-transparent" />
 
@@ -163,7 +163,7 @@ export default function HomePage() {
               Mengenal{" "}
               <span className="gradient-text">Tlogomoyo</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
               Dusun Tlogomoyo merupakan bagian dari Desa Candi, Kecamatan
               Pringkuku, Kabupaten Pacitan, Jawa Timur. Dusun ini memiliki
               beragam potensi yang menjadikannya unik dan menarik.
@@ -203,7 +203,7 @@ export default function HomePage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up"
+                className="group bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up"
                 style={{ animationDelay: `${i * 150}ms`, animationFillMode: "both" }}
               >
                 <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
@@ -211,10 +211,10 @@ export default function HomePage() {
                     {item.icon}
                   </svg>
                 </div>
-                <h3 className="font-heading text-lg font-bold text-slate-800 mb-2">
+                <h3 className="font-heading text-lg font-bold text-slate-800 dark:text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-slate-500 leading-relaxed text-justify">
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">
                   {item.desc}
                 </p>
               </div>
@@ -262,7 +262,7 @@ export default function HomePage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up"
+                className="group bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up"
                 style={{ animationDelay: `${i * 150}ms`, animationFillMode: "both" }}
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
@@ -270,10 +270,10 @@ export default function HomePage() {
                     {item.icon}
                   </svg>
                 </div>
-                <h3 className="font-heading text-lg font-bold text-slate-800 mb-2">
+                <h3 className="font-heading text-lg font-bold text-slate-800 dark:text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-slate-500 leading-relaxed text-justify">
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">
                   {item.desc}
                 </p>
               </div>
@@ -283,7 +283,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== LOCATION / MAP SECTION ===== */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white">
+      <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-slate-800">
         {/* Section decoration */}
         <div className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-200 to-transparent" />
 
@@ -297,7 +297,7 @@ export default function HomePage() {
               Temukan Kami di{" "}
               <span className="gradient-text">Tlogomoyo</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
               Dusun Tlogomoyo terletak di Desa Candi, Kecamatan Pringkuku,
               Kabupaten Pacitan, Jawa Timur. Mudah diakses dan siap menyambut
               kedatangan Anda.
@@ -307,7 +307,7 @@ export default function HomePage() {
           {/* Map & Info Grid */}
           <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             {/* Map Embed */}
-            <div className="lg:col-span-2 rounded-2xl overflow-hidden border border-slate-200/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-shadow duration-500">
+            <div className="lg:col-span-2 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-shadow duration-500">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2865.362219080696!2d111.0171998!3d-8.2239559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bde642f66d46f%3A0xd988cfd297cf7eff!2sTlogomoyo%2C%20Candi%2C%20Kec.%20Pringkuku%2C%20Kabupaten%20Pacitan%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1718976000000"
                 width="100%"
@@ -322,7 +322,7 @@ export default function HomePage() {
             </div>
 
             {/* Location Info Card */}
-            <div className="bg-gradient-to-br from-slate-50 to-primary-50/30 rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[var(--shadow-card)] flex flex-col justify-between">
+            <div className="bg-gradient-to-br from-slate-50 to-primary-50/30 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-5 shadow-lg">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
@@ -330,10 +330,10 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                   </svg>
                 </div>
-                <h3 className="font-heading text-lg font-bold text-slate-800 mb-3">
+                <h3 className="font-heading text-lg font-bold text-slate-800 dark:text-white mb-3">
                   Alamat Lengkap
                 </h3>
-                <div className="space-y-3 text-sm text-slate-600 leading-relaxed text-justify">
+                <div className="space-y-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                   <div className="flex items-start gap-3">
                     <svg className="w-4 h-4 text-primary-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />

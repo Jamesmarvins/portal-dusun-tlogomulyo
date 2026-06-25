@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* ===== Design System: Portal Informasi Dusun Tlogomoyo ===== */
 
 @theme inline {
@@ -57,6 +59,11 @@
 :root {
   --background: #faf7f2;
   --foreground: #1e293b;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
 }
 
 * {

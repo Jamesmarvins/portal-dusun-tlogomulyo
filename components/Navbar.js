@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "./ThemeToggle";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/", label: "Beranda" },
@@ -33,8 +35,8 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/80 backdrop-blur-xl shadow-lg border-b border-primary-100"
-          : "bg-white/60 backdrop-blur-md"
+          ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-lg border-b border-primary-100 dark:border-slate-800"
+          : "bg-white/60 dark:bg-slate-900/60 backdrop-blur-md"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navigasi utama">
@@ -68,10 +70,10 @@ export default function Navbar() {
               </svg>
             </div>
             <div className="flex flex-col">
-              <span className="font-heading text-base sm:text-lg font-bold text-primary-800 leading-tight tracking-tight">
+              <span className="font-heading text-base sm:text-lg font-bold text-primary-800 dark:text-primary-400 leading-tight tracking-tight">
                 Tlogomoyo
               </span>
-              <span className="text-[10px] sm:text-xs text-slate-500 font-medium tracking-wide uppercase">
+              <span className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium tracking-wide uppercase">
                 Portal Informasi
               </span>
             </div>
@@ -87,8 +89,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`relative px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                     isActive
-                      ? "text-primary-700 bg-primary-50"
-                      : "text-slate-600 hover:text-primary-700 hover:bg-primary-50/50"
+                      ? "text-primary-700 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30"
+                      : "text-slate-600 dark:text-slate-300 hover:text-primary-700 dark:hover:text-primary-400 hover:bg-primary-50/50 dark:hover:bg-slate-800"
                   }`}
                 >
                   {link.label}
@@ -100,10 +102,13 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Mobile Hamburger Button */}
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+
+            {/* Mobile Hamburger Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl text-slate-600 hover:text-primary-700 hover:bg-primary-50 transition-colors duration-200"
+            className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl text-slate-600 dark:text-slate-300 hover:text-primary-700 dark:hover:text-primary-400 hover:bg-primary-50 dark:hover:bg-slate-800 transition-colors duration-200"
             aria-label={isOpen ? "Tutup menu" : "Buka menu"}
             aria-expanded={isOpen}
           >
@@ -125,15 +130,16 @@ export default function Navbar() {
               />
             </div>
           </button>
+          </div>
         </div>
 
         {/* Mobile Menu Overlay */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen ? "max-h-80 opacity-100 pb-4" : "max-h-0 opacity-0"
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-slate-900 ${
+            isOpen ? "max-h-80 opacity-100 pb-4 shadow-xl" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="pt-2 space-y-1 border-t border-primary-100">
+          <div className="pt-2 space-y-1 border-t border-primary-100 dark:border-slate-800">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -142,8 +148,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
                     isActive
-                      ? "text-primary-700 bg-primary-50 border-l-3 border-primary-500"
-                      : "text-slate-600 hover:text-primary-700 hover:bg-primary-50/50"
+                      ? "text-primary-700 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 border-l-3 border-primary-500"
+                      : "text-slate-600 dark:text-slate-300 hover:text-primary-700 dark:hover:text-primary-400 hover:bg-primary-50/50 dark:hover:bg-slate-800"
                   }`}
                 >
                   {link.label}

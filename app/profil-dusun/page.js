@@ -59,7 +59,7 @@ export default function ProfilDusunPage() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:bg-white/15 transition-colors duration-300"
+                className="bg-white bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:bg-white dark:bg-slate-800/15 transition-colors duration-300"
               >
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
@@ -77,7 +77,7 @@ export default function ProfilDusunPage() {
       </section>
 
       {/* ===== GEOGRAFI & TOPOGRAFI ===== */}
-      <section className="py-14 sm:py-18 lg:py-22 bg-white">
+      <section className="py-14 sm:py-18 lg:py-22 bg-white dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Text Content */}
@@ -89,7 +89,7 @@ export default function ProfilDusunPage() {
                 Letak Geografis{" "}
                 <span className="gradient-text">Tlogomoyo</span>
               </h2>
-              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed text-justify">
+              <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                 <p>
                   Dusun Tlogomoyo terletak di <strong>Desa Candi</strong>, Kecamatan Pringkuku,
                   Kabupaten Pacitan, Provinsi Jawa Timur. Desa Candi sendiri berjarak sekitar{" "}
@@ -112,7 +112,7 @@ export default function ProfilDusunPage() {
             {/* Batas Wilayah Card */}
             <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <div className="bg-gradient-to-br from-primary-50 to-earth-50 rounded-2xl p-6 sm:p-8 border border-primary-100 shadow-[var(--shadow-card)]">
-                <h3 className="font-heading text-lg font-bold text-slate-800 mb-5 flex items-center gap-2">
+                <h3 className="font-heading text-lg font-bold text-slate-800 dark:text-white mb-5 flex items-center gap-2">
                   <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
                   </svg>
@@ -127,14 +127,14 @@ export default function ProfilDusunPage() {
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-4 bg-white rounded-xl p-3 border border-slate-100 hover:shadow-md transition-shadow duration-300"
+                      className="flex items-center gap-4 bg-white dark:bg-slate-800 rounded-xl p-3 border border-slate-100 dark:border-slate-700 hover:shadow-md transition-shadow duration-300"
                     >
                       <div className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center font-bold text-lg shrink-0`}>
                         {item.icon}
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">{item.arah}</p>
-                        <p className="text-sm font-semibold text-slate-700">{item.batas}</p>
+                        <p className="text-sm font-semibold text-slate-700 dark:text-slate-100">{item.batas}</p>
                       </div>
                     </div>
                   ))}
@@ -170,7 +170,7 @@ export default function ProfilDusunPage() {
               Kekayaan Alam{" "}
               <span className="gradient-text">Tlogomoyo</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
               Topografi perbukitan yang subur menjadikan wilayah ini kaya akan beragam
               komoditas pertanian dan hasil bumi. Masyarakat Tlogomoyo juga aktif berorganisasi dalam bidang agraris, salah satunya melalui keberadaan kelompok tani (seperti Kelompok Tani Nuju Makmur XII) yang menjadi motor penggerak ketahanan pangan dan ekonomi warga setempat.
             </p>
@@ -203,21 +203,21 @@ export default function ProfilDusunPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className={`${item.bg} rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up`}
+                className={`${item.bg} rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up`}
                 style={{ animationDelay: `${i * 150}ms`, animationFillMode: "both" }}
               >
                 <div className={`inline-flex items-center justify-center px-3 py-1 rounded-lg bg-gradient-to-r ${item.gradient} mb-4`}>
                   <span className="text-xl sm:text-2xl font-extrabold text-white">{item.value}</span>
                 </div>
-                <h3 className="font-heading text-lg font-bold text-slate-800 mb-2">{item.label}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed text-justify">{item.desc}</p>
+                <h3 className="font-heading text-lg font-bold text-slate-800 dark:text-white mb-2">{item.label}</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">{item.desc}</p>
               </div>
             ))}
           </div>
 
           {/* Komoditas Unggulan */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[var(--shadow-card)] animate-fade-in-up">
-            <h3 className="font-heading text-lg sm:text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] animate-fade-in-up">
+            <h3 className="font-heading text-lg sm:text-xl font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2">
               <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-lg flex items-center justify-center">
                 <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 8.25 4.69a7.5 7.5 0 0 1 3.75-1.69z" />
@@ -236,10 +236,10 @@ export default function ProfilDusunPage() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="group bg-slate-50 hover:bg-primary-50 rounded-xl p-4 text-center border border-slate-100 hover:border-primary-200 transition-all duration-300 hover:-translate-y-0.5"
+                  className="group bg-slate-50 dark:bg-slate-900 hover:bg-primary-50 rounded-xl p-4 text-center border border-slate-100 dark:border-slate-700 hover:border-primary-200 transition-all duration-300 hover:-translate-y-0.5"
                 >
                   <span className="text-3xl block mb-2 group-hover:scale-110 transition-transform duration-300">{item.emoji}</span>
-                  <p className="text-sm font-semibold text-slate-700">{item.name}</p>
+                  <p className="text-sm font-semibold text-slate-700 dark:text-slate-100">{item.name}</p>
                   <p className="text-xs text-slate-400 mt-0.5">{item.desc}</p>
                 </div>
               ))}
@@ -249,7 +249,7 @@ export default function ProfilDusunPage() {
       </section>
 
       {/* ===== BUDAYA & TRADISI ===== */}
-      <section className="py-14 sm:py-18 lg:py-22 bg-white">
+      <section className="py-14 sm:py-18 lg:py-22 bg-white dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
@@ -259,7 +259,7 @@ export default function ProfilDusunPage() {
               Kearifan Lokal{" "}
               <span className="gradient-text">yang Terjaga</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
               Masyarakat Tlogomoyo memiliki tradisi dan kesenian yang kaya warisan leluhur
               yang masih hidup dan terus dilestarikan dari generasi ke generasi.
             </p>
@@ -312,7 +312,7 @@ export default function ProfilDusunPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up"
+                className="group bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up"
                 style={{ animationDelay: `${i * 100}ms`, animationFillMode: "both" }}
               >
                 <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
@@ -320,8 +320,8 @@ export default function ProfilDusunPage() {
                     {item.icon}
                   </svg>
                 </div>
-                <h3 className="font-heading text-lg font-bold text-slate-800 mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed text-justify">{item.desc}</p>
+                <h3 className="font-heading text-lg font-bold text-slate-800 dark:text-white mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -339,7 +339,7 @@ export default function ProfilDusunPage() {
               Destinasi Wisata di{" "}
               <span className="gradient-text">Sekitar Dusun</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
               Desa Candi dan sekitarnya menyimpan destinasi wisata alam yang memukau 
               dari pantai berpasir putih hingga sungai di tengah hutan yang sejuk.
             </p>
@@ -347,11 +347,11 @@ export default function ProfilDusunPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {/* Pantai Srau Card */}
-            <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 animate-fade-in-up">
+            <div className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 animate-fade-in-up">
               {/* Header gradient */}
               <div className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 sm:px-8 py-5">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                  <div className="w-10 h-10 bg-white dark:bg-slate-800/20 rounded-xl flex items-center justify-center">
                     <span className="text-2xl">🏖️</span>
                   </div>
                   <div>
@@ -361,7 +361,7 @@ export default function ProfilDusunPage() {
                 </div>
               </div>
               <div className="p-6 sm:p-8">
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-5 text-justify">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-5 text-justify">
                   Pantai Srau merupakan destinasi wisata unggulan Kabupaten Pacitan yang terletak di
                   Desa Candi. Kawasan pantai ini terbagi menjadi <strong>tiga area</strong> yang dipisahkan
                   oleh bukit karang, masing-masing dengan karakteristik unik.
@@ -375,7 +375,7 @@ export default function ProfilDusunPage() {
                   ].map((item, i) => (
                     <div key={i} className="bg-cyan-50/50 rounded-lg p-3 border border-cyan-100">
                       <p className="text-xs text-slate-400 font-medium">{item.label}</p>
-                      <p className="text-sm font-semibold text-slate-700">{item.detail}</p>
+                      <p className="text-sm font-semibold text-slate-700 dark:text-slate-100">{item.detail}</p>
                     </div>
                   ))}
                 </div>
@@ -390,11 +390,11 @@ export default function ProfilDusunPage() {
             </div>
 
             {/* Kali Barong Card */}
-            <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+            <div className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
               {/* Header gradient */}
               <div className="bg-gradient-to-r from-emerald-500 to-teal-600 px-6 sm:px-8 py-5">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                  <div className="w-10 h-10 bg-white dark:bg-slate-800/20 rounded-xl flex items-center justify-center">
                     <span className="text-2xl">🏞️</span>
                   </div>
                   <div>
@@ -404,7 +404,7 @@ export default function ProfilDusunPage() {
                 </div>
               </div>
               <div className="p-6 sm:p-8">
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-5 text-justify">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-5 text-justify">
                   Wisata alam berbasis sungai yang menawarkan kesegaran aliran air jernih di tengah
                   pepohonan rindang dan tebing-tebing alami. Kali Barong juga menjadi rumah bagi
                   kesenian unik <strong>&quot;Ceklukan&quot;</strong> musik alami dari suara air sungai.
@@ -418,7 +418,7 @@ export default function ProfilDusunPage() {
                   ].map((item, i) => (
                     <div key={i} className="bg-emerald-50/50 rounded-lg p-3 border border-emerald-100">
                       <p className="text-xs text-slate-400 font-medium">{item.label}</p>
-                      <p className="text-sm font-semibold text-slate-700">{item.detail}</p>
+                      <p className="text-sm font-semibold text-slate-700 dark:text-slate-100">{item.detail}</p>
                     </div>
                   ))}
                 </div>
@@ -436,13 +436,13 @@ export default function ProfilDusunPage() {
       </section>
 
       {/* ===== MASYARAKAT & MATA PENCAHARIAN ===== */}
-      <section className="py-14 sm:py-18 lg:py-22 bg-white">
+      <section className="py-14 sm:py-18 lg:py-22 bg-white dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left: Info Card */}
             <div className="animate-fade-in-up">
-              <div className="bg-gradient-to-br from-slate-50 to-primary-50/30 rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[var(--shadow-card)]">
-                <h3 className="font-heading text-lg sm:text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+              <div className="bg-gradient-to-br from-slate-50 to-primary-50/30 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)]">
+                <h3 className="font-heading text-lg sm:text-xl font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2">
                   <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -476,8 +476,8 @@ export default function ProfilDusunPage() {
                         </svg>
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-slate-700">{item.title}</p>
-                        <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mt-0.5 text-justify">{item.desc}</p>
+                        <p className="text-sm font-semibold text-slate-700 dark:text-slate-100">{item.title}</p>
+                        <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed mt-0.5 text-justify">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -494,7 +494,7 @@ export default function ProfilDusunPage() {
                 Kehidupan{" "}
                 <span className="gradient-text">Masyarakat</span>
               </h2>
-              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed text-justify">
+              <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                 <p>
                   Masyarakat Dusun Tlogomoyo dan Desa Candi secara umum hidup harmonis
                   dengan alam. Pertanian tetap menjadi tulang punggung ekonomi terutama
@@ -532,14 +532,14 @@ export default function ProfilDusunPage() {
               Struktur{" "}
               <span className="gradient-text">Pemerintahan Dusun</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed text-center">
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
               Pemerintahan Dusun Tlogomoyo berada di bawah naungan Desa Candi. Perangkat dusun
               dipilih secara demokratis untuk melayani dan membangun masyarakat.
             </p>
           </div>
 
           <div className="max-w-3xl mx-auto">
-            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[var(--shadow-card)] animate-fade-in-up">
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] animate-fade-in-up">
               <div className="space-y-5">
                 {[
                   {
@@ -573,11 +573,11 @@ export default function ProfilDusunPage() {
                         {item.icon}
                       </div>
                     </div>
-                    <div className={`flex-1 ${i < 3 ? "pb-5 border-b border-slate-100" : ""}`}>
-                      <h3 className="text-base sm:text-lg font-bold text-slate-800 mb-1.5">
+                    <div className={`flex-1 ${i < 3 ? "pb-5 border-b border-slate-100 dark:border-slate-700" : ""}`}>
+                      <h3 className="text-base sm:text-lg font-bold text-slate-800 dark:text-white mb-1.5">
                         {item.jabatan}
                       </h3>
-                      <p className="text-sm text-slate-500 leading-relaxed text-justify">{item.desc}</p>
+                      <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -614,7 +614,7 @@ export default function ProfilDusunPage() {
             </Link>
             <Link
               href="/"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white font-bold rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 text-sm sm:text-base"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white bg-white/10 text-white font-bold rounded-2xl border border-white/20 hover:bg-white dark:bg-slate-800/20 transition-all duration-300 text-sm sm:text-base"
             >
               Kembali ke Beranda
             </Link>
