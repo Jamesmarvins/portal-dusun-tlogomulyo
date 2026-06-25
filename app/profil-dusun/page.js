@@ -59,7 +59,7 @@ export default function ProfilDusunPage() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className="bg-white bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:bg-white dark:bg-slate-800/15 transition-colors duration-300"
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:bg-white/20 dark:bg-slate-800/15 transition-colors duration-300"
               >
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
@@ -614,7 +614,7 @@ export default function ProfilDusunPage() {
             </Link>
             <Link
               href="/"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white bg-white/10 text-white font-bold rounded-2xl border border-white/20 hover:bg-white dark:bg-slate-800/20 transition-all duration-300 text-sm sm:text-base"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white font-bold rounded-2xl border border-white/20 hover:bg-white hover:text-slate-900 dark:bg-slate-800/20 transition-all duration-300 text-sm sm:text-base"
             >
               Kembali ke Beranda
             </Link>
