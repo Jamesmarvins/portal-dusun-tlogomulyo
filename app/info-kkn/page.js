@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 /* ============================
-   DATA — Ganti dengan data asli
+   DATA Ganti dengan data asli
    ============================ */
 
 const kelompokData = {
@@ -31,7 +31,7 @@ const prokerKelompok = {
   status: "Selesai",
 };
 
-/* 7 anggota — masing-masing 1 proker individu */
+/* 7 anggota masing-masing 1 proker individu */
 const anggota = [
   {
     nama: "Giovanni",
@@ -352,7 +352,7 @@ export default function InfoKKNPage() {
             </p>
           </div>
 
-          {/* Single Proker Kelompok — Featured Card */}
+          {/* Single Proker Kelompok Featured Card */}
           <div className="bg-white rounded-2xl border border-slate-200/80 shadow-[var(--shadow-card)] overflow-hidden animate-fade-in-up">
             <div className="bg-gradient-to-r from-emerald-500 to-emerald-700 px-6 sm:px-8 py-5">
               <div className="flex items-center gap-3">

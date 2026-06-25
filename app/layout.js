@@ -15,7 +15,7 @@ const outfit = Outfit({
   display: "swap",
 });
 
-/* Viewport — responsivitas mobile */
+/* Viewport responsivitas mobile */
 export const viewport = {
   width: "device-width",
   initialScale: 1,
@@ -24,7 +24,7 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "Portal Informasi Dusun Tlogomoyo — Desa Candi, Pacitan",
+  title: "Portal Informasi Dusun Tlogomoyo Desa Candi, Pacitan",
   description:
     "Portal informasi resmi Dusun Tlogomoyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan, Jawa Timur. Kenali potensi dusun, informasi KKN, dan hubungi perangkat desa.",
   keywords: [
@@ -39,7 +39,7 @@ export const metadata = {
   openGraph: {
     title: "Portal Informasi Dusun Tlogomoyo",
     description:
-      "Portal informasi resmi Dusun Tlogomoyo — kenali potensi dusun dan informasi penting lainnya.",
+      "Portal informasi resmi Dusun Tlogomoyo kenali potensi dusun dan informasi penting lainnya.",
     type: "website",
     locale: "id_ID",
   },

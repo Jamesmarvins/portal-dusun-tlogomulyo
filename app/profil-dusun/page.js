@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Profil Dusun Tlogomoyo — Geografi, Budaya & Potensi Desa",
+  title: "Profil Dusun Tlogomoyo Geografi, Budaya & Potensi Desa",
   description:
     "Informasi lengkap tentang Dusun Tlogomoyo, Desa Candi, Kecamatan Pringkuku, Kabupaten Pacitan. Geografi, demografi, potensi pertanian, budaya & tradisi, serta destinasi wisata sekitar.",
 };
@@ -43,7 +43,7 @@ export default function ProfilDusunPage() {
               <span className="text-accent-400">Tlogomoyo</span>
             </h1>
             <p className="text-base sm:text-lg text-primary-100 max-w-2xl leading-relaxed">
-              Mengenal lebih dekat Dusun Tlogomoyo — geografi, sejarah,
+              Mengenal lebih dekat Dusun Tlogomoyo geografi, sejarah,
               kekayaan budaya, potensi pertanian, serta destinasi wisata
               di sekitarnya. Sebuah dusun yang asri di jantung Pacitan selatan.
             </p>
@@ -260,7 +260,7 @@ export default function ProfilDusunPage() {
               <span className="gradient-text">yang Terjaga</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
-              Masyarakat Tlogomoyo memiliki tradisi dan kesenian yang kaya — warisan leluhur
+              Masyarakat Tlogomoyo memiliki tradisi dan kesenian yang kaya warisan leluhur
               yang masih hidup dan terus dilestarikan dari generasi ke generasi.
             </p>
           </div>
@@ -269,7 +269,7 @@ export default function ProfilDusunPage() {
             {[
               {
                 title: "Tradisi Ammos",
-                desc: "Tradisi khas Kecamatan Pringkuku yang menjadi cikal bakal kesenian Kothekan Lesung — seni memukul alat penumbuk padi tradisional secara bersamaan. Tradisi ini lahir dari kehidupan agraris dan melambangkan semangat kegotongroyongan masyarakat.",
+                desc: "Tradisi khas Kecamatan Pringkuku yang menjadi cikal bakal kesenian Kothekan Lesung seni memukul alat penumbuk padi tradisional secara bersamaan. Tradisi ini lahir dari kehidupan agraris dan melambangkan semangat kegotongroyongan masyarakat.",
                 gradient: "from-amber-100 to-amber-200",
                 iconColor: "text-amber-700",
                 icon: <path strokeLinecap="round" strokeLinejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z" />,
@@ -297,7 +297,7 @@ export default function ProfilDusunPage() {
               },
               {
                 title: "Musik Air Ceklukan",
-                desc: "Kesenian unik dari Kali Barong (di wilayah Desa Candi) — musik alami yang tercipta dari alunan suara air sungai yang dimainkan oleh 6-7 orang menggunakan teknik tertentu. Seni ini dihidupkan kembali sebagai upaya pelestarian budaya lokal.",
+                desc: "Kesenian unik dari Kali Barong (di wilayah Desa Candi) musik alami yang tercipta dari alunan suara air sungai yang dimainkan oleh 6-7 orang menggunakan teknik tertentu. Seni ini dihidupkan kembali sebagai upaya pelestarian budaya lokal.",
                 gradient: "from-cyan-100 to-cyan-200",
                 iconColor: "text-cyan-700",
                 icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />,
@@ -340,7 +340,7 @@ export default function ProfilDusunPage() {
               <span className="gradient-text">Sekitar Dusun</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
-              Desa Candi dan sekitarnya menyimpan destinasi wisata alam yang memukau —
+              Desa Candi dan sekitarnya menyimpan destinasi wisata alam yang memukau 
               dari pantai berpasir putih hingga sungai di tengah hutan yang sejuk.
             </p>
           </div>
@@ -356,7 +356,7 @@ export default function ProfilDusunPage() {
                   </div>
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-white">Pantai Srau</h3>
-                    <p className="text-xs text-cyan-100">&quot;Permata Putih&quot; Pacitan — Desa Candi</p>
+                    <p className="text-xs text-cyan-100">&quot;Permata Putih&quot; Pacitan Desa Candi</p>
                   </div>
                 </div>
               </div>
@@ -399,7 +399,7 @@ export default function ProfilDusunPage() {
                   </div>
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-white">Kali Barong</h3>
-                    <p className="text-xs text-emerald-100">Wisata Sungai — Desa Candi</p>
+                    <p className="text-xs text-emerald-100">Wisata Sungai Desa Candi</p>
                   </div>
                 </div>
               </div>
@@ -407,7 +407,7 @@ export default function ProfilDusunPage() {
                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-5">
                   Wisata alam berbasis sungai yang menawarkan kesegaran aliran air jernih di tengah
                   pepohonan rindang dan tebing-tebing alami. Kali Barong juga menjadi rumah bagi
-                  kesenian unik <strong>&quot;Ceklukan&quot;</strong> — musik alami dari suara air sungai.
+                  kesenian unik <strong>&quot;Ceklukan&quot;</strong> musik alami dari suara air sungai.
                 </p>
                 <div className="grid grid-cols-2 gap-3 mb-5">
                   {[
@@ -497,12 +497,12 @@ export default function ProfilDusunPage() {
               <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed">
                 <p>
                   Masyarakat Dusun Tlogomoyo dan Desa Candi secara umum hidup harmonis
-                  dengan alam. Pertanian tetap menjadi tulang punggung ekonomi — terutama
+                  dengan alam. Pertanian tetap menjadi tulang punggung ekonomi terutama
                   budidaya singkong, empon-empon, kelapa, serta tanaman hortikultura.
                 </p>
                 <p>
                   Seiring berkembangnya sektor pariwisata di kawasan Pantai Srau, banyak
-                  warga yang kini juga berperan sebagai pelaku usaha wisata — dari
+                  warga yang kini juga berperan sebagai pelaku usaha wisata dari
                   pedagang, penyedia jasa penginapan, hingga pemandu wisata lokal.
                   Transformasi ini membawa dampak positif bagi peningkatan kesejahteraan
                   masyarakat.

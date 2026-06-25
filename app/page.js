@@ -37,7 +37,7 @@ export default function HomePage() {
 
               {/* Description */}
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mb-8 sm:mb-10">
-                Kenali lebih dekat Dusun Tlogomoyo — sebuah dusun yang kaya
+                Kenali lebih dekat Dusun Tlogomoyo sebuah dusun yang kaya
                 akan potensi alam, budaya, dan semangat gotong royong.
                 Temukan informasi lengkap mengenai dusun kami di sini.
               </p>
@@ -243,7 +243,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 ),
                 title: "Lokasi Strategis",
-                desc: "Terletak di Kabupaten Pacitan, Jawa Timur — daerah yang dikenal dengan keindahan alamnya. Akses menuju dusun dapat ditempuh dengan mudah dari pusat kota.",
+                desc: "Terletak di Kabupaten Pacitan, Jawa Timur daerah yang dikenal dengan keindahan alamnya. Akses menuju dusun dapat ditempuh dengan mudah dari pusat kota.",
               },
               {
                 icon: (

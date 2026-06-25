@@ -11,7 +11,7 @@ Dibangun dengan ❤️ oleh Tim KKN untuk Dusun Tlogomoyo.
 
 ## 📖 Tentang Proyek
 
-Portal digital ini menyajikan informasi lengkap tentang **Dusun Tlogomoyo** — sebuah dusun yang kaya akan potensi alam, budaya, dan semangat gotong royong di Kabupaten Pacitan, Jawa Timur. Website ini dibuat sebagai upaya digitalisasi informasi desa dan menjadi jembatan komunikasi antara masyarakat dusun dengan dunia luar.
+Portal digital ini menyajikan informasi lengkap tentang **Dusun Tlogomoyo** sebuah dusun yang kaya akan potensi alam, budaya, dan semangat gotong royong di Kabupaten Pacitan, Jawa Timur. Website ini dibuat sebagai upaya digitalisasi informasi desa dan menjadi jembatan komunikasi antara masyarakat dusun dengan dunia luar.
 
 ### ✨ Fitur Utama
 
@@ -23,11 +23,11 @@ Portal digital ini menyajikan informasi lengkap tentang **Dusun Tlogomoyo** — 
 
 ### 🎨 Desain
 
-- **Modern & Responsif** — Tampilan optimal di desktop, tablet, dan mobile
-- **Glassmorphism** — Efek kaca transparan pada komponen UI
-- **Micro-animations** — Animasi halus untuk pengalaman pengguna yang premium
-- **Earthy Green Palette** — Skema warna hijau alami yang mencerminkan keasrian dusun
-- **Typography** — Menggunakan font [Inter](https://fonts.google.com/specimen/Inter) dan [Outfit](https://fonts.google.com/specimen/Outfit)
+- **Modern & Responsif** Tampilan optimal di desktop, tablet, dan mobile
+- **Glassmorphism** Efek kaca transparan pada komponen UI
+- **Micro-animations** Animasi halus untuk pengalaman pengguna yang premium
+- **Earthy Green Palette** Skema warna hijau alami yang mencerminkan keasrian dusun
+- **Typography** Menggunakan font [Inter](https://fonts.google.com/specimen/Inter) dan [Outfit](https://fonts.google.com/specimen/Outfit)
 
 ---
 
@@ -38,7 +38,7 @@ Portal digital ini menyajikan informasi lengkap tentang **Dusun Tlogomoyo** — 
 | [Next.js](https://nextjs.org/) | 16.2 | Framework React dengan App Router |
 | [React](https://react.dev/) | 19 | Library UI |
 | [Tailwind CSS](https://tailwindcss.com/) | 4 | Utility-first CSS framework |
-| [Vercel](https://vercel.com/) | — | Platform hosting & deployment |
+| [Vercel](https://vercel.com/) | | Platform hosting & deployment |
 
 ---
 
@@ -114,10 +114,10 @@ npm start
 
 ### Potensi Unggulan
 
-- 🌿 **Pertanian** — Singkong, empon-empon organik, kelapa, buah-buahan
-- 🏖️ **Wisata** — Pantai Srau, Kali Barong
-- 🎵 **Budaya** — Tradisi Ammos, Karawitan & Tayub, Musik Air Ceklukan
-- 🤝 **Sosial** — Gotong royong, Ritual Baritan, Istigosah
+- 🌿 **Pertanian** Singkong, empon-empon organik, kelapa, buah-buahan
+- 🏖️ **Wisata** Pantai Srau, Kali Barong
+- 🎵 **Budaya** Tradisi Ammos, Karawitan & Tayub, Musik Air Ceklukan
+- 🤝 **Sosial** Gotong royong, Ritual Baritan, Istigosah
 
 ---
 
@@ -129,7 +129,7 @@ Proyek ini dibuat untuk kepentingan informasi publik Dusun Tlogomoyo dan program
 
 <div align="center">
 
-**🏡 Dusun Tlogomoyo — Desa Candi, Pringkuku, Pacitan**
+**🏡 Dusun Tlogomoyo Desa Candi, Pringkuku, Pacitan**
 
 *Dibangun dengan semangat gotong royong untuk digitalisasi desa* 🌾
 
