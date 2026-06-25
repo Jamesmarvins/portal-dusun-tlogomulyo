@@ -8,9 +8,15 @@ export default function InteractiveMap() {
   const [activeSpot, setActiveSpot] = useState("srau");
 
   const mapEmbedUrls = {
-    srau: "https://maps.google.com/maps?q=Pantai+Srau+Desa+Candi+Pacitan&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    srau: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15380.6!2d110.9948616!3d-8.2502683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bddfc642a1a13%3A0xe03ac9d9c526a05a!2sPantai%20Srau!5e0!3m2!1sen!2sid!4v1718976000000",
     balai: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2865.362219080696!2d111.0171998!3d-8.2239559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bde642f66d46f%3A0xd988cfd297cf7eff!2sTlogomoyo%2C%20Candi%2C%20Kec.%20Pringkuku%2C%20Kabupaten%20Pacitan%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1718976000000",
-    barong: "https://maps.google.com/maps?q=Sungai+Barong+Candi+Pacitan&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    barong: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.16!2d111.0346026!3d-8.2109038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bdef977636e6d%3A0x6d8fc8787536e6dc!2sKali%20Barong%20Pacitan!5e0!3m2!1sen!2sid!4v1718976000000",
+  };
+
+  const shareUrls = {
+    srau: "https://maps.app.goo.gl/VxGR2WLb7jfGUdc87",
+    barong: "https://maps.app.goo.gl/BsSocKHXLFehp7Xk7",
+    balai: "https://maps.google.com/?q=Balai+Dusun+Tlogomoyo+Candi+Pacitan",
   };
 
   const spotInfo = t.map.locations[activeSpot];
@@ -77,7 +83,7 @@ export default function InteractiveMap() {
                 </code>
               </div>
               <a
-                href={`https://maps.google.com/?q=${encodeURIComponent(spotInfo.name)}`}
+                href={shareUrls[activeSpot]}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 bg-slate-900 hover:bg-primary-700 dark:bg-white dark:text-slate-900 dark:hover:bg-primary-400 text-white font-bold rounded-xl transition-colors duration-300 text-sm shadow-md"
