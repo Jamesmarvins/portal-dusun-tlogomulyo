@@ -172,7 +172,7 @@ export default function ProfilDusunPage() {
             </h2>
             <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
               Topografi perbukitan yang subur menjadikan wilayah ini kaya akan beragam
-              komoditas pertanian dan hasil bumi yang menjadi tulang punggung ekonomi masyarakat.
+              komoditas pertanian dan hasil bumi. Masyarakat Tlogomoyo juga aktif berorganisasi dalam bidang agraris, salah satunya melalui keberadaan kelompok tani (seperti Kelompok Tani Nuju Makmur XII) yang menjadi motor penggerak ketahanan pangan dan ekonomi warga setempat.
             </p>
           </div>
 
