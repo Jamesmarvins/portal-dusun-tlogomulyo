@@ -11,7 +11,7 @@ export const daftarBerita = [
       
       Singkong hasil panen ini tidak hanya dijual mentah ke pasar, tetapi sebagian besar juga diolah oleh ibu-ibu PKK menjadi berbagai produk UMKM unggulan seperti keripik singkong, tiwul instan, dan getuk. Diharapkan dengan melimpahnya hasil panen ini, kesejahteraan warga Dusun Tlogomoyo akan semakin meningkat.
     `,
-    image: "https://images.unsplash.com/photo-1592982537447-6f2c6a0c5f21?q=80&w=800&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: "pelatihan-digital-marketing-umkm",
@@ -25,7 +25,7 @@ export const daftarBerita = [
       
       Materi yang diberikan mencakup cara mengambil foto produk yang menarik, membuat deskripsi jualan yang persuasif, hingga mendaftarkan toko di berbagai aplikasi belanja online. "Kami berharap dengan adanya pelatihan ini, produk asli Tlogomoyo bisa menjangkau pasar yang lebih luas, tidak hanya di Pacitan saja," ungkap salah satu mahasiswa perwakilan KKN.
     `,
-    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: "gotong-royong-bersihkan-saluran-air",
@@ -39,6 +39,6 @@ export const daftarBerita = [
       
       Selain membersihkan saluran air, warga juga menanam beberapa bibit pohon di area yang rawan erosi. Semangat kebersamaan dan kepedulian terhadap lingkungan ini merupakan salah satu nilai kearifan lokal yang terus dijaga kelestariannya di Dusun Tlogomoyo.
     `,
-    image: "https://images.unsplash.com/photo-1594705578765-b771e89f81fc?q=80&w=800&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop"
   }
 ];
