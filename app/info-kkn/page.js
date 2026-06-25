@@ -24,10 +24,10 @@ const kelompokData = {
 
 /* 1 Program Kerja Kelompok */
 const prokerKelompok = {
-  judul: "Kerja Bakti dan Bersih Desa",
+  judul: "KREASI Tlogo Moyo (Kreativitas Ekonomi & Akselerasi Digital)",
   deskripsi:
-    "Kegiatan gotong royong membersihkan lingkungan dusun, termasuk pembersihan jalan, selokan, dan fasilitas umum bersama warga masyarakat. Program ini bertujuan mempererat silaturahmi antara mahasiswa KKN dengan warga serta mewujudkan lingkungan dusun yang bersih, sehat, dan nyaman.",
-  target: "Seluruh area dusun bersih dan terawat",
+    "Program edukasi dan pendampingan UMKM yang mencakup digitalisasi pendaftaran toko online, penyusunan nilai gizi produk, perancangan desain kemasan melalui Canva, serta edukasi pembukuan.",
+  target: "UMKM dusun terdigitalisasi dan memiliki pembukuan yang baik",
   status: "Selesai",
 };
 
@@ -39,10 +39,10 @@ const anggota = [
     prodi: "Kedokteran",
     jabatan: "Ketua",
     prokerIndividu: {
-      judul: "Sosialisasi Pertanian Organik",
+      judul: "SATRIA (Skrining Aktif Risiko Gula, Kolesterol, & Asam Urat)",
       deskripsi:
-        "Memberikan penyuluhan mengenai teknik pertanian organik, pembuatan pupuk kompos, dan pestisida alami kepada petani di Dusun Tlogomoyo.",
-      target: "20 petani mengikuti sosialisasi",
+        "Pemeriksaan kesehatan gratis yang meliputi cek gula darah, asam urat, dan kolesterol bagi warga Dusun Tlogo Moyo.",
+      target: ">80% sasaran mengikuti skrining",
       status: "Selesai",
     },
   },
@@ -52,10 +52,10 @@ const anggota = [
     prodi: "PBI",
     jabatan: "Sekre",
     prokerIndividu: {
-      judul: "Bimbingan Belajar Anak SD",
+      judul: "English Fun for Kids",
       deskripsi:
-        "Menyelenggarakan program bimbingan belajar rutin bagi anak-anak usia sekolah dasar di Dusun Tlogomoyo dengan fokus pada literasi membaca dan menulis.",
-      target: "15 anak SD mengikuti bimbel 3x seminggu",
+        "Pelatihan Bahasa Inggris Dasar yang interaktif dan menyenangkan bagi Anak-Anak SD Dusun Tlogo Moyo.",
+      target: "Anak mampu menggunakan kosakata dasar Bahasa Inggris",
       status: "Selesai",
     },
   },
@@ -65,10 +65,10 @@ const anggota = [
     prodi: "Manajemen",
     jabatan: "Bendahara",
     prokerIndividu: {
-      judul: "Sosialisasi Literasi Keuangan",
+      judul: "Pelatihan Kewirausahaan & Kreativitas Anak SD",
       deskripsi:
-        "Memberikan edukasi mengenai pengelolaan keuangan rumah tangga, pentingnya menabung, dan perencanaan keuangan sederhana kepada ibu-ibu PKK.",
-      target: "20 peserta ibu-ibu PKK",
+        "Memberikan pelatihan kewirausahaan dan kreativitas melalui praktik langsung membuat kreasi aksesori manik-manik untuk anak-anak SD.",
+      target: "Terciptanya aksesori kreasi mandiri oleh peserta",
       status: "Selesai",
     },
   },
@@ -78,10 +78,10 @@ const anggota = [
     prodi: "Manajemen",
     jabatan: "Humas",
     prokerIndividu: {
-      judul: "Posyandu dan Cek Kesehatan Gratis",
+      judul: "Edukasi Literasi Keuangan Anak",
       deskripsi:
-        "Mengadakan kegiatan posyandu dengan pemeriksaan tekanan darah, gula darah, dan tinggi badan bagi warga lansia dan balita di Dusun Tlogomoyo.",
-      target: "30 warga mengikuti cek kesehatan",
+        "Sosialisasi pentingnya menabung sebagai langkah awal literasi keuangan anak, dibarengi dengan pembagian celengan target.",
+      target: "Minimal 7 anak mencapai target menabung",
       status: "Selesai",
     },
   },
@@ -91,10 +91,10 @@ const anggota = [
     prodi: "Arsitek",
     jabatan: "PDD",
     prokerIndividu: {
-      judul: "Pelatihan Kerajinan Tangan",
+      judul: "Edukasi Desain dengan Canva",
       deskripsi:
-        "Mengadakan pelatihan membuat kerajinan tangan dari bahan daur ulang bagi ibu-ibu dan remaja dusun sebagai peluang usaha kreatif.",
-      target: "15 peserta menghasilkan minimal 2 produk",
+        "Mengajarkan aplikasi Canva kepada masyarakat agar dapat membuat materi promosi seperti poster dan banner secara mandiri.",
+      target: "Warga mampu mendesain materi promosi mandiri",
       status: "Selesai",
     },
   },
@@ -106,7 +106,7 @@ const anggota = [
     prokerIndividu: {
       judul: "Pembuatan Website Portal Informasi Desa",
       deskripsi:
-        "Merancang dan mengembangkan website portal informasi untuk Dusun Tlogomoyo sebagai media digitalisasi profil desa, potensi alam, dan informasi publik.",
+        "Merancang dan mengembangkan website portal informasi untuk Dusun Tlogomulyo sebagai media digitalisasi profil desa, potensi alam, dan informasi publik.",
       target: "1 website responsif aktif dan terdaftar domain",
       status: "Selesai",
     },
@@ -117,10 +117,10 @@ const anggota = [
     prodi: "Informatika",
     jabatan: "Perlengkapan",
     prokerIndividu: {
-      judul: "Pembuatan Papan Nama Jalan Dusun",
+      judul: "Operasi Data Cepat (ODC) Menggunakan Microsoft Excel",
       deskripsi:
-        "Merancang dan memasang papan nama jalan dan penunjuk arah di titik-titik strategis Dusun Tlogomoyo untuk memudahkan navigasi.",
-      target: "8 papan nama terpasang",
+        "Pelatihan penggunaan rumus dasar Excel untuk mengolah data keuangan dan bisnis bagi peserta dan masyarakat dusun.",
+      target: "Peserta mampu menggunakan rumus dasar Excel",
       status: "Selesai",
     },
   },
