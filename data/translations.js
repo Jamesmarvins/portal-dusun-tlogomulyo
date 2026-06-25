@@ -10,7 +10,7 @@ export const translations = {
     },
     // Homepage Hero
     hero: {
-      badge: "KKN Kelompok 12 UKDW",
+      badge: "KKN Kelompok 28 UKDW",
       welcome: "Selamat Datang di",
       portalTitle: "Portal Informasi Resmi",
       hamletName: "Dusun Tlogomoyo",
@@ -91,7 +91,7 @@ export const translations = {
     },
     // Homepage Hero
     hero: {
-      badge: "KKN Group 12 UKDW",
+      badge: "KKN Group 28 UKDW",
       welcome: "Welcome to",
       portalTitle: "Official Information Portal",
       hamletName: "Tlogomoyo Hamlet",

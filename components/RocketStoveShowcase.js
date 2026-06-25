@@ -16,7 +16,7 @@ export default function RocketStoveShowcase() {
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/20 border border-orange-500/40 text-orange-400 text-xs sm:text-sm font-bold tracking-wide mb-4">
             <span>🔥</span>
-            <span>Inovasi Lingkungan KKN Kelompok 12</span>
+            <span>Inovasi Lingkungan KKN Kelompok 28</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold font-heading mb-4 tracking-tight">
             Tungku Sampah <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-emerald-400">Rocket Stove</span> Minim Asap

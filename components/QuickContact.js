@@ -55,7 +55,7 @@ export default function QuickContact() {
             >
               <span className="text-base">🎓</span>
               <div className="min-w-0">
-                <p className="font-bold text-white group-hover:text-white">Tim KKN Kelompok 12</p>
+                <p className="font-bold text-white group-hover:text-white">Tim KKN Kelompok 28</p>
                 <p className="text-[10px] text-slate-400 group-hover:text-blue-100">Info proker & kerjasama</p>
               </div>
             </button>

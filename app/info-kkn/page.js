@@ -7,7 +7,7 @@ import { useState } from "react";
    ============================ */
 
 const kelompokData = {
-  nama: "KKN Kelompok 12",
+  nama: "KKN Kelompok 28",
   universitas: "Universitas Kristen Duta Wacana",
   fakultas: "Lintas Fakultas",
   periode: "24 Juni - 23 Juli 2026",

@@ -5,11 +5,11 @@ export const daftarBerita = [
     date: "20 Juni 2026",
     excerpt: "Menjawab permasalahan kebiasaan membakar sampah terbuka di pekarangan rumah warga, mahasiswa KKN memperkenalkan tungku pembakar sampah bermetode Rocket Stove minim asap.",
     content: `
-      Merespons kebiasaan masyarakat Dusun Tlogomoyo yang rata-rata membakar sampah rumah tangga secara terbuka di pekarangan rumah, kelompok mahasiswa Kuliah Kerja Nyata (KKN) Kelompok 12 meluncurkan inovasi tepat guna berupa tungku pembakar sampah ramah lingkungan bermetode *Rocket Stove*.
+      Merespons kebiasaan masyarakat Dusun Tlogomoyo yang rata-rata membakar sampah rumah tangga secara terbuka di pekarangan rumah, kelompok mahasiswa Kuliah Kerja Nyata (KKN) Kelompok 28 meluncurkan inovasi tepat guna berupa tungku pembakar sampah ramah lingkungan bermetode *Rocket Stove*.
       
       Kebiasaan membakar sampah terbuka selama ini sering kali menimbulkan kepulan asap pekat dan uap berbahaya yang dapat mengganggu pernapasan serta merusak keasrian udara pedesaan. Melalui inovasi *Rocket Stove*, pembakaran dirancang menggunakan prinsip sirkulasi udara ganda (*secondary combustion*) pada ruang bakar vertikal bersuhu tinggi.
       
-      "Dengan suhu pembakaran yang jauh lebih panas dan suplai oksigen yang terisolasi sempurna, sampah terbakar lebih tuntas sehingga kuantitas asap atau uap yang terbuang ke udara berkurang drastis hingga 80%," jelas perwakilan KKN Kelompok 12 saat sesi demonstrasi di Balai Dusun. Warga menyambut sangat antusias inovasi sederhana namun berdampak besar bagi kelestarian lingkungan Dusun Tlogomoyo ini.
+      "Dengan suhu pembakaran yang jauh lebih panas dan suplai oksigen yang terisolasi sempurna, sampah terbakar lebih tuntas sehingga kuantitas asap atau uap yang terbuang ke udara berkurang drastis hingga 80%," jelas perwakilan KKN Kelompok 28 saat sesi demonstrasi di Balai Dusun. Warga menyambut sangat antusias inovasi sederhana namun berdampak besar bagi kelestarian lingkungan Dusun Tlogomoyo ini.
     `,
     image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop"
   },
