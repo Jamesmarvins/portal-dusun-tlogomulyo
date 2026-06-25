@@ -213,7 +213,7 @@ export default function InfoKKNPage() {
       </section>
 
       {/* ===== SECTION 1: PROFIL KELOMPOK ===== */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-earth-50">
+      <section className="py-12 sm:py-16 lg:py-20 bg-earth-50 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
@@ -421,7 +421,7 @@ export default function InfoKKNPage() {
       </section>
 
       {/* ===== SECTION 3: PROGRAM KERJA INDIVIDU (7 proker) ===== */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-earth-50 hero-pattern">
+      <section className="py-12 sm:py-16 lg:py-20 bg-earth-50 dark:bg-slate-900 hero-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
@@ -518,7 +518,7 @@ export default function InfoKKNPage() {
                               ? "bg-emerald-100 text-emerald-700 border border-emerald-200"
                               : proker.status === "Sedang Berjalan"
                               ? "bg-blue-100 text-blue-700 border border-blue-200"
-                              : "bg-slate-100 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700"
+                              : "bg-slate-100 text-slate-600 dark:text-slate-300 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
                           }`}
                         >
                           {proker.status}

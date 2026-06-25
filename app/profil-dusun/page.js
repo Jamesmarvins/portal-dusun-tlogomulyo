@@ -160,7 +160,7 @@ export default function ProfilDusunPage() {
       </section>
 
       {/* ===== POTENSI PERTANIAN & PENGGUNAAN LAHAN ===== */}
-      <section className="py-14 sm:py-18 lg:py-22 bg-earth-50 hero-pattern">
+      <section className="py-14 sm:py-18 lg:py-22 bg-earth-50 dark:bg-slate-900 hero-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
@@ -329,7 +329,7 @@ export default function ProfilDusunPage() {
       </section>
 
       {/* ===== WISATA SEKITAR ===== */}
-      <section className="py-14 sm:py-18 lg:py-22 bg-earth-50 hero-pattern">
+      <section className="py-14 sm:py-18 lg:py-22 bg-earth-50 dark:bg-slate-900 hero-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
@@ -522,7 +522,7 @@ export default function ProfilDusunPage() {
       </section>
 
       {/* ===== PEMERINTAHAN DUSUN ===== */}
-      <section className="py-14 sm:py-18 lg:py-22 bg-earth-50 hero-pattern">
+      <section className="py-14 sm:py-18 lg:py-22 bg-earth-50 dark:bg-slate-900 hero-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
