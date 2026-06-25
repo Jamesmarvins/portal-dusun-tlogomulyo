@@ -486,24 +486,9 @@ export default function InfoKKNPage() {
                       {proker.judul}
                     </h3>
 
-                    <p
-                      className={`text-sm text-slate-500 leading-relaxed mb-4 flex-1 ${
-                        isExpanded ? "" : "line-clamp-3"
-                      }`}
-                    >
+                    <p className="text-sm text-slate-500 leading-relaxed text-justify mb-4 flex-1">
                       {proker.deskripsi}
                     </p>
-
-                    {proker.deskripsi.length > 120 && (
-                      <button
-                        onClick={() =>
-                          setExpandedCard(isExpanded ? null : i)
-                        }
-                        className="text-xs font-semibold text-primary-600 hover:text-primary-700 transition-colors mb-4 self-start"
-                      >
-                        {isExpanded ? "Tutup ▲" : "Selengkapnya ▼"}
-                      </button>
-                    )}
 
                     {/* Target + Status */}
                     <div className="mt-auto space-y-3">
