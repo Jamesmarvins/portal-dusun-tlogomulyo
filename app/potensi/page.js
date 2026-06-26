@@ -16,7 +16,7 @@ export default function PotensiUMKM() {
         </svg>
       ),
       color: "from-amber-400 to-orange-500",
-      image: "/images/potensi.png"
+      image: "/images/pertanian.jpg"
     },
     {
       id: "makanan",
@@ -28,7 +28,7 @@ export default function PotensiUMKM() {
         </svg>
       ),
       color: "from-red-400 to-rose-600",
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Tapioca_chips_in_Jakarta.jpg/800px-Tapioca_chips_in_Jakarta.jpg"
+      image: "/images/makanan.jpg"
     },
     {
       id: "kerajinan",
@@ -52,7 +52,7 @@ export default function PotensiUMKM() {
         </svg>
       ),
       color: "from-emerald-400 to-teal-600",
-      image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=800&q=80"
+      image: "/images/peternakan.jpg"
     }
   ];
 
