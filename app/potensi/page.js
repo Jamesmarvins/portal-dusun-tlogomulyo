@@ -16,7 +16,7 @@ export default function PotensiUMKM() {
         </svg>
       ),
       color: "from-amber-400 to-orange-500",
-      image: "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?q=80&w=800&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "makanan",
@@ -28,7 +28,7 @@ export default function PotensiUMKM() {
         </svg>
       ),
       color: "from-red-400 to-rose-600",
-      image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?q=80&w=800&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "kerajinan",
@@ -40,7 +40,7 @@ export default function PotensiUMKM() {
         </svg>
       ),
       color: "from-blue-400 to-indigo-600",
-      image: "https://images.unsplash.com/photo-1590736969955-71cc94901144?q=80&w=800&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "peternakan",
@@ -52,7 +52,7 @@ export default function PotensiUMKM() {
         </svg>
       ),
       color: "from-emerald-400 to-teal-600",
-      image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=800&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=800&q=80"
     }
   ];
 
