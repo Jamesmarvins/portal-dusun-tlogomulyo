@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useLanguage } from "@/components/LanguageProvider";
 import WeatherWidget from "@/components/WeatherWidget";
 import InteractiveMap from "@/components/InteractiveMap";
+import AgendaWidget from "@/components/AgendaWidget";
+import DownloadProfileButton from "@/components/DownloadProfileButton";
 
 export default function HomePage() {
   const { t } = useLanguage();
@@ -55,7 +57,7 @@ export default function HomePage() {
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                 <a
                   href="#tentang"
                   className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-sm sm:text-base"
@@ -74,6 +76,7 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                   </svg>
                 </Link>
+                <DownloadProfileButton />
               </div>
 
               {/* Stats Row */}
@@ -313,6 +316,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ===== AGENDA DUSUN SECTION ===== */}
+      <AgendaWidget />
 
       {/* ===== INTERACTIVE MAP SECTION ===== */}
       <InteractiveMap />
