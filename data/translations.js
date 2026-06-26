@@ -6,7 +6,6 @@ export const translations = {
       profil: "Profil Dusun",
       potensi: "Potensi Dusun",
       infokkn: "Tentang & KKN",
-      berita: "Berita & Kegiatan",
     },
     // Homepage Hero
     hero: {
@@ -16,7 +15,7 @@ export const translations = {
       hamletName: "Dusun Tlogomoyo",
       desc: "Jelajahi keindahan alam surga surfing Pantai Srau, aliran jernih Kali Barong, serta potensi UMKM kreatif Dusun Tlogomoyo, Desa Candi, Kabupaten Pacitan.",
       btnPotential: "Kenali Potensi Dusun",
-      btnNews: "Berita & Kegiatan",
+      btnContact: "Hubungi Kepala Dusun",
       stats: {
         pop: "Penduduk",
         kk: "Kepala Keluarga",
@@ -87,7 +86,6 @@ export const translations = {
       profil: "Village Profile",
       potensi: "Local Potential",
       infokkn: "About & KKN",
-      berita: "News & Events",
     },
     // Homepage Hero
     hero: {
@@ -97,7 +95,7 @@ export const translations = {
       hamletName: "Tlogomoyo Hamlet",
       desc: "Discover the pristine beauty of Srau surfing paradise, the refreshing Barong River, and the creative MSMEs of Tlogomoyo Hamlet, Candi Village, Pacitan.",
       btnPotential: "Explore Potential",
-      btnNews: "News & Activities",
+      btnContact: "Contact Village Head",
       stats: {
         pop: "Population",
         kk: "Households",

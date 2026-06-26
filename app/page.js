@@ -65,15 +65,15 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
                   </svg>
                 </a>
-                <Link
-                  href="/berita"
-                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white dark:bg-slate-800 text-primary-700 font-bold rounded-2xl border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50 shadow-sm hover:shadow-md transition-all duration-300 text-sm sm:text-base"
+                <a
+                  href="https://wa.me/6281234567890?text=Halo%20Bapak%20Kepala%20Dusun%20Tlogomoyo,%20saya%20berkunjung%20dari%20website%20portal."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white dark:bg-slate-800 text-primary-700 font-bold rounded-2xl border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50 shadow-sm hover:shadow-md transition-all duration-300 text-sm sm:text-base cursor-pointer"
                 >
-                  {t.hero.btnNews}
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                  </svg>
-                </Link>
+                  {t.hero.btnContact}
+                  <span className="text-base">📞</span>
+                </a>
               </div>
 
               {/* Stats Row */}
@@ -165,6 +165,37 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== SAMBUTAN KEPALA DUSUN ===== */}
+      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 sm:-mt-14 z-20 mb-12 animate-fade-in-up">
+        <div className="bg-gradient-to-br from-white/95 via-white/90 to-primary-50/80 dark:from-slate-800/95 dark:via-slate-800/90 dark:to-slate-900/80 backdrop-blur-2xl rounded-3xl p-6 sm:p-10 border border-primary-200/60 dark:border-primary-500/20 shadow-2xl shadow-primary-900/10 grid md:grid-cols-12 gap-8 items-center">
+          <div className="md:col-span-4 lg:col-span-3 flex flex-col items-center text-center">
+            <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-3xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-700 bg-gradient-to-br from-primary-400 to-primary-700 p-1 mb-4 group">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" alt="Kepala Dusun Tlogomoyo" className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent rounded-2xl" />
+            </div>
+            <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-300 rounded-full text-xs font-bold tracking-wider uppercase mb-1">Kepala Dusun</span>
+            <h3 className="font-heading text-lg font-bold text-slate-900 dark:text-white">Bapak Kepala Dusun</h3>
+            <p className="text-xs text-slate-500 dark:text-slate-400">Pemerintah Dusun Tlogomoyo</p>
+          </div>
+          <div className="md:col-span-8 lg:col-span-9 space-y-4">
+            <div className="inline-flex items-center gap-2 text-amber-600 dark:text-amber-400 text-sm font-semibold">
+              <span>👑</span>
+              <span>Pesan & Sambutan Resmi</span>
+            </div>
+            <blockquote className="text-base sm:text-lg text-slate-700 dark:text-slate-200 leading-relaxed italic text-justify border-l-4 border-primary-500 pl-4 py-1">
+              &ldquo;Assalamu&apos;alaikum Warahmatullahi Wabarakatuh. Salam sejahtera bagi kita semua. Selamat datang di Portal Informasi Digital Resmi Dusun Tlogomoyo, Desa Candi. Website ini dihadirkan sebagai wujud digitalisasi dan jembatan informasi bagi masyarakat serta wisatawan yang ingin mengenal potensi pertanian, keindahan Pantai Srau, dan keramahan warga kami.&rdquo;
+            </blockquote>
+            <div className="pt-2 flex flex-wrap items-center justify-between gap-4 border-t border-slate-100 dark:border-slate-700/80">
+              <span className="text-xs text-slate-400 font-medium">Dipersembahkan dalam rangka kemajuan & transparansi dusun</span>
+              <a href="https://wa.me/6281234567890?text=Halo%20Bapak%20Kepala%20Dusun%20Tlogomoyo..." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-bold text-primary-600 hover:text-primary-700 dark:text-primary-400 transition-colors">
+                <span>💬 Sampaikan Aspirasi Langsung</span>
+                <span>&rarr;</span>
+              </a>
             </div>
           </div>
         </div>
