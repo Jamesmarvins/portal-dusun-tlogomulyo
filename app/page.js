@@ -14,8 +14,9 @@ export default function HomePage() {
       <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center overflow-hidden hero-pattern">
         {/* Hero Background Image */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-          <img src="/images/hero.png" alt="Dusun Tlogomoyo Pacitan" className="w-full h-full object-cover object-center opacity-10 dark:opacity-25 scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 to-white dark:via-slate-900/80 dark:to-slate-900" />
+          <img src="/images/hero.png" alt="Dusun Tlogomoyo Pacitan" className="w-full h-full object-cover object-center opacity-55 dark:opacity-35 scale-105" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/75 to-white/20 dark:from-slate-900/95 dark:via-slate-900/80 dark:to-slate-900/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white dark:to-slate-900" />
         </div>
 
         {/* Decorative Elements */}
