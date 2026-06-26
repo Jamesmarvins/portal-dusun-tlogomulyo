@@ -1,5 +1,4 @@
 import Link from "next/link";
-import DownloadProfileButton from "@/components/DownloadProfileButton";
 
 export const metadata = {
   title: "Profil Dusun Tlogomoyo Geografi, Budaya & Potensi Desa",
@@ -43,14 +42,11 @@ export default function ProfilDusunPage() {
               Profil Dusun{" "}
               <span className="text-accent-400">Tlogomoyo</span>
             </h1>
-            <p className="text-base sm:text-lg text-primary-100 max-w-2xl leading-relaxed text-justify mb-8">
+            <p className="text-base sm:text-lg text-primary-100 max-w-2xl leading-relaxed text-justify">
               Mengenal lebih dekat Dusun Tlogomoyo geografi, sejarah,
               kekayaan budaya, potensi pertanian, serta destinasi wisata
               di sekitarnya. Sebuah dusun yang asri di jantung Pacitan selatan.
             </p>
-            <div className="mt-6">
-              <DownloadProfileButton />
-            </div>
           </div>
 
           {/* Quick Stats */}

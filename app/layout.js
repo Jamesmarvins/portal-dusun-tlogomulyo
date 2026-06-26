@@ -52,7 +52,6 @@ export const metadata = {
 
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";
-import AmbiencePlayer from "@/components/AmbiencePlayer";
 import PwaRegister from "@/components/PwaRegister";
 
 export default function RootLayout({ children }) {
@@ -68,7 +67,6 @@ export default function RootLayout({ children }) {
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
-            <AmbiencePlayer />
             <PwaRegister />
           </LanguageProvider>
         </ThemeProvider>
