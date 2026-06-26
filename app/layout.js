@@ -54,7 +54,6 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import AmbiencePlayer from "@/components/AmbiencePlayer";
 import PwaRegister from "@/components/PwaRegister";
-import QuickContact from "@/components/QuickContact";
 
 export default function RootLayout({ children }) {
   return (
@@ -71,7 +70,6 @@ export default function RootLayout({ children }) {
             <Footer />
             <AmbiencePlayer />
             <PwaRegister />
-            <QuickContact />
           </LanguageProvider>
         </ThemeProvider>
       </body>
