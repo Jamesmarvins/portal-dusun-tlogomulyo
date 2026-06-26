@@ -127,7 +127,7 @@ export default function HomePage() {
                     ].map((item, i) => (
                       <div
                         key={i}
-                        className="flex items-center gap-3 bg-slate-50 dark:bg-slate-900 rounded-xl p-3 border border-slate-100 dark:border-slate-700 hover:bg-primary-50/50 transition-colors duration-200"
+                        className="flex items-center gap-3 bg-slate-50 dark:bg-slate-800 rounded-xl p-3 border border-slate-200 dark:border-slate-700 hover:bg-primary-50 dark:hover:bg-slate-700/80 transition-colors duration-200 shadow-sm"
                       >
                         <div className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center shrink-0`}>
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
@@ -135,8 +135,8 @@ export default function HomePage() {
                           </svg>
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="text-sm font-semibold text-slate-700 dark:text-slate-100 truncate">{item.name}</p>
-                          <p className="text-xs text-slate-400">{item.detail}</p>
+                          <p className="text-sm font-bold text-slate-800 dark:text-white truncate">{item.name}</p>
+                          <p className="text-xs font-medium text-slate-500 dark:text-slate-300">{item.detail}</p>
                         </div>
                       </div>
                     ))}
@@ -224,7 +224,7 @@ export default function HomePage() {
                 title: "Potensi Pertanian",
                 desc: "Dusun Tlogomoyo kaya akan hasil pertanian seperti singkong, empon-empon organik, kelapa, dan produk turunannya. Komoditas ini menjadi tulang punggung perekonomian masyarakat setempat.",
                 gradient: "from-emerald-100 to-emerald-200",
-                iconColor: "text-emerald-700",
+                iconColor: "text-emerald-700 dark:text-emerald-400",
               },
               {
                 image: "/images/budaya.png",
@@ -234,7 +234,7 @@ export default function HomePage() {
                 title: "Masyarakat & Budaya",
                 desc: "Masyarakat Tlogomoyo dikenal ramah dan menjunjung tinggi nilai gotong royong. Tradisi dan kearifan lokal tetap terjaga di tengah perkembangan zaman modern.",
                 gradient: "from-amber-100 to-amber-200",
-                iconColor: "text-amber-700",
+                iconColor: "text-amber-700 dark:text-amber-400",
               },
               {
                 image: "/images/hero.png",
@@ -244,7 +244,7 @@ export default function HomePage() {
                 title: "Terbuka untuk KKN",
                 desc: "Dusun Tlogomoyo menyambut baik program KKN dari berbagai perguruan tinggi. Kolaborasi antara akademisi dan masyarakat telah menciptakan dampak positif yang berkelanjutan.",
                 gradient: "from-blue-100 to-blue-200",
-                iconColor: "text-blue-700",
+                iconColor: "text-blue-700 dark:text-blue-400",
               },
             ].map((item, i) => (
               <div

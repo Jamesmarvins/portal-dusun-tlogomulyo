@@ -236,11 +236,11 @@ export default function ProfilDusunPage() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="group bg-slate-50 dark:bg-slate-900 hover:bg-primary-50 rounded-xl p-4 text-center border border-slate-100 dark:border-slate-700 hover:border-primary-200 transition-all duration-300 hover:-translate-y-0.5"
+                  className="group bg-slate-50 dark:bg-slate-800 hover:bg-primary-50 dark:hover:bg-slate-700 rounded-xl p-4 text-center border border-slate-200 dark:border-slate-700 hover:border-primary-300 dark:hover:border-primary-500 transition-all duration-300 hover:-translate-y-0.5 shadow-sm"
                 >
                   <span className="text-3xl block mb-2 group-hover:scale-110 transition-transform duration-300">{item.emoji}</span>
-                  <p className="text-sm font-semibold text-slate-700 dark:text-slate-100">{item.name}</p>
-                  <p className="text-xs text-slate-400 mt-0.5">{item.desc}</p>
+                  <p className="text-sm font-bold text-slate-800 dark:text-white group-hover:text-primary-700 dark:group-hover:text-primary-300">{item.name}</p>
+                  <p className="text-xs font-medium text-slate-500 dark:text-slate-300 mt-1">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -385,15 +385,15 @@ export default function ProfilDusunPage() {
                     { label: "Jarak", detail: "~45 menit dari kota" },
                     { label: "Aktivitas", detail: "Surfing, camping, dll" },
                   ].map((item, i) => (
-                    <div key={i} className="bg-cyan-50/50 rounded-lg p-3 border border-cyan-100">
-                      <p className="text-xs text-slate-400 font-medium">{item.label}</p>
-                      <p className="text-sm font-semibold text-slate-700 dark:text-slate-100">{item.detail}</p>
+                    <div key={i} className="bg-cyan-50/80 dark:bg-slate-700/80 rounded-lg p-3 border border-cyan-200 dark:border-slate-600">
+                      <p className="text-xs text-cyan-800 dark:text-cyan-300 font-bold mb-0.5">{item.label}</p>
+                      <p className="text-sm font-extrabold text-slate-800 dark:text-white">{item.detail}</p>
                     </div>
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {["Berenang", "Berselancar", "Berkemah", "Memancing", "Bersepeda"].map((act, i) => (
-                    <span key={i} className="inline-flex items-center px-3 py-1 bg-cyan-50 text-cyan-700 text-xs font-medium rounded-full border border-cyan-200">
+                    <span key={i} className="inline-flex items-center px-3 py-1 bg-cyan-100 dark:bg-cyan-950/80 text-cyan-800 dark:text-cyan-200 text-xs font-bold rounded-full border border-cyan-300 dark:border-cyan-800">
                       {act}
                     </span>
                   ))}
@@ -428,15 +428,15 @@ export default function ProfilDusunPage() {
                     { label: "Fasilitas", detail: "Perahu & sepeda air" },
                     { label: "Cocok untuk", detail: "Kemah & piknik" },
                   ].map((item, i) => (
-                    <div key={i} className="bg-emerald-50/50 rounded-lg p-3 border border-emerald-100">
-                      <p className="text-xs text-slate-400 font-medium">{item.label}</p>
-                      <p className="text-sm font-semibold text-slate-700 dark:text-slate-100">{item.detail}</p>
+                    <div key={i} className="bg-emerald-50/80 dark:bg-slate-700/80 rounded-lg p-3 border border-emerald-200 dark:border-slate-600">
+                      <p className="text-xs text-emerald-800 dark:text-emerald-300 font-bold mb-0.5">{item.label}</p>
+                      <p className="text-sm font-extrabold text-slate-800 dark:text-white">{item.detail}</p>
                     </div>
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {["Berenang", "Perahu", "Sepeda Air", "Berkemah", "Piknik"].map((act, i) => (
-                    <span key={i} className="inline-flex items-center px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-medium rounded-full border border-emerald-200">
+                    <span key={i} className="inline-flex items-center px-3 py-1 bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-200 text-xs font-bold rounded-full border border-emerald-300 dark:border-emerald-800">
                       {act}
                     </span>
                   ))}

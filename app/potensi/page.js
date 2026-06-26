@@ -94,7 +94,7 @@ export default function PotensiUMKM() {
           {potensiList.map((item, index) => (
             <div 
               key={item.id}
-              className="group bg-white dark:bg-slate-800 rounded-3xl p-2 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 border border-slate-100 dark:border-slate-700 flex flex-col overflow-hidden animate-fade-in-up"
+              className="group bg-white dark:bg-slate-800 rounded-3xl p-2 shadow-xl shadow-slate-200/50 dark:shadow-none hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 border border-slate-100 dark:border-slate-700 flex flex-col overflow-hidden animate-fade-in-up"
               style={{ animationDelay: `${(index + 3) * 100}ms` }}
             >
               <div className="relative h-64 sm:h-72 w-full rounded-2xl overflow-hidden mb-6">
