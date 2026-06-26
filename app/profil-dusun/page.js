@@ -599,6 +599,86 @@ export default function ProfilDusunPage() {
         </div>
       </section>
 
+      {/* ===== DIREKTORI WARGA (RT 01 & RT 02) ===== */}
+      <section className="py-14 sm:py-18 lg:py-22 bg-white dark:bg-slate-800 border-t border-slate-100 dark:border-slate-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
+            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
+              Demografi & Kependudukan
+            </span>
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+              Daftar Kepala Keluarga{" "}
+              <span className="gradient-text">RT 01 & RT 02</span>
+            </h2>
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
+              Data resmi kependudukan dan kepala keluarga warga Dusun Tlogomoyo yang senantiasa menjaga kerukunan serta budaya gotong royong antar tetangga.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* RT 01 Card */}
+            <div className="bg-slate-50 dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-xl">
+              <div className="flex items-center justify-between pb-6 mb-6 border-b border-slate-200 dark:border-slate-800">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white font-black text-xl shadow-md">
+                    01
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Wilayah RT 01</h3>
+                    <p className="text-xs text-slate-500 font-medium">35 Kepala Keluarga</p>
+                  </div>
+                </div>
+                <span className="px-3 py-1 bg-primary-100 dark:bg-primary-950 text-primary-700 dark:text-primary-300 rounded-full text-xs font-bold">Aktif</span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-[480px] overflow-y-auto pr-2 custom-scrollbar">
+                {[
+                  "Tuirin", "Tusirah", "Yamti", "Wakiyem", "Ponidi", "Suparno", "Sutarno", "Parnen", "Suparmi", "Sunarto",
+                  "Tusiran", "Haryanti", "Suharto", "Sarno", "Suyanto", "Sutilah", "Sokiyem", "Siram", "Sukiman", "Tusiran",
+                  "Salbani", "Paiyem", "Boinah", "Wagiran", "Wonimin", "Katemi", "Boyadi", "Sokiran", "Yati", "Mujiatin",
+                  "Etik", "Surono", "Siti. A.", "Sugito", "Sugiyanto"
+                ].map((name, idx) => (
+                  <div key={idx} className="flex items-center gap-3 bg-white dark:bg-slate-800/80 px-3.5 py-2.5 rounded-xl border border-slate-100 dark:border-slate-700/60 shadow-sm hover:border-primary-300 transition-colors">
+                    <span className="w-6 text-right text-xs font-mono font-bold text-slate-400">{idx + 37}.</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-200 truncate">{name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* RT 02 Card */}
+            <div className="bg-slate-50 dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-xl">
+              <div className="flex items-center justify-between pb-6 mb-6 border-b border-slate-200 dark:border-slate-800">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white font-black text-xl shadow-md">
+                    02
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Wilayah RT 02</h3>
+                    <p className="text-xs text-slate-500 font-medium">36 Kepala Keluarga</p>
+                  </div>
+                </div>
+                <span className="px-3 py-1 bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-bold">Aktif</span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-[480px] overflow-y-auto pr-2 custom-scrollbar">
+                {[
+                  "Hairani", "Sukatman", "Rasidin", "Sugiarto", "Kadiyat", "Wasono", "Tumirah", "Mameni", "Sumadi", "Supadi",
+                  "Pawito", "Riswanto", "Woniran", "Sardi", "Sumarlan", "Jumiati", "Suwito", "Nanang I.", "Samino", "Yudi",
+                  "Saidi", "Tumino", "Sukadi", "Parno", "Katirun", "Suryanto", "Jumingan", "Bambang", "Tumiran", "Dwi",
+                  "Agus", "Purwanto", "Joko", "Tukino", "Poiman", "Samidi"
+                ].map((name, idx) => (
+                  <div key={idx} className="flex items-center gap-3 bg-white dark:bg-slate-800/80 px-3.5 py-2.5 rounded-xl border border-slate-100 dark:border-slate-700/60 shadow-sm hover:border-emerald-300 transition-colors">
+                    <span className="w-6 text-right text-xs font-mono font-bold text-slate-400">{idx + 1}.</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-200 truncate">{name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== CTA BOTTOM ===== */}
       <section className="py-14 sm:py-18 lg:py-22 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
