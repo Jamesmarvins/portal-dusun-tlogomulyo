@@ -12,6 +12,12 @@ export default function HomePage() {
     <>
       {/* ===== HERO SECTION ===== */}
       <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center overflow-hidden hero-pattern">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          <img src="/images/hero.png" alt="Dusun Tlogomoyo Pacitan" className="w-full h-full object-cover object-center opacity-10 dark:opacity-25 scale-105" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 to-white dark:via-slate-900/80 dark:to-slate-900" />
+        </div>
+
         {/* Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Floating circles */}
@@ -95,11 +101,21 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-400/20 to-accent-400/20 rounded-3xl blur-2xl scale-110" />
 
                 {/* Main card */}
-                <div className="relative bg-white dark:bg-slate-800/80 backdrop-blur-xl rounded-3xl p-8 border border-primary-100 shadow-2xl">
+                <div className="relative bg-white dark:bg-slate-800/90 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-primary-100 dark:border-slate-700 shadow-2xl overflow-hidden max-w-md">
+                  {/* Image banner inside card */}
+                  <div className="relative h-44 -mx-6 -mt-6 sm:-mx-8 sm:-mt-8 mb-6 overflow-hidden group">
+                    <img src="/images/hero.png" alt="Panorama Tlogomoyo" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-3 left-4 flex items-center gap-2 text-white">
+                      <span className="px-2.5 py-1 bg-primary-600/90 backdrop-blur-md rounded-lg text-xs font-bold uppercase tracking-wider">Pacitan</span>
+                      <span className="text-xs font-medium opacity-90">Jawa Timur</span>
+                    </div>
+                  </div>
+
                   {/* Top decoration */}
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl flex items-center justify-center">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                       </svg>
@@ -179,9 +195,10 @@ export default function HomePage() {
           </div>
 
           {/* Info Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
+                image: "/images/potensi.png",
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 8.25 4.69a7.5 7.5 0 0 1 3.75-1.69z" />
                 ),
@@ -191,6 +208,7 @@ export default function HomePage() {
                 iconColor: "text-emerald-700",
               },
               {
+                image: "/images/budaya.png",
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
                 ),
@@ -200,6 +218,7 @@ export default function HomePage() {
                 iconColor: "text-amber-700",
               },
               {
+                image: "/images/hero.png",
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                 ),
@@ -211,18 +230,22 @@ export default function HomePage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up"
+                className="group bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up overflow-hidden flex flex-col"
                 style={{ animationDelay: `${i * 150}ms`, animationFillMode: "both" }}
               >
-                <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
-                  <svg className={`w-6 h-6 ${item.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                    {item.icon}
-                  </svg>
+                <div className="relative h-48 -mx-6 -mt-6 sm:-mx-8 sm:-mt-8 mb-6 overflow-hidden">
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                  <div className={`absolute bottom-3 left-4 w-10 h-10 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md rounded-xl flex items-center justify-center shadow-lg`}>
+                    <svg className={`w-5 h-5 ${item.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      {item.icon}
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="font-heading text-lg font-bold text-slate-800 dark:text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify flex-1">
                   {item.desc}
                 </p>
               </div>

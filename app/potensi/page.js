@@ -16,7 +16,7 @@ export default function PotensiUMKM() {
         </svg>
       ),
       color: "from-amber-400 to-orange-500",
-      image: "https://images.unsplash.com/photo-1592982537447-6f2c6a0c5f21?q=80&w=600&auto=format&fit=crop"
+      image: "/images/potensi.png"
     },
     {
       id: "makanan",

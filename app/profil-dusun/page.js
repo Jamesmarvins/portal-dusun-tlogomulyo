@@ -265,6 +265,18 @@ export default function ProfilDusunPage() {
             </p>
           </div>
 
+          {/* Budaya Showcase Banner */}
+          <div className="mb-12 rounded-3xl overflow-hidden shadow-2xl border border-slate-100 dark:border-slate-700 relative h-72 sm:h-96 group animate-fade-in-up">
+            <img src="/images/budaya.png" alt="Budaya Gotong Royong Warga Tlogomoyo" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8">
+              <div className="text-white">
+                <span className="px-3 py-1 bg-amber-500 text-slate-950 rounded-lg font-bold text-xs uppercase tracking-wider mb-2 inline-block">Nilai Utama</span>
+                <h3 className="text-2xl sm:text-3xl font-extrabold">Semangat Kegotongroyongan & Budaya Agraris</h3>
+                <p className="text-sm text-slate-200 mt-1 max-w-xl">Dari tradisi Ammos, Kothekan Lesung, hingga kerja bakti rutin membangun desa bersama-sama dengan senyum hangat keramahan lokal.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
             {[
               {
