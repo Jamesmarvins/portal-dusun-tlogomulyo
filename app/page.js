@@ -183,10 +183,6 @@ export default function HomePage() {
             </blockquote>
             <div className="pt-2 flex flex-wrap items-center justify-between gap-4 border-t border-slate-100 dark:border-slate-700/80">
               <span className="text-xs text-slate-400 font-medium">Dipersembahkan dalam rangka kemajuan & transparansi dusun</span>
-              <a href="https://wa.me/6281234567890?text=Halo%20Bapak%20Kepala%20Dusun%20Tlogomoyo..." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-bold text-primary-600 hover:text-primary-700 dark:text-primary-400 transition-colors">
-                <span>💬 Sampaikan Aspirasi Langsung</span>
-                <span>&rarr;</span>
-              </a>
             </div>
           </div>
         </div>
