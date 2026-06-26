@@ -40,7 +40,7 @@ export default function PotensiUMKM() {
         </svg>
       ),
       color: "from-blue-400 to-indigo-600",
-      image: "/images/budaya.png"
+      image: "/images/kerajinan.jpg"
     },
     {
       id: "peternakan",
