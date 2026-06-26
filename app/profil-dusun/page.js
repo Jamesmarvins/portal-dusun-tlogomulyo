@@ -533,85 +533,129 @@ export default function ProfilDusunPage() {
         </div>
       </section>
 
-      {/* ===== PEMERINTAHAN DUSUN ===== */}
-      <section className="py-14 sm:py-18 lg:py-22 bg-earth-50 dark:bg-slate-900 hero-pattern">
+      {/* ===== STRUKTUR ORGANISASI PEMERINTAHAN ===== */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 dark:bg-slate-900 hero-pattern border-t border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
-            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              Pemerintahan
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-100/60 dark:bg-primary-900/40 px-4 py-1.5 rounded-full border border-primary-200 dark:border-primary-800">
+              Kelembagaan & Tokoh Masyarakat
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-              Struktur{" "}
-              <span className="gradient-text">Pemerintahan Dusun</span>
+            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">
+              Struktur Organisasi <span className="gradient-text">Pemerintahan Dusun</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
-              Pemerintahan Dusun Tlogomoyo berada di bawah naungan Desa Candi. Perangkat dusun
-              dipilih secara demokratis untuk melayani dan membangun masyarakat.
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed text-center">
+              Pemerintahan Dusun Tlogomoyo berada di bawah naungan Pemerintah Desa Candi. Berikut adalah jajaran jembatan pemangku wilayah yang senantiasa bergotong royong melayani warga.
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] animate-fade-in-up">
-              <div className="space-y-5">
-                {[
-                  {
-                    jabatan: "Kepala Desa Candi",
-                    desc: "Pemimpin tertinggi di tingkat desa yang membawahi seluruh dusun, termasuk Tlogomoyo. Bertanggung jawab atas pemerintahan, pembangunan, dan pelayanan masyarakat desa.",
-                    color: "from-primary-500 to-primary-700",
-                    icon: "🏛️",
-                  },
-                  {
-                    jabatan: "Kepala Dusun (Kadus) Tlogomoyo",
-                    desc: "Koordinator di tingkat dusun yang menjadi ujung tombak pelayanan masyarakat. Bertugas mengelola administrasi dusun, menjadi mediator warga, dan mengkoordinasikan program pembangunan.",
-                    color: "from-emerald-500 to-emerald-700",
-                    icon: "👤",
-                  },
-                  {
-                    jabatan: "RT / RW",
-                    desc: "Perangkat lingkungan di tingkat paling bawah yang berinteraksi langsung dengan warga sehari-hari. Membantu pendataan, penyaluran bantuan, dan menjaga ketertiban lingkungan.",
-                    color: "from-amber-500 to-amber-700",
-                    icon: "🏘️",
-                  },
-                  {
-                    jabatan: "Lembaga Masyarakat Desa",
-                    desc: "Termasuk BPD (Badan Permusyawaratan Desa), PKK, Karang Taruna, dan lembaga lainnya yang aktif dalam pemberdayaan masyarakat dan kegiatan sosial dusun.",
-                    color: "from-blue-500 to-blue-700",
-                    icon: "🤝",
-                  },
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-4 sm:gap-5 group">
-                    <div className="shrink-0">
-                      <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-2xl flex items-center justify-center text-xl shadow-md group-hover:scale-105 transition-transform duration-300`}>
-                        {item.icon}
-                      </div>
-                    </div>
-                    <div className={`flex-1 ${i < 3 ? "pb-5 border-b border-slate-100 dark:border-slate-700" : ""}`}>
-                      <h3 className="text-base sm:text-lg font-bold text-slate-800 dark:text-white mb-1.5">
-                        {item.jabatan}
-                      </h3>
-                      <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                jabatan: "Kepala Desa Candi",
+                nama: "Pemerintah Desa Candi",
+                desc: "Pemimpin tertinggi tingkat desa di Kecamatan Pringkuku yang membawahi 15 dusun, termasuk Dusun Tlogomoyo.",
+                color: "from-amber-400 to-orange-600",
+                badge: "Pembina Wilayah",
+                icon: "🏛️",
+              },
+              {
+                jabatan: "Kepala Dusun (Kasun)",
+                nama: "Bapak Kepala Dusun Tlogomoyo",
+                desc: "Koordinator utama pemangku wilayah Dusun Tlogomoyo yang menjadi ujung tombak pelayanan administrasi & aspirasi masyarakat.",
+                color: "from-emerald-400 to-teal-700",
+                badge: "Pimpinan Dusun",
+                icon: "👑",
+              },
+              {
+                jabatan: "Ketua Rukun Warga (RW)",
+                nama: "Ketua RW Dusun Tlogomoyo",
+                desc: "Koordinator ketertiban lingkungan dan jembatan komunikasi antar-RT di seluruh wilayah pedukuhan Tlogomoyo.",
+                color: "from-blue-400 to-indigo-600",
+                badge: "Koordinator Lingkungan",
+                icon: "🤝",
+              },
+              {
+                jabatan: "Ketua RT 01",
+                nama: "Pengurus Wilayah RT 01",
+                desc: "Membawahi dan melayani 35 Kepala Keluarga (KK) di sektor wilayah selatan/barat Dusun Tlogomoyo.",
+                color: "from-purple-400 to-indigo-700",
+                badge: "35 Kepala Keluarga",
+                icon: "🏘️",
+              },
+              {
+                jabatan: "Ketua RT 02",
+                nama: "Pengurus Wilayah RT 02",
+                desc: "Membawahi dan melayani 36 Kepala Keluarga (KK) di sektor wilayah utara/timur Dusun Tlogomoyo.",
+                color: "from-teal-400 to-emerald-700",
+                badge: "36 Kepala Keluarga",
+                icon: "🏡",
+              },
+              {
+                jabatan: "Kelompok Tani",
+                nama: "Nuju Makmur XII",
+                desc: "Motor penggerak ketahanan pangan, budidaya singkong, dan empon-empon organik penopang perekonomian warga.",
+                color: "from-red-400 to-rose-600",
+                badge: "Lembaga Agraris",
+                icon: "🌾",
+              },
+            ].map((item, i) => (
+              <div key={i} className="group bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-7 border border-slate-200/80 dark:border-slate-700 shadow-xl shadow-slate-200/40 dark:shadow-none hover:shadow-2xl hover:border-primary-400 transition-all duration-300 flex flex-col items-center text-center relative overflow-hidden">
+                <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r sm:w-full" style={{ backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))` }} />
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center text-3xl shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300 text-white mt-2`}>
+                  {item.icon}
+                </div>
+                <span className="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold rounded-full mb-2 tracking-wider uppercase">{item.badge}</span>
+                <h3 className="font-heading text-lg font-bold text-slate-900 dark:text-white mb-1">{item.jabatan}</h3>
+                <p className="text-sm font-semibold text-primary-600 dark:text-primary-400 mb-3">{item.nama}</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed text-center">{item.desc}</p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ===== DIREKTORI WARGA (RT 01 & RT 02) ===== */}
-      <section className="py-14 sm:py-18 lg:py-22 bg-white dark:bg-slate-800 border-t border-slate-100 dark:border-slate-700">
+      {/* ===== INFOGRAFIS DATA KEPENDUDUKAN (OPEN DATA) ===== */}
+      <section className="py-16 sm:py-20 bg-white dark:bg-slate-800 border-t border-slate-100 dark:border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
-            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              Demografi & Kependudukan
+          <div className="text-center mb-12 animate-fade-in-up">
+            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 dark:bg-primary-900/30 px-4 py-1.5 rounded-full border border-primary-200 dark:border-primary-800">
+              Open Data Desa
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-              Daftar Kepala Keluarga{" "}
-              <span className="gradient-text">RT 01 & RT 02</span>
+            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+              Infografis Demografi <span className="gradient-text">Dusun Tlogomoyo</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
-              Data resmi kependudukan dan kepala keluarga warga Dusun Tlogomoyo yang senantiasa menjaga kerukunan serta budaya gotong royong antar tetangga.
+              Transparansi data statistik kependudukan warga Dusun Tlogomoyo berdasarkan pemutakhiran direktori wilayah RT 01 dan RT 02.
+            </p>
+          </div>
+
+          {/* Infografis 4 Cards */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16 max-w-6xl mx-auto">
+            {[
+              { label: "Total Jiwa", val: "~284 Jiwa", desc: "Estimasi penduduk aktif", icon: "👥", bg: "from-blue-500/10 to-indigo-500/10", border: "border-blue-200 dark:border-blue-800", text: "text-blue-600 dark:text-blue-400" },
+              { label: "Kepala Keluarga", val: "71 KK", desc: "35 KK (RT 01) + 36 KK (RT 02)", icon: "🏡", bg: "from-emerald-500/10 to-teal-500/10", border: "border-emerald-200 dark:border-emerald-800", text: "text-emerald-600 dark:text-emerald-400" },
+              { label: "Rukun Tetangga", val: "2 RT Aktif", desc: "Partisipasi gotong royong 100%", icon: "📍", bg: "from-amber-500/10 to-orange-500/10", border: "border-amber-200 dark:border-amber-800", text: "text-amber-600 dark:text-amber-400" },
+              { label: "Sektor Unggulan", val: "Agraris", desc: "Singkong & Empon-empon Organik", icon: "🌾", bg: "from-purple-500/10 to-pink-500/10", border: "border-purple-200 dark:border-purple-800", text: "text-purple-600 dark:text-purple-400" },
+            ].map((stat, idx) => (
+              <div key={idx} className={`rounded-3xl p-6 bg-gradient-to-br ${stat.bg} border ${stat.border} flex flex-col justify-between shadow-lg`}>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-3xl">{stat.icon}</span>
+                  <span className={`text-xs font-bold uppercase tracking-wider ${stat.text}`}>{stat.label}</span>
+                </div>
+                <div>
+                  <h4 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-1">{stat.val}</h4>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">{stat.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">
+              Direktori Kepala Keluarga <span className="gradient-text">RT 01 & RT 02</span>
+            </h3>
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
+              Daftar pemangku rumah tangga yang menjadi penopang kerukunan antarwarga.
             </p>
           </div>
 
