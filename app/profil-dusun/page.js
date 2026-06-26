@@ -382,7 +382,7 @@ export default function ProfilDusunPage() {
                   {[
                     { label: "Pasir Putih", detail: "Halus & bersih" },
                     { label: "Karang Bolong", detail: "Ikon foto favorit" },
-                    { label: "Jarak", detail: "~45 menit dari kota" },
+                    { label: "Jarak dr Dusun", detail: "~10 mnt (~3 km)" },
                     { label: "Aktivitas", detail: "Surfing, camping, dll" },
                   ].map((item, i) => (
                     <div key={i} className="bg-cyan-50/80 dark:bg-slate-700/80 rounded-lg p-3 border border-cyan-200 dark:border-slate-600">
@@ -392,7 +392,7 @@ export default function ProfilDusunPage() {
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {["Berenang", "Berselancar", "Berkemah", "Memancing", "Bersepeda"].map((act, i) => (
+                  {["Berselancar", "Berkemah", "Wisata Foto", "Memancing", "Piknik Pantai"].map((act, i) => (
                     <span key={i} className="inline-flex items-center px-3 py-1 bg-cyan-100 dark:bg-cyan-950/80 text-cyan-800 dark:text-cyan-200 text-xs font-bold rounded-full border border-cyan-300 dark:border-cyan-800">
                       {act}
                     </span>
@@ -425,8 +425,8 @@ export default function ProfilDusunPage() {
                   {[
                     { label: "Suasana", detail: "Sejuk & alami" },
                     { label: "Keunikan", detail: "Musik air Ceklukan" },
+                    { label: "Jarak dr Dusun", detail: "~10 mnt (~3 km)" },
                     { label: "Fasilitas", detail: "Perahu & sepeda air" },
-                    { label: "Cocok untuk", detail: "Kemah & piknik" },
                   ].map((item, i) => (
                     <div key={i} className="bg-emerald-50/80 dark:bg-slate-700/80 rounded-lg p-3 border border-emerald-200 dark:border-slate-600">
                       <p className="text-xs text-emerald-800 dark:text-emerald-300 font-bold mb-0.5">{item.label}</p>
@@ -435,7 +435,7 @@ export default function ProfilDusunPage() {
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {["Berenang", "Perahu", "Sepeda Air", "Berkemah", "Piknik"].map((act, i) => (
+                  {["Susur Sungai", "Sepeda Air", "Seni Ceklukan", "Berkemah", "Piknik Keluarga"].map((act, i) => (
                     <span key={i} className="inline-flex items-center px-3 py-1 bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-200 text-xs font-bold rounded-full border border-emerald-300 dark:border-emerald-800">
                       {act}
                     </span>
