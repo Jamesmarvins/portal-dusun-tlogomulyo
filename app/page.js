@@ -65,15 +65,6 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
                   </svg>
                 </a>
-                <a
-                  href="https://wa.me/6281234567890?text=Halo%20Bapak%20Kepala%20Dusun%20Tlogomoyo,%20saya%20berkunjung%20dari%20website%20portal."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white dark:bg-slate-800 text-primary-700 font-bold rounded-2xl border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50 shadow-sm hover:shadow-md transition-all duration-300 text-sm sm:text-base cursor-pointer"
-                >
-                  {t.hero.btnContact}
-                  <span className="text-base">📞</span>
-                </a>
               </div>
 
               {/* Stats Row */}
