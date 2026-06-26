@@ -59,17 +59,7 @@ export default function InteractiveMap() {
           ))}
         </div>
 
-        {/* Infographic Illustration Map Banner */}
-        <div className="mb-10 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl overflow-hidden animate-fade-in-up">
-          <div className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden group">
-            <img src="/images/peta.png" alt="Infografis Peta Wisata & Potensi Tlogomoyo" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/30 to-transparent flex flex-col justify-end p-6 sm:p-8">
-              <span className="inline-block px-3 py-1 bg-accent-500 text-white rounded-lg text-xs font-bold uppercase tracking-wider w-max mb-2.5 shadow-md">Denah Wilayah Ilustrasi</span>
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight">Peta Potensi & Wisata Alam Dusun Tlogomoyo</h3>
-              <p className="text-xs sm:text-sm text-slate-200 max-w-2xl mt-1.5 leading-relaxed">Gambaran interaktif tata ruang dusun, perkebunan warga, balai dusun, hingga jalur wisata pantai selatan Pacitan di sekeliling kami.</p>
-            </div>
-          </div>
-        </div>
+
 
         {/* Map Container & Info Card */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start animate-fade-in-up">

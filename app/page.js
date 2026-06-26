@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useLanguage } from "@/components/LanguageProvider";
 import WeatherWidget from "@/components/WeatherWidget";
 import InteractiveMap from "@/components/InteractiveMap";
-import AgendaWidget from "@/components/AgendaWidget";
 
 export default function HomePage() {
   const { t } = useLanguage();
@@ -314,9 +313,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ===== AGENDA DUSUN SECTION ===== */}
-      <AgendaWidget />
 
       {/* ===== INTERACTIVE MAP SECTION ===== */}
       <InteractiveMap />
