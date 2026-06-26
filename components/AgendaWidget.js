@@ -5,12 +5,30 @@ import React, { useState } from "react";
 export default function AgendaWidget() {
   const [activeFilter, setActiveFilter] = useState("semua");
 
+  const getFutureDate = (daysAhead) => {
+    const d = new Date();
+    d.setDate(d.getDate() + daysAhead);
+    const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+    return {
+      date: String(d.getDate()).padStart(2, "0"),
+      month: months[d.getMonth()],
+      year: String(d.getFullYear()),
+      fullDate: `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`
+    };
+  };
+
+  const d1 = getFutureDate(3);
+  const d2 = getFutureDate(8);
+  const d3 = getFutureDate(15);
+  const d4 = getFutureDate(25);
+
   const agendaList = [
     {
       id: 1,
-      date: "12",
-      month: "Juli",
-      year: "2026",
+      date: d1.date,
+      month: d1.month,
+      year: d1.year,
+      fullDate: d1.fullDate,
       title: "Posyandu Balita & Lansia Rutin",
       time: "08.00 - 11.00 WIB",
       location: "Balai Dusun Tlogomoyo",
@@ -22,9 +40,10 @@ export default function AgendaWidget() {
     },
     {
       id: 2,
-      date: "19",
-      month: "Juli",
-      year: "2026",
+      date: d2.date,
+      month: d2.month,
+      year: d2.year,
+      fullDate: d2.fullDate,
       title: "Kerja Bakti Gotong Royong Bersih Dusun",
       time: "07.00 WIB - Selesai",
       location: "Sepanjang Jalan Utama Dusun",
@@ -36,9 +55,10 @@ export default function AgendaWidget() {
     },
     {
       id: 3,
-      date: "03",
-      month: "Agustus",
-      year: "2026",
+      date: d3.date,
+      month: d3.month,
+      year: d3.year,
+      fullDate: d3.fullDate,
       title: "Penyambutan & Penerimaan Mahasiswa KKN",
       time: "09.00 - 12.00 WIB",
       location: "Pendopo Balai Dusun & Candi",
@@ -50,9 +70,10 @@ export default function AgendaWidget() {
     },
     {
       id: 4,
-      date: "15",
-      month: "Agustus",
-      year: "2026",
+      date: d4.date,
+      month: d4.month,
+      year: d4.year,
+      fullDate: d4.fullDate,
       title: "Musyawarah Kelompok Tani Nuju Makmur XII",
       time: "13.00 - 15.30 WIB",
       location: "Kediaman Kepala Dusun (Kamituwo)",
@@ -81,14 +102,14 @@ export default function AgendaWidget() {
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 animate-fade-in-up">
           <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-primary-600 dark:text-primary-400 uppercase tracking-widest mb-3 bg-primary-50 dark:bg-primary-950 px-4 py-1.5 rounded-full border border-primary-200 dark:border-primary-800 shadow-sm">
             <span>📅</span>
-            <span>Jadwal Terjadwal</span>
+            <span>Jadwal Terjadwal Otomatis</span>
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">
             Papan Agenda &{" "}
             <span className="gradient-text">Kegiatan Terdekat</span>
           </h2>
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-            Ikuti berbagai kegiatan kemasyarakatan, pemeriksaan kesehatan rutin, gotong royong, hingga agenda penyambutan mahasiswa KKN di Dusun Tlogomoyo.
+            Ikuti berbagai kegiatan kemasyarakatan, pemeriksaan kesehatan rutin, gotong royong, hingga agenda penyambutan mahasiswa KKN di Dusun Tlogomoyo yang diperbarui secara *real-time*.
           </p>
         </div>
 
@@ -164,7 +185,7 @@ export default function AgendaWidget() {
                 </div>
 
                 <button
-                  onClick={() => alert(`Pengingat agenda "${agenda.title}" pada ${agenda.date} ${agenda.month} ${agenda.year} telah dicatat di perangkat Anda.`)}
+                  onClick={() => alert(`Pengingat agenda "${agenda.title}" pada ${agenda.fullDate} telah dicatat di perangkat Anda.`)}
                   className="shrink-0 px-3.5 py-2 rounded-xl bg-primary-50 dark:bg-primary-950 text-primary-700 dark:text-primary-300 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-500 dark:hover:text-slate-950 font-bold text-xs transition-colors duration-200 border border-primary-200 dark:border-primary-800 flex items-center gap-1.5 cursor-pointer shadow-2xs"
                 >
                   <span>🔔</span>

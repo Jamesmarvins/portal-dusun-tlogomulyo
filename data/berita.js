@@ -1,8 +1,15 @@
+const getDynamicDate = (daysAgo) => {
+  const d = new Date();
+  d.setDate(d.getDate() - daysAgo);
+  const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+  return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+};
+
 export const daftarBerita = [
   {
     id: "inovasi-rocket-stove-kurangi-asap-sampah",
     title: "Solusi Atasi Polusi Asap Rumah Tangga, Mahasiswa KKN Ciptakan Tungku Rocket Stove Ramah Lingkungan",
-    date: "20 Juni 2026",
+    date: getDynamicDate(2),
     excerpt: "Menjawab permasalahan kebiasaan membakar sampah terbuka di pekarangan rumah warga, mahasiswa KKN memperkenalkan tungku pembakar sampah bermetode Rocket Stove minim asap.",
     content: `
       Merespons kebiasaan masyarakat Dusun Tlogomoyo yang rata-rata membakar sampah rumah tangga secara terbuka di pekarangan rumah, kelompok mahasiswa Kuliah Kerja Nyata (KKN) Kelompok 28 meluncurkan inovasi tepat guna berupa tungku pembakar sampah ramah lingkungan bermetode *Rocket Stove*.
@@ -16,10 +23,10 @@ export const daftarBerita = [
   {
     id: "panen-raya-singkong-tlogomoyo",
     title: "Panen Raya Singkong di Dusun Tlogomoyo Membawa Berkah",
-    date: "15 Juni 2026",
+    date: getDynamicDate(7),
     excerpt: "Petani di Dusun Tlogomoyo menyambut gembira hasil panen singkong tahun ini yang dinilai melimpah dan berkualitas unggul.",
     content: `
-      Warga Dusun Tlogomoyo, Desa Candi kembali mengadakan panen raya singkong pada pertengahan bulan Juni ini. Kegiatan yang rutin dilakukan setiap tahun ini menjadi momen penting bagi perekonomian warga setempat.
+      Warga Dusun Tlogomoyo, Desa Candi kembali mengadakan panen raya singkong pada minggu ini. Kegiatan yang rutin dilakukan setiap tahun ini menjadi momen penting bagi perekonomian warga setempat.
       
       Kepala Dusun Tlogomoyo menyampaikan bahwa hasil panen tahun ini meningkat sekitar 20% dibandingkan tahun sebelumnya. "Cuaca yang mendukung serta penggunaan pupuk organik buatan warga sendiri menjadi faktor utama keberhasilan panen ini," ujarnya.
       
@@ -30,7 +37,7 @@ export const daftarBerita = [
   {
     id: "pelatihan-digital-marketing-umkm",
     title: "Mahasiswa KKN Gelar Pelatihan Digital Marketing untuk UMKM",
-    date: "10 Juni 2026",
+    date: getDynamicDate(14),
     excerpt: "Untuk meningkatkan daya saing produk lokal, mahasiswa KKN mengadakan pelatihan pemasaran digital bagi pelaku UMKM Dusun Tlogomoyo.",
     content: `
       Dalam upaya memajukan potensi desa, kelompok mahasiswa Kuliah Kerja Nyata (KKN) mengadakan program pelatihan *Digital Marketing* yang ditujukan khusus bagi pelaku Usaha Mikro Kecil Menengah (UMKM) di Dusun Tlogomoyo.
@@ -44,10 +51,10 @@ export const daftarBerita = [
   {
     id: "gotong-royong-bersihkan-saluran-air",
     title: "Warga Kompak Gotong Royong Bersihkan Saluran Air Menjelang Musim Hujan",
-    date: "28 Mei 2026",
+    date: getDynamicDate(21),
     excerpt: "Antisipasi banjir dan genangan air, seluruh elemen masyarakat Dusun Tlogomoyo melakukan kerja bakti membersihkan saluran irigasi.",
     content: `
-      Menyambut datangnya pergantian musim, warga Dusun Tlogomoyo secara serentak melaksanakan kegiatan gotong royong membersihkan saluran air dan irigasi pada hari Minggu pagi.
+      Menyambut datangnya pergantian cuaca, warga Dusun Tlogomoyo secara serentak melaksanakan kegiatan gotong royong membersihkan saluran air dan irigasi pada hari Minggu pagi.
       
       Kegiatan ini melibatkan berbagai lapisan masyarakat, mulai dari perangkat desa, tokoh masyarakat, pemuda karang taruna, hingga ibu-ibu yang bertugas menyiapkan konsumsi. Tujuan utama dari kerja bakti ini adalah memastikan aliran air lancar sehingga tidak menyebabkan genangan atau banjir yang dapat merusak lahan pertanian warga.
       
