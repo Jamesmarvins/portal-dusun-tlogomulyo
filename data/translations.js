@@ -5,6 +5,7 @@ export const translations = {
       beranda: "Beranda",
       profil: "Profil Dusun",
       potensi: "Potensi Dusun",
+      umkm: "Katalog UMKM",
       infokkn: "Tentang & KKN",
     },
     // Homepage Hero
@@ -85,6 +86,7 @@ export const translations = {
       beranda: "Home",
       profil: "Village Profile",
       potensi: "Local Potential",
+      umkm: "MSME Catalog",
       infokkn: "About & KKN",
     },
     // Homepage Hero

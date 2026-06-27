@@ -25,9 +25,9 @@ export default function ProfilDusunPage() {
             <nav className="mb-6" aria-label="Breadcrumb">
               <ol className="flex items-center gap-2 text-sm text-primary-200">
                 <li>
-                  <a href="/" className="hover:text-white transition-colors">
+                  <Link href="/" className="hover:text-white transition-colors">
                     Beranda
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <svg className="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>

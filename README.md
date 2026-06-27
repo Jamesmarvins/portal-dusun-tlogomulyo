@@ -17,8 +17,10 @@ Portal digital ini menyajikan informasi lengkap tentang **Dusun Tlogomoyo** sebu
 
 | Halaman | Deskripsi |
 |---------|-----------|
-| 🏠 **Beranda** | Landing page dengan profil singkat dusun, keunggulan, dan peta lokasi Google Maps |
-| 🗺️ **Profil Dusun** | Informasi lengkap: geografi, batas wilayah, pertanian & SDA, budaya & tradisi, wisata sekitar, masyarakat, dan pemerintahan |
+| 🏠 **Beranda** | Landing page dengan profil singkat dusun, cuaca live, dan peta lokasi interaktif |
+| 🗺️ **Profil Dusun** | Informasi lengkap: geografi, batas wilayah, pertanian & SDA, budaya & tradisi, wisata sekitar |
+| 🌿 **Potensi Dusun** | Penjelasan potensi agrikultur, perkebunan, dan kreativitas masyarakat Tlogomoyo |
+| 🛍️ **Katalog UMKM** | E-Katalog produk olahan warga dengan filter, pencarian, dan pemesanan langsung via WhatsApp |
 | 🎓 **Tentang & KKN** | Panduan KKN bagi perguruan tinggi: prosedur perizinan, persyaratan dokumen, dan kontak resmi |
 
 ### 🎨 Desain

@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/", key: "beranda" },
   { href: "/profil-dusun", key: "profil" },
   { href: "/potensi", key: "potensi" },
+  { href: "/umkm", key: "umkm" },
   { href: "/info-kkn", key: "infokkn" },
 ];
 

@@ -53,6 +53,8 @@ export const metadata = {
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import PwaRegister from "@/components/PwaRegister";
+import AmbiencePlayer from "@/components/AmbiencePlayer";
+import QuickContact from "@/components/QuickContact";
 
 export default function RootLayout({ children }) {
   return (
@@ -68,6 +70,8 @@ export default function RootLayout({ children }) {
             <main className="flex-1">{children}</main>
             <Footer />
             <PwaRegister />
+            <AmbiencePlayer />
+            <QuickContact />
           </LanguageProvider>
         </ThemeProvider>
       </body>
