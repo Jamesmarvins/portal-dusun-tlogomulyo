@@ -1,4 +1,5 @@
 import ProfilHeader from "./ProfilHeader";
+import Link from "next/link";
 
 export const metadata = {
   title: "Profil Dusun Tlogomoyo Geografi, Budaya & Potensi Desa",
