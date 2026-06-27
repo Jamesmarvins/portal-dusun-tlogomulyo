@@ -2,7 +2,6 @@
 
 import React, { useState, useMemo } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
-import ShareButtons from "@/components/ShareButtons";
 
 const katalogProduk = [
   {
@@ -345,22 +344,6 @@ export default function UmkmPage() {
             </div>
           </div>
         </div>
-      )}
-
-      {/* ===== FOOTER CALLOUT ===== */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-        <div className="bg-gradient-to-r from-amber-500/10 via-primary-500/10 to-teal-500/10 rounded-3xl p-8 sm:p-12 border border-primary-200 dark:border-slate-800 text-center relative overflow-hidden">
-          <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-4">
-            Punya Usaha di Dusun Tlogomoyo?
-          </h3>
-          <p className="text-slate-600 dark:text-slate-300 max-w-xl mx-auto text-sm sm:text-base mb-6">
-            Daftarkan produk makanan, minuman, kerajinan, atau hasil panen Anda ke dalam katalog digital resmi ini secara gratis melalui perangkat desa atau tim KKN.
-          </p>
-          <div className="flex justify-center">
-            <ShareButtons title="Katalog Produk UMKM Dusun Tlogomoyo Pacitan" />
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
