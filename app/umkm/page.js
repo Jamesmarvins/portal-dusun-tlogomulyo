@@ -228,12 +228,12 @@ export default function UmkmPage() {
                   
                   {/* Category Tag */}
                   <span className="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1.5 rounded-xl border border-white/10 shadow-sm">
-                    {product.categoryLabel}
+                    {t?.umkm?.cats?.[product.category] || product.categoryLabel}
                   </span>
 
                   {/* Badge */}
                   <span className="absolute top-4 right-4 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-extrabold text-[11px] px-3 py-1.5 rounded-xl shadow-md">
-                    {product.badge}
+                    {t?.umkmProducts?.[product.id]?.badge || product.badge}
                   </span>
 
                   {/* Price overlay on image bottom */}
@@ -242,7 +242,7 @@ export default function UmkmPage() {
                       Rp {product.price.toLocaleString("id-ID")}
                     </span>
                     <span className="text-xs bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-lg font-medium">
-                      Lihat Detail 👁️
+                      {language === "en" ? "View Details 👁️" : "Lihat Detail 👁️"}
                     </span>
                   </div>
                 </div>
@@ -258,10 +258,10 @@ export default function UmkmPage() {
                       onClick={() => setSelectedProduct(product)}
                       className="font-heading text-lg sm:text-xl font-bold text-slate-800 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors cursor-pointer line-clamp-1"
                     >
-                      {product.name}
+                      {t?.umkmProducts?.[product.id]?.name || product.name}
                     </h3>
                     <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 line-clamp-3">
-                      {product.desc}
+                      {t?.umkmProducts?.[product.id]?.desc || product.desc}
                     </p>
                   </div>
 
@@ -302,23 +302,23 @@ export default function UmkmPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60" />
               <span className="absolute bottom-4 left-6 bg-amber-500 text-slate-950 font-black px-4 py-1.5 rounded-xl text-sm shadow-lg">
-                {selectedProduct.badge}
+                {t?.umkmProducts?.[selectedProduct.id]?.badge || selectedProduct.badge}
               </span>
             </div>
 
             <div className="p-6 sm:p-8">
               <div className="flex items-center justify-between text-xs font-bold text-primary-600 dark:text-primary-400 mb-2 uppercase tracking-wider">
-                <span>{selectedProduct.categoryLabel}</span>
+                <span>{t?.umkm?.cats?.[selectedProduct.category] || selectedProduct.categoryLabel}</span>
                 <span>🏪 {selectedProduct.seller}</span>
               </div>
               <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
-                {selectedProduct.name}
+                {t?.umkmProducts?.[selectedProduct.id]?.name || selectedProduct.name}
               </h2>
               <div className="text-2xl font-black text-emerald-600 dark:text-emerald-400 mb-4">
                 {selectedProduct.priceLabel}
               </div>
               <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-8 text-justify">
-                {selectedProduct.desc}
+                {t?.umkmProducts?.[selectedProduct.id]?.desc || selectedProduct.desc}
               </p>
 
               <div className="flex flex-col sm:flex-row items-center gap-4 border-t border-slate-100 dark:border-slate-800 pt-6">

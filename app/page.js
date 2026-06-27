@@ -145,8 +145,8 @@ export default function HomePage() {
                   {/* Bottom stat */}
                   <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex justify-between items-center">
                     <div>
-                      <p className="text-xs text-slate-400">Terbuka untuk</p>
-                      <p className="text-lg font-extrabold text-primary-700">KKN<span className="text-sm font-normal text-slate-400"> & Kunjungan</span></p>
+                      <p className="text-xs text-slate-400">{t?.heroBottom?.openFor || "Terbuka untuk"}</p>
+                      <p className="text-lg font-extrabold text-primary-700">{t?.heroBottom?.kknVisit || "KKN & Kunjungan"}</p>
                     </div>
                     <div className="w-10 h-10 bg-primary-50 rounded-full flex items-center justify-center">
                       <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -169,20 +169,19 @@ export default function HomePage() {
               <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" alt="Kepala Dusun Tlogomoyo" className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent rounded-2xl" />
             </div>
-            <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-300 rounded-full text-xs font-bold tracking-wider uppercase mb-1">Kepala Dusun</span>
-            <h3 className="font-heading text-lg font-bold text-slate-900 dark:text-white">Bapak Kepala Dusun</h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400">Pemerintah Dusun Tlogomoyo</p>
+            <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-300 rounded-full text-xs font-bold tracking-wider uppercase mb-1">{t?.sambutan?.role || "Kepala Dusun"}</span>
+            <h3 className="font-heading text-lg font-bold text-slate-900 dark:text-white">{t?.sambutan?.name || "Bapak Kepala Dusun"}</h3>
+            <p className="text-xs text-slate-500 dark:text-slate-400">{t?.sambutan?.gov || "Pemerintah Dusun Tlogomoyo"}</p>
           </div>
           <div className="md:col-span-8 lg:col-span-9 space-y-4">
             <div className="inline-flex items-center gap-2 text-amber-600 dark:text-amber-400 text-sm font-semibold">
-              <span>👑</span>
-              <span>Pesan & Sambutan Resmi</span>
+              <span>{t?.sambutan?.badge || "👑 Pesan & Sambutan Resmi"}</span>
             </div>
             <blockquote className="text-base sm:text-lg text-slate-700 dark:text-slate-200 leading-relaxed italic text-justify border-l-4 border-primary-500 pl-4 py-1">
-              &ldquo;Assalamu&apos;alaikum Warahmatullahi Wabarakatuh. Salam sejahtera bagi kita semua. Selamat datang di Portal Informasi Digital Resmi Dusun Tlogomoyo, Desa Candi. Website ini dihadirkan sebagai wujud digitalisasi dan jembatan informasi bagi masyarakat serta wisatawan yang ingin mengenal potensi pertanian, keindahan Pantai Srau, dan keramahan warga kami.&rdquo;
+              &ldquo;{t?.sambutan?.quote || "Assalamu'alaikum Warahmatullahi Wabarakatuh. Salam sejahtera bagi kita semua. Selamat datang di Portal Informasi Digital Resmi Dusun Tlogomoyo, Desa Candi. Website ini dihadirkan sebagai wujud digitalisasi dan jembatan informasi bagi masyarakat serta wisatawan yang ingin mengenal potensi pertanian, keindahan Pantai Srau, dan keramahan warga kami."}&rdquo;
             </blockquote>
             <div className="pt-2 flex flex-wrap items-center justify-between gap-4 border-t border-slate-100 dark:border-slate-700/80">
-              <span className="text-xs text-slate-400 font-medium">Dipersembahkan dalam rangka kemajuan & transparansi dusun</span>
+              <span className="text-xs text-slate-400 font-medium">{t?.sambutan?.footer || "Dipersembahkan dalam rangka kemajuan & transparansi dusun"}</span>
             </div>
           </div>
         </div>

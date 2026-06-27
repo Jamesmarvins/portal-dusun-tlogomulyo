@@ -1,15 +1,16 @@
-export const metadata = {
-  title: "Potensi & UMKM Dusun Tlogomoyo Pacitan",
-  description:
-    "Jelajahi potensi luar biasa dari Dusun Tlogomoyo, mulai dari hasil pertanian organik, kerajinan tangan lokal, hingga produk UMKM unggulan yang menggerakkan ekonomi warga.",
-};
+"use client";
+
+import React from "react";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function PotensiUMKM() {
+  const { t } = useLanguage();
+
   const potensiList = [
     {
       id: "pertanian",
-      title: "Hasil Pertanian & Perkebunan",
-      desc: "Tanah Tlogomoyo yang subur menghasilkan berbagai komoditas unggulan seperti singkong, empon-empon (jahe, kunyit, temulawak), kelapa, dan sayuran organik. Hasil bumi ini menjadi tulang punggung perekonomian sebagian besar warga.",
+      title: t?.potensiPage?.items?.[0]?.title || "Hasil Pertanian & Perkebunan",
+      desc: t?.potensiPage?.items?.[0]?.desc || "Tanah Tlogomoyo yang subur menghasilkan berbagai komoditas unggulan seperti singkong, empon-empon (jahe, kunyit, temulawak), kelapa, dan sayuran organik. Hasil bumi ini menjadi tulang punggung perekonomian sebagian besar warga.",
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -20,8 +21,8 @@ export default function PotensiUMKM() {
     },
     {
       id: "makanan",
-      title: "Olahan Pangan Lokal",
-      desc: "Warga dusun aktif mengolah hasil panen menjadi produk bernilai jual lebih tinggi. Terdapat UMKM pembuat keripik singkong, gula aren, jamu tradisional, dan berbagai penganan khas pedesaan yang lezat dan sehat.",
+      title: t?.potensiPage?.items?.[1]?.title || "Olahan Pangan Lokal",
+      desc: t?.potensiPage?.items?.[1]?.desc || "Warga dusun aktif mengolah hasil panen menjadi produk bernilai jual lebih tinggi. Terdapat UMKM pembuat keripik singkong, gula aren, jamu tradisional, dan berbagai penganan khas pedesaan yang lezat dan sehat.",
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
@@ -32,8 +33,8 @@ export default function PotensiUMKM() {
     },
     {
       id: "kerajinan",
-      title: "Kerajinan Tangan",
-      desc: "Keterampilan tangan warga Tlogomoyo menghasilkan produk kerajinan anyaman bambu, peralatan dapur tradisional, hingga hiasan dekoratif yang bernilai seni tinggi. Produk ini sering dijadikan cinderamata khas.",
+      title: t?.potensiPage?.items?.[2]?.title || "Kerajinan Tangan",
+      desc: t?.potensiPage?.items?.[2]?.desc || "Keterampilan tangan warga Tlogomoyo menghasilkan produk kerajinan anyaman bambu, peralatan dapur tradisional, hingga hiasan dekoratif yang bernilai seni tinggi. Produk ini sering dijadikan cinderamata khas.",
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
@@ -44,8 +45,8 @@ export default function PotensiUMKM() {
     },
     {
       id: "peternakan",
-      title: "Peternakan Rakyat",
-      desc: "Sebagian warga juga mengelola peternakan skala rumah tangga seperti ayam kampung, kambing, dan sapi. Peternakan ini memberikan kontribusi yang stabil terhadap pemenuhan gizi dan pendapatan keluarga.",
+      title: t?.potensiPage?.items?.[3]?.title || "Peternakan Rakyat",
+      desc: t?.potensiPage?.items?.[3]?.desc || "Sebagian warga juga mengelola peternakan skala rumah tangga seperti ayam kampung, kambing, dan sapi. Peternakan ini memberikan kontribusi yang stabil terhadap pemenuhan gizi dan pendapatan keluarga.",
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -76,14 +77,14 @@ export default function PotensiUMKM() {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            Ekonomi Kreatif & Agrikultur
+            {t?.potensiPage?.badge || "Ekonomi Kreatif & Agrikultur"}
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6 animate-fade-in-up" style={{ animationDelay: "100ms" }}>
-            Potensi & UMKM <br className="hidden sm:block" />
+            {t?.potensiPage?.title || "Potensi & UMKM"} <br className="hidden sm:block" />
             <span className="gradient-text">Dusun Tlogomoyo</span>
           </h1>
           <p className="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-300 leading-relaxed animate-fade-in-up text-center" style={{ animationDelay: "200ms" }}>
-            Jelajahi kekayaan alam dan kreativitas masyarakat Dusun Tlogomoyo. Dari hasil bumi yang melimpah hingga kerajinan tangan yang memukau.
+            {t?.potensiPage?.subtitle || "Jelajahi kekayaan alam dan kreativitas masyarakat Dusun Tlogomoyo. Dari hasil bumi yang melimpah hingga kerajinan tangan yang memukau."}
           </p>
         </div>
       </section>

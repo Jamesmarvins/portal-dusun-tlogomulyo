@@ -1,13 +1,12 @@
+"use client";
+
 import ProfilHeader from "./ProfilHeader";
 import Link from "next/link";
-
-export const metadata = {
-  title: "Profil Dusun Tlogomoyo Geografi, Budaya & Potensi Desa",
-  description:
-    "Informasi lengkap tentang Dusun Tlogomoyo, Desa Candi, Kecamatan Pringkuku, Kabupaten Pacitan. Geografi, demografi, potensi pertanian, budaya & tradisi, serta destinasi wisata sekitar.",
-};
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function ProfilDusunPage() {
+  const { t } = useLanguage();
+
   return (
     <>
       {/* ===== PAGE HEADER ===== */}
@@ -27,9 +26,9 @@ export default function ProfilDusunPage() {
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             {[
               { value: "Pacitan", label: "Kabupaten", icon: "M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" },
-              { value: "Pringkuku", label: "Kecamatan", icon: "M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" },
-              { value: "Candi", label: "Desa", icon: "m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" },
-              { value: "Jawa Timur", label: "Provinsi", icon: "M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" },
+              { value: "Pringkuku", label: t?.profilContent?.stats?.[0]?.label || "Kecamatan", icon: "M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" },
+              { value: "Candi", label: t?.profilContent?.stats?.[1]?.label || "Desa", icon: "m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" },
+              { value: "Jawa Timur", label: t?.profilContent?.stats?.[2]?.label || "Provinsi", icon: "M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" },
             ].map((stat, i) => (
               <div
                 key={i}
@@ -57,29 +56,16 @@ export default function ProfilDusunPage() {
             {/* Text Content */}
             <div className="animate-fade-in-up">
               <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-                Geografi & Topografi
+                {t?.profilContent?.geoBadge || "Geografi & Topografi"}
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-5">
-                Letak Geografis{" "}
+                {t?.profilContent?.geoTitle || "Letak Geografis"}{" "}
                 <span className="gradient-text">Tlogomoyo</span>
               </h2>
               <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
-                <p>
-                  Dusun Tlogomoyo terletak di <strong>Desa Candi</strong>, Kecamatan Pringkuku,
-                  Kabupaten Pacitan, Provinsi Jawa Timur. Desa Candi sendiri berjarak sekitar{" "}
-                  <strong>10 km dari ibu kota kecamatan</strong> dan merupakan salah satu desa
-                  yang memiliki cakupan wilayah cukup luas di Kecamatan Pringkuku.
-                </p>
-                <p>
-                  Topografi wilayah ini didominasi oleh <strong>pegunungan berbatu</strong> yang
-                  merupakan bagian dari bentang alam <strong>Pegunungan Seribu</strong> (Gunung Sewu).
-                  Di sisi selatan, Desa Candi berbatasan langsung dengan <strong>Samudera Indonesia</strong>,
-                  menciptakan perpaduan lanskap perbukitan hijau dan pantai yang memukau.
-                </p>
-                <p>
-                  Koordinat geografis dusun berada di sekitar <strong>8.2239°S, 111.0172°E</strong>,
-                  dengan ketinggian bervariasi dari pesisir hingga perbukitan.
-                </p>
+                <p>{t?.profilContent?.geoP1 || "Dusun Tlogomoyo terletak di Desa Candi, Kecamatan Pringkuku, Kabupaten Pacitan, Provinsi Jawa Timur. Desa Candi sendiri berjarak sekitar 10 km dari ibu kota kecamatan dan merupakan salah satu desa yang memiliki cakupan wilayah cukup luas di Kecamatan Pringkuku."}</p>
+                <p>{t?.profilContent?.geoP2 || "Topografi wilayah ini didominasi oleh pegunungan berbatu yang merupakan bagian dari bentang alam Pegunungan Seribu (Gunung Sewu). Di sisi selatan, Desa Candi berbatasan langsung dengan Samudera Indonesia, menciptakan perpaduan lanskap perbukitan hijau dan pantai yang memukau."}</p>
+                <p>{t?.profilContent?.geoP3 || "Koordinat geografis dusun berada di sekitar 8.2239°S, 111.0172°E, dengan ketinggian bervariasi dari pesisir hingga perbukitan."}</p>
               </div>
             </div>
 
@@ -90,14 +76,14 @@ export default function ProfilDusunPage() {
                   <svg className="w-5 h-5 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
                   </svg>
-                  Batas Wilayah Desa Candi
+                  {t?.profilContent?.batasTitle || "Batas Wilayah Desa Candi"}
                 </h3>
                 <div className="space-y-3">
                   {[
-                    { arah: "Utara", batas: "Desa Pringkuku", icon: "↑", color: "from-blue-100 to-blue-200 text-blue-700" },
-                    { arah: "Timur", batas: "Desa Poko", icon: "→", color: "from-emerald-100 to-emerald-200 text-emerald-700" },
-                    { arah: "Selatan", batas: "Samudera Indonesia", icon: "↓", color: "from-cyan-100 to-cyan-200 text-cyan-700" },
-                    { arah: "Barat", batas: "Desa Jlubang", icon: "←", color: "from-amber-100 to-amber-200 text-amber-700" },
+                    { arah: t?.profilContent?.batas?.[0]?.arah || "Utara", batas: t?.profilContent?.batas?.[0]?.batas || "Desa Pringkuku", icon: "↑", color: "from-blue-100 to-blue-200 text-blue-700" },
+                    { arah: t?.profilContent?.batas?.[1]?.arah || "Timur", batas: t?.profilContent?.batas?.[1]?.batas || "Desa Poko", icon: "→", color: "from-emerald-100 to-emerald-200 text-emerald-700" },
+                    { arah: t?.profilContent?.batas?.[2]?.arah || "Selatan", batas: t?.profilContent?.batas?.[2]?.batas || "Samudera Indonesia", icon: "↓", color: "from-cyan-100 to-cyan-200 text-cyan-700" },
+                    { arah: t?.profilContent?.batas?.[3]?.arah || "Barat", batas: t?.profilContent?.batas?.[3]?.batas || "Desa Jlubang", icon: "←", color: "from-amber-100 to-amber-200 text-amber-700" },
                   ].map((item, i) => (
                     <div
                       key={i}
@@ -706,18 +692,17 @@ export default function ProfilDusunPage() {
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in-up">
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-4">
-            Tertarik Mengenal Lebih Dekat?
+            {t?.profilContent?.ctaHeading || "Tertarik Mengenal Lebih Dekat?"}
           </h2>
           <p className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed mb-8 text-center">
-            Kenali lebih jauh tentang kegiatan kemahasiswaan dan program kerja (Proker) KKN 
-            yang telah dan sedang berlangsung di Dusun Tlogomoyo.
+            {t?.profilContent?.ctaDesc || "Kenali lebih jauh tentang kegiatan kemahasiswaan dan program kerja (Proker) KKN yang telah dan sedang berlangsung di Dusun Tlogomoyo."}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link
               href="/info-kkn"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-sm sm:text-base"
             >
-              Tentang KKN & Proker Kami
+              {t?.profilContent?.ctaTitle || "Tentang KKN & Proker Kami"}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
               </svg>
@@ -726,7 +711,7 @@ export default function ProfilDusunPage() {
               href="/"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white font-bold rounded-2xl border border-white/20 hover:bg-white hover:text-slate-900 dark:bg-slate-800/20 transition-all duration-300 text-sm sm:text-base"
             >
-              Kembali ke Beranda
+              {t?.profilContent?.ctaBack || "Kembali ke Beranda"}
             </Link>
           </div>
         </div>

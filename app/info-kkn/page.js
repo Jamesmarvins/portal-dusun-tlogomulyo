@@ -192,9 +192,9 @@ export default function InfoKKNPage() {
             {/* Quick Stats */}
             <div className="mt-8 flex flex-wrap gap-4 sm:gap-6">
               {[
-                { value: "7", label: "Anggota" },
-                { value: "1", label: "Proker Kelompok" },
-                { value: "7", label: "Proker Individu" },
+                { value: "7", label: t?.kknContent?.stats?.[0]?.label || "Anggota" },
+                { value: "1", label: t?.kknContent?.stats?.[1]?.label || "Proker Kelompok" },
+                { value: "7", label: t?.kknContent?.stats?.[2]?.label || "Proker Individu" },
                 { value: "29 Hari", label: "Durasi" },
               ].map((stat, i) => (
                 <div
@@ -220,7 +220,7 @@ export default function InfoKKNPage() {
           {/* Section Header */}
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              Profil Kelompok
+              {t?.kknContent?.tabs?.profil || "Profil Kelompok"}
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
               Kenali <span className="gradient-text">Tim Kami</span>
