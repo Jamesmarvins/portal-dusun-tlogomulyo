@@ -89,6 +89,72 @@ export const translations = {
       subtitle: "Profil kelompok, program kerja kelompok, dan program kerja individu Tim KKN di Dusun Tlogomoyo.",
       breadcrumb: "Tentang & KKN",
     },
+    footer: {
+      desc: "Portal Informasi Resmi Dusun Tlogomoyo, Desa Candi, Kecamatan Pringkuku, Kabupaten Pacitan, Jawa Timur. Membangun desa digital berbasis potensi lokal.",
+      quickLinks: "Tautan Cepat",
+      contact: "Kontak & Alamat",
+      address: "Balai Dusun Tlogomoyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan, Jawa Timur 63552",
+      copyright: "Hak Cipta © 2026 Pemerintah Dusun Tlogomoyo.",
+      kknGroup: "KKN Kelompok 28 UKDW",
+    },
+    homeSections: {
+      potensiBadge: "Potensi Unggulan",
+      potensiTitle: "Kekayaan & Potensi Dusun",
+      potensiDesc: "Dusun Tlogomoyo dianugerahi kesuburan tanah perbukitan, keindahan pesona pantai tropis, serta kreativitas warga dalam mengembangkan produk UMKM berkualitas.",
+      cards: [
+        {
+          title: "Pertanian & Perkebunan",
+          desc: "Penghasil utama kelapa, ketela pohon, jagung, dan padi sawah tadah hujan. Sebagian warga juga membudidayakan tanaman keras seperti cengkeh dan mahoni.",
+        },
+        {
+          title: "Wisata & Alam Tropis",
+          desc: "Akses langsung menuju Pantai Srau surga tersembunyi berpasir putih halus yang menjadi magnet wisatawan mancanegara dan peselancar dunia.",
+        },
+        {
+          title: "UMKM & Kerajinan Warga",
+          desc: "Produksi olahan hasil bumi seperti keripik ketela, gula merah kelapa, serta kerajinan anyaman bambu bernilai guna tinggi khas pedesaan.",
+        },
+      ],
+      kknBadge: "Pengabdian Masyarakat",
+      kknTitle: "KKN Kelompok 28 UKDW",
+      kknDesc: "Tim Kuliah Kerja Nyata dari Universitas Kristen Duta Wacana berkolaborasi dengan Pemerintah Dusun Tlogomoyo dalam mengemban program kerja digitalisasi, promosi potensi desa, dan pengembangan lingkungan sehat ramah wisata.",
+      kknBtn: "Lihat Detail Program & Anggota",
+      keunggulanBadge: "Keunggulan",
+      keunggulanTitle: "Mengapa Tlogomoyo?",
+      keunggulanCards: [
+        {
+          title: "Lokasi Strategis",
+          desc: "Terletak di Kabupaten Pacitan, Jawa Timur daerah yang dikenal dengan keindahan alamnya. Akses menuju dusun dapat ditempuh dengan mudah dari pusat kota.",
+        },
+        {
+          title: "Lingkungan Asri & Aman",
+          desc: "Dikelilingi oleh perbukitan hijau dan udara segar. Lingkungan yang tenang dan aman menjadikan dusun ini cocok untuk kegiatan akademik, penelitian, dan KKN.",
+        },
+        {
+          title: "Kearifan Lokal",
+          desc: "Tradisi dan adat istiadat masyarakat yang masih terjaga memberikan pengalaman otentik bagi siapa pun yang berkunjung dan ingin belajar tentang kehidupan pedesaan.",
+        },
+      ],
+    },
+    umkm: {
+      badge: "E-Katalog Digital & Pemberdayaan Warga",
+      title: "Katalog Produk UMKM Dusun Tlogomoyo",
+      subtitle: "Dukung perekonomian lokal dengan membeli produk olahan pangan segar, kerajinan tangan, dan hasil tani langsung dari warga Dusun Tlogomoyo.",
+      searchPlaceholder: "Cari camilan, jamu, atau penjual...",
+      searchEmpty: "Produk Tidak Ditemukan",
+      searchEmptyAdvice: "Maaf, tidak ada produk yang cocok. Coba gunakan kata kunci lain atau pilih kategori Semua.",
+      viewAllBtn: "Lihat Semua Produk",
+      cats: {
+        semua: "🌟 Semua Produk",
+        makanan: "🍟 Makanan & Camilan",
+        minuman: "☕ Jamu & Minuman",
+        kerajinan: "🧺 Kerajinan Tangan",
+        "hasil-bumi": "🌾 Hasil Bumi",
+      },
+      orderBtn: "Beli via WhatsApp",
+      orderDirectBtn: "Pesan Langsung via WhatsApp",
+      backBtn: "Kembali",
+    },
   },
   en: {
     // Navigation
@@ -179,6 +245,72 @@ export const translations = {
       title: "About KKN Program",
       subtitle: "Group profile, collaborative work programs, and individual initiatives of the KKN Team in Tlogomoyo Hamlet.",
       breadcrumb: "About & KKN",
+    },
+    footer: {
+      desc: "Official Information Portal of Tlogomoyo Hamlet, Candi Village, Pringkuku District, Pacitan Regency, East Java. Building a digital village based on local potential.",
+      quickLinks: "Quick Links",
+      contact: "Contact & Address",
+      address: "Tlogomoyo Hamlet Hall, Candi Village, Pringkuku District, Pacitan Regency, East Java 63552",
+      copyright: "Copyright © 2026 Tlogomoyo Hamlet Government.",
+      kknGroup: "KKN Group 28 UKDW",
+    },
+    homeSections: {
+      potensiBadge: "Featured Potential",
+      potensiTitle: "Hamlet Assets & Potential",
+      potensiDesc: "Tlogomoyo Hamlet is blessed with fertile hill soil, tropical beach charms, and resident creativity in developing quality MSME products.",
+      cards: [
+        {
+          title: "Agriculture & Plantations",
+          desc: "Major producer of coconuts, cassava, corn, and rain-fed paddy rice. Residents also cultivate perennials such as cloves and mahogany.",
+        },
+        {
+          title: "Tourism & Tropical Nature",
+          desc: "Direct access to Srau Beach a hidden paradise featuring fine white sand that attracts global travelers and world-class surfers.",
+        },
+        {
+          title: "MSMEs & Handicrafts",
+          desc: "Production of processed farm goods such as cassava chips, coconut palm sugar, and traditional woven bamboo handicrafts.",
+        },
+      ],
+      kknBadge: "Community Service",
+      kknTitle: "KKN Group 28 UKDW",
+      kknDesc: "The Student Community Service Team from Duta Wacana Christian University collaborates with the Tlogomoyo Hamlet Government on digitalization, village promotion, and eco-friendly tourism development.",
+      kknBtn: "View Program & Member Details",
+      keunggulanBadge: "Key Advantages",
+      keunggulanTitle: "Why Tlogomoyo?",
+      keunggulanCards: [
+        {
+          title: "Strategic Location",
+          desc: "Located in Pacitan Regency, East Java an area renowned for its natural beauty. Access to the hamlet is easily reachable from the city center.",
+        },
+        {
+          title: "Pristine & Safe Environment",
+          desc: "Surrounded by lush green hills and fresh air. The serene and safe environment makes this hamlet ideal for academic activities, research, and KKN.",
+        },
+        {
+          title: "Local Wisdom & Heritage",
+          desc: "Preserved community traditions and customs provide an authentic experience for anyone visiting and looking to learn about rural village life.",
+        },
+      ],
+    },
+    umkm: {
+      badge: "Digital E-Catalog & Resident Empowerment",
+      title: "Tlogomoyo MSME Product Catalog",
+      subtitle: "Support the local economy by purchasing organic processed food, traditional herbs, and handicrafts directly from Tlogomoyo Hamlet residents.",
+      searchPlaceholder: "Search snacks, herbal drinks, or sellers...",
+      searchEmpty: "No Products Found",
+      searchEmptyAdvice: "Sorry, no matching products found. Try another keyword or select All Products.",
+      viewAllBtn: "View All Products",
+      cats: {
+        semua: "🌟 All Products",
+        makanan: "🍟 Food & Snacks",
+        minuman: "☕ Herbs & Drinks",
+        kerajinan: "🧺 Handicrafts",
+        "hasil-bumi": "🌾 Farm Produce",
+      },
+      orderBtn: "Buy via WhatsApp",
+      orderDirectBtn: "Order Directly via WhatsApp",
+      backBtn: "Back",
     },
   },
 };

@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -42,24 +46,21 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm leading-relaxed text-slate-400 max-w-sm text-justify">
-              Portal informasi resmi Dusun Tlogomoyo, Desa Candi, Kecamatan
-              Pringkuku, Kabupaten Pacitan. Menyediakan informasi tentang
-              potensi dusun, kegiatan masyarakat, dan panduan KKN bagi
-              perguruan tinggi.
+              {t?.footer?.desc || "Portal informasi resmi Dusun Tlogomoyo, Desa Candi, Kecamatan Pringkuku, Kabupaten Pacitan. Menyediakan informasi tentang potensi dusun, kegiatan masyarakat, dan panduan KKN bagi perguruan tinggi."}
             </p>
           </div>
 
           {/* Column 2: Quick Links */}
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Navigasi
+              {t?.footer?.quickLinks || "Navigasi"}
             </h4>
             <ul className="space-y-2.5">
               {[
-                { href: "/", label: "Beranda" },
-                { href: "/profil-dusun", label: "Profil Dusun" },
-                { href: "/potensi", label: "Potensi & UMKM" },
-                { href: "/info-kkn", label: "Tentang & Info KKN" },
+                { href: "/", label: t?.nav?.beranda || "Beranda" },
+                { href: "/profil-dusun", label: t?.nav?.profil || "Profil Dusun" },
+                { href: "/potensi", label: t?.nav?.potensi || "Potensi Dusun" },
+                { href: "/info-kkn", label: t?.nav?.infokkn || "Tentang & Info KKN" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -89,7 +90,7 @@ export default function Footer() {
           {/* Column 3: Contact Info */}
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Informasi Perangkat Desa
+              {t?.footer?.contact || "Informasi Perangkat Desa"}
             </h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm">
@@ -98,9 +99,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 </svg>
                 <span className="text-slate-400">
-                  Dusun Tlogomoyo, Desa Candi,<br />
-                  Kec. Pringkuku, Kab. Pacitan,<br />
-                  Jawa Timur, Indonesia
+                  {t?.footer?.address || "Balai Dusun Tlogomoyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan, Jawa Timur 63552"}
                 </span>
               </li>
               <li className="flex items-center gap-3 text-sm">
@@ -122,15 +121,14 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="py-5 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
           <p>
-            &copy; {currentYear} Pemerintah Dusun Tlogomoyo. Hak cipta
-            dilindungi.
+            {t?.footer?.copyright || `© ${currentYear} Pemerintah Dusun Tlogomoyo.`}
           </p>
           <p className="flex items-center gap-1">
             Dibangun dengan
             <svg className="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24">
               <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
             </svg>
-            oleh Tim KKN untuk Tlogomoyo
+            oleh {t?.footer?.kknGroup || "Tim KKN untuk Tlogomoyo"}
           </p>
         </div>
       </div>

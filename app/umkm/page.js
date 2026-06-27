@@ -93,7 +93,7 @@ const kategoriList = [
 ];
 
 export default function UmkmPage() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState("semua");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -126,16 +126,13 @@ export default function UmkmPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-amber-300 text-xs sm:text-sm font-bold tracking-wider uppercase mb-6 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
-            E-Katalog Digital & Pemberdayaan Warga
+            {t?.umkm?.badge || "E-Katalog Digital & Pemberdayaan Warga"}
           </div>
           <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-            Katalog Produk UMKM <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-emerald-300 to-teal-200">
-              Dusun Tlogomoyo
-            </span>
+            {t?.umkm?.title || "Katalog Produk UMKM Dusun Tlogomoyo"}
           </h1>
           <p className="max-w-2xl mx-auto text-base sm:text-lg text-slate-200 leading-relaxed">
-            Dukung perekonomian lokal dengan membeli langsung produk olahan pangan organik, jamu tradisional, dan kerajinan tangan dari warga Dusun Tlogomoyo, Pacitan.
+            {t?.umkm?.subtitle || "Dukung perekonomian lokal dengan membeli langsung produk olahan pangan organik, jamu tradisional, dan kerajinan tangan dari warga Dusun Tlogomoyo, Pacitan."}
           </p>
         </div>
       </section>
@@ -157,7 +154,7 @@ export default function UmkmPage() {
                       : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-slate-700 hover:text-primary-600"
                   }`}
                 >
-                  {cat.label}
+                  {t?.umkm?.cats?.[cat.id] || cat.label}
                 </button>
               );
             })}
@@ -169,7 +166,7 @@ export default function UmkmPage() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Cari camilan, jamu, atau penjual..."
+              placeholder={t?.umkm?.searchPlaceholder || "Cari camilan, jamu, atau penjual..."}
               className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500/20 transition-all duration-200"
             />
             <svg
@@ -200,16 +197,16 @@ export default function UmkmPage() {
               🔍
             </div>
             <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">
-              Produk Tidak Ditemukan
+              {t?.umkm?.searchEmpty || "Produk Tidak Ditemukan"}
             </h3>
             <p className="text-slate-500 dark:text-slate-400 text-sm max-w-md mx-auto">
-              Maaf, tidak ada produk yang cocok dengan kata kunci &quot;{searchQuery}&quot;. Coba gunakan kata kunci lain atau pilih kategori Semua.
+              {t?.umkm?.searchEmptyAdvice || "Maaf, tidak ada produk yang cocok. Coba gunakan kata kunci lain atau pilih kategori Semua."}
             </p>
             <button
               onClick={() => { setSelectedCategory("semua"); setSearchQuery(""); }}
               className="mt-6 px-6 py-2.5 bg-primary-600 text-white font-semibold rounded-xl text-sm shadow-md hover:bg-primary-700 transition-colors"
             >
-              Lihat Semua Produk
+              {t?.umkm?.viewAllBtn || "Lihat Semua Produk"}
             </button>
           </div>
         ) : (
@@ -276,7 +273,7 @@ export default function UmkmPage() {
                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                       <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.131.564 4.14 1.566 5.885l-1.666 6.115 6.275-1.644c1.685.918 3.612 1.444 5.666 1.444 6.628 0 12-5.373 12-12 0-6.628-5.372-12-12-12z"/>
                     </svg>
-                    <span>Beli via WhatsApp</span>
+                    <span>{t?.umkm?.orderBtn || "Beli via WhatsApp"}</span>
                   </button>
                 </div>
               </div>
@@ -332,13 +329,13 @@ export default function UmkmPage() {
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
                     <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.131.564 4.14 1.566 5.885l-1.666 6.115 6.275-1.644c1.685.918 3.612 1.444 5.666 1.444 6.628 0 12-5.373 12-12 0-6.628-5.372-12-12-12z"/>
                   </svg>
-                  <span>Pesan Langsung via WhatsApp</span>
+                  <span>{t?.umkm?.orderDirectBtn || "Pesan Langsung via WhatsApp"}</span>
                 </button>
                 <button
                   onClick={() => setSelectedProduct(null)}
                   className="w-full sm:w-auto px-6 py-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded-2xl transition-colors"
                 >
-                  Kembali
+                  {t?.umkm?.backBtn || "Kembali"}
                 </button>
               </div>
             </div>

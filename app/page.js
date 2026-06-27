@@ -200,16 +200,13 @@ export default function HomePage() {
           {/* Section Header */}
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              Profil Dusun
+              {t?.homeSections?.potensiBadge || "Profil Dusun"}
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-              Mengenal{" "}
-              <span className="gradient-text">Tlogomoyo</span>
+              {t?.homeSections?.potensiTitle || "Mengenal Tlogomoyo"}
             </h2>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
-              Dusun Tlogomoyo merupakan bagian dari Desa Candi, Kecamatan
-              Pringkuku, Kabupaten Pacitan, Jawa Timur. Dusun ini memiliki
-              beragam potensi yang menjadikannya unik dan menarik.
+              {t?.homeSections?.potensiDesc || "Dusun Tlogomoyo merupakan bagian dari Desa Candi, Kecamatan Pringkuku, Kabupaten Pacitan, Jawa Timur. Dusun ini memiliki beragam potensi yang menjadikannya unik dan menarik."}
             </p>
           </div>
 
@@ -221,8 +218,8 @@ export default function HomePage() {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 8.25 4.69a7.5 7.5 0 0 1 3.75-1.69z" />
                 ),
-                title: "Potensi Pertanian",
-                desc: "Dusun Tlogomoyo kaya akan hasil pertanian seperti singkong, empon-empon organik, kelapa, dan produk turunannya. Komoditas ini menjadi tulang punggung perekonomian masyarakat setempat.",
+                title: t?.homeSections?.cards?.[0]?.title || "Potensi Pertanian",
+                desc: t?.homeSections?.cards?.[0]?.desc || "Dusun Tlogomoyo kaya akan hasil pertanian seperti singkong, empon-empon organik, kelapa, dan produk turunannya. Komoditas ini menjadi tulang punggung perekonomian masyarakat setempat.",
                 gradient: "from-emerald-100 to-emerald-200",
                 iconColor: "text-emerald-700 dark:text-emerald-400",
               },
@@ -231,8 +228,8 @@ export default function HomePage() {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
                 ),
-                title: "Masyarakat & Budaya",
-                desc: "Masyarakat Tlogomoyo dikenal ramah dan menjunjung tinggi nilai gotong royong. Tradisi dan kearifan lokal tetap terjaga di tengah perkembangan zaman modern.",
+                title: t?.homeSections?.cards?.[1]?.title || "Masyarakat & Budaya",
+                desc: t?.homeSections?.cards?.[1]?.desc || "Masyarakat Tlogomoyo dikenal ramah dan menjunjung tinggi nilai gotong royong. Tradisi dan kearifan lokal tetap terjaga di tengah perkembangan zaman modern.",
                 gradient: "from-amber-100 to-amber-200",
                 iconColor: "text-amber-700 dark:text-amber-400",
               },
@@ -241,8 +238,8 @@ export default function HomePage() {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                 ),
-                title: "Terbuka untuk KKN",
-                desc: "Dusun Tlogomoyo menyambut baik program KKN dari berbagai perguruan tinggi. Kolaborasi antara akademisi dan masyarakat telah menciptakan dampak positif yang berkelanjutan.",
+                title: t?.homeSections?.cards?.[2]?.title || "Terbuka untuk KKN",
+                desc: t?.homeSections?.cards?.[2]?.desc || "Dusun Tlogomoyo menyambut baik program KKN dari berbagai perguruan tinggi. Kolaborasi antara akademisi dan masyarakat telah menciptakan dampak positif yang berkelanjutan.",
                 gradient: "from-blue-100 to-blue-200",
                 iconColor: "text-blue-700 dark:text-blue-400",
               },
@@ -278,11 +275,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              Keunggulan
+              {t?.homeSections?.keunggulanBadge || "Keunggulan"}
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-              Mengapa{" "}
-              <span className="gradient-text">Tlogomoyo?</span>
+              {t?.homeSections?.keunggulanTitle || "Mengapa Tlogomoyo?"}
             </h2>
           </div>
 
@@ -292,22 +288,22 @@ export default function HomePage() {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 ),
-                title: "Lokasi Strategis",
-                desc: "Terletak di Kabupaten Pacitan, Jawa Timur daerah yang dikenal dengan keindahan alamnya. Akses menuju dusun dapat ditempuh dengan mudah dari pusat kota.",
+                title: t?.homeSections?.keunggulanCards?.[0]?.title || "Lokasi Strategis",
+                desc: t?.homeSections?.keunggulanCards?.[0]?.desc || "Terletak di Kabupaten Pacitan, Jawa Timur daerah yang dikenal dengan keindahan alamnya. Akses menuju dusun dapat ditempuh dengan mudah dari pusat kota.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
                 ),
-                title: "Lingkungan Asri & Aman",
-                desc: "Dikelilingi oleh perbukitan hijau dan udara segar. Lingkungan yang tenang dan aman menjadikan dusun ini cocok untuk kegiatan akademik, penelitian, dan KKN.",
+                title: t?.homeSections?.keunggulanCards?.[1]?.title || "Lingkungan Asri & Aman",
+                desc: t?.homeSections?.keunggulanCards?.[1]?.desc || "Dikelilingi oleh perbukitan hijau dan udara segar. Lingkungan yang tenang dan aman menjadikan dusun ini cocok untuk kegiatan akademik, penelitian, dan KKN.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.97M5.25 4.97l-2.62 10.726c-.122.499.106 1.028.589 1.202a5.989 5.989 0 0 0 2.031.352 5.989 5.989 0 0 0 2.031-.352c.483-.174.711-.703.59-1.202L5.25 4.97" />
                 ),
-                title: "Kearifan Lokal",
-                desc: "Tradisi dan adat istiadat masyarakat yang masih terjaga memberikan pengalaman otentik bagi siapa pun yang berkunjung dan ingin belajar tentang kehidupan pedesaan.",
+                title: t?.homeSections?.keunggulanCards?.[2]?.title || "Kearifan Lokal",
+                desc: t?.homeSections?.keunggulanCards?.[2]?.desc || "Tradisi dan adat istiadat masyarakat yang masih terjaga memberikan pengalaman otentik bagi siapa pun yang berkunjung dan ingin belajar tentang kehidupan pedesaan.",
               },
             ].map((item, i) => (
               <div
