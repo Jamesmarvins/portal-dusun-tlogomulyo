@@ -170,7 +170,7 @@ export default function InfoKKNPage() {
               <ol className="flex items-center gap-2 text-sm text-slate-300">
                 <li>
                   <Link href="/" className="hover:text-white transition-colors">
-                    {t.nav.beranda}
+                    {t?.nav?.beranda || "Beranda"}
                   </Link>
                 </li>
                 <li>
@@ -178,15 +178,15 @@ export default function InfoKKNPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                   </svg>
                 </li>
-                <li className="text-white font-medium">{t.kkn.breadcrumb}</li>
+                <li className="text-white font-medium">{t?.kkn?.breadcrumb || "Tentang & KKN"}</li>
               </ol>
             </nav>
 
             <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 tracking-tight">
-              {t.kkn.title} <span className="gradient-text">Tlogomoyo</span>
+              {t?.kkn?.title || "Tentang KKN"} <span className="gradient-text">Tlogomoyo</span>
             </h1>
             <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed text-justify">
-              {t.kkn.subtitle}
+              {t?.kkn?.subtitle || "Profil kelompok, program kerja kelompok, dan program kerja individu Tim KKN di Dusun Tlogomoyo."}
             </p>
 
             {/* Quick Stats */}
