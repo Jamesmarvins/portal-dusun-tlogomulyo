@@ -64,10 +64,10 @@ export default function WeatherWidget() {
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
                 <span>Real-time Satelit Pacitan</span>
               </div>
-              <h3 className="font-heading text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white truncate">
+              <h3 className="font-heading text-base sm:text-xl font-extrabold text-slate-900 dark:text-white leading-tight">
                 {t.weather.title}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 truncate">
+              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">
                 {t.weather.subtitle}
               </p>
             </div>
@@ -90,7 +90,7 @@ export default function WeatherWidget() {
                 <p className="text-xl sm:text-2xl font-extrabold text-primary-600 dark:text-primary-400 mt-0.5">
                   {weatherData.temperature_2m}°C
                 </p>
-                <p className="text-[10px] text-slate-500 font-medium mt-0.5 truncate">{getWeatherName(weatherData.weather_code)}</p>
+                <p className="text-[10px] text-slate-500 font-medium mt-0.5 leading-tight">{getWeatherName(weatherData.weather_code)}</p>
               </div>
 
               {/* Terasa */}
