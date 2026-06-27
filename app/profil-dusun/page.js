@@ -1,4 +1,4 @@
-import Link from "next/link";
+import ProfilHeader from "./ProfilHeader";
 
 export const metadata = {
   title: "Profil Dusun Tlogomoyo Geografi, Budaya & Potensi Desa",
@@ -20,34 +20,7 @@ export default function ProfilDusunPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
-          <div className="animate-fade-in-up">
-            {/* Breadcrumb */}
-            <nav className="mb-6" aria-label="Breadcrumb">
-              <ol className="flex items-center gap-2 text-sm text-primary-200">
-                <li>
-                  <Link href="/" className="hover:text-white transition-colors">
-                    Beranda
-                  </Link>
-                </li>
-                <li>
-                  <svg className="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                  </svg>
-                </li>
-                <li className="text-white font-medium">Profil Dusun</li>
-              </ol>
-            </nav>
-
-            <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 tracking-tight">
-              Profil Dusun{" "}
-              <span className="text-accent-400">Tlogomoyo</span>
-            </h1>
-            <p className="text-base sm:text-lg text-primary-100 max-w-2xl leading-relaxed text-justify">
-              Mengenal lebih dekat Dusun Tlogomoyo geografi, sejarah,
-              kekayaan budaya, potensi pertanian, serta destinasi wisata
-              di sekitarnya. Sebuah dusun yang asri di jantung Pacitan selatan.
-            </p>
-          </div>
+          <ProfilHeader />
 
           {/* Quick Stats */}
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>

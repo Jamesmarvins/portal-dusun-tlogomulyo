@@ -78,6 +78,16 @@ export const translations = {
           coords: "-8.1950, 111.1005",
         },
       },
+      profil: {
+        title: "Profil Dusun",
+        subtitle: "Mengenal lebih dekat Dusun Tlogomoyo geografi, sejarah, kekayaan budaya, potensi pertanian, serta destinasi wisata di sekitarnya. Sebuah dusun yang asri di jantung Pacitan selatan.",
+        breadcrumb: "Profil Dusun",
+      },
+      kkn: {
+        title: "Tentang KKN",
+        subtitle: "Profil kelompok, program kerja kelompok, dan program kerja individu Tim KKN di Dusun Tlogomoyo.",
+        breadcrumb: "Tentang & KKN",
+      },
     },
   },
   en: {
@@ -158,6 +168,16 @@ export const translations = {
           desc: "A crystal-clear river nature spot shaded by lush greenery. The birthplace of the unique 'Ceklukan' water-slapping acoustic music tradition.",
           coords: "-8.1950, 111.1005",
         },
+      },
+      profil: {
+        title: "Hamlet Profile",
+        subtitle: "Discover the geography, history, rich cultural heritage, agricultural potential, and surrounding tourist destinations of Tlogomoyo Hamlet. A serene haven in southern Pacitan.",
+        breadcrumb: "Hamlet Profile",
+      },
+      kkn: {
+        title: "About KKN Program",
+        subtitle: "Group profile, collaborative work programs, and individual initiatives of the KKN Team in Tlogomoyo Hamlet.",
+        breadcrumb: "About & KKN",
       },
     },
   },
