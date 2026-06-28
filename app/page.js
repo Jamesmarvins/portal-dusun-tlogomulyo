@@ -72,7 +72,7 @@ export default function HomePage() {
                 {[
                   { value: "1.200+", label: t.hero.stats.pop },
                   { value: "350+", label: t.hero.stats.kk },
-                  { value: "2 Spot", label: t.hero.stats.wisata },
+                  { value: t?.hero?.stats?.wisata === "Tourist Spots" ? "2 Spots" : "2 Spot", label: t.hero.stats.wisata },
                 ].map((stat, i) => (
                   <div key={i} className="text-center sm:text-left">
                     <p className="text-xl sm:text-2xl font-extrabold text-primary-700">
@@ -100,7 +100,7 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
                     <div className="absolute bottom-3 left-4 flex items-center gap-2 text-white">
                       <span className="px-2.5 py-1 bg-primary-600/90 backdrop-blur-md rounded-lg text-xs font-bold uppercase tracking-wider">Pacitan</span>
-                      <span className="text-xs font-medium opacity-90">Jawa Timur</span>
+                      <span className="text-xs font-medium opacity-90">{t?.heroCard?.province || "Jawa Timur"}</span>
                     </div>
                   </div>
 
@@ -113,23 +113,29 @@ export default function HomePage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-slate-800 dark:text-white">Profil Dusun</p>
-                      <p className="text-xs text-slate-500 dark:text-slate-400">Tlogomoyo, Pacitan</p>
+                      <p className="text-sm font-bold text-slate-800 dark:text-white">{t?.heroCard?.title || "Profil Dusun"}</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400">{t?.heroCard?.location || "Tlogomoyo, Pacitan"}</p>
                     </div>
                   </div>
 
                   {/* Info items */}
                   <div className="space-y-3">
-                    {[
-                      { name: "Potensi Pertanian", detail: "Singkong, Empon-empon, Kelapa", color: "from-emerald-400 to-emerald-600" },
-                      { name: "Lokasi Strategis", detail: "Jawa Timur, Indonesia", color: "from-blue-400 to-blue-600" },
-                      { name: "Masyarakat Ramah", detail: "Gotong Royong & Budaya Lokal", color: "from-amber-400 to-amber-600" },
-                    ].map((item, i) => (
+                    {(t?.heroCard?.items || [
+                      { name: "Potensi Pertanian", detail: "Singkong, Empon-empon, Kelapa" },
+                      { name: "Lokasi Strategis", detail: "Jawa Timur, Indonesia" },
+                      { name: "Masyarakat Ramah", detail: "Gotong Royong & Budaya Lokal" },
+                    ]).map((item, i) => {
+                      const colors = [
+                        "from-emerald-400 to-emerald-600",
+                        "from-blue-400 to-blue-600",
+                        "from-amber-400 to-amber-600",
+                      ];
+                      return (
                       <div
                         key={i}
                         className="flex items-center gap-3 bg-slate-50 dark:bg-slate-800 rounded-xl p-3 border border-slate-200 dark:border-slate-700 hover:bg-primary-50 dark:hover:bg-slate-700/80 transition-colors duration-200 shadow-sm"
                       >
-                        <div className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center shrink-0`}>
+                        <div className={`w-8 h-8 bg-gradient-to-br ${colors[i % colors.length]} rounded-lg flex items-center justify-center shrink-0`}>
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                           </svg>
@@ -139,14 +145,15 @@ export default function HomePage() {
                           <p className="text-xs font-medium text-slate-500 dark:text-slate-300">{item.detail}</p>
                         </div>
                       </div>
-                    ))}
+                      );
+                    })}
                   </div>
 
                   {/* Bottom stat */}
                   <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex justify-between items-center">
                     <div>
-                      <p className="text-xs text-slate-400">{t?.heroBottom?.openFor || "Terbuka untuk"}</p>
-                      <p className="text-lg font-extrabold text-primary-700">{t?.heroBottom?.kknVisit || "KKN & Kunjungan"}</p>
+                      <p className="text-xs text-slate-400">{t?.heroCard?.openFor || t?.heroBottom?.openFor || "Terbuka untuk"}</p>
+                      <p className="text-lg font-extrabold text-primary-700">{t?.heroCard?.kknVisit || t?.heroBottom?.kknVisit || "KKN & Kunjungan"}</p>
                     </div>
                     <div className="w-10 h-10 bg-primary-50 rounded-full flex items-center justify-center">
                       <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>

@@ -54,7 +54,7 @@ export default function InteractiveMap() {
               }`}
             >
               <span className="text-lg">{spot.icon}</span>
-              <span>{spot.label}</span>
+              <span>{t?.map?.spotLabels?.[spot.id] || spot.label}</span>
             </button>
           ))}
         </div>
@@ -67,7 +67,7 @@ export default function InteractiveMap() {
           <div className="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-[var(--shadow-card)] flex flex-col justify-between space-y-6 lg:h-[450px]">
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-100 dark:bg-accent-950 text-accent-700 dark:text-accent-300 text-xs font-bold mb-3">
-                <span>📍 Titik Terpilih</span>
+                <span>📍 {t?.map?.selectedPoint || "Titik Terpilih"}</span>
               </div>
               <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mb-3">
                 {spotInfo.name}
@@ -79,7 +79,7 @@ export default function InteractiveMap() {
 
             <div className="pt-6 border-t border-slate-100 dark:border-slate-700 space-y-4">
               <div className="flex items-center justify-between text-xs sm:text-sm">
-                <span className="text-slate-400 font-semibold">Koordinat GPS</span>
+                <span className="text-slate-400 font-semibold">{t?.map?.gpsCoords || "Koordinat GPS"}</span>
                 <code className="bg-slate-100 dark:bg-slate-900 px-3 py-1 rounded-lg text-primary-600 dark:text-primary-400 font-mono font-bold">
                   {spotInfo.coords}
                 </code>

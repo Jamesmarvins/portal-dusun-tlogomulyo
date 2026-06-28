@@ -151,8 +151,14 @@ function getInitials(name) {
    ============================ */
 
 export default function InfoKKNPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [expandedCard, setExpandedCard] = useState(null);
+
+  const activeKelompokData = t?.infoKknFull?.kelompokData || kelompokData;
+  const activeProkerKelompok = t?.infoKknFull?.prokerKelompok || prokerKelompok;
+  const activeAnggota = t?.infoKknFull?.anggota || anggota;
+  const activeLabels = t?.infoKknFull?.labels || {};
+  const activeJabatans = t?.infoKknFull?.jabatans || {};
 
   return (
     <>
@@ -195,7 +201,7 @@ export default function InfoKKNPage() {
                 { value: "7", label: t?.kknContent?.stats?.[0]?.label || "Anggota" },
                 { value: "1", label: t?.kknContent?.stats?.[1]?.label || "Proker Kelompok" },
                 { value: "7", label: t?.kknContent?.stats?.[2]?.label || "Proker Individu" },
-                { value: "29 Hari", label: "Durasi" },
+                { value: activeLabels.durationVal || "29 Hari", label: activeLabels.duration || "Durasi" },
               ].map((stat, i) => (
                 <div
                   key={i}
@@ -223,11 +229,10 @@ export default function InfoKKNPage() {
               {t?.kknContent?.tabs?.profil || "Profil Kelompok"}
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-              Kenali <span className="gradient-text">Tim Kami</span>
+              {activeLabels.sec1Title || "Kenali"} <span className="gradient-text">{activeLabels.sec1Highlight || "Tim Kami"}</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
-              Kelompok KKN yang bertugas di Dusun Tlogomoyo terdiri dari 7
-              mahasiswa lintas jurusan yang siap berkolaborasi dengan masyarakat.
+              {activeLabels.sec1Desc || "Kelompok KKN yang bertugas di Dusun Tlogomoyo terdiri dari 7 mahasiswa lintas jurusan yang siap berkolaborasi dengan masyarakat."}
             </p>
           </div>
 
@@ -242,10 +247,10 @@ export default function InfoKKNPage() {
                 </div>
                 <div>
                   <h3 className="text-lg sm:text-xl font-bold text-white">
-                    {kelompokData.nama}
+                    {activeKelompokData.nama}
                   </h3>
                   <p className="text-sm text-white/70">
-                    {kelompokData.universitas}
+                    {activeKelompokData.universitas}
                   </p>
                 </div>
               </div>
@@ -253,11 +258,11 @@ export default function InfoKKNPage() {
             <div className="p-6 sm:p-8">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 {[
-                  { label: "Universitas", value: kelompokData.universitas, icon: "🏫" },
-                  { label: "Periode", value: kelompokData.periode, icon: "📅" },
-                  { label: "Lokasi", value: kelompokData.lokasi, icon: "📍" },
-                  { label: "DPL", value: kelompokData.dpl.nama, icon: "👨‍🏫" },
-                  { label: "APL", value: kelompokData.apl.nama, icon: "🧑‍💼" },
+                  { label: activeLabels.univ || "Universitas", value: activeKelompokData.universitas, icon: "🏫" },
+                  { label: activeLabels.period || "Periode", value: activeKelompokData.periode, icon: "📅" },
+                  { label: activeLabels.loc || "Lokasi", value: activeKelompokData.lokasi, icon: "📍" },
+                  { label: activeLabels.dpl || "DPL", value: activeKelompokData.dpl.nama, icon: "👨‍🏫" },
+                  { label: activeLabels.apl || "APL", value: activeKelompokData.apl.nama, icon: "🧑‍💼" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 bg-slate-50 dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-700">
                     <span className="text-xl shrink-0">{item.icon}</span>
@@ -275,10 +280,10 @@ export default function InfoKKNPage() {
               {/* Tema */}
               <div className="mt-6 bg-gradient-to-r from-primary-50 to-accent-400/10 dark:from-slate-800 dark:to-slate-800 rounded-xl p-5 border border-primary-100 dark:border-slate-700">
                 <p className="text-xs font-semibold text-primary-600 uppercase tracking-wider mb-1">
-                  Tema KKN
+                  {activeLabels.theme || "Tema KKN"}
                 </p>
                 <p className="text-sm sm:text-base font-bold text-slate-800 dark:text-white leading-relaxed text-justify">
-                  &ldquo;{kelompokData.tema}&rdquo;
+                  &ldquo;{activeKelompokData.tema}&rdquo;
                 </p>
               </div>
             </div>
@@ -286,9 +291,10 @@ export default function InfoKKNPage() {
 
           {/* ===== ANGGOTA GRID ===== */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
-            {anggota.map((member, i) => {
+            {activeAnggota.map((member, i) => {
               const gradientColor =
                 jabatanColors[member.jabatan] || jabatanColors.default;
+              const translatedJabatan = activeJabatans[member.jabatan] || member.jabatan;
               return (
                 <div
                   key={i}
@@ -325,7 +331,7 @@ export default function InfoKKNPage() {
                       <span
                         className={`inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-gradient-to-r ${gradientColor} text-white`}
                       >
-                        {member.jabatan}
+                        {translatedJabatan}
                       </span>
                     </div>
                   </div>
@@ -343,14 +349,13 @@ export default function InfoKKNPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              Program Kerja
+              {activeLabels.sec2Badge || "Program Kerja"}
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-              Proker <span className="gradient-text">Kelompok</span>
+              {activeLabels.sec2Title || "Proker"} <span className="gradient-text">{activeLabels.sec2Highlight || "Kelompok"}</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
-              Program kerja bersama yang dilaksanakan oleh seluruh anggota
-              kelompok KKN selama periode penugasan di Dusun Tlogomoyo.
+              {activeLabels.sec2Desc || "Program kerja bersama yang dilaksanakan oleh seluruh anggota kelompok KKN selama periode penugasan di Dusun Tlogomoyo."}
             </p>
           </div>
 
@@ -365,23 +370,23 @@ export default function InfoKKNPage() {
                 </div>
                 <div>
                   <h3 className="text-lg sm:text-xl font-bold text-white">
-                    Program Kerja Kelompok
+                    {activeLabels.prokerKelompokHeader || "Program Kerja Kelompok"}
                   </h3>
                   <p className="text-sm text-white/70">
-                    Dilaksanakan oleh seluruh anggota
+                    {activeLabels.prokerKelompokSub || "Dilaksanakan oleh seluruh anggota"}
                   </p>
                 </div>
                 <span className="ml-auto text-[10px] font-extrabold uppercase tracking-wider px-3 py-1.5 rounded-full bg-white text-emerald-800 dark:bg-slate-800/40 dark:text-white border border-white/30 shadow-sm">
-                  {prokerKelompok.status}
+                  {activeProkerKelompok.status}
                 </span>
               </div>
             </div>
             <div className="p-6 sm:p-8">
               <h4 className="font-heading text-xl sm:text-2xl font-bold text-slate-800 dark:text-white mb-3">
-                {prokerKelompok.judul}
+                {activeProkerKelompok.judul}
               </h4>
               <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-6 text-justify">
-                {prokerKelompok.deskripsi}
+                {activeProkerKelompok.deskripsi}
               </p>
 
               {/* Target & Participants */}
@@ -393,10 +398,10 @@ export default function InfoKKNPage() {
                     </svg>
                     <div>
                       <p className="text-[10px] font-semibold text-emerald-600 uppercase tracking-wider">
-                        Target Capaian
+                        {activeLabels.target || "Target Capaian"}
                       </p>
                       <p className="text-sm font-medium text-slate-700 dark:text-slate-100 mt-0.5">
-                        {prokerKelompok.target}
+                        {activeProkerKelompok.target}
                       </p>
                     </div>
                   </div>
@@ -408,10 +413,10 @@ export default function InfoKKNPage() {
                     </svg>
                     <div>
                       <p className="text-[10px] font-semibold text-primary-600 uppercase tracking-wider">
-                        Pelaksana
+                        {activeLabels.pelaksana || "Pelaksana"}
                       </p>
                       <p className="text-sm font-medium text-slate-700 dark:text-slate-100 mt-0.5">
-                        Seluruh 7 anggota kelompok KKN
+                        {activeLabels.pelaksanaVal || "Seluruh 7 anggota kelompok KKN"}
                       </p>
                     </div>
                   </div>
@@ -427,23 +432,23 @@ export default function InfoKKNPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              Proker Individu
+              {activeLabels.sec3Badge || "Proker Individu"}
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-              Program Kerja <span className="gradient-text">Individu</span>
+              {activeLabels.sec3Title || "Program Kerja"} <span className="gradient-text">{activeLabels.sec3Highlight || "Individu"}</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
-              Setiap anggota memiliki satu program kerja individu sesuai bidang
-              keahlian masing-masing.
+              {activeLabels.sec3Desc || "Setiap anggota memiliki satu program kerja individu sesuai bidang keahlian masing-masing."}
             </p>
           </div>
 
           {/* Grid of individual proker cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-            {anggota.map((member, i) => {
+            {activeAnggota.map((member, i) => {
               const gradientColor =
                 jabatanColors[member.jabatan] || jabatanColors.default;
-              const proker = member.prokerIndividu;
+              const proker = member.proker || member.prokerIndividu;
+              const translatedJabatan = activeJabatans[member.jabatan] || member.jabatan;
               const isExpanded = expandedCard === i;
 
               return (
@@ -479,7 +484,7 @@ export default function InfoKKNPage() {
                       <span
                         className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-gradient-to-r ${gradientColor} text-white shrink-0`}
                       >
-                        {member.jabatan.split(" ").slice(0, 2).join(" ")}
+                        {translatedJabatan.split(" ").slice(0, 2).join(" ")}
                       </span>
                     </div>
 
@@ -501,7 +506,7 @@ export default function InfoKKNPage() {
                           </svg>
                           <div>
                             <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
-                              Target
+                              {activeLabels.targetMini || "Target"}
                             </p>
                             <p className="text-xs font-medium text-slate-600 dark:text-slate-300 mt-0.5">
                               {proker.target}
@@ -516,9 +521,9 @@ export default function InfoKKNPage() {
                         </span>
                         <span
                           className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
-                            proker.status === "Selesai"
+                            proker.status === "Selesai" || proker.status === "Completed"
                               ? "bg-emerald-100 text-emerald-700 border border-emerald-200"
-                              : proker.status === "Sedang Berjalan"
+                              : proker.status === "Sedang Berjalan" || proker.status === "In Progress"
                               ? "bg-blue-100 text-blue-700 border border-blue-200"
                               : "bg-slate-100 text-slate-600 dark:text-slate-300 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
                           }`}

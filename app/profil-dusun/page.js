@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useLanguage } from "@/components/LanguageProvider";
 
 export default function ProfilDusunPage() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <>
@@ -25,10 +25,10 @@ export default function ProfilDusunPage() {
           {/* Quick Stats */}
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             {[
-              { value: "Pacitan", label: "Kabupaten", icon: "M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" },
-              { value: "Pringkuku", label: t?.profilContent?.stats?.[0]?.label || "Kecamatan", icon: "M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" },
-              { value: "Candi", label: t?.profilContent?.stats?.[1]?.label || "Desa", icon: "m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" },
-              { value: "Jawa Timur", label: t?.profilContent?.stats?.[2]?.label || "Provinsi", icon: "M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" },
+              { value: t?.profilContent?.stats?.[0]?.value || "Pacitan", label: t?.profilContent?.stats?.[0]?.label || "Kabupaten", icon: "M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" },
+              { value: t?.profilContent?.stats?.[1]?.value || "Pringkuku", label: t?.profilContent?.stats?.[1]?.label || "Kecamatan", icon: "M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" },
+              { value: t?.profilContent?.stats?.[2]?.value || "Candi", label: t?.profilContent?.stats?.[2]?.label || "Desa", icon: "m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" },
+              { value: t?.profilContent?.stats?.[3]?.value || "Jawa Timur", label: t?.profilContent?.stats?.[3]?.label || "Provinsi", icon: "M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" },
             ].map((stat, i) => (
               <div
                 key={i}
@@ -104,12 +104,12 @@ export default function ProfilDusunPage() {
                 <div className="mt-5 pt-5 border-t border-primary-100 dark:border-slate-700">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Luas Kecamatan Pringkuku</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">{language === "en" ? "Pringkuku District Area" : "Luas Kecamatan Pringkuku"}</p>
                       <p className="text-xl font-extrabold text-primary-700 dark:text-primary-400">~132,93 km²</p>
                     </div>
                     <div>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Jumlah Desa</p>
-                      <p className="text-xl font-extrabold text-primary-700 dark:text-primary-400">13 Desa</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">{language === "en" ? "Number of Villages" : "Jumlah Desa"}</p>
+                      <p className="text-xl font-extrabold text-primary-700 dark:text-primary-400">{language === "en" ? "13 Villages" : "13 Desa"}</p>
                     </div>
                   </div>
                 </div>
@@ -124,55 +124,43 @@ export default function ProfilDusunPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              Pertanian & Sumber Daya Alam
+              {t?.profilFull?.sec2Badge || "Pertanian & Sumber Daya Alam"}
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-              Kekayaan Alam{" "}
-              <span className="gradient-text">Tlogomoyo</span>
+              {t?.profilFull?.sec2Title || "Kekayaan Alam"}{" "}
+              <span className="gradient-text">{t?.profilFull?.sec2TitleHighlight || "Tlogomoyo"}</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
-              Topografi perbukitan yang subur menjadikan wilayah ini kaya akan beragam
-              komoditas pertanian dan hasil bumi. Masyarakat Tlogomoyo juga aktif berorganisasi dalam bidang agraris, salah satunya melalui keberadaan kelompok tani (seperti Kelompok Tani Nuju Makmur XII) yang menjadi motor penggerak ketahanan pangan dan ekonomi warga setempat.
+              {t?.profilFull?.sec2Desc || "Topografi perbukitan yang subur menjadikan wilayah ini kaya akan beragam komoditas pertanian dan hasil bumi. Masyarakat Tlogomoyo juga aktif berorganisasi dalam bidang agraris, salah satunya melalui keberadaan kelompok tani (seperti Kelompok Tani Nuju Makmur XII) yang menjadi motor penggerak ketahanan pangan dan ekonomi warga setempat."}
             </p>
           </div>
 
           {/* Penggunaan Lahan */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 mb-10 sm:mb-12">
-            {[
-              {
-                value: "~650 ha",
-                label: "Ladang & Tegalan",
-                desc: "Lahan utama untuk bercocok tanam singkong, empon-empon, dan tanaman pangan lainnya.",
-                gradient: "from-emerald-500 to-emerald-700",
-                bg: "bg-emerald-50",
-              },
-              {
-                value: "~451 ha",
-                label: "Hutan Rakyat",
-                desc: "Hutan yang dikelola masyarakat, menghasilkan kayu, kelapa, dan produk kehutanan.",
-                gradient: "from-primary-500 to-primary-700",
-                bg: "bg-primary-50",
-              },
-              {
-                value: "~12,5 ha",
-                label: "Lahan Sawah",
-                desc: "Area sawah yang relatif kecil namun tetap produktif untuk kebutuhan pangan lokal.",
-                gradient: "from-amber-500 to-amber-700",
-                bg: "bg-amber-50",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className={`${item.bg} dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up`}
-                style={{ animationDelay: `${i * 150}ms`, animationFillMode: "both" }}
-              >
-                <div className={`inline-flex items-center justify-center px-3 py-1 rounded-lg bg-gradient-to-r ${item.gradient} mb-4`}>
-                  <span className="text-xl sm:text-2xl font-extrabold text-white">{item.value}</span>
+            {(t?.profilFull?.lahan || [
+              { value: "~650 ha", label: "Ladang & Tegalan", desc: "Lahan utama untuk bercocok tanam singkong, empon-empon, dan tanaman pangan lainnya." },
+              { value: "~451 ha", label: "Hutan Rakyat", desc: "Hutan yang dikelola masyarakat, menghasilkan kayu, kelapa, dan produk kehutanan." },
+              { value: "~12,5 ha", label: "Lahan Sawah", desc: "Area sawah yang relatif kecil namun tetap produktif untuk kebutuhan pangan lokal." },
+            ]).map((item, i) => {
+              const styles = [
+                { gradient: "from-emerald-500 to-emerald-700", bg: "bg-emerald-50" },
+                { gradient: "from-primary-500 to-primary-700", bg: "bg-primary-50" },
+                { gradient: "from-amber-500 to-amber-700", bg: "bg-amber-50" },
+              ][i] || { gradient: "from-emerald-500 to-emerald-700", bg: "bg-emerald-50" };
+              return (
+                <div
+                  key={i}
+                  className={`${styles.bg} dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up`}
+                  style={{ animationDelay: `${i * 150}ms`, animationFillMode: "both" }}
+                >
+                  <div className={`inline-flex items-center justify-center px-3 py-1 rounded-lg bg-gradient-to-r ${styles.gradient} mb-4`}>
+                    <span className="text-xl sm:text-2xl font-extrabold text-white">{item.value}</span>
+                  </div>
+                  <h3 className="font-heading text-lg font-bold text-slate-800 dark:text-white mb-2">{item.label}</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">{item.desc}</p>
                 </div>
-                <h3 className="font-heading text-lg font-bold text-slate-800 dark:text-white mb-2">{item.label}</h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">{item.desc}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Komoditas Unggulan */}
@@ -183,26 +171,29 @@ export default function ProfilDusunPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 8.25 4.69a7.5 7.5 0 0 1 3.75-1.69z" />
                 </svg>
               </div>
-              Komoditas Unggulan
+              {t?.profilFull?.komoditasTitle || "Komoditas Unggulan"}
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {[
-                { name: "Singkong", emoji: "🌿", desc: "Tanaman pangan utama" },
-                { name: "Empon-empon", emoji: "🫚", desc: "Rempah organik" },
-                { name: "Kelapa", emoji: "🥥", desc: "Buah & minyak" },
-                { name: "Buah-buahan", emoji: "🍌", desc: "Pisang, pepaya, dll" },
-                { name: "Sayuran", emoji: "🥬", desc: "Sayur segar lokal" },
-                { name: "Kayu", emoji: "🪵", desc: "Hasil hutan rakyat" },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="group bg-slate-50 dark:bg-slate-800 hover:bg-primary-50 dark:hover:bg-slate-700 rounded-xl p-4 text-center border border-slate-200 dark:border-slate-700 hover:border-primary-300 dark:hover:border-primary-500 transition-all duration-300 hover:-translate-y-0.5 shadow-sm"
-                >
-                  <span className="text-3xl block mb-2 group-hover:scale-110 transition-transform duration-300">{item.emoji}</span>
-                  <p className="text-sm font-bold text-slate-800 dark:text-white group-hover:text-primary-700 dark:group-hover:text-primary-300">{item.name}</p>
-                  <p className="text-xs font-medium text-slate-500 dark:text-slate-300 mt-1">{item.desc}</p>
-                </div>
-              ))}
+              {(t?.profilFull?.komoditas || [
+                { name: "Singkong", desc: "Tanaman pangan utama" },
+                { name: "Empon-empon", desc: "Rempah organik" },
+                { name: "Kelapa", desc: "Buah & minyak" },
+                { name: "Buah-buahan", desc: "Pisang, pepaya, dll" },
+                { name: "Sayuran", desc: "Sayur segar lokal" },
+                { name: "Kayu", desc: "Hasil hutan rakyat" },
+              ]).map((item, i) => {
+                const emoji = ["🌿", "🫚", "🥥", "🍌", "🥬", "🪵"][i] || "🌱";
+                return (
+                  <div
+                    key={i}
+                    className="group bg-slate-50 dark:bg-slate-800 hover:bg-primary-50 dark:hover:bg-slate-700 rounded-xl p-4 text-center border border-slate-200 dark:border-slate-700 hover:border-primary-300 dark:hover:border-primary-500 transition-all duration-300 hover:-translate-y-0.5 shadow-sm"
+                  >
+                    <span className="text-3xl block mb-2 group-hover:scale-110 transition-transform duration-300">{emoji}</span>
+                    <p className="text-sm font-bold text-slate-800 dark:text-white group-hover:text-primary-700 dark:group-hover:text-primary-300">{item.name}</p>
+                    <p className="text-xs font-medium text-slate-500 dark:text-slate-300 mt-1">{item.desc}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -213,15 +204,14 @@ export default function ProfilDusunPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              Budaya & Tradisi
+              {t?.profilFull?.sec3Badge || "Budaya & Tradisi"}
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-              Kearifan Lokal{" "}
-              <span className="gradient-text">yang Terjaga</span>
+              {t?.profilFull?.sec3Title || "Kearifan Lokal"}{" "}
+              <span className="gradient-text">{t?.profilFull?.sec3TitleHighlight || "yang Terjaga"}</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
-              Masyarakat Tlogomoyo memiliki tradisi dan kesenian yang kaya warisan leluhur
-              yang masih hidup dan terus dilestarikan dari generasi ke generasi.
+              {t?.profilFull?.sec3Desc || "Masyarakat Tlogomoyo memiliki tradisi dan kesenian yang kaya warisan leluhur yang masih hidup dan terus dilestarikan dari generasi ke generasi."}
             </p>
           </div>
 
@@ -230,72 +220,46 @@ export default function ProfilDusunPage() {
             <img src="/images/budaya.png" alt="Budaya Gotong Royong Warga Tlogomoyo" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8">
               <div className="text-white">
-                <span className="px-3 py-1 bg-amber-500 text-slate-950 rounded-lg font-bold text-xs uppercase tracking-wider mb-2 inline-block">Nilai Utama</span>
-                <h3 className="text-2xl sm:text-3xl font-extrabold">Semangat Kegotongroyongan & Budaya Agraris</h3>
-                <p className="text-sm text-slate-200 mt-1 max-w-xl">Dari tradisi Ammos, Kothekan Lesung, hingga kerja bakti rutin membangun desa bersama-sama dengan senyum hangat keramahan lokal.</p>
+                <span className="px-3 py-1 bg-amber-500 text-slate-950 rounded-lg font-bold text-xs uppercase tracking-wider mb-2 inline-block">{t?.profilFull?.bannerBadge || "Nilai Utama"}</span>
+                <h3 className="text-2xl sm:text-3xl font-extrabold">{t?.profilFull?.bannerTitle || "Semangat Kegotongroyongan & Budaya Agraris"}</h3>
+                <p className="text-sm text-slate-200 mt-1 max-w-xl">{t?.profilFull?.bannerDesc || "Dari tradisi Ammos, Kothekan Lesung, hingga kerja bakti rutin membangun desa bersama-sama dengan senyum hangat keramahan lokal."}</p>
               </div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
-            {[
-              {
-                title: "Tradisi Ammos",
-                desc: "Tradisi khas Kecamatan Pringkuku yang menjadi cikal bakal kesenian Kothekan Lesung seni memukul alat penumbuk padi tradisional secara bersamaan. Tradisi ini lahir dari kehidupan agraris dan melambangkan semangat kegotongroyongan masyarakat.",
-                gradient: "from-amber-100 to-amber-200",
-                iconColor: "text-amber-700",
-                icon: <path strokeLinecap="round" strokeLinejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z" />,
-              },
-              {
-                title: "Karawitan & Tayub",
-                desc: "Kesenian tradisional gamelan Jawa (Karawitan) dan tarian Tayub sering ditampilkan dalam berbagai acara sosial, hajatan, dan perayaan desa. Kesenian ini mempererat kebersamaan dan menjadi wadah ekspresi budaya masyarakat setempat.",
-                gradient: "from-rose-100 to-rose-200",
-                iconColor: "text-rose-700",
-                icon: <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />,
-              },
-              {
-                title: "Ritual Baritan",
-                desc: "Upacara tolak bala dan sedekah bumi yang dilakukan sebagai bentuk rasa syukur kepada Tuhan atas hasil panen dan permohonan perlindungan. Ritual ini biasanya disertai pertunjukan seni lokal dan makan bersama seluruh warga.",
-                gradient: "from-purple-100 to-purple-200",
-                iconColor: "text-purple-700",
-                icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.97M5.25 4.97l-2.62 10.726c-.122.499.106 1.028.589 1.202a5.989 5.989 0 0 0 2.031.352 5.989 5.989 0 0 0 2.031-.352c.483-.174.711-.703.59-1.202L5.25 4.97" />,
-              },
-              {
-                title: "Gotong Royong",
-                desc: "Tradisi kerja bersama yang sangat kuat di Tlogomoyo. Masyarakat rutin bergotong royong dalam kegiatan pembangunan infrastruktur dusun, perbaikan jalan, bersih-bersih lingkungan, hingga membantu tetangga yang mengadakan hajatan.",
-                gradient: "from-blue-100 to-blue-200",
-                iconColor: "text-blue-700",
-                icon: <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />,
-              },
-              {
-                title: "Musik Air Ceklukan",
-                desc: "Kesenian unik dari Kali Barong (di wilayah Desa Candi) musik alami yang tercipta dari alunan suara air sungai yang dimainkan oleh 6-7 orang menggunakan teknik tertentu. Seni ini dihidupkan kembali sebagai upaya pelestarian budaya lokal.",
-                gradient: "from-cyan-100 to-cyan-200",
-                iconColor: "text-cyan-700",
-                icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />,
-              },
-              {
-                title: "Istigosah & Keagamaan",
-                desc: "Masyarakat rutin mengadakan istigosah (doa bersama) di lokasi-lokasi yang dianggap bersejarah dan sakral. Kegiatan keagamaan ini menjadi perekat sosial dan memperkuat keharmonisan antarwarga dusun.",
-                gradient: "from-emerald-100 to-emerald-200",
-                iconColor: "text-emerald-700",
-                icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />,
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="group bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up"
-                style={{ animationDelay: `${i * 100}ms`, animationFillMode: "both" }}
-              >
-                <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
-                  <svg className={`w-6 h-6 ${item.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                    {item.icon}
-                  </svg>
+            {(t?.profilFull?.cards || [
+              { title: "Tradisi Ammos", desc: "Tradisi khas Kecamatan Pringkuku yang menjadi cikal bakal kesenian Kothekan Lesung seni memukul alat penumbuk padi tradisional secara bersamaan. Tradisi ini lahir dari kehidupan agraris dan melambangkan semangat kegotongroyongan masyarakat." },
+              { title: "Karawitan & Tayub", desc: "Kesenian tradisional gamelan Jawa (Karawitan) dan tarian Tayub sering ditampilkan dalam berbagai acara sosial, hajatan, dan perayaan desa. Kesenian ini mempererat kebersamaan dan menjadi wadah ekspresi budaya masyarakat setempat." },
+              { title: "Ritual Baritan", desc: "Upacara tolak bala dan sedekah bumi yang dilakukan sebagai bentuk rasa syukur kepada Tuhan atas hasil panen dan permohonan perlindungan. Ritual ini biasanya disertai pertunjukan seni lokal dan makan bersama seluruh warga." },
+              { title: "Gotong Royong", desc: "Tradisi kerja bersama yang sangat kuat di Tlogomoyo. Masyarakat rutin bergotong royong dalam kegiatan pembangunan infrastruktur dusun, perbaikan jalan, bersih-bersih lingkungan, hingga membantu tetangga yang mengadakan hajatan." },
+              { title: "Musik Air Ceklukan", desc: "Kesenian unik dari Kali Barong (di wilayah Desa Candi) musik alami yang tercipta dari alunan suara air sungai yang dimainkan oleh 6-7 orang menggunakan teknik tertentu. Seni ini dihidupkan kembali sebagai upaya pelestarian budaya lokal." },
+              { title: "Istigosah & Keagamaan", desc: "Masyarakat rutin mengadakan istigosah (doa bersama) di lokasi-lokasi yang dianggap bersejarah dan sakral. Kegiatan keagamaan ini menjadi perekat sosial dan memperkuat keharmonisan antarwarga dusun." },
+            ]).map((item, i) => {
+              const styles = [
+                { gradient: "from-amber-100 to-amber-200", iconColor: "text-amber-700", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z" /> },
+                { gradient: "from-rose-100 to-rose-200", iconColor: "text-rose-700", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" /> },
+                { gradient: "from-purple-100 to-purple-200", iconColor: "text-purple-700", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.97M5.25 4.97l-2.62 10.726c-.122.499.106 1.028.589 1.202a5.989 5.989 0 0 0 2.031.352 5.989 5.989 0 0 0 2.031-.352c.483-.174.711-.703.59-1.202L5.25 4.97" /> },
+                { gradient: "from-blue-100 to-blue-200", iconColor: "text-blue-700", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" /> },
+                { gradient: "from-cyan-100 to-cyan-200", iconColor: "text-cyan-700", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" /> },
+                { gradient: "from-emerald-100 to-emerald-200", iconColor: "text-emerald-700", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /> },
+              ][i] || { gradient: "from-amber-100 to-amber-200", iconColor: "text-amber-700", icon: null };
+              return (
+                <div
+                  key={i}
+                  className="group bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up"
+                  style={{ animationDelay: `${i * 100}ms`, animationFillMode: "both" }}
+                >
+                  <div className={`w-12 h-12 bg-gradient-to-br ${styles.gradient} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
+                    <svg className={`w-6 h-6 ${styles.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                      {styles.icon}
+                    </svg>
+                  </div>
+                  <h3 className="font-heading text-lg font-bold text-slate-800 dark:text-white mb-2">{item.title}</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">{item.desc}</p>
                 </div>
-                <h3 className="font-heading text-lg font-bold text-slate-800 dark:text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">{item.desc}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -305,15 +269,14 @@ export default function ProfilDusunPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              Wisata Sekitar
+              {t?.profilFull?.sec4Badge || "Wisata Sekitar"}
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-              Destinasi Wisata di{" "}
-              <span className="gradient-text">Sekitar Dusun</span>
+              {t?.profilFull?.sec4Title || "Destinasi Wisata di"}{" "}
+              <span className="gradient-text">{t?.profilFull?.sec4TitleHighlight || "Sekitar Dusun"}</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
-              Desa Candi dan sekitarnya menyimpan destinasi wisata alam yang memukau 
-              dari pantai berpasir putih hingga sungai di tengah hutan yang sejuk.
+              {t?.profilFull?.sec4Desc || "Desa Candi dan sekitarnya menyimpan destinasi wisata alam yang memukau dari pantai berpasir putih hingga sungai di tengah hutan yang sejuk."}
             </p>
           </div>
 
@@ -327,24 +290,22 @@ export default function ProfilDusunPage() {
                     <span className="text-2xl">🏖️</span>
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-white">Pantai Srau</h3>
-                    <p className="text-xs text-cyan-100">&quot;Permata Putih&quot; Pacitan Desa Candi</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-white">{t?.profilFull?.srau?.title || "Pantai Srau"}</h3>
+                    <p className="text-xs text-cyan-100">{t?.profilFull?.srau?.subtitle || '"Permata Putih" Pacitan Desa Candi'}</p>
                   </div>
                 </div>
               </div>
               <div className="p-6 sm:p-8">
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-5 text-justify">
-                  Pantai Srau merupakan destinasi wisata unggulan Kabupaten Pacitan yang terletak di
-                  Desa Candi. Kawasan pantai ini terbagi menjadi <strong>tiga area</strong> yang dipisahkan
-                  oleh bukit karang, masing-masing dengan karakteristik unik.
+                  {t?.profilFull?.srau?.p1 || "Pantai Srau merupakan destinasi wisata unggulan Kabupaten Pacitan yang terletak di Desa Candi. Kawasan pantai ini terbagi menjadi tiga area yang dipisahkan oleh bukit karang, masing-masing dengan karakteristik unik."}
                 </p>
                 <div className="grid grid-cols-2 gap-3 mb-5">
-                  {[
+                  {(t?.profilFull?.srau?.details || [
                     { label: "Pasir Putih", detail: "Halus & bersih" },
                     { label: "Karang Bolong", detail: "Ikon foto favorit" },
                     { label: "Jarak dr Dusun", detail: "~10 mnt (~3 km)" },
                     { label: "Aktivitas", detail: "Surfing, camping, dll" },
-                  ].map((item, i) => (
+                  ]).map((item, i) => (
                     <div key={i} className="bg-cyan-50/80 dark:bg-slate-700/80 rounded-lg p-3 border border-cyan-200 dark:border-slate-600">
                       <p className="text-xs text-cyan-800 dark:text-cyan-300 font-bold mb-0.5">{item.label}</p>
                       <p className="text-sm font-extrabold text-slate-800 dark:text-white">{item.detail}</p>
@@ -352,7 +313,7 @@ export default function ProfilDusunPage() {
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {["Berselancar", "Berkemah", "Wisata Foto", "Memancing", "Piknik Pantai"].map((act, i) => (
+                  {(t?.profilFull?.srau?.acts || ["Berselancar", "Berkemah", "Wisata Foto", "Memancing", "Piknik Pantai"]).map((act, i) => (
                     <span key={i} className="inline-flex items-center px-3 py-1 bg-cyan-100 dark:bg-cyan-950/80 text-cyan-800 dark:text-cyan-200 text-xs font-bold rounded-full border border-cyan-300 dark:border-cyan-800">
                       {act}
                     </span>
@@ -370,24 +331,22 @@ export default function ProfilDusunPage() {
                     <span className="text-2xl">🏞️</span>
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-white">Kali Barong</h3>
-                    <p className="text-xs text-emerald-100">Wisata Sungai Desa Candi</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-white">{t?.profilFull?.barong?.title || "Kali Barong"}</h3>
+                    <p className="text-xs text-emerald-100">{t?.profilFull?.barong?.subtitle || "Wisata Sungai Desa Candi"}</p>
                   </div>
                 </div>
               </div>
               <div className="p-6 sm:p-8">
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-5 text-justify">
-                  Wisata alam berbasis sungai yang menawarkan kesegaran aliran air jernih di tengah
-                  pepohonan rindang dan tebing-tebing alami. Kali Barong juga menjadi rumah bagi
-                  kesenian unik <strong>&quot;Ceklukan&quot;</strong> musik alami dari suara air sungai.
+                  {t?.profilFull?.barong?.p1 || 'Wisata alam berbasis sungai yang menawarkan kesegaran aliran air jernih di tengah pepohonan rindang dan tebing-tebing alami. Kali Barong juga menjadi rumah bagi kesenian unik "Ceklukan" musik alami dari suara air sungai.'}
                 </p>
                 <div className="grid grid-cols-2 gap-3 mb-5">
-                  {[
+                  {(t?.profilFull?.barong?.details || [
                     { label: "Suasana", detail: "Sejuk & alami" },
                     { label: "Keunikan", detail: "Musik air Ceklukan" },
                     { label: "Jarak dr Dusun", detail: "~10 mnt (~3 km)" },
                     { label: "Fasilitas", detail: "Perahu & sepeda air" },
-                  ].map((item, i) => (
+                  ]).map((item, i) => (
                     <div key={i} className="bg-emerald-50/80 dark:bg-slate-700/80 rounded-lg p-3 border border-emerald-200 dark:border-slate-600">
                       <p className="text-xs text-emerald-800 dark:text-emerald-300 font-bold mb-0.5">{item.label}</p>
                       <p className="text-sm font-extrabold text-slate-800 dark:text-white">{item.detail}</p>
@@ -395,7 +354,7 @@ export default function ProfilDusunPage() {
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {["Susur Sungai", "Sepeda Air", "Seni Ceklukan", "Berkemah", "Piknik Keluarga"].map((act, i) => (
+                  {(t?.profilFull?.barong?.acts || ["Susur Sungai", "Sepeda Air", "Seni Ceklukan", "Berkemah", "Piknik Keluarga"]).map((act, i) => (
                     <span key={i} className="inline-flex items-center px-3 py-1 bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-200 text-xs font-bold rounded-full border border-emerald-300 dark:border-emerald-800">
                       {act}
                     </span>
@@ -420,27 +379,15 @@ export default function ProfilDusunPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                     </svg>
                   </div>
-                  Karakteristik Masyarakat
+                  {t?.profilFull?.sec5Title || "Karakteristik Masyarakat"}
                 </h3>
                 <div className="space-y-4">
-                  {[
-                    {
-                      title: "Heterogen & Majemuk",
-                      desc: "Masyarakat Kecamatan Pringkuku dikenal heterogen dengan latar belakang sosial ekonomi dan tingkat pendidikan yang beragam.",
-                    },
-                    {
-                      title: "Agraris & Pariwisata",
-                      desc: "Sebagian besar berprofesi sebagai petani, namun sektor pariwisata kini juga menjadi sumber pendapatan utama berkat Pantai Srau.",
-                    },
-                    {
-                      title: "Ramah & Terbuka",
-                      desc: "Masyarakat sangat ramah terhadap pendatang, mahasiswa KKN, dan wisatawan. Nilai gotong royong masih sangat kuat.",
-                    },
-                    {
-                      title: "Transformasi Ekonomi",
-                      desc: "Desa Candi mengalami transformasi dari desa berbasis agraris menjadi desa yang juga mengandalkan potensi wisata bahari.",
-                    },
-                  ].map((item, i) => (
+                  {(t?.profilFull?.sec5Chars || [
+                    { title: "Heterogen & Majemuk", desc: "Masyarakat Kecamatan Pringkuku dikenal heterogen dengan latar belakang sosial ekonomi dan tingkat pendidikan yang beragam." },
+                    { title: "Agraris & Pariwisata", desc: "Sebagian besar berprofesi sebagai petani, namun sektor pariwisata kini juga menjadi sumber pendapatan utama berkat Pantai Srau." },
+                    { title: "Ramah & Terbuka", desc: "Masyarakat sangat ramah terhadap pendatang, mahasiswa KKN, dan wisatawan. Nilai gotong royong masih sangat kuat." },
+                    { title: "Transformasi Ekonomi", desc: "Desa Candi mengalami transformasi dari desa berbasis agraris menjadi desa yang juga mengandalkan potensi wisata bahari." },
+                  ]).map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                         <svg className="w-3.5 h-3.5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
@@ -460,34 +407,17 @@ export default function ProfilDusunPage() {
             {/* Right: Text */}
             <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-widest mb-3 bg-primary-50 dark:bg-primary-900/30 px-4 py-1.5 rounded-full">
-                Sosial & Ekonomi
+                {t?.profilFull?.sec5RightBadge || "Sosial & Ekonomi"}
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-5">
-                Kehidupan{" "}
-                <span className="gradient-text">Masyarakat</span>
+                {t?.profilFull?.sec5RightTitle || "Kehidupan"}{" "}
+                <span className="gradient-text">{t?.profilFull?.sec5RightHighlight || "Masyarakat"}</span>
               </h2>
               <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
-                <p>
-                  Masyarakat Dusun Tlogomoyo dan Desa Candi secara umum hidup harmonis
-                  dengan alam. Pertanian tetap menjadi tulang punggung ekonomi terutama
-                  budidaya singkong, empon-empon, kelapa, serta tanaman hortikultura.
-                </p>
-                <p>
-                  Seiring berkembangnya sektor pariwisata di kawasan Pantai Srau, banyak
-                  warga yang kini juga berperan sebagai pelaku usaha wisata dari
-                  pedagang, penyedia jasa penginapan, hingga pemandu wisata lokal.
-                  Transformasi ini membawa dampak positif bagi peningkatan kesejahteraan
-                  masyarakat.
-                </p>
-                <p>
-                  Kecamatan Pringkuku tercatat memiliki penduduk sekitar{" "}
-                  <strong>32.347 jiwa</strong> (data 2024), tersebar di 13 desa dengan
-                  karakteristik demografis yang beragam. Desa Candi sendiri terdiri dari{" "}
-                  <strong>15 dusun</strong>, dengan Tlogomoyo sebagai salah satu dusun
-                  yang aktif dalam berbagai program pembangunan dan pemberdayaan.
-                </p>
+                <p>{t?.profilFull?.sec5P1 || "Masyarakat Dusun Tlogomoyo dan Desa Candi secara umum hidup harmonis dengan alam. Pertanian tetap menjadi tulang punggung ekonomi terutama budidaya singkong, empon-empon, kelapa, serta tanaman hortikultura."}</p>
+                <p>{t?.profilFull?.sec5P2 || "Seiring berkembangnya sektor pariwisata di kawasan Pantai Srau, banyak warga yang kini juga berperan sebagai pelaku usaha wisata dari pedagang, penyedia jasa penginapan, hingga pemandu wisata lokal. Transformasi ini membawa dampak positif bagi peningkatan kesejahteraan masyarakat."}</p>
+                <p>{t?.profilFull?.sec5P3 || "Kecamatan Pringkuku tercatat memiliki penduduk sekitar 32.347 jiwa (data 2024), tersebar di 13 desa dengan karakteristik demografis yang beragam. Desa Candi sendiri terdiri dari 15 dusun, dengan Tlogomoyo sebagai salah satu dusun yang aktif dalam berbagai program pembangunan dan pemberdayaan."}</p>
               </div>
-
             </div>
           </div>
         </div>
@@ -498,78 +428,46 @@ export default function ProfilDusunPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-100/60 dark:bg-primary-900/40 px-4 py-1.5 rounded-full border border-primary-200 dark:border-primary-800">
-              Kelembagaan & Tokoh Masyarakat
+              {t?.profilFull?.sec6Badge || "Kelembagaan & Tokoh Masyarakat"}
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">
-              Struktur Organisasi <span className="gradient-text">Pemerintahan Dusun</span>
+              {t?.profilFull?.sec6Title || "Struktur Organisasi"} <span className="gradient-text">{t?.profilFull?.sec6Highlight || "Pemerintahan Dusun"}</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed text-center">
-              Pemerintahan Dusun Tlogomoyo berada di bawah naungan Pemerintah Desa Candi. Berikut adalah jajaran jembatan pemangku wilayah yang senantiasa bergotong royong melayani warga.
+              {t?.profilFull?.sec6Desc || "Pemerintahan Dusun Tlogomoyo berada di bawah naungan Pemerintah Desa Candi. Berikut adalah jajaran jembatan pemangku wilayah yang senantiasa bergotong royong melayani warga."}
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                jabatan: "Kepala Desa Candi",
-                nama: "Pemerintah Desa Candi",
-                desc: "Pemimpin tertinggi tingkat desa di Kecamatan Pringkuku yang membawahi 15 dusun, termasuk Dusun Tlogomoyo.",
-                color: "from-amber-400 to-orange-600",
-                badge: "Pembina Wilayah",
-                icon: "🏛️",
-              },
-              {
-                jabatan: "Kepala Dusun (Kasun)",
-                nama: "Bapak Kepala Dusun Tlogomoyo",
-                desc: "Koordinator utama pemangku wilayah Dusun Tlogomoyo yang menjadi ujung tombak pelayanan administrasi & aspirasi masyarakat.",
-                color: "from-emerald-400 to-teal-700",
-                badge: "Pimpinan Dusun",
-                icon: "👑",
-              },
-              {
-                jabatan: "Ketua Rukun Warga (RW)",
-                nama: "Ketua RW Dusun Tlogomoyo",
-                desc: "Koordinator ketertiban lingkungan dan jembatan komunikasi antar-RT di seluruh wilayah pedukuhan Tlogomoyo.",
-                color: "from-blue-400 to-indigo-600",
-                badge: "Koordinator Lingkungan",
-                icon: "🤝",
-              },
-              {
-                jabatan: "Ketua RT 01",
-                nama: "Pengurus Wilayah RT 01",
-                desc: "Membawahi dan melayani 35 Kepala Keluarga (KK) di sektor wilayah selatan/barat Dusun Tlogomoyo.",
-                color: "from-purple-400 to-indigo-700",
-                badge: "35 Kepala Keluarga",
-                icon: "🏘️",
-              },
-              {
-                jabatan: "Ketua RT 02",
-                nama: "Pengurus Wilayah RT 02",
-                desc: "Membawahi dan melayani 36 Kepala Keluarga (KK) di sektor wilayah utara/timur Dusun Tlogomoyo.",
-                color: "from-teal-400 to-emerald-700",
-                badge: "36 Kepala Keluarga",
-                icon: "🏡",
-              },
-              {
-                jabatan: "Kelompok Tani",
-                nama: "Nuju Makmur XII",
-                desc: "Motor penggerak ketahanan pangan, budidaya singkong, dan empon-empon organik penopang perekonomian warga.",
-                color: "from-red-400 to-rose-600",
-                badge: "Lembaga Agraris",
-                icon: "🌾",
-              },
-            ].map((item, i) => (
-              <div key={i} className="group bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-7 border border-slate-200/80 dark:border-slate-700 shadow-xl shadow-slate-200/40 dark:shadow-none hover:shadow-2xl hover:border-primary-400 transition-all duration-300 flex flex-col items-center text-center relative overflow-hidden">
-                <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r sm:w-full" style={{ backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))` }} />
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center text-3xl shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300 text-white mt-2`}>
-                  {item.icon}
+            {(t?.profilFull?.govCards || [
+              { jabatan: "Kepala Desa Candi", nama: "Pemerintah Desa Candi", desc: "Pemimpin tertinggi tingkat desa di Kecamatan Pringkuku yang membawahi 15 dusun, termasuk Dusun Tlogomoyo.", badge: "Pembina Wilayah" },
+              { jabatan: "Kepala Dusun (Kasun)", nama: "Bapak Kepala Dusun Tlogomoyo", desc: "Koordinator utama pemangku wilayah Dusun Tlogomoyo yang menjadi ujung tombak pelayanan administrasi & aspirasi masyarakat.", badge: "Pimpinan Dusun" },
+              { jabatan: "Ketua Rukun Warga (RW)", nama: "Ketua RW Dusun Tlogomoyo", desc: "Koordinator ketertiban lingkungan dan jembatan komunikasi antar-RT di seluruh wilayah pedukuhan Tlogomoyo.", badge: "Koordinator Lingkungan" },
+              { jabatan: "Ketua RT 01", nama: "Pengurus Wilayah RT 01", desc: "Membawahi dan melayani 35 Kepala Keluarga (KK) di sektor wilayah selatan/barat Dusun Tlogomoyo.", badge: "35 Kepala Keluarga" },
+              { jabatan: "Ketua RT 02", nama: "Pengurus Wilayah RT 02", desc: "Membawahi dan melayani 36 Kepala Keluarga (KK) di sektor wilayah utara/timur Dusun Tlogomoyo.", badge: "36 Kepala Keluarga" },
+              { jabatan: "Kelompok Tani", nama: "Nuju Makmur XII", desc: "Motor penggerak ketahanan pangan, budidaya singkong, dan empon-empon organik penopang perekonomian warga.", badge: "Lembaga Agraris" },
+            ]).map((item, i) => {
+              const styles = [
+                { color: "from-amber-400 to-orange-600", icon: "🏛️" },
+                { color: "from-emerald-400 to-teal-700", icon: "👑" },
+                { color: "from-blue-400 to-indigo-600", icon: "🤝" },
+                { color: "from-purple-400 to-indigo-700", icon: "🏘️" },
+                { color: "from-teal-400 to-emerald-700", icon: "🏡" },
+                { color: "from-red-400 to-rose-600", icon: "🌾" },
+              ][i] || { color: "from-amber-400 to-orange-600", icon: "⭐" };
+              return (
+                <div key={i} className="group bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-7 border border-slate-200/80 dark:border-slate-700 shadow-xl shadow-slate-200/40 dark:shadow-none hover:shadow-2xl hover:border-primary-400 transition-all duration-300 flex flex-col items-center text-center relative overflow-hidden">
+                  <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r sm:w-full" style={{ backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))` }} />
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${styles.color} flex items-center justify-center text-3xl shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300 text-white mt-2`}>
+                    {styles.icon}
+                  </div>
+                  <span className="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold rounded-full mb-2 tracking-wider uppercase">{item.badge}</span>
+                  <h3 className="font-heading text-lg font-bold text-slate-900 dark:text-white mb-1">{item.jabatan}</h3>
+                  <p className="text-sm font-semibold text-primary-600 dark:text-primary-400 mb-3">{item.nama}</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed text-center">{item.desc}</p>
                 </div>
-                <span className="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold rounded-full mb-2 tracking-wider uppercase">{item.badge}</span>
-                <h3 className="font-heading text-lg font-bold text-slate-900 dark:text-white mb-1">{item.jabatan}</h3>
-                <p className="text-sm font-semibold text-primary-600 dark:text-primary-400 mb-3">{item.nama}</p>
-                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed text-center">{item.desc}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -579,43 +477,51 @@ export default function ProfilDusunPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 dark:bg-primary-900/30 px-4 py-1.5 rounded-full border border-primary-200 dark:border-primary-800">
-              Open Data Desa
+              {t?.profilFull?.sec7Badge || "Open Data Desa"}
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-              Infografis Demografi <span className="gradient-text">Dusun Tlogomoyo</span>
+              {t?.profilFull?.sec7Title || "Infografis Demografi"} <span className="gradient-text">{t?.profilFull?.sec7Highlight || "Dusun Tlogomoyo"}</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
-              Transparansi data statistik kependudukan warga Dusun Tlogomoyo berdasarkan pemutakhiran direktori wilayah RT 01 dan RT 02.
+              {t?.profilFull?.sec7Desc || "Transparansi data statistik kependudukan warga Dusun Tlogomoyo berdasarkan pemutakhiran direktori wilayah RT 01 dan RT 02."}
             </p>
           </div>
 
           {/* Infografis 4 Cards */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16 max-w-6xl mx-auto">
-            {[
-              { label: "Total Jiwa", val: "~284 Jiwa", desc: "Estimasi penduduk aktif", icon: "👥", bg: "from-blue-500/10 to-indigo-500/10", border: "border-blue-200 dark:border-blue-800", text: "text-blue-600 dark:text-blue-400" },
-              { label: "Kepala Keluarga", val: "71 KK", desc: "35 KK (RT 01) + 36 KK (RT 02)", icon: "🏡", bg: "from-emerald-500/10 to-teal-500/10", border: "border-emerald-200 dark:border-emerald-800", text: "text-emerald-600 dark:text-emerald-400" },
-              { label: "Rukun Tetangga", val: "2 RT Aktif", desc: "Partisipasi gotong royong 100%", icon: "📍", bg: "from-amber-500/10 to-orange-500/10", border: "border-amber-200 dark:border-amber-800", text: "text-amber-600 dark:text-amber-400" },
-              { label: "Sektor Unggulan", val: "Agraris", desc: "Singkong & Empon-empon Organik", icon: "🌾", bg: "from-purple-500/10 to-pink-500/10", border: "border-purple-200 dark:border-purple-800", text: "text-purple-600 dark:text-purple-400" },
-            ].map((stat, idx) => (
-              <div key={idx} className={`rounded-3xl p-6 bg-gradient-to-br ${stat.bg} border ${stat.border} flex flex-col justify-between shadow-lg`}>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl">{stat.icon}</span>
-                  <span className={`text-xs font-bold uppercase tracking-wider ${stat.text}`}>{stat.label}</span>
+            {(t?.profilFull?.infografis || [
+              { label: "Total Jiwa", val: "~284 Jiwa", desc: "Estimasi penduduk aktif" },
+              { label: "Kepala Keluarga", val: "71 KK", desc: "35 KK (RT 01) + 36 KK (RT 02)" },
+              { label: "Rukun Tetangga", val: "2 RT Aktif", desc: "Partisipasi gotong royong 100%" },
+              { label: "Sektor Unggulan", val: "Agraris", desc: "Singkong & Empon-empon Organik" },
+            ]).map((stat, idx) => {
+              const styles = [
+                { icon: "👥", bg: "from-blue-500/10 to-indigo-500/10", border: "border-blue-200 dark:border-blue-800", text: "text-blue-600 dark:text-blue-400" },
+                { icon: "🏡", bg: "from-emerald-500/10 to-teal-500/10", border: "border-emerald-200 dark:border-emerald-800", text: "text-emerald-600 dark:text-emerald-400" },
+                { icon: "📍", bg: "from-amber-500/10 to-orange-500/10", border: "border-amber-200 dark:border-amber-800", text: "text-amber-600 dark:text-amber-400" },
+                { icon: "🌾", bg: "from-purple-500/10 to-pink-500/10", border: "border-purple-200 dark:border-purple-800", text: "text-purple-600 dark:text-purple-400" },
+              ][idx] || { icon: "📊", bg: "from-blue-500/10 to-indigo-500/10", border: "border-blue-200 dark:border-blue-800", text: "text-blue-600 dark:text-blue-400" };
+              return (
+                <div key={idx} className={`rounded-3xl p-6 bg-gradient-to-br ${styles.bg} border ${styles.border} flex flex-col justify-between shadow-lg`}>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-3xl">{styles.icon}</span>
+                    <span className={`text-xs font-bold uppercase tracking-wider ${styles.text}`}>{stat.label}</span>
+                  </div>
+                  <div>
+                    <h4 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-1">{stat.val}</h4>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">{stat.desc}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-1">{stat.val}</h4>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">{stat.desc}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <h3 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">
-              Direktori Kepala Keluarga <span className="gradient-text">RT 01 & RT 02</span>
+              {t?.profilFull?.dirTitle || "Direktori Kepala Keluarga"} <span className="gradient-text">{t?.profilFull?.dirHighlight || "RT 01 & RT 02"}</span>
             </h3>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
-              Daftar pemangku rumah tangga yang menjadi penopang kerukunan antarwarga.
+              {t?.profilFull?.dirDesc || "Daftar pemangku rumah tangga yang menjadi penopang kerukunan antarwarga."}
             </p>
           </div>
 
@@ -628,11 +534,11 @@ export default function ProfilDusunPage() {
                     01
                   </div>
                   <div>
-                    <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Wilayah RT 01</h3>
-                    <p className="text-xs text-slate-500 font-medium">35 Kepala Keluarga</p>
+                    <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">{t?.profilFull?.rt1Title || "Wilayah RT 01"}</h3>
+                    <p className="text-xs text-slate-500 font-medium">{t?.profilFull?.rt1Sub || "35 Kepala Keluarga"}</p>
                   </div>
                 </div>
-                <span className="px-3 py-1 bg-primary-100 dark:bg-primary-950 text-primary-700 dark:text-primary-300 rounded-full text-xs font-bold">Aktif</span>
+                <span className="px-3 py-1 bg-primary-100 dark:bg-primary-950 text-primary-700 dark:text-primary-300 rounded-full text-xs font-bold">{t?.profilFull?.rtActive || "Aktif"}</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-[480px] overflow-y-auto pr-2 custom-scrollbar">
@@ -658,11 +564,11 @@ export default function ProfilDusunPage() {
                     02
                   </div>
                   <div>
-                    <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Wilayah RT 02</h3>
-                    <p className="text-xs text-slate-500 font-medium">36 Kepala Keluarga</p>
+                    <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">{t?.profilFull?.rt2Title || "Wilayah RT 02"}</h3>
+                    <p className="text-xs text-slate-500 font-medium">{t?.profilFull?.rt2Sub || "36 Kepala Keluarga"}</p>
                   </div>
                 </div>
-                <span className="px-3 py-1 bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-bold">Aktif</span>
+                <span className="px-3 py-1 bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-bold">{t?.profilFull?.rtActive || "Aktif"}</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-[480px] overflow-y-auto pr-2 custom-scrollbar">

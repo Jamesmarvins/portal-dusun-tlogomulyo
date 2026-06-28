@@ -62,7 +62,7 @@ export default function WeatherWidget() {
             <div>
               <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
-                <span>Real-time Satelit Pacitan</span>
+                <span>{t?.weather?.title === "Real-Time Weather" ? "Pacitan Satellite Real-time" : "Real-time Satelit Pacitan"}</span>
               </div>
               <h3 className="font-heading text-base sm:text-xl font-extrabold text-slate-900 dark:text-white leading-tight">
                 {t.weather.title}
@@ -99,7 +99,7 @@ export default function WeatherWidget() {
                 <p className="text-xl sm:text-2xl font-extrabold text-slate-800 dark:text-slate-100 mt-0.5">
                   {weatherData.apparent_temperature}°C
                 </p>
-                <p className="text-[10px] text-slate-500 font-medium mt-0.5">Pantai Srau</p>
+                <p className="text-[10px] text-slate-500 font-medium mt-0.5">{t?.weather?.title === "Real-Time Weather" ? "Srau Beach" : "Pantai Srau"}</p>
               </div>
 
               {/* Angin */}
