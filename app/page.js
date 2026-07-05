@@ -173,7 +173,7 @@ export default function HomePage() {
         <div className="bg-gradient-to-br from-white/95 via-white/90 to-primary-50/80 dark:from-slate-800/95 dark:via-slate-800/90 dark:to-slate-900/80 backdrop-blur-2xl rounded-3xl p-6 sm:p-10 border border-primary-200/60 dark:border-primary-500/20 shadow-2xl shadow-primary-900/10 grid md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-4 lg:col-span-3 flex flex-col items-center text-center">
             <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-3xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-700 bg-gradient-to-br from-primary-400 to-primary-700 p-1 mb-4 group">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" alt="Kepala Dusun Tlogomoyo" className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500" />
+              <img src="/images/kepala-dusun.jpg" alt="Kepala Dusun Tlogomoyo" className="w-full h-full object-cover object-center rounded-2xl group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent rounded-2xl" />
             </div>
             <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-300 rounded-full text-xs font-bold tracking-wider uppercase mb-1">{t?.sambutan?.role || "Kepala Dusun"}</span>
