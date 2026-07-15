@@ -273,22 +273,14 @@ export default function UmkmPage() {
                       {t?.umkmProducts?.[product.id]?.desc || product.desc}
                     </p>
                   </div>
-                  <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-3">
+                  <div className="pt-4 border-t border-slate-100 dark:border-slate-800">
                     <button
                       onClick={() => setSelectedProduct(product)}
-                      className="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-xl text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer"
+                      className="w-full py-2.5 bg-slate-100 dark:bg-slate-800 hover:bg-primary-600 dark:hover:bg-primary-600 text-slate-700 dark:text-slate-300 hover:text-white dark:hover:text-white rounded-xl text-xs font-bold transition-all duration-300 cursor-pointer flex items-center justify-center gap-1.5"
                     >
-                      {language === "en" ? "Details" : "Detail"}
+                      <span>👁️</span>
+                      <span>{language === "en" ? "View Details" : "Lihat Detail"}</span>
                     </button>
-                    <a
-                      href={`https://wa.me/${product.phone}?text=${encodeURIComponent(`Halo, saya tertarik dengan produk ${product.name} yang dijual oleh ${product.seller}. Apakah masih tersedia?`)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-md shadow-emerald-500/10"
-                    >
-                      <span>💬</span>
-                      <span>{t?.umkm?.orderBtn || "Pesan"}</span>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -352,22 +344,13 @@ export default function UmkmPage() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-100 dark:border-slate-800 pt-6">
+              <div className="flex items-center justify-end border-t border-slate-100 dark:border-slate-800 pt-6">
                 <button
                   onClick={() => setSelectedProduct(null)}
-                  className="w-full sm:w-auto px-8 py-3.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded-2xl transition-colors cursor-pointer text-center"
+                  className="w-full sm:w-auto px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-2xl transition-colors cursor-pointer text-center text-sm"
                 >
-                  {t?.umkm?.backBtn || "Kembali"}
+                  {language === "en" ? "Close" : "Tutup"}
                 </button>
-                <a
-                  href={`https://wa.me/${selectedProduct.phone}?text=${encodeURIComponent(`Halo, saya tertarik dengan produk ${selectedProduct.name} yang Anda tawarkan di E-Katalog. Bagaimana cara pemesanannya?`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:flex-1 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl flex items-center justify-center gap-2.5 transition-colors shadow-lg shadow-emerald-500/20 text-center cursor-pointer text-sm"
-                >
-                  <span className="text-lg">💬</span>
-                  <span>{t?.umkm?.orderDirectBtn || "Pesan Langsung via WhatsApp"}</span>
-                </a>
               </div>
             </div>
           </div>

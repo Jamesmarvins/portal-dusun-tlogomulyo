@@ -21,7 +21,7 @@ export default function Footer() {
           {/* Column 1: About */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden flex items-center justify-center shadow-lg">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden flex items-center justify-center shadow-lg bg-white dark:bg-slate-800 p-1 border border-slate-200 dark:border-slate-700">
                 <img
                   src="/images/logo.png"
                   alt="Logo Tlogomoyo"
