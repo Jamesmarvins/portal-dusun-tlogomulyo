@@ -227,39 +227,23 @@ export default function ProfilDusunPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
+          <div className="flex justify-center max-w-2xl mx-auto">
             {(t?.profilFull?.cards || [
-              { title: "Tradisi Ammos", desc: "Tradisi khas Kecamatan Pringkuku yang menjadi cikal bakal kesenian Kothekan Lesung seni memukul alat penumbuk padi tradisional secara bersamaan. Tradisi ini lahir dari kehidupan agraris dan melambangkan semangat kegotongroyongan masyarakat." },
-              { title: "Karawitan & Tayub", desc: "Kesenian tradisional gamelan Jawa (Karawitan) dan tarian Tayub sering ditampilkan dalam berbagai acara sosial, hajatan, dan perayaan desa. Kesenian ini mempererat kebersamaan dan menjadi wadah ekspresi budaya masyarakat setempat." },
-              { title: "Ritual Baritan", desc: "Upacara tolak bala dan sedekah bumi yang dilakukan sebagai bentuk rasa syukur kepada Tuhan atas hasil panen dan permohonan perlindungan. Ritual ini biasanya disertai pertunjukan seni lokal dan makan bersama seluruh warga." },
               { title: "Gotong Royong", desc: "Tradisi kerja bersama yang sangat kuat di Tlogomoyo. Masyarakat rutin bergotong royong dalam kegiatan pembangunan infrastruktur dusun, perbaikan jalan, bersih-bersih lingkungan, hingga membantu tetangga yang mengadakan hajatan." },
-              { title: "Musik Air Ceklukan", desc: "Kesenian unik dari Kali Barong (di wilayah Desa Candi) musik alami yang tercipta dari alunan suara air sungai yang dimainkan oleh 6-7 orang menggunakan teknik tertentu. Seni ini dihidupkan kembali sebagai upaya pelestarian budaya lokal." },
-              { title: "Istigosah & Keagamaan", desc: "Masyarakat rutin mengadakan istigosah (doa bersama) di lokasi-lokasi yang dianggap bersejarah dan sakral. Kegiatan keagamaan ini menjadi perekat sosial dan memperkuat keharmonisan antarwarga dusun." },
-            ]).map((item, i) => {
-              const styles = [
-                { gradient: "from-amber-100 to-amber-200", iconColor: "text-amber-700", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z" /> },
-                { gradient: "from-rose-100 to-rose-200", iconColor: "text-rose-700", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" /> },
-                { gradient: "from-purple-100 to-purple-200", iconColor: "text-purple-700", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.97M5.25 4.97l-2.62 10.726c-.122.499.106 1.028.589 1.202a5.989 5.989 0 0 0 2.031.352 5.989 5.989 0 0 0 2.031-.352c.483-.174.711-.703.59-1.202L5.25 4.97" /> },
-                { gradient: "from-blue-100 to-blue-200", iconColor: "text-blue-700", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" /> },
-                { gradient: "from-cyan-100 to-cyan-200", iconColor: "text-cyan-700", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" /> },
-                { gradient: "from-emerald-100 to-emerald-200", iconColor: "text-emerald-700", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /> },
-              ][i] || { gradient: "from-amber-100 to-amber-200", iconColor: "text-amber-700", icon: null };
-              return (
-                <div
-                  key={i}
-                  className="group bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up"
-                  style={{ animationDelay: `${i * 100}ms`, animationFillMode: "both" }}
-                >
-                  <div className={`w-12 h-12 bg-gradient-to-br ${styles.gradient} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
-                    <svg className={`w-6 h-6 ${styles.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                      {styles.icon}
-                    </svg>
-                  </div>
-                  <h3 className="font-heading text-lg font-bold text-slate-800 dark:text-white mb-2">{item.title}</h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">{item.desc}</p>
+            ]).map((item, i) => (
+              <div
+                key={i}
+                className="group bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 hover:-translate-y-1 animate-fade-in-up w-full"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                  </svg>
                 </div>
-              );
-            })}
+                <h3 className="font-heading text-lg sm:text-xl font-bold text-slate-800 dark:text-white mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
