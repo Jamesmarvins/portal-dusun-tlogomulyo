@@ -99,7 +99,7 @@ export default function WeatherWidget() {
                 <p className="text-xl sm:text-2xl font-extrabold text-slate-800 dark:text-slate-100 mt-0.5">
                   {weatherData.apparent_temperature}°C
                 </p>
-                <p className="text-[10px] text-slate-500 font-medium mt-0.5">{t?.weather?.title === "Real-Time Weather" ? "Srau Beach" : "Pantai Srau"}</p>
+                <p className="text-[10px] text-slate-500 font-medium mt-0.5">{t?.weather?.title === "Real-Time Weather" ? "Tlogomoyo Hamlet" : "Dusun Tlogomoyo"}</p>
               </div>
 
               {/* Angin */}
@@ -108,7 +108,7 @@ export default function WeatherWidget() {
                 <p className="text-xl sm:text-2xl font-extrabold text-blue-900 dark:text-blue-200 mt-0.5">
                   {weatherData.wind_speed_10m} <span className="text-xs font-bold">km/h</span>
                 </p>
-                <p className="text-[10px] text-blue-500/80 font-medium mt-0.5">Surfing Info</p>
+                <p className="text-[10px] text-blue-500/80 font-medium mt-0.5">{t?.weather?.title === "Real-Time Weather" ? "Wind Speed" : "Kecepatan Angin"}</p>
               </div>
 
               {/* Kelembaban */}

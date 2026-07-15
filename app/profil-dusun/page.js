@@ -264,57 +264,57 @@ export default function ProfilDusunPage() {
         </div>
       </section>
 
-      {/* ===== WISATA SEKITAR ===== */}
+      {/* ===== SEJARAH & ASAL-USUL ===== */}
       <section className="py-14 sm:py-18 lg:py-22 bg-earth-50 dark:bg-slate-900 hero-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
             <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              {t?.profilFull?.sec4Badge || "Wisata Sekitar"}
+              {t?.profilFull?.sec4Badge || "Sejarah & Asal-Usul"}
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-              {t?.profilFull?.sec4Title || "Destinasi Wisata di"}{" "}
-              <span className="gradient-text">{t?.profilFull?.sec4TitleHighlight || "Sekitar Dusun"}</span>
+              {t?.profilFull?.sec4Title || "Rekam Jejak & Asal Nama"}{" "}
+              <span className="gradient-text">{t?.profilFull?.sec4TitleHighlight || "Tlogomoyo"}</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-center">
-              {t?.profilFull?.sec4Desc || "Desa Candi dan sekitarnya menyimpan destinasi wisata alam yang memukau dari pantai berpasir putih hingga sungai di tengah hutan yang sejuk."}
+              {t?.profilFull?.sec4Desc || "Mari telusuri sejarah berdirinya pemukiman di Tlogomoyo serta makna luhur di balik nama dusun ini."}
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-            {/* Pantai Srau Card */}
+            {/* Asal-Usul Nama Card */}
             <div className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 animate-fade-in-up">
               {/* Header gradient */}
-              <div className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 sm:px-8 py-5">
+              <div className="bg-gradient-to-r from-primary-600 to-primary-700 px-6 sm:px-8 py-5">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-white dark:bg-slate-800/20 rounded-xl flex items-center justify-center">
-                    <span className="text-2xl">🏖️</span>
+                    <span className="text-2xl">💧</span>
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-white">{t?.profilFull?.srau?.title || "Pantai Srau"}</h3>
-                    <p className="text-xs text-cyan-100">{t?.profilFull?.srau?.subtitle || '"Permata Putih" Pacitan Desa Candi'}</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-white">{t?.profilFull?.asalUsul?.title || "Asal-Usul Nama Tlogomoyo"}</h3>
+                    <p className="text-xs text-primary-100">{t?.profilFull?.asalUsul?.subtitle || "Kejernihan Sumber Air di Atas Bukit Karst"}</p>
                   </div>
                 </div>
               </div>
               <div className="p-6 sm:p-8">
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-5 text-justify">
-                  {t?.profilFull?.srau?.p1 || "Pantai Srau merupakan destinasi wisata unggulan Kabupaten Pacitan yang terletak di Desa Candi. Kawasan pantai ini terbagi menjadi tiga area yang dipisahkan oleh bukit karang, masing-masing dengan karakteristik unik."}
+                  {t?.profilFull?.asalUsul?.p1 || "Nama Tlogomoyo memiliki akar historis dari kata 'Tlogo' (telaga/sumber air) dan 'Moyo' (bayangan atau ketenangan batin). Konon di masa awal pemukiman, para tetua dusun menemukan sebuah telaga kecil dengan air yang sangat jernih di antara bukit karst kering. Telaga ini menjadi tumpuan warga untuk bertahan hidup dan mengolah tanah pertanian, sehingga dusun ini dinamai Tlogomoyo sebagai perlambang berkah ketenangan dan kehidupan."}
                 </p>
                 <div className="grid grid-cols-2 gap-3 mb-5">
-                  {(t?.profilFull?.srau?.details || [
-                    { label: "Pasir Putih", detail: "Halus & bersih" },
-                    { label: "Karang Bolong", detail: "Ikon foto favorit" },
-                    { label: "Jarak dr Dusun", detail: "~10 mnt (~3 km)" },
-                    { label: "Aktivitas", detail: "Surfing, camping, dll" },
+                  {(t?.profilFull?.asalUsul?.details || [
+                    { label: "Makna 'Tlogo'", detail: "Telaga Kehidupan" },
+                    { label: "Makna 'Moyo'", detail: "Ketenangan Jiwa" },
+                    { label: "Karakter Lahan", detail: "Bukit Karst Pegunungan Sewu" },
+                    { label: "Pilar Utama", detail: "Sumber Daya Air Lokal" },
                   ]).map((item, i) => (
-                    <div key={i} className="bg-cyan-50/80 dark:bg-slate-700/80 rounded-lg p-3 border border-cyan-200 dark:border-slate-600">
-                      <p className="text-xs text-cyan-800 dark:text-cyan-300 font-bold mb-0.5">{item.label}</p>
+                    <div key={i} className="bg-primary-50/80 dark:bg-slate-700/80 rounded-lg p-3 border border-primary-200 dark:border-slate-600">
+                      <p className="text-xs text-primary-800 dark:text-primary-300 font-bold mb-0.5">{item.label}</p>
                       <p className="text-sm font-extrabold text-slate-800 dark:text-white">{item.detail}</p>
                     </div>
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {(t?.profilFull?.srau?.acts || ["Berselancar", "Berkemah", "Wisata Foto", "Memancing", "Piknik Pantai"]).map((act, i) => (
-                    <span key={i} className="inline-flex items-center px-3 py-1 bg-cyan-100 dark:bg-cyan-950/80 text-cyan-800 dark:text-cyan-200 text-xs font-bold rounded-full border border-cyan-300 dark:border-cyan-800">
+                  {(t?.profilFull?.asalUsul?.acts || ["Harmoni Alam", "Kearifan Lokal", "Penjaga Telaga", "Konservasi Air"]).map((act, i) => (
+                    <span key={i} className="inline-flex items-center px-3 py-1 bg-primary-100 dark:bg-primary-950/80 text-primary-800 dark:text-primary-200 text-xs font-bold rounded-full border border-primary-300 dark:border-primary-800">
                       {act}
                     </span>
                   ))}
@@ -322,40 +322,40 @@ export default function ProfilDusunPage() {
               </div>
             </div>
 
-            {/* Kali Barong Card */}
+            {/* Sejarah Perkembangan Card */}
             <div className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/80 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-500 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
               {/* Header gradient */}
-              <div className="bg-gradient-to-r from-emerald-500 to-teal-600 px-6 sm:px-8 py-5">
+              <div className="bg-gradient-to-r from-amber-500 to-orange-600 px-6 sm:px-8 py-5">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-white dark:bg-slate-800/20 rounded-xl flex items-center justify-center">
-                    <span className="text-2xl">🏞️</span>
+                    <span className="text-2xl">🌾</span>
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-white">{t?.profilFull?.barong?.title || "Kali Barong"}</h3>
-                    <p className="text-xs text-emerald-100">{t?.profilFull?.barong?.subtitle || "Wisata Sungai Desa Candi"}</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-white">{t?.profilFull?.sejarah?.title || "Sejarah Perkembangan Agraris"}</h3>
+                    <p className="text-xs text-amber-100">{t?.profilFull?.sejarah?.subtitle || "Babad Alas dan Ketahanan Pangan Mandiri"}</p>
                   </div>
                 </div>
               </div>
               <div className="p-6 sm:p-8">
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-5 text-justify">
-                  {t?.profilFull?.barong?.p1 || 'Wisata alam berbasis sungai yang menawarkan kesegaran aliran air jernih di tengah pepohonan rindang dan tebing-tebing alami. Kali Barong juga menjadi rumah bagi kesenian unik "Ceklukan" musik alami dari suara air sungai.'}
+                  {t?.profilFull?.sejarah?.p1 || "Pemukiman Tlogomoyo dimulai oleh para pembuka lahan (babad alas) yang bermigrasi mencari lahan subur di pedalaman Pacitan selatan. Generasi awal berfokus pada teknik bercocok tanam tadah hujan karena struktur tanah berbatu. Melalui ketekunan, warga berhasil mengembangkan sistem budidaya singkong, empon-empon, dan penyadapan nira kelapa yang kini diwariskan turun-temurun sebagai identitas ekonomi utama dusun."}
                 </p>
                 <div className="grid grid-cols-2 gap-3 mb-5">
-                  {(t?.profilFull?.barong?.details || [
-                    { label: "Suasana", detail: "Sejuk & alami" },
-                    { label: "Keunikan", detail: "Musik air Ceklukan" },
-                    { label: "Jarak dr Dusun", detail: "~10 mnt (~3 km)" },
-                    { label: "Fasilitas", detail: "Perahu & sepeda air" },
+                  {(t?.profilFull?.sejarah?.details || [
+                    { label: "Masa Rintisan", detail: "Pertanian Tadah Hujan" },
+                    { label: "Komoditas Awal", detail: "Singkong & Kelapa" },
+                    { label: "Pola Sosial", detail: "Gotong Royong Sambatan" },
+                    { label: "Fase Modern", detail: "Digitalisasi & UMKM Kreatif" },
                   ]).map((item, i) => (
-                    <div key={i} className="bg-emerald-50/80 dark:bg-slate-700/80 rounded-lg p-3 border border-emerald-200 dark:border-slate-600">
-                      <p className="text-xs text-emerald-800 dark:text-emerald-300 font-bold mb-0.5">{item.label}</p>
+                    <div key={i} className="bg-amber-50/80 dark:bg-slate-700/80 rounded-lg p-3 border border-amber-200 dark:border-slate-600">
+                      <p className="text-xs text-amber-800 dark:text-amber-300 font-bold mb-0.5">{item.label}</p>
                       <p className="text-sm font-extrabold text-slate-800 dark:text-white">{item.detail}</p>
                     </div>
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {(t?.profilFull?.barong?.acts || ["Susur Sungai", "Sepeda Air", "Seni Ceklukan", "Berkemah", "Piknik Keluarga"]).map((act, i) => (
-                    <span key={i} className="inline-flex items-center px-3 py-1 bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-200 text-xs font-bold rounded-full border border-emerald-300 dark:border-emerald-800">
+                  {(t?.profilFull?.sejarah?.acts || ["Babad Alas", "Tani Tradisional", "Sistem Sambatan", "Kemandirian Pangan"]).map((act, i) => (
+                    <span key={i} className="inline-flex items-center px-3 py-1 bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-200 text-xs font-bold rounded-full border border-amber-300 dark:border-amber-800">
                       {act}
                     </span>
                   ))}

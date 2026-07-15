@@ -5,17 +5,17 @@ import { useLanguage } from "./LanguageProvider";
 
 export default function InteractiveMap() {
   const { t } = useLanguage();
-  const [activeSpot, setActiveSpot] = useState("srau");
+  const [activeSpot, setActiveSpot] = useState("balai");
 
   const mapEmbedUrls = {
-    srau: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15380.6!2d110.9948616!3d-8.2502683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bddfc642a1a13%3A0xe03ac9d9c526a05a!2sPantai%20Srau!5e0!3m2!1sen!2sid!4v1718976000000",
+    pertanian: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15381.16!2d111.015!3d-8.224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bde642f66d46f%3A0xd988cfd297cf7eff!2sTlogomoyo%2C%20Candi%2C%20Kec.%20Pringkuku%2C%20Kabupaten%20Pacitan%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1718976000000",
     balai: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2865.362219080696!2d111.0171998!3d-8.2239559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bde642f66d46f%3A0xd988cfd297cf7eff!2sTlogomoyo%2C%20Candi%2C%20Kec.%20Pringkuku%2C%20Kabupaten%20Pacitan%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1718976000000",
-    barong: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.16!2d111.0346026!3d-8.2109038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bdef977636e6d%3A0x6d8fc8787536e6dc!2sKali%20Barong%20Pacitan!5e0!3m2!1sen!2sid!4v1718976000000",
+    umkm: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5000.16!2d111.016!3d-8.223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bde642f66d46f%3A0xd988cfd297cf7eff!2sTlogomoyo%2C%20Candi%2C%20Kec.%20Pringkuku%2C%20Kabupaten%20Pacitan%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1718976000000",
   };
 
   const shareUrls = {
-    srau: "https://maps.app.goo.gl/VxGR2WLb7jfGUdc87",
-    barong: "https://maps.app.goo.gl/BsSocKHXLFehp7Xk7",
+    pertanian: "https://maps.google.com/?q=-8.2250,111.0190",
+    umkm: "https://maps.google.com/?q=-8.2220,111.0150",
     balai: "https://maps.google.com/?q=Balai+Dusun+Tlogomoyo+Candi+Pacitan",
   };
 
@@ -40,9 +40,9 @@ export default function InteractiveMap() {
         {/* Hotspot Switcher Buttons */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 animate-fade-in-up">
           {[
-            { id: "srau", icon: "🏖️", label: "Pantai Srau Spot" },
+            { id: "pertanian", icon: "🌾", label: "Kawasan Pertanian" },
             { id: "balai", icon: "📍", label: "Balai Dusun & Candi" },
-            { id: "barong", icon: "🏞️", label: "Kali Barong River" },
+            { id: "umkm", icon: "🧺", label: "Sentra Kerajinan & UMKM" },
           ].map((spot) => (
             <button
               key={spot.id}

@@ -66,13 +66,12 @@ export default function HomePage() {
                   </svg>
                 </a>
               </div>
-
               {/* Stats Row */}
               <div className="mt-10 sm:mt-12 flex items-center gap-6 sm:gap-8">
                 {[
                   { value: "1.200+", label: t.hero.stats.pop },
                   { value: "350+", label: t.hero.stats.kk },
-                  { value: t?.hero?.stats?.wisata === "Tourist Spots" ? "2 Spots" : "2 Spot", label: t.hero.stats.wisata },
+                  { value: "~650 ha", label: t.hero.stats.lahan },
                 ].map((stat, i) => (
                   <div key={i} className="text-center sm:text-left">
                     <p className="text-xl sm:text-2xl font-extrabold text-primary-700">
