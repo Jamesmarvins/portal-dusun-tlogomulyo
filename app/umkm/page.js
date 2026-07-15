@@ -254,9 +254,14 @@ export default function UmkmPage() {
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center gap-2 text-xs text-primary-600 dark:text-primary-400 font-semibold mb-2">
-                      <span>🏪</span>
-                      <span className="truncate">{product.seller}</span>
+                    <div className="flex items-center justify-between text-xs font-semibold mb-2">
+                      <div className="flex items-center gap-1.5 text-primary-600 dark:text-primary-400">
+                        <span>🏪</span>
+                        <span className="truncate max-w-[140px]">{product.seller}</span>
+                      </div>
+                      <span className="text-amber-600 dark:text-amber-400 font-bold bg-amber-50 dark:bg-amber-950/30 px-2 py-0.5 rounded-lg border border-amber-200/50 dark:border-amber-900/30">
+                        {product.id === "wayang-yono" ? (language === "en" ? "Custom" : "Kustom") : `Rp ${product.price.toLocaleString("id-ID")}`}
+                      </span>
                     </div>
                     <h3 
                       onClick={() => setSelectedProduct(product)}
@@ -264,9 +269,26 @@ export default function UmkmPage() {
                     >
                       {t?.umkmProducts?.[product.id]?.name || product.name}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-2 line-clamp-3">
+                    <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3">
                       {t?.umkmProducts?.[product.id]?.desc || product.desc}
                     </p>
+                  </div>
+                  <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-3">
+                    <button
+                      onClick={() => setSelectedProduct(product)}
+                      className="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-xl text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer"
+                    >
+                      {language === "en" ? "Details" : "Detail"}
+                    </button>
+                    <a
+                      href={`https://wa.me/${product.phone}?text=${encodeURIComponent(`Halo, saya tertarik dengan produk ${product.name} yang dijual oleh ${product.seller}. Apakah masih tersedia?`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-md shadow-emerald-500/10"
+                    >
+                      <span>💬</span>
+                      <span>{t?.umkm?.orderBtn || "Pesan"}</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -307,17 +329,45 @@ export default function UmkmPage() {
               <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-4">
                 {t?.umkmProducts?.[selectedProduct.id]?.name || selectedProduct.name}
               </h2>
-              <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-8 text-justify">
+              <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6 text-justify">
                 {t?.umkmProducts?.[selectedProduct.id]?.desc || selectedProduct.desc}
               </p>
 
-              <div className="flex items-center justify-end border-t border-slate-100 dark:border-slate-800 pt-6">
+              <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800/80 rounded-2xl p-4 mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wider mb-0.5">
+                    {language === "en" ? "Price Estimation" : "Estimasi Harga"}
+                  </p>
+                  <p className="text-lg sm:text-xl font-extrabold text-primary-600 dark:text-primary-400">
+                    {selectedProduct.priceLabel}
+                  </p>
+                </div>
+                <div className="text-left sm:text-right">
+                  <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wider mb-0.5">
+                    {language === "en" ? "Producer / Seller" : "Produsen / Penjual"}
+                  </p>
+                  <p className="text-sm font-bold text-slate-800 dark:text-slate-200">
+                    {selectedProduct.seller}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-100 dark:border-slate-800 pt-6">
                 <button
                   onClick={() => setSelectedProduct(null)}
-                  className="w-full sm:w-auto px-8 py-3.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded-2xl transition-colors cursor-pointer"
+                  className="w-full sm:w-auto px-8 py-3.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded-2xl transition-colors cursor-pointer text-center"
                 >
                   {t?.umkm?.backBtn || "Kembali"}
                 </button>
+                <a
+                  href={`https://wa.me/${selectedProduct.phone}?text=${encodeURIComponent(`Halo, saya tertarik dengan produk ${selectedProduct.name} yang Anda tawarkan di E-Katalog. Bagaimana cara pemesanannya?`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:flex-1 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl flex items-center justify-center gap-2.5 transition-colors shadow-lg shadow-emerald-500/20 text-center cursor-pointer text-sm"
+                >
+                  <span className="text-lg">💬</span>
+                  <span>{t?.umkm?.orderDirectBtn || "Pesan Langsung via WhatsApp"}</span>
+                </a>
               </div>
             </div>
           </div>

@@ -51,11 +51,11 @@ export default function Navbar() {
             aria-label="Beranda Portal Informasi Tlogomoyo"
           >
             {/* Logo Image */}
-            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl overflow-hidden flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+            <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
               <img
                 src="/images/logo.png"
                 alt="Logo Tlogomoyo"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             <div className="flex flex-col">

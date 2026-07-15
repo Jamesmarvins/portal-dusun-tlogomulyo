@@ -5,7 +5,7 @@ import React, { useState } from "react";
 export default function QuickContact() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const kadusWa = "6281234567890";
+  const kadusWa = "6285259300843";
   const kknWa = "6289876543210";
 
   const handleWaClick = (number, topic) => {
