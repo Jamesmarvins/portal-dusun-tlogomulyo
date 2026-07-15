@@ -21,20 +21,12 @@ export default function Footer() {
           {/* Column 1: About */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center shadow-lg">
-                <svg
-                  className="w-5 h-5 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 8.25 4.69a7.5 7.5 0 0 1 3.75-1.69z"
-                  />
-                </svg>
+              <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center shadow-lg">
+                <img
+                  src="/images/logo.png"
+                  alt="Logo Tlogomoyo"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h3 className="font-heading text-lg font-bold text-white">
