@@ -12,9 +12,9 @@ const katalogProduk = [
     price: 150000,
     priceLabel: "Harga menyesuaikan ukuran & kerumitan",
     seller: "Pak Yono (RT 02)",
-    phone: "6281234567890",
+    phone: "6285259300843",
     image: "/images/umkm-wayang.jpg",
-    desc: "Wayang kulit tatah tradisional buatan tangan Pak Yono. Dibuat dengan tingkat ketelitian tinggi, sangat cocok sebagai hiasan dinding bernilai seni tinggi atau koleksi.",
+    desc: "Kerajinan wayang kulit tatah tradisional buatan tangan Pak Yono yang bernilai seni tinggi.",
     badge: "Karya Seni 🎨"
   },
   {
@@ -25,9 +25,9 @@ const katalogProduk = [
     price: 15000,
     priceLabel: "Mulai Rp 15.000 / kemasan",
     seller: "Bu Ismi (RT 01)",
-    phone: "6281234567890",
+    phone: "6285259300843",
     image: "/images/umkm-cemilan.jpg",
-    desc: "Berbagai aneka camilan renyah dan gurih produksi Bu Ismi. Mulai dari keripik singkong, kue bawang, kembang goyang, pangsit, hingga untir-untir tradisional.",
+    desc: "Aneka camilan kering tradisional seperti keripik, kue bawang, dan pangsit renyah olahan Bu Ismi.",
     badge: "Terlaris 🔥"
   },
   {
@@ -38,9 +38,9 @@ const katalogProduk = [
     price: 18000,
     priceLabel: "Rp 18.000 / pouch",
     seller: "Bu Yani (RT 02)",
-    phone: "6281234567890",
+    phone: "6285259300843",
     image: "/images/umkm-bawang.jpg",
-    desc: "Bawang goreng gurih renyah tanpa pengawet buatan Bu Yani. Menggunakan bawang merah pilihan hasil bumi Tlogomoyo, digoreng kering dan dikemas praktis.",
+    desc: "Bawang goreng merah gurih renyah tanpa bahan pengawet produksi rumahan Bu Yani.",
     badge: "Renyah & Gurih 💨"
   },
   {
@@ -51,9 +51,9 @@ const katalogProduk = [
     price: 5000,
     priceLabel: "Rp 5.000 / ikat",
     seller: "Bu Yanti (RT 01)",
-    phone: "6281234567890",
+    phone: "6285259300843",
     image: "/images/umkm-tempe.jpg",
-    desc: "Tempe tradisional bungkus daun jati/pisang segar buatan Bu Yanti. Dibuat dengan kedelai pilihan dan ragi alami, memiliki rasa khas gurih yang lezat saat digoreng.",
+    desc: "Tempe tradisional bungkus daun jati dan pisang segar buatan Bu Yanti dengan ragi alami.",
     badge: "Tradisional 🍃"
   },
   {
@@ -64,9 +64,9 @@ const katalogProduk = [
     price: 12000,
     priceLabel: "Rp 12.000 / pack",
     seller: "Bu Suharmi (RT 01)",
-    phone: "6281234567890",
+    phone: "6285259300843",
     image: "/images/umkm-kerupuk.jpg",
-    desc: "Kerupuk renyah mentah siap goreng produksi Bu Suharmi. Dikeringkan alami di bawah sinar matahari dusun, menghasilkan kerupuk mekar sempurna saat digoreng.",
+    desc: "Kerupuk kering mentah siap goreng produksi Bu Suharmi yang mekar renyah sempurna.",
     badge: "Ekstra Mekar ✨"
   },
   {
@@ -77,9 +77,9 @@ const katalogProduk = [
     price: 20000,
     priceLabel: "Rp 20.000 / pack",
     seller: "Bu Suharmi (RT 01)",
-    phone: "6281234567890",
+    phone: "6285259300843",
     image: "/images/umkm-sale.jpg",
-    desc: "Sale pisang goreng manis legit berbahan dasar pisang matang pohon pekarangan Tlogomoyo. Digoreng tipis dengan balutan tepung renyah khas racikan Bu Suharmi.",
+    desc: "Camilan sale pisang goreng manis gurih khas Pacitan buatan Bu Suharmi.",
     badge: "Khas Pacitan 🍌"
   },
   {
@@ -90,9 +90,9 @@ const katalogProduk = [
     price: 10000,
     priceLabel: "Mulai Rp 10.000 / pack",
     seller: "Bu Maya (RT 02)",
-    phone: "6281234567890",
+    phone: "6285259300843",
     image: "/images/umkm-roti.png",
-    desc: "Aneka roti manis dan roti isi buatan dapur roti Bu Maya. Selalu segar setiap hari, teksturnya lembut dengan berbagai varian isian tradisional yang nikmat.",
+    desc: "Aneka roti manis isi tradisional yang lembut dan dipanggang segar setiap hari oleh Bu Maya.",
     badge: "Segar dari Oven 🍞"
   }
 ];
