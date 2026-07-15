@@ -173,16 +173,15 @@ export default function ProfilDusunPage() {
               </div>
               {t?.profilFull?.komoditasTitle || "Komoditas Unggulan"}
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
               {(t?.profilFull?.komoditas || [
                 { name: "Singkong", desc: "Tanaman pangan utama" },
-                { name: "Empon-empon", desc: "Rempah organik" },
-                { name: "Kelapa", desc: "Buah & minyak" },
-                { name: "Buah-buahan", desc: "Pisang, pepaya, dll" },
-                { name: "Sayuran", desc: "Sayur segar lokal" },
-                { name: "Kayu", desc: "Hasil hutan rakyat" },
+                { name: "Padi", desc: "Bahan pangan pokok utama" },
+                { name: "Kelapa", desc: "Hasil perkebunan unggulan" },
+                { name: "Jagung", desc: "Tanaman palawija pendukung" },
+                { name: "Pisang", desc: "Hortikultura kebun pekarangan" },
               ]).map((item, i) => {
-                const emoji = ["🌿", "🫚", "🥥", "🍌", "🥬", "🪵"][i] || "🌱";
+                const emoji = ["🌿", "🌾", "🥥", "🌽", "🍌"][i] || "🌱";
                 return (
                   <div
                     key={i}
