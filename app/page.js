@@ -69,8 +69,8 @@ export default function HomePage() {
               {/* Stats Row */}
               <div className="mt-10 sm:mt-12 flex items-center gap-6 sm:gap-8">
                 {[
-                  { value: "1.200+", label: t.hero.stats.pop },
-                  { value: "350+", label: t.hero.stats.kk },
+                  { value: "~190", label: t.hero.stats.pop },
+                  { value: "71 KK", label: t.hero.stats.kk },
                   { value: "~650 ha", label: t.hero.stats.lahan },
                 ].map((stat, i) => (
                   <div key={i} className="text-center sm:text-left">

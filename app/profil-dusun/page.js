@@ -490,10 +490,10 @@ export default function ProfilDusunPage() {
           {/* Infografis 4 Cards */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16 max-w-6xl mx-auto">
             {(t?.profilFull?.infografis || [
-              { label: "Total Jiwa", val: "~284 Jiwa", desc: "Estimasi penduduk aktif" },
+              { label: "Total Jiwa", val: "~190 Jiwa", desc: "Estimasi penduduk aktif" },
               { label: "Kepala Keluarga", val: "71 KK", desc: "35 KK (RT 01) + 36 KK (RT 02)" },
               { label: "Rukun Tetangga", val: "2 RT Aktif", desc: "Partisipasi gotong royong 100%" },
-              { label: "Sektor Unggulan", val: "Agraris", desc: "Singkong & Empon-empon Organik" },
+              { label: "Sektor Unggulan", val: "Pertanian", desc: "Singkong, Padi, Kelapa, Jagung, Pisang" },
             ]).map((stat, idx) => {
               const styles = [
                 { icon: "👥", bg: "from-blue-500/10 to-indigo-500/10", border: "border-blue-200 dark:border-blue-800", text: "text-blue-600 dark:text-blue-400" },
