@@ -86,7 +86,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Illustration / Decorative Card */}
-            <div className="hidden lg:flex justify-center items-center">
+            <div className="flex justify-center items-center mt-10 lg:mt-0">
               <div className="relative">
                 {/* Background glow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-400/20 to-accent-400/20 rounded-3xl blur-2xl scale-110" />

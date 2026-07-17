@@ -286,8 +286,8 @@ export default function UmkmPage() {
 
       {/* ===== PRODUCT DETAIL MODAL ===== */}
       {selectedProduct && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in">
-          <div className="relative w-full max-w-2xl bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 animate-fade-in-up">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in overflow-y-auto">
+          <div className="relative w-full max-w-2xl bg-white dark:bg-slate-900 rounded-3xl overflow-y-auto max-h-[90vh] shadow-2xl border border-slate-200 dark:border-slate-800 animate-fade-in-up">
             {/* Close button */}
             <button
               onClick={() => setSelectedProduct(null)}
@@ -296,11 +296,11 @@ export default function UmkmPage() {
               ✕
             </button>
 
-            <div className="h-64 sm:h-80 w-full relative">
+            <div className="h-48 sm:h-64 md:h-80 w-full relative bg-slate-50 dark:bg-slate-950/30 flex items-center justify-center">
               <img
                 src={selectedProduct.image}
                 alt={selectedProduct.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60" />
               <span className="absolute bottom-4 left-6 bg-amber-500 text-slate-950 font-black px-4 py-1.5 rounded-xl text-sm shadow-lg">
