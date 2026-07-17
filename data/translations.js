@@ -10,7 +10,7 @@ export const translations = {
     },
     // Homepage Hero
     hero: {
-      badge: "KKN Kelompok 28 UKDW",
+      badge: "Dusun Tlogomoyo",
       welcome: "Selamat Datang di",
       portalTitle: "Portal Informasi Resmi",
       hamletName: "Dusun Tlogomoyo",
@@ -102,7 +102,7 @@ export const translations = {
       contact: "Kontak & Alamat",
       address: "Balai Dusun Tlogomoyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan, Jawa Timur 63552",
       copyright: "Hak Cipta © 2026 Pemerintah Dusun Tlogomoyo.",
-      kknGroup: "KKN Kelompok 28 UKDW",
+      kknGroup: "Dusun Tlogomoyo",
     },
     homeSections: {
       potensiBadge: "Potensi Unggulan",
@@ -123,7 +123,7 @@ export const translations = {
         },
       ],
       kknBadge: "Pengabdian Masyarakat",
-      kknTitle: "KKN Kelompok 28 UKDW",
+      kknTitle: "Dusun Tlogomoyo",
       kknDesc: "Tim Kuliah Kerja Nyata dari Universitas Kristen Duta Wacana berkolaborasi dengan Pemerintah Dusun Tlogomoyo dalam mengemban program kerja digitalisasi, penguatan potensi desa, dan pengembangan lingkungan sehat dan mandiri.",
       kknBtn: "Lihat Detail Program & Anggota",
       keunggulanBadge: "Keunggulan",
@@ -460,7 +460,7 @@ export const translations = {
     },
     // Homepage Hero
     hero: {
-      badge: "KKN Group 28 UKDW",
+      badge: "Tlogomoyo Hamlet",
       welcome: "Welcome to",
       portalTitle: "Official Information Portal",
       hamletName: "Tlogomoyo Hamlet",
@@ -552,7 +552,7 @@ export const translations = {
       contact: "Contact & Address",
       address: "Tlogomoyo Hamlet Hall, Candi Village, Pringkuku District, Pacitan Regency, East Java 63552",
       copyright: "Copyright © 2026 Tlogomoyo Hamlet Government.",
-      kknGroup: "KKN Group 28 UKDW",
+      kknGroup: "Tlogomoyo Hamlet",
     },
     homeSections: {
       potensiBadge: "Featured Potential",
@@ -573,7 +573,7 @@ export const translations = {
         },
       ],
       kknBadge: "Community Service",
-      kknTitle: "KKN Group 28 UKDW",
+      kknTitle: "Tlogomoyo Hamlet",
       kknDesc: "The Student Community Service Team from Duta Wacana Christian University collaborates with the Tlogomoyo Hamlet Government on digitalization, village promotion, and eco-friendly sustainable environment development.",
       kknBtn: "View Program & Member Details",
       keunggulanBadge: "Key Advantages",
