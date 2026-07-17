@@ -15,7 +15,9 @@ export function LanguageProvider({ children }) {
   useEffect(() => {
     const stored = localStorage.getItem("tlogomoyo_lang");
     if (stored === "id" || stored === "en") {
-      setLanguage(stored);
+      setTimeout(() => {
+        setLanguage(stored);
+      }, 0);
     }
   }, []);
 

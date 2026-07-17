@@ -10,7 +10,7 @@ export default function LanguageToggle() {
     <div className="inline-flex items-center bg-slate-100 dark:bg-slate-800 rounded-full p-1 border border-slate-200 dark:border-slate-700 shadow-inner shrink-0">
       <button
         onClick={() => setLanguage("id")}
-        className={`px-2.5 py-1 rounded-full text-xs font-bold transition-all duration-300 flex items-center gap-1.5 ${
+        className={`px-2 sm:px-2.5 py-1 rounded-full text-xs font-bold transition-all duration-300 flex items-center gap-1 sm:gap-1.5 ${
           language === "id"
             ? "bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm scale-105"
             : "text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200"
@@ -18,11 +18,11 @@ export default function LanguageToggle() {
         title="Bahasa Indonesia"
       >
         <span>🇮🇩</span>
-        <span>ID</span>
+        <span className="hidden sm:inline">ID</span>
       </button>
       <button
         onClick={() => setLanguage("en")}
-        className={`px-2.5 py-1 rounded-full text-xs font-bold transition-all duration-300 flex items-center gap-1.5 ${
+        className={`px-2 sm:px-2.5 py-1 rounded-full text-xs font-bold transition-all duration-300 flex items-center gap-1 sm:gap-1.5 ${
           language === "en"
             ? "bg-white dark:bg-slate-700 text-primary-700 dark:text-primary-300 shadow-sm scale-105"
             : "text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200"
@@ -30,7 +30,7 @@ export default function LanguageToggle() {
         title="English Version"
       >
         <span>🇬🇧</span>
-        <span>EN</span>
+        <span className="hidden sm:inline">EN</span>
       </button>
     </div>
   );

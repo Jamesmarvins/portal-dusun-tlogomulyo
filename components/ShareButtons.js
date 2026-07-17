@@ -6,7 +6,9 @@ export default function ShareButtons({ title }) {
   const [url, setUrl] = useState("");
 
   useEffect(() => {
-    setUrl(window.location.href);
+    setTimeout(() => {
+      setUrl(window.location.href);
+    }, 0);
   }, []);
 
   const handleShare = async () => {

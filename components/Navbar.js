@@ -31,7 +31,9 @@ export default function Navbar() {
 
   // Close mobile menu on route change
   useEffect(() => {
-    setIsOpen(false);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 0);
   }, [pathname]);
 
   return (
@@ -51,7 +53,7 @@ export default function Navbar() {
             aria-label="Beranda Portal Informasi Tlogomoyo"
           >
             {/* Logo Image */}
-            <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105 bg-white dark:bg-slate-900 p-1 border border-slate-100 dark:border-slate-800">
+            <div className="relative w-10 h-10 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105 bg-white dark:bg-slate-900 p-1 border border-slate-100 dark:border-slate-800">
               <img
                 src="/images/logo.png"
                 alt="Logo Tlogomoyo"
@@ -59,10 +61,10 @@ export default function Navbar() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-heading text-base sm:text-lg font-bold text-primary-800 dark:text-primary-400 leading-tight tracking-tight">
+              <span className="font-heading text-sm sm:text-base md:text-lg font-bold text-primary-800 dark:text-primary-400 leading-tight tracking-tight">
                 Tlogomoyo
               </span>
-              <span className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium tracking-wide uppercase">
+              <span className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium tracking-wide uppercase hidden sm:block">
                 Portal Informasi
               </span>
             </div>
