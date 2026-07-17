@@ -198,9 +198,9 @@ export default function InfoKKNPage() {
             {/* Quick Stats */}
             <div className="mt-8 flex flex-wrap gap-4 sm:gap-6">
               {[
-                { value: "7", label: t?.kknContent?.stats?.[0]?.label || "Anggota" },
-                { value: "1", label: t?.kknContent?.stats?.[1]?.label || "Proker Kelompok" },
-                { value: "7", label: t?.kknContent?.stats?.[2]?.label || "Proker Individu" },
+                { value: "7", label: t?.kknContent?.stats?.[0]?.label || "Anggota Tim" },
+                { value: "1", label: t?.kknContent?.stats?.[1]?.label || "Program Kerja Kelompok" },
+                { value: "7", label: t?.kknContent?.stats?.[2]?.label || "Program Kerja Individu" },
                 { value: activeLabels.durationVal || "29 Hari", label: activeLabels.duration || "Durasi" },
               ].map((stat, i) => (
                 <div

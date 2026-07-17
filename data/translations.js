@@ -227,9 +227,9 @@ export const translations = {
     },
     kknContent: {
       stats: [
-        { label: "Anggota Tim", value: "11 Mahasiswa" },
-        { label: "Program Kerja", value: "15+ Proker" },
-        { label: "Dosen Pembimbing", value: "1 DPL" },
+        { label: "Anggota Tim", value: "7 Anggota" },
+        { label: "Program Kerja Kelompok", value: "1 Proker" },
+        { label: "Program Kerja Individu", value: "7 Proker" },
         { label: "Desa Sasaran", value: "Tlogomoyo" },
       ],
       tabs: {
@@ -677,9 +677,9 @@ export const translations = {
     },
     kknContent: {
       stats: [
-        { label: "Team Members", value: "11 Students" },
-        { label: "Work Programs", value: "15+ Programs" },
-        { label: "Field Supervisor", value: "1 Supervisor" },
+        { label: "Team Members", value: "7 Members" },
+        { label: "Group Work Program", value: "1 Program" },
+        { label: "Individual Programs", value: "7 Programs" },
         { label: "Target Village", value: "Tlogomoyo" },
       ],
       tabs: {
