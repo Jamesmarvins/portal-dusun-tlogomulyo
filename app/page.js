@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useLanguage } from "@/components/LanguageProvider";
 import WeatherWidget from "@/components/WeatherWidget";
 import InteractiveMap from "@/components/InteractiveMap";
+import EditButton from "@/components/EditButton";
 
 export default function HomePage() {
   const { t } = useLanguage();
@@ -35,11 +36,14 @@ export default function HomePage() {
             {/* Left Content */}
             <div className="animate-fade-in-up">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-white dark:bg-slate-800/70 backdrop-blur-sm px-4 py-2 rounded-full border border-primary-200 shadow-sm mb-6 sm:mb-8">
-                <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
-                <span className="text-xs sm:text-sm font-semibold text-primary-700 tracking-wide">
-                  {t.hero.badge}
-                </span>
+              <div className="flex items-center gap-3 flex-wrap mb-6 sm:mb-8">
+                <div className="inline-flex items-center gap-2 bg-white dark:bg-slate-800/70 backdrop-blur-sm px-4 py-2 rounded-full border border-primary-200 shadow-sm">
+                  <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
+                  <span className="text-xs sm:text-sm font-semibold text-primary-700 tracking-wide">
+                    {t.hero.badge}
+                  </span>
+                </div>
+                <EditButton section="hero" label="Edit Hero" />
               </div>
 
               {/* Heading */}
@@ -180,8 +184,11 @@ export default function HomePage() {
             <p className="text-xs text-slate-500 dark:text-slate-400">{t?.sambutan?.gov || "Pemerintah Dusun Tlogomoyo"}</p>
           </div>
           <div className="md:col-span-8 lg:col-span-9 space-y-4">
-            <div className="inline-flex items-center gap-2 text-amber-600 dark:text-amber-400 text-sm font-semibold">
-              <span>{t?.sambutan?.badge || "👑 Pesan & Sambutan Resmi"}</span>
+            <div className="flex items-center gap-3 flex-wrap">
+              <div className="inline-flex items-center gap-2 text-amber-600 dark:text-amber-400 text-sm font-semibold">
+                <span>{t?.sambutan?.badge || "👑 Pesan & Sambutan Resmi"}</span>
+              </div>
+              <EditButton section="sambutan" label="Edit Sambutan" />
             </div>
             <blockquote className="text-base sm:text-lg text-slate-700 dark:text-slate-200 leading-relaxed italic text-justify border-l-4 border-primary-500 pl-4 py-1">
               &ldquo;{t?.sambutan?.quote || "Assalamu'alaikum Warahmatullahi Wabarakatuh. Salam sejahtera bagi kita semua. Selamat datang di Portal Informasi Digital Resmi Dusun Tlogomoyo, Desa Candi. Website ini dihadirkan sebagai wujud digitalisasi dan jembatan informasi bagi masyarakat serta wisatawan yang ingin mengenal potensi pertanian, keindahan Pantai Srau, dan keramahan warga kami."}&rdquo;
@@ -203,10 +210,13 @@ export default function HomePage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
-            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              {t?.homeSections?.potensiBadge || "Profil Dusun"}
-            </span>
+          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up space-y-2">
+            <div className="flex items-center justify-center gap-3">
+              <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest bg-primary-50 px-4 py-1.5 rounded-full">
+                {t?.homeSections?.potensiBadge || "Profil Dusun"}
+              </span>
+              <EditButton section="homeSections" label="Edit Profil & Potensi" />
+            </div>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
               {t?.homeSections?.potensiTitle || "Mengenal Tlogomoyo"}
             </h2>
@@ -278,10 +288,13 @@ export default function HomePage() {
       {/* ===== KEUNGGULAN / POTENSI SECTION ===== */}
       <section className="py-16 sm:py-20 lg:py-24 bg-earth-50 dark:bg-slate-900 hero-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
-            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              {t?.homeSections?.keunggulanBadge || "Keunggulan"}
-            </span>
+          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up space-y-2">
+            <div className="flex items-center justify-center gap-3">
+              <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest bg-primary-50 px-4 py-1.5 rounded-full">
+                {t?.homeSections?.keunggulanBadge || "Keunggulan"}
+              </span>
+              <EditButton section="homeSections" label="Edit Keunggulan" />
+            </div>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
               {t?.homeSections?.keunggulanTitle || "Mengapa Tlogomoyo?"}
             </h2>

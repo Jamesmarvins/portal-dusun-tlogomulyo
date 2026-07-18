@@ -2,100 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
-
-const katalogProduk = [
-  {
-    id: "wayang-yono",
-    name: "Kerajinan Wayang Pak Yono",
-    category: "kerajinan",
-    categoryLabel: "🧺 Kerajinan Tangan",
-    price: 150000,
-    priceLabel: "Harga menyesuaikan ukuran & kerumitan",
-    seller: "Pak Yono (RT 02)",
-    phone: "6285259300843",
-    image: "/images/umkm-wayang.jpg",
-    desc: "Kerajinan wayang kulit tatah tradisional buatan tangan Pak Yono yang bernilai seni tinggi.",
-    badge: "Karya Seni 🎨"
-  },
-  {
-    id: "cemilan-ismi",
-    name: "Aneka Cemilan Bu Ismi",
-    category: "makanan",
-    categoryLabel: "🍟 Makanan & Camilan",
-    price: 15000,
-    priceLabel: "Mulai Rp 15.000 / kemasan",
-    seller: "Bu Ismi (RT 01)",
-    phone: "6285259300843",
-    image: "/images/umkm-cemilan.jpg",
-    desc: "Aneka camilan kering tradisional seperti keripik, kue bawang, dan pangsit renyah olahan Bu Ismi.",
-    badge: "Terlaris 🔥"
-  },
-  {
-    id: "bawang-yani",
-    name: "Bawang Goreng Bu Yani",
-    category: "makanan",
-    categoryLabel: "🍟 Makanan & Camilan",
-    price: 18000,
-    priceLabel: "Rp 18.000 / pouch",
-    seller: "Bu Yani (RT 02)",
-    phone: "6285259300843",
-    image: "/images/umkm-bawang.jpg",
-    desc: "Bawang goreng merah gurih renyah tanpa bahan pengawet produksi rumahan Bu Yani.",
-    badge: "Renyah & Gurih 💨"
-  },
-  {
-    id: "tempe-yanti",
-    name: "Tempe Daun Bu Yanti",
-    category: "makanan",
-    categoryLabel: "🍟 Makanan & Camilan",
-    price: 5000,
-    priceLabel: "Rp 5.000 / ikat",
-    seller: "Bu Yanti (RT 01)",
-    phone: "6285259300843",
-    image: "/images/umkm-tempe.jpg",
-    desc: "Tempe tradisional bungkus daun jati dan pisang segar buatan Bu Yanti dengan ragi alami.",
-    badge: "Tradisional 🍃"
-  },
-  {
-    id: "kerupuk-suharmi",
-    name: "Kerupuk Kering Bu Suharmi",
-    category: "makanan",
-    categoryLabel: "🍟 Makanan & Camilan",
-    price: 12000,
-    priceLabel: "Rp 12.000 / pack",
-    seller: "Bu Suharmi (RT 01)",
-    phone: "6285259300843",
-    image: "/images/umkm-kerupuk.jpg",
-    desc: "Kerupuk kering mentah siap goreng produksi Bu Suharmi yang mekar renyah sempurna.",
-    badge: "Ekstra Mekar ✨"
-  },
-  {
-    id: "sale-suharmi",
-    name: "Sale Pisang Goreng Bu Suharmi",
-    category: "makanan",
-    categoryLabel: "🍟 Makanan & Camilan",
-    price: 20000,
-    priceLabel: "Rp 20.000 / pack",
-    seller: "Bu Suharmi (RT 01)",
-    phone: "6285259300843",
-    image: "/images/umkm-sale.jpg",
-    desc: "Camilan sale pisang goreng manis gurih khas Pacitan buatan Bu Suharmi.",
-    badge: "Khas Pacitan 🍌"
-  },
-  {
-    id: "roti-maya",
-    name: "Roti Manis Bu Maya",
-    category: "makanan",
-    categoryLabel: "🍟 Makanan & Camilan",
-    price: 10000,
-    priceLabel: "Mulai Rp 10.000 / pack",
-    seller: "Bu Maya (RT 02)",
-    phone: "6285259300843",
-    image: "/images/umkm-roti.png",
-    desc: "Aneka roti manis isi tradisional yang lembut dan dipanggang segar setiap hari oleh Bu Maya.",
-    badge: "Segar dari Oven 🍞"
-  }
-];
+import EditButton from "@/components/EditButton";
 
 const kategoriList = [
   { id: "semua", label: "🌟 Semua Produk" },
@@ -106,13 +13,13 @@ const kategoriList = [
 ];
 
 export default function UmkmPage() {
-  const { language, t } = useLanguage();
+  const { language, t, umkmList, saveUmkmList, editMode } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState("semua");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const filteredProducts = useMemo(() => {
-    return katalogProduk.filter((item) => {
+    return umkmList.filter((item) => {
       const matchCategory = selectedCategory === "semua" || item.category === selectedCategory;
       const matchSearch =
         item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -120,7 +27,7 @@ export default function UmkmPage() {
         item.seller.toLowerCase().includes(searchQuery.toLowerCase());
       return matchCategory && matchSearch;
     });
-  }, [selectedCategory, searchQuery]);
+  }, [umkmList, selectedCategory, searchQuery]);
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 pb-24 selection:bg-primary-200 selection:text-primary-900">
@@ -167,30 +74,35 @@ export default function UmkmPage() {
             })}
           </div>
 
-          {/* Search Input */}
-          <div className="relative w-full md:w-80">
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={t?.umkm?.searchPlaceholder || "Cari camilan, jamu, atau penjual..."}
-              className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500/20 transition-all duration-200"
-            />
-            <svg
-              className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery("")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs font-bold"
+          {/* Search Input & Add Button */}
+          <div className="flex items-center gap-3 w-full md:w-auto">
+            <div className="relative flex-1 md:w-80 md:flex-initial">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder={t?.umkm?.searchPlaceholder || "Cari camilan, jamu, atau penjual..."}
+                className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500/20 transition-all duration-200"
+              />
+              <svg
+                className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                ✕
-              </button>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-655 dark:hover:text-slate-200 text-xs font-bold font-sans"
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+            {editMode && (
+              <EditButton type="umkm-add" label="+ Tambah Produk" className="shrink-0 !py-2.5 !px-3.5 !text-xs !rounded-2xl" />
             )}
           </div>
         </div>
@@ -221,9 +133,36 @@ export default function UmkmPage() {
             {filteredProducts.map((product, i) => (
               <div
                 key={product.id}
-                className="group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-700 shadow-[var(--shadow-card)] hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500 flex flex-col animate-fade-in-up"
+                className="group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-700 shadow-[var(--shadow-card)] hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500 flex flex-col animate-fade-in-up relative"
                 style={{ animationDelay: `${i * 100}ms` }}
               >
+                {editMode && (
+                  <div className="bg-slate-900/90 text-white p-2.5 px-4 flex justify-between items-center border-b border-slate-800 text-[11px] font-bold gap-2 select-none z-10">
+                    <span className="text-emerald-450 truncate">⚙️ Kelola Produk</span>
+                    <div className="flex gap-1.5 shrink-0">
+                      <EditButton type="umkm-edit" item={product} label="Edit" className="!py-1 !px-2" />
+                      <button
+                        type="button"
+                        onClick={async (e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          if (confirm(`Apakah Anda yakin ingin menghapus produk "${product.name}"?`)) {
+                            const updatedList = umkmList.filter((p) => p.id !== product.id);
+                            const res = await saveUmkmList(updatedList);
+                            if (res.success) {
+                              alert("Produk berhasil dihapus.");
+                            } else {
+                              alert(res.error || "Gagal menghapus produk.");
+                            }
+                          }
+                        }}
+                        className="px-2.5 py-1 bg-red-650 hover:bg-red-600 hover:scale-105 active:scale-95 text-white font-bold rounded-lg text-[10px] cursor-pointer transition border border-red-500/20 shadow-sm"
+                      >
+                        Hapus
+                      </button>
+                    </div>
+                  </div>
+                )}
                 {/* Image & Badges */}
                 <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer" onClick={() => setSelectedProduct(product)}>
                   <img

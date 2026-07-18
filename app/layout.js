@@ -1,19 +1,7 @@
-import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 /* Viewport responsivitas mobile */
 export const viewport = {
@@ -53,14 +41,20 @@ export const metadata = {
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import PwaRegister from "@/components/PwaRegister";
+import QuickEditor from "@/components/QuickEditor";
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="id"
-      className={`${inter.variable} ${outfit.variable} antialiased`}
+      className="antialiased"
       suppressHydrationWarning
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+      </head>
       <body className="min-h-screen flex flex-col overflow-x-hidden">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <LanguageProvider>
@@ -68,6 +62,7 @@ export default function RootLayout({ children }) {
             <main className="flex-1">{children}</main>
             <Footer />
             <PwaRegister />
+            <QuickEditor />
           </LanguageProvider>
         </ThemeProvider>
       </body>

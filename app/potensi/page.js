@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useLanguage } from "@/components/LanguageProvider";
+import EditButton from "@/components/EditButton";
 
 export default function PotensiUMKM() {
   const { t } = useLanguage();
@@ -68,16 +69,19 @@ export default function PotensiUMKM() {
         <div className="absolute top-40 -left-20 w-72 h-72 bg-accent-200/40 rounded-full blur-3xl" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-100/50 border border-primary-200 text-primary-700 text-sm font-medium mb-6 animate-fade-in-up">
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            {t?.potensiPage?.badge || "Ekonomi Kreatif & Agrikultur"}
+          <div className="flex items-center justify-center gap-3 flex-wrap mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-100/50 border border-primary-200 text-primary-700 text-sm font-medium animate-fade-in-up">
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              {t?.potensiPage?.badge || "Ekonomi Kreatif & Agrikultur"}
+            </div>
+            <EditButton section="potensiPage" label="Edit Potensi Halaman" />
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6 animate-fade-in-up" style={{ animationDelay: "100ms" }}>
             {t?.potensiPage?.title || "Potensi & UMKM"} <br className="hidden sm:block" />

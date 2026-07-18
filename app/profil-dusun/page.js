@@ -3,6 +3,7 @@
 import ProfilHeader from "./ProfilHeader";
 import Link from "next/link";
 import { useLanguage } from "@/components/LanguageProvider";
+import EditButton from "@/components/EditButton";
 
 export default function ProfilDusunPage() {
   const { language, t } = useLanguage();
@@ -55,9 +56,12 @@ export default function ProfilDusunPage() {
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Text Content */}
             <div className="animate-fade-in-up">
-              <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-                {t?.profilContent?.geoBadge || "Geografi & Topografi"}
-              </span>
+              <div className="flex items-center gap-3 flex-wrap mb-3">
+                <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest bg-primary-50 px-4 py-1.5 rounded-full">
+                  {t?.profilContent?.geoBadge || "Geografi & Topografi"}
+                </span>
+                <EditButton section="profilContent" label="Edit Geografi & Batas" />
+              </div>
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-5">
                 {t?.profilContent?.geoTitle || "Letak Geografis"}{" "}
                 <span className="gradient-text">Tlogomoyo</span>
@@ -122,10 +126,13 @@ export default function ProfilDusunPage() {
       {/* ===== POTENSI PERTANIAN & PENGGUNAAN LAHAN ===== */}
       <section className="py-14 sm:py-18 lg:py-22 bg-earth-50 dark:bg-slate-900 hero-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
-            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              {t?.profilFull?.sec2Badge || "Pertanian & Sumber Daya Alam"}
-            </span>
+          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up space-y-2">
+            <div className="flex items-center justify-center gap-3 flex-wrap">
+              <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest bg-primary-50 px-4 py-1.5 rounded-full">
+                {t?.profilFull?.sec2Badge || "Pertanian & Sumber Daya Alam"}
+              </span>
+              <EditButton section="profilFull" label="Edit Detail Profil" />
+            </div>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
               {t?.profilFull?.sec2Title || "Kekayaan Alam"}{" "}
               <span className="gradient-text">{t?.profilFull?.sec2TitleHighlight || "Tlogomoyo"}</span>

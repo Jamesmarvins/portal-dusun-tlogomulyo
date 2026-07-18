@@ -1,0 +1,1404 @@
+{
+  "id": {
+    "nav": {
+      "beranda": "Beranda",
+      "profil": "Profil Dusun",
+      "potensi": "Potensi Dusun",
+      "umkm": "Katalog UMKM",
+      "infokkn": "Tentang & KKN"
+    },
+    "hero": {
+      "badge": "Dusun Tlogomoyo",
+      "welcome": "Selamat Datang di",
+      "portalTitle": "Portal Informasi Resmi",
+      "hamletName": "Dusun Tlogomoyo",
+      "desc": "Temukan informasi administrasi kependudukan, kondisi geografis, potensi pertanian, UMKM lokal, serta warisan budaya leluhur di Dusun Tlogomoyo, Desa Candi, Kabupaten Pacitan.",
+      "btnPotential": "Kenali Potensi Dusun",
+      "btnContact": "Hubungi Kepala Dusun",
+      "stats": {
+        "pop": "Penduduk",
+        "kk": "Kepala Keluarga",
+        "lahan": "Lahan Pertanian",
+        "umkm": "UMKM Lokal"
+      }
+    },
+    "weather": {
+      "title": "Cuaca Live Dusun Tlogomoyo & Pacitan",
+      "subtitle": "Kondisi cuaca terkini untuk pemantauan pertanian & aktivitas warga",
+      "temp": "Suhu Aktual",
+      "feels": "Terasa Seperti",
+      "wind": "Angin",
+      "humidity": "Kelembaban",
+      "loading": "Mengambil cuaca satelit terbaru...",
+      "error": "Gagal memuat cuaca live",
+      "goodCondition": "☀️ Kondisi cerah prima untuk aktivitas bertani dan penjemuran hasil bumi!",
+      "cloudyCondition": "⛅ Cuaca berawan sejuk, sangat nyaman untuk bertani di ladang.",
+      "rainCondition": "🌧️ Cuaca sedang hujan/berangin, persiapkan pelindung air untuk komoditas hasil tani.",
+      "codes": {
+        "0": "Cerah",
+        "1": "Cerah Berawan",
+        "2": "Berawan",
+        "3": "Mendung Gelap",
+        "45": "Berkabut",
+        "48": "Kabut Tebal",
+        "51": "Gerimis Ringan",
+        "53": "Gerimis",
+        "55": "Gerimis Lebat",
+        "61": "Hujan Ringan",
+        "63": "Hujan Sedang",
+        "65": "Hujan Lebat",
+        "80": "Hujan Lokal",
+        "95": "Badai Petir"
+      }
+    },
+    "map": {
+      "sectionBadge": "Peta Digital",
+      "sectionTitle": "Peta Wilayah & Fasilitas",
+      "sectionDesc": "Temukan rute navigasi menuju pusat pemerintahan, kawasan pertanian, dan pusat UMKM di wilayah Dusun Tlogomoyo.",
+      "selectHotspot": "Pilih Lokasi Peta:",
+      "openMaps": "Buka Rute di Google Maps",
+      "selectedPoint": "Titik Terpilih",
+      "gpsCoords": "Koordinat GPS",
+      "spotLabels": {
+        "pertanian": "Kawasan Pertanian",
+        "balai": "Balai Dusun & Pusat Desa",
+        "umkm": "Sentra Kerajinan & UMKM"
+      },
+      "locations": {
+        "balai": {
+          "name": "Balai Dusun Tlogomoyo & Pusat Desa",
+          "desc": "Pusat kegiatan administrasi kemasyarakatan, pelayanan publik, pertemuan warga, serta pusat koordinasi pembangunan wilayah Dusun Tlogomoyo di Desa Candi.",
+          "coords": "-8.2239, 111.0172"
+        },
+        "pertanian": {
+          "name": "Kawasan Pertanian & Kelompok Tani Nuju Makmur XII",
+          "desc": "Area lahan tegalan dan persawahan subur yang dikelola oleh Kelompok Tani Nuju Makmur XII. Kawasan ini merupakan sentra budidaya singkong unggulan, empon-empon organik, dan pohon kelapa.",
+          "coords": "-8.2250, 111.0190"
+        },
+        "umkm": {
+          "name": "Sentra Produksi Kerajinan & Olahan Pangan",
+          "desc": "Wilayah permukiman warga yang menjadi pusat industri rumah tangga kreatif, memproduksi anyaman bambu tradisional (besek), keripik singkong renyah, dan nira gula aren murni.",
+          "coords": "-8.2220, 111.0150"
+        }
+      }
+    },
+    "profil": {
+      "title": "Profil Dusun",
+      "subtitle": "Mengenal lebih dekat Dusun Tlogomoyo geografi, sejarah, kekayaan budaya, potensi pertanian, serta destinasi wisata di sekitarnya. Sebuah dusun yang asri di jantung Pacitan selatan.",
+      "breadcrumb": "Profil Dusun"
+    },
+    "kkn": {
+      "title": "Tentang KKN",
+      "subtitle": "Profil kelompok, program kerja kelompok, dan program kerja individu Tim KKN di Dusun Tlogomoyo.",
+      "breadcrumb": "Tentang & KKN"
+    },
+    "footer": {
+      "desc": "Portal Informasi Resmi Dusun Tlogomoyo, Desa Candi, Kecamatan Pringkuku, Kabupaten Pacitan, Jawa Timur. Membangun desa digital berbasis potensi lokal.",
+      "quickLinks": "Tautan Cepat",
+      "contact": "Kontak & Alamat",
+      "address": "Balai Dusun Tlogomoyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan, Jawa Timur 63552",
+      "copyright": "Hak Cipta © 2026 Pemerintah Dusun Tlogomoyo.",
+      "kknGroup": "Dusun Tlogomoyo"
+    },
+    "homeSections": {
+      "potensiBadge": "Potensi Unggulan",
+      "potensiTitle": "Kekayaan & Potensi Dusun",
+      "potensiDesc": "Dusun Tlogomoyo dianugerahi kesuburan tanah perbukitan karst, keanekaragaman tanaman pangan lokal, serta kreativitas warga dalam mengembangkan produk UMKM berkualitas.",
+      "cards": [
+        {
+          "title": "Pertanian & Perkebunan",
+          "desc": "Penghasil utama kelapa, ketela pohon, jagung, dan padi sawah tadah hujan. Sebagian warga juga membudidayakan tanaman keras seperti cengkeh dan mahoni."
+        },
+        {
+          "title": "Peternakan & Hasil Bumi",
+          "desc": "Integrasi pertanian tegalan dengan peternakan kambing, sapi, dan ayam kampung yang membantu menjaga siklus pupuk alami dan menyokong gizi keluarga."
+        },
+        {
+          "title": "UMKM & Kerajinan Warga",
+          "desc": "Produksi olahan hasil bumi seperti keripik ketela, gula merah kelapa, serta kerajinan anyaman bambu bernilai guna tinggi khas pedesaan."
+        }
+      ],
+      "kknBadge": "Pengabdian Masyarakat",
+      "kknTitle": "Dusun Tlogomoyo",
+      "kknDesc": "Tim Kuliah Kerja Nyata dari Universitas Kristen Duta Wacana berkolaborasi dengan Pemerintah Dusun Tlogomoyo dalam mengemban program kerja digitalisasi, penguatan potensi desa, dan pengembangan lingkungan sehat dan mandiri.",
+      "kknBtn": "Lihat Detail Program & Anggota",
+      "keunggulanBadge": "Keunggulan",
+      "keunggulanTitle": "Mengapa Tlogomoyo?",
+      "keunggulanCards": [
+        {
+          "title": "Lokasi Strategis",
+          "desc": "Terletak di Kabupaten Pacitan, Jawa Timur daerah yang dikenal dengan keindahan alamnya. Akses menuju dusun dapat ditempuh dengan mudah dari pusat kota."
+        },
+        {
+          "title": "Lingkungan Asri & Aman",
+          "desc": "Dikelilingi oleh perbukitan hijau dan udara segar. Lingkungan yang tenang dan aman menjadikan dusun ini cocok untuk kegiatan akademik, penelitian, dan KKN."
+        },
+        {
+          "title": "Kearifan Lokal",
+          "desc": "Tradisi dan adat istiadat masyarakat yang masih terjaga memberikan pengalaman otentik bagi siapa pun yang berkunjung dan ingin belajar tentang kehidupan pedesaan."
+        }
+      ]
+    },
+    "umkm": {
+      "badge": "E-Katalog Digital & Pemberdayaan Warga",
+      "title": "Katalog Produk UMKM Dusun Tlogomoyo",
+      "subtitle": "Dukung perekonomian lokal dengan membeli produk olahan pangan segar, kerajinan tangan, dan hasil tani langsung dari warga Dusun Tlogomoyo.",
+      "searchPlaceholder": "Cari camilan, jamu, atau penjual...",
+      "searchEmpty": "Produk Tidak Ditemukan",
+      "searchEmptyAdvice": "Maaf, tidak ada produk yang cocok. Coba gunakan kata kunci lain atau pilih kategori Semua.",
+      "viewAllBtn": "Lihat Semua Produk",
+      "cats": {
+        "semua": "🌟 Semua Produk",
+        "makanan": "🍟 Makanan & Camilan",
+        "minuman": "☕ Jamu & Minuman",
+        "kerajinan": "🧺 Kerajinan Tangan",
+        "hasil-bumi": "🌾 Hasil Bumi"
+      },
+      "orderBtn": "Beli via WhatsApp",
+      "orderDirectBtn": "Pesan Langsung via WhatsApp",
+      "backBtn": "Kembali"
+    },
+    "sambutan": {
+      "role": "Kepala Dusun",
+      "name": "Bapak Kepala Dusun",
+      "gov": "Pemerintah Dusun Tlogomoyo",
+      "badge": "👑 Pesan & Sambutan Resmi",
+      "quote": "Assalamu'alaikum Warahmatullahi Wabarakatuh. Salam sejahtera bagi kita semua. Selamat datang di Portal Informasi Digital Resmi Dusun Tlogomoyo, Desa Candi. Website ini dihadirkan sebagai wujud digitalisasi dan jembatan informasi bagi masyarakat luas yang ingin mengenal potensi pertanian, kerajinan lokal, dan keramahan warga kami.",
+      "footer": "Dipersembahkan dalam rangka kemajuan & transparansi dusun"
+    },
+    "heroBottom": {
+      "openFor": "Terbuka untuk",
+      "kknVisit": "KKN & Kunjungan"
+    },
+    "potensiPage": {
+      "badge": "Kekayaan Bumi & Agrikultur",
+      "title": "Kekayaan & Hasil Tani",
+      "subtitle": "Jelajahi keanekaragaman hasil bumi dan komoditas pertanian unggulan yang dibudidayakan secara produktif oleh warga Dusun Tlogomoyo.",
+      "items": [
+        {
+          "id": "pertanian",
+          "title": "Pertanian Singkong & Padi",
+          "desc": "Singkong dan padi sawah/gogo merupakan komoditas utama pangan warga Dusun Tlogomoyo. Kedua hasil bumi ini menjadi pilar utama ketahanan pangan keluarga dan diolah secara tradisional untuk menyokong kehidupan sehari-hari."
+        },
+        {
+          "id": "makanan",
+          "title": "Perkebunan Kelapa & Penyadapan Nira",
+          "desc": "Pohon kelapa tumbuh subur di perbukitan Dusun Tlogomoyo. Warga memanfaatkan buah kelapa serta menyadap air nira kelapa secara rutin untuk diproses secara tradisional menjadi produk gula aren cetak murni."
+        },
+        {
+          "id": "kerajinan",
+          "title": "Pertanian Jagung & Palawija",
+          "desc": "Tanaman jagung dibudidayakan di lahan tegalan kering secara musiman. Jagung menjadi hasil tani pendukung penting, baik untuk konsumsi alternatif maupun sebagai pakan berkualitas bagi ternak warga."
+        },
+        {
+          "id": "peternakan",
+          "title": "Hortikultura Buah Pisang",
+          "desc": "Kebun dan pekarangan warga dipenuhi oleh tanaman pisang dari berbagai varietas lokal. Buah pisang melimpah ruah sepanjang tahun, menjadi sumber vitamin harian sekaligus tambahan pendapatan bagi warga."
+        }
+      ]
+    },
+    "profilContent": {
+      "stats": [
+        {
+          "label": "Kabupaten",
+          "value": "Pacitan"
+        },
+        {
+          "label": "Kecamatan",
+          "value": "Pringkuku"
+        },
+        {
+          "label": "Desa",
+          "value": "Candi"
+        },
+        {
+          "label": "Provinsi",
+          "value": "Jawa Timur"
+        }
+      ],
+      "geoBadge": "Geografi & Topografi",
+      "geoTitle": "Letak Geografis",
+      "geoP1": "Dusun Tlogomoyo terletak di Desa Candi, Kecamatan Pringkuku, Kabupaten Pacitan, Provinsi Jawa Timur. Desa Candi sendiri berjarak sekitar 10 km dari ibu kota kecamatan dan merupakan salah satu desa yang memiliki cakupan wilayah cukup luas di Kecamatan Pringkuku.",
+      "geoP2": "Topografi wilayah ini didominasi oleh pegunungan berbatu yang merupakan bagian dari bentang alam Pegunungan Seribu (Gunung Sewu). Di sisi selatan, Desa Candi berbatasan langsung dengan Samudera Indonesia, menciptakan perpaduan lanskap perbukitan hijau dan pantai yang memukau.",
+      "geoP3": "Koordinat geografis dusun berada di sekitar 8.2239°S, 111.0172°E, dengan ketinggian bervariasi dari pesisir hingga perbukitan.",
+      "batasTitle": "Batas Wilayah Desa Candi",
+      "batas": [
+        {
+          "arah": "Utara",
+          "batas": "Desa Pringkuku"
+        },
+        {
+          "arah": "Timur",
+          "batas": "Desa Poko"
+        },
+        {
+          "arah": "Selatan",
+          "batas": "Samudera Indonesia"
+        },
+        {
+          "arah": "Barat",
+          "batas": "Desa Jlubang"
+        }
+      ],
+      "ctaHeading": "Tertarik Mengenal Lebih Dekat?",
+      "ctaTitle": "Tentang KKN & Proker Kami",
+      "ctaBack": "Kembali ke Beranda",
+      "ctaDesc": "Kenali lebih jauh tentang kegiatan kemahasiswaan dan program kerja (Proker) KKN yang telah dan sedang berlangsung di Dusun Tlogomoyo."
+    },
+    "kknContent": {
+      "stats": [
+        {
+          "label": "Anggota Tim",
+          "value": "7 Anggota"
+        },
+        {
+          "label": "Program Kerja Kelompok",
+          "value": "1 Proker"
+        },
+        {
+          "label": "Program Kerja Individu",
+          "value": "7 Proker"
+        },
+        {
+          "label": "Desa Sasaran",
+          "value": "Tlogomoyo"
+        }
+      ],
+      "tabs": {
+        "profil": "Profil Kelompok & DPL",
+        "kelompok": "Proker Kelompok",
+        "individu": "Proker Individu"
+      },
+      "dplTitle": "Dosen Pembimbing Lapangan",
+      "dplRole": "Pembimbing KKN Kelompok 28",
+      "groupTitle": "Sejarah & Visi Kelompok 28",
+      "ctaTitle": "Dukung Pengembangan Dusun Tlogomoyo",
+      "ctaDesc": "Jelajahi potensi lokal dan dukung UMKM warga Dusun Tlogomoyo melalui katalog digital resmi kami.",
+      "ctaBtn": "Kunjungi Katalog UMKM"
+    },
+    "umkmProducts": {
+      "wayang-yono": {
+        "name": "Kerajinan Wayang Pak Yono",
+        "badge": "Karya Seni 🎨",
+        "desc": "Kerajinan wayang kulit tatah tradisional buatan tangan Pak Yono yang bernilai seni tinggi."
+      },
+      "cemilan-ismi": {
+        "name": "Aneka Cemilan Bu Ismi",
+        "badge": "Terlaris 🔥",
+        "desc": "Aneka camilan kering tradisional seperti keripik, kue bawang, dan pangsit renyah olahan Bu Ismi."
+      },
+      "bawang-yani": {
+        "name": "Bawang Goreng Bu Yani",
+        "badge": "Renyah & Gurih 💨",
+        "desc": "Bawang goreng merah gurih renyah tanpa bahan pengawet produksi rumahan Bu Yani."
+      },
+      "tempe-yanti": {
+        "name": "Tempe Daun Bu Yanti",
+        "badge": "Tradisional 🍃",
+        "desc": "Tempe tradisional bungkus daun jati dan pisang segar buatan Bu Yanti dengan ragi alami."
+      },
+      "kerupuk-suharmi": {
+        "name": "Kerupuk Kering Bu Suharmi",
+        "badge": "Ekstra Mekar ✨",
+        "desc": "Kerupuk kering mentah siap goreng produksi Bu Suharmi yang mekar renyah sempurna."
+      },
+      "sale-suharmi": {
+        "name": "Sale Pisang Goreng Bu Suharmi",
+        "badge": "Khas Pacitan 🍌",
+        "desc": "Camilan sale pisang goreng manis gurih khas Pacitan buatan Bu Suharmi."
+      },
+      "roti-maya": {
+        "name": "Roti Manis Bu Maya",
+        "badge": "Segar dari Oven 🍞",
+        "desc": "Aneka roti manis isi tradisional yang lembut dan dipanggang segar setiap hari oleh Bu Maya."
+      }
+    },
+    "heroCard": {
+      "province": "Jawa Timur",
+      "title": "Profil Dusun",
+      "location": "Tlogomoyo, Pacitan",
+      "items": [
+        {
+          "name": "Potensi Pertanian",
+          "detail": "Singkong, Empon-empon, Kelapa"
+        },
+        {
+          "name": "Lokasi Strategis",
+          "detail": "Jawa Timur, Indonesia"
+        },
+        {
+          "name": "Masyarakat Ramah",
+          "detail": "Gotong Royong & Budaya Lokal"
+        }
+      ],
+      "openFor": "Terbuka untuk",
+      "kknVisit": "KKN & Kunjungan"
+    },
+    "profilFull": {
+      "sec2Badge": "Pertanian & Sumber Daya Alam",
+      "sec2Title": "Kekayaan Alam",
+      "sec2TitleHighlight": "Tlogomoyo",
+      "sec2Desc": "Topografi perbukitan yang subur menjadikan wilayah ini kaya akan beragam komoditas pertanian dan hasil bumi. Masyarakat Tlogomoyo juga aktif berorganisasi dalam bidang agraris, salah satunya melalui keberadaan kelompok tani (seperti Kelompok Tani Nuju Makmur XII) yang menjadi motor penggerak ketahanan pangan dan ekonomi warga setempat.",
+      "lahan": [
+        {
+          "value": "~650 ha",
+          "label": "Ladang & Tegalan",
+          "desc": "Lahan utama untuk bercocok tanam singkong, empon-empon, dan tanaman pangan lainnya."
+        },
+        {
+          "value": "~451 ha",
+          "label": "Hutan Rakyat",
+          "desc": "Hutan yang dikelola masyarakat, menghasilkan kayu, kelapa, dan produk kehutanan."
+        },
+        {
+          "value": "~12,5 ha",
+          "label": "Lahan Sawah",
+          "desc": "Area sawah yang relatif kecil namun tetap produktif untuk kebutuhan pangan lokal."
+        }
+      ],
+      "komoditasTitle": "Komoditas Unggulan",
+      "komoditas": [
+        {
+          "name": "Singkong",
+          "desc": "Tanaman pangan utama"
+        },
+        {
+          "name": "Padi",
+          "desc": "Bahan pangan pokok utama"
+        },
+        {
+          "name": "Kelapa",
+          "desc": "Hasil perkebunan unggulan"
+        },
+        {
+          "name": "Jagung",
+          "desc": "Tanaman palawija pendukung"
+        },
+        {
+          "name": "Pisang",
+          "desc": "Hortikultura kebun pekarangan"
+        }
+      ],
+      "sec3Badge": "Budaya & Tradisi",
+      "sec3Title": "Kearifan Lokal",
+      "sec3TitleHighlight": "yang Terjaga",
+      "sec3Desc": "Masyarakat Tlogomoyo senantiasa memelihara nilai luhur kebersamaan yang diwariskan secara turun-temurun sebagai pengikat kerukunan warga.",
+      "bannerBadge": "Nilai Utama",
+      "bannerTitle": "Semangat Kegotongroyongan & Budaya Agraris",
+      "bannerDesc": "Dari tradisi kerja bakti rutin membangun desa bersama-sama dengan senyum hangat keramahan lokal.",
+      "cards": [
+        {
+          "title": "Gotong Royong",
+          "desc": "Tradisi kerja bersama yang sangat kuat di Tlogomoyo. Masyarakat secara aktif dan rutin bergotong royong dalam kegiatan pembangunan infrastruktur dusun, perbaikan jalan, bersih-bersih lingkungan, hingga membantu tetangga yang mengadakan hajatan."
+        }
+      ],
+      "sec4Badge": "Sejarah & Asal-Usul",
+      "sec4Title": "Rekam Jejak & Asal Nama",
+      "sec4TitleHighlight": "Tlogomoyo",
+      "sec4Desc": "Mari telusuri sejarah berdirinya pemukiman di Tlogomoyo serta makna luhur di balik nama dusun ini.",
+      "asalUsul": {
+        "title": "Asal-Usul Nama Tlogomoyo",
+        "subtitle": "Kejernihan Sumber Air di Atas Bukit Karst",
+        "p1": "Nama Tlogomoyo memiliki akar historis dari kata 'Tlogo' (telaga/sumber air) dan 'Moyo' (bayangan atau ketenangan batin). Konon di masa awal pemukiman, para tetua dusun menemukan sebuah telaga kecil dengan air yang sangat jernih di antara bukit karst kering. Telaga ini menjadi tumpuan warga untuk bertahan hidup dan mengolah tanah pertanian, sehingga dusun ini dinamai Tlogomoyo sebagai perlambang berkah ketenangan dan kehidupan.",
+        "details": [
+          {
+            "label": "Makna 'Tlogo'",
+            "detail": "Telaga Kehidupan"
+          },
+          {
+            "label": "Makna 'Moyo'",
+            "detail": "Ketenangan Jiwa"
+          },
+          {
+            "label": "Karakter Lahan",
+            "detail": "Bukit Karst Pegunungan Sewu"
+          },
+          {
+            "label": "Pilar Utama",
+            "detail": "Sumber Daya Air Lokal"
+          }
+        ],
+        "acts": [
+          "Harmoni Alam",
+          "Kearifan Lokal",
+          "Penjaga Telaga",
+          "Konservasi Air"
+        ]
+      },
+      "sejarah": {
+        "title": "Sejarah Perkembangan Agraris",
+        "subtitle": "Babad Alas dan Ketahanan Pangan Mandiri",
+        "p1": "Pemukiman Tlogomoyo dimulai oleh para pembuka lahan (babad alas) yang bermigrasi mencari lahan subur di pedalaman Pacitan selatan. Generasi awal berfokus pada teknik bercocok tanam tadah hujan karena struktur tanah berbatu. Melalui ketekunan, warga berhasil mengembangkan sistem budidaya singkong, empon-empon, dan penyadapan nira kelapa yang kini diwariskan turun-temurun sebagai identitas ekonomi utama dusun.",
+        "details": [
+          {
+            "label": "Masa Rintisan",
+            "detail": "Pertanian Tadah Hujan"
+          },
+          {
+            "label": "Komoditas Awal",
+            "detail": "Singkong & Kelapa"
+          },
+          {
+            "label": "Pola Sosial",
+            "detail": "Gotong Royong Sambatan"
+          },
+          {
+            "label": "Fase Modern",
+            "detail": "Digitalisasi & UMKM Kreatif"
+          }
+        ],
+        "acts": [
+          "Babad Alas",
+          "Tani Tradisional",
+          "Sistem Sambatan",
+          "Kemandirian Pangan"
+        ]
+      },
+      "sec5Title": "Karakteristik Masyarakat",
+      "sec5Chars": [
+        {
+          "title": "Heterogen & Majemuk",
+          "desc": "Masyarakat Kecamatan Pringkuku dikenal heterogen dengan latar belakang sosial ekonomi dan tingkat pendidikan yang beragam."
+        },
+        {
+          "title": "Kemandirian Agraris",
+          "desc": "Sebagian besar penduduk berprofesi sebagai petani, mengelola tegalan secara mandiri dengan budidaya berkelanjutan."
+        },
+        {
+          "title": "Ramah & Terbuka",
+          "desc": "Masyarakat sangat ramah terhadap pendatang, mahasiswa KKN, dan tamu lainnya. Nilai gotong royong masih sangat kuat."
+        },
+        {
+          "title": "Sinergi UMKM & Tani",
+          "desc": "Desa Candi bertransformasi dengan mensinergikan hasil pertanian mentah menjadi produk olahan bernilai tinggi melalui UMKM warga."
+        }
+      ],
+      "sec5RightBadge": "Sosial & Ekonomi",
+      "sec5RightTitle": "Kehidupan",
+      "sec5RightHighlight": "Masyarakat",
+      "sec5P1": "Masyarakat Dusun Tlogomoyo dan Desa Candi secara umum hidup harmonis dengan alam. Pertanian tetap menjadi tulang punggung ekonomi terutama budidaya singkong, empon-empon, kelapa, serta tanaman hortikultura.",
+      "sec5P2": "Seiring dengan berkembangnya kreativitas warga dalam memproses hasil bumi, banyak masyarakat yang kini aktif mengelola kelompok UMKM lokal. Mulai dari produksi keripik singkong renyah, nira kelapa menjadi gula aren cetak, hingga anyaman bambu bernilai seni tinggi. Diversifikasi usaha ini terbukti meningkatkan pendapatan dan ketahanan ekonomi keluarga di dusun.",
+      "sec5P3": "Kecamatan Pringkuku tercatat memiliki penduduk sekitar 32.347 jiwa (data 2024), tersebar di 13 desa dengan karakteristik demografis yang beragam. Desa Candi sendiri terdiri dari 15 dusun, dengan Tlogomoyo sebagai salah satu dusun yang aktif dalam berbagai program pembangunan dan pemberdayaan.",
+      "sec6Badge": "Kelembagaan & Tokoh Masyarakat",
+      "sec6Title": "Struktur Organisasi",
+      "sec6Highlight": "Pemerintahan Dusun",
+      "sec6Desc": "Pemerintahan Dusun Tlogomoyo berada di bawah naungan Pemerintah Desa Candi. Berikut adalah jajaran jembatan pemangku wilayah yang senantiasa bergotong royong melayani warga.",
+      "govCards": [
+        {
+          "jabatan": "Kepala Desa Candi",
+          "nama": "Pemerintah Desa Candi",
+          "desc": "Pemimpin tertinggi tingkat desa di Kecamatan Pringkuku yang membawahi 15 dusun, termasuk Dusun Tlogomoyo.",
+          "badge": "Pembina Wilayah"
+        },
+        {
+          "jabatan": "Kepala Dusun (Kasun)",
+          "nama": "Bapak Kepala Dusun Tlogomoyo",
+          "desc": "Koordinator utama pemangku wilayah Dusun Tlogomoyo yang menjadi ujung tombak pelayanan administrasi & aspirasi masyarakat.",
+          "badge": "Pimpinan Dusun"
+        },
+        {
+          "jabatan": "Ketua Rukun Warga (RW)",
+          "nama": "Ketua RW Dusun Tlogomoyo",
+          "desc": "Koordinator ketertiban lingkungan dan jembatan komunikasi antar-RT di seluruh wilayah pedukuhan Tlogomoyo.",
+          "badge": "Koordinator Lingkungan"
+        },
+        {
+          "jabatan": "Ketua RT 01",
+          "nama": "Pengurus Wilayah RT 01",
+          "desc": "Membawahi dan melayani 35 Kepala Keluarga (KK) di sektor wilayah selatan/barat Dusun Tlogomoyo.",
+          "badge": "35 Kepala Keluarga"
+        },
+        {
+          "jabatan": "Ketua RT 02",
+          "nama": "Pengurus Wilayah RT 02",
+          "desc": "Membawahi dan melayani 36 Kepala Keluarga (KK) di sektor wilayah utara/timur Dusun Tlogomoyo.",
+          "badge": "36 Kepala Keluarga"
+        },
+        {
+          "jabatan": "Kelompok Tani",
+          "nama": "Nuju Makmur XII",
+          "desc": "Motor penggerak ketahanan pangan, budidaya singkong, dan empon-empon organik penopang perekonomian warga.",
+          "badge": "Lembaga Agraris"
+        }
+      ],
+      "sec7Badge": "Open Data Desa",
+      "sec7Title": "Infografis Demografi",
+      "sec7Highlight": "Dusun Tlogomoyo",
+      "sec7Desc": "Transparansi data statistik kependudukan warga Dusun Tlogomoyo berdasarkan pemutakhiran direktori wilayah RT 01 dan RT 02.",
+      "infografis": [
+        {
+          "label": "Total Jiwa",
+          "val": "~190 Jiwa",
+          "desc": "Estimasi penduduk aktif"
+        },
+        {
+          "label": "Kepala Keluarga",
+          "val": "71 KK",
+          "desc": "35 KK (RT 01) + 36 KK (RT 02)"
+        },
+        {
+          "label": "Rukun Tetangga",
+          "val": "2 RT Aktif",
+          "desc": "Partisipasi gotong royong 100%"
+        },
+        {
+          "label": "Sektor Unggulan",
+          "val": "Pertanian",
+          "desc": "Singkong, Padi, Kelapa, Jagung, Pisang"
+        }
+      ],
+      "dirTitle": "Direktori Kepala Keluarga",
+      "dirHighlight": "RT 01 & RT 02",
+      "dirDesc": "Daftar pemangku rumah tangga yang menjadi penopang kerukunan antarwarga.",
+      "rt1Title": "Wilayah RT 01",
+      "rt1Sub": "35 Kepala Keluarga",
+      "rt2Title": "Wilayah RT 02",
+      "rt2Sub": "36 Kepala Keluarga",
+      "rtActive": "Aktif"
+    },
+    "infoKknFull": {
+      "labels": {
+        "duration": "Durasi",
+        "durationVal": "29 Hari",
+        "sec1Title": "Kenali",
+        "sec1Highlight": "Tim Kami",
+        "sec1Desc": "Kelompok KKN yang bertugas di Dusun Tlogomoyo terdiri dari 7 mahasiswa lintas jurusan yang siap berkolaborasi dengan masyarakat.",
+        "univ": "Universitas",
+        "period": "Periode",
+        "loc": "Lokasi",
+        "dpl": "DPL",
+        "apl": "APL",
+        "theme": "Tema KKN",
+        "sec2Badge": "Program Kerja",
+        "sec2Title": "Proker",
+        "sec2Highlight": "Kelompok",
+        "sec2Desc": "Program kerja bersama yang dilaksanakan oleh seluruh anggota kelompok KKN selama periode penugasan di Dusun Tlogomoyo.",
+        "prokerKelompokHeader": "Program Kerja Kelompok",
+        "prokerKelompokSub": "Dilaksanakan oleh seluruh anggota",
+        "target": "Target Capaian",
+        "pelaksana": "Pelaksana",
+        "pelaksanaVal": "Seluruh 7 anggota kelompok KKN",
+        "sec3Badge": "Proker Individu",
+        "sec3Title": "Program Kerja",
+        "sec3Highlight": "Individu",
+        "sec3Desc": "Setiap anggota memiliki satu program kerja individu sesuai bidang keahlian masing-masing.",
+        "targetMini": "Target"
+      },
+      "kelompokData": {
+        "nama": "KKN Kelompok 28",
+        "universitas": "Universitas Kristen Duta Wacana",
+        "fakultas": "Lintas Fakultas",
+        "periode": "24 Juni - 23 Juli 2026",
+        "lokasi": "Dusun Tlogomoyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan",
+        "dpl": {
+          "nama": "Eka Adhi Wibowo, SE, M.Sc"
+        },
+        "apl": {
+          "nama": "Stefanus Andy Kurniawan"
+        },
+        "tema": "Penguatan Kapasitas Masyarakat di Bidang Pariwisata, Digitalisasi, dan Kesehatan Lingkungan Berbasis Potensi Lokasi"
+      },
+      "prokerKelompok": {
+        "judul": "Inovasi Tungku Sampah Minim Asap (Rocket Stove Ramah Lingkungan)",
+        "deskripsi": "Pembuatan dan sosialisasi tungku pembakar sampah bermetode Rocket Stove bagi rumah tangga di Dusun Tlogomoyo. Program ini dirancang sebagai solusi atas kebiasaan masyarakat membakar sampah secara terbuka di halaman rumah, guna mengurangi polusi uap/asap berbahaya serta menjaga kualitas udara perbukitan tetap bersih dan sehat.",
+        "target": "Mengurangi emisi asap pembakaran sampah rumah tangga dan memasyarakatkan metode pembakaran minim polusi",
+        "status": "Selesai"
+      },
+      "jabatans": {
+        "Ketua": "Ketua",
+        "Sekretaris": "Sekretaris",
+        "Bendahara": "Bendahara",
+        "Humas": "Humas",
+        "PDD": "PDD",
+        "Perlengkapan": "Perlengkapan"
+      },
+      "anggota": [
+        {
+          "nama": "Giovanni",
+          "nim": "41220663",
+          "prodi": "Kedokteran",
+          "jabatan": "Ketua",
+          "proker": {
+            "judul": "SATRIA (Skrining Aktif Risiko Gula, Kolesterol, & Asam Urat)",
+            "deskripsi": "Pemeriksaan kesehatan gratis yang meliputi cek gula darah, asam urat, dan kolesterol bagi warga Dusun Tlogo Moyo.",
+            "target": ">80% sasaran mengikuti skrining",
+            "status": "Selesai"
+          }
+        },
+        {
+          "nama": "Skolastika Puspa Wulandari",
+          "nim": "81230167",
+          "prodi": "PBI",
+          "jabatan": "Sekretaris",
+          "proker": {
+            "judul": "English Fun for Kids",
+            "deskripsi": "Pelatihan Bahasa Inggris Dasar yang interaktif dan menyenangkan bagi Anak-Anak SD Dusun Tlogo Moyo.",
+            "target": "Anak mampu menggunakan kosakata dasar Bahasa Inggris",
+            "status": "Selesai"
+          }
+        },
+        {
+          "nama": "Sarniati Simon",
+          "nim": "11231408",
+          "prodi": "Manajemen",
+          "jabatan": "Bendahara",
+          "proker": {
+            "judul": "Pelatihan Kewirausahaan & Kreativitas Anak SD",
+            "deskripsi": "Memberikan pelatihan kewirausahaan dan kreativitas melalui praktik langsung membuat kreasi aksesori manik-manik untuk anak-anak SD.",
+            "target": "Terciptanya aksesori kreasi mandiri oleh peserta",
+            "status": "Selesai"
+          }
+        },
+        {
+          "nama": "Kadek Nadya",
+          "nim": "11221249",
+          "prodi": "Manajemen",
+          "jabatan": "Humas",
+          "proker": {
+            "judul": "Edukasi Literasi Keuangan Anak",
+            "deskripsi": "Sosialisasi pentingnya menabung sebagai langkah awal literasi keuangan anak, dibarengi dengan pembagian celengan target.",
+            "target": "Minimal 7 anak mencapai target menabung",
+            "status": "Selesai"
+          }
+        },
+        {
+          "nama": "Rachel Sry Bunga Redjeki",
+          "nim": "61230816",
+          "prodi": "Arsitek",
+          "jabatan": "PDD",
+          "proker": {
+            "judul": "Edukasi Desain dengan Canva",
+            "deskripsi": "Mengajarkan aplikasi Canva kepada masyarakat agar dapat membuat materi promosi seperti poster dan banner secara mandiri.",
+            "target": "Warga mampu mendesain materi promosi mandiri",
+            "status": "Selesai"
+          }
+        },
+        {
+          "nama": "James Marvin Santoso",
+          "nim": "71230971",
+          "prodi": "Informatika",
+          "jabatan": "PDD",
+          "proker": {
+            "judul": "Pembuatan Website Portal Informasi Desa",
+            "deskripsi": "Merancang dan mengembangkan website portal informasi untuk Dusun Tlogomulyo sebagai media digitalisasi profil desa, potensi alam, dan informasi publik.",
+            "target": "1 website responsif aktif dan terdaftar domain",
+            "status": "Selesai"
+          }
+        },
+        {
+          "nama": "Sadrakh Satria Wibowo",
+          "nim": "71220939",
+          "prodi": "Informatika",
+          "jabatan": "Perlengkapan",
+          "proker": {
+            "judul": "Operasi Data Cepat (ODC) Menggunakan Microsoft Excel",
+            "deskripsi": "Pelatihan penggunaan rumus dasar Excel untuk mengolah data keuangan dan bisnis bagi peserta dan masyarakat dusun.",
+            "target": "Peserta mampu menggunakan rumus dasar Excel",
+            "status": "Selesai"
+          }
+        }
+      ]
+    }
+  },
+  "en": {
+    "nav": {
+      "beranda": "Home",
+      "profil": "Village Profile",
+      "potensi": "Local Potential",
+      "umkm": "MSME Catalog",
+      "infokkn": "About & KKN"
+    },
+    "hero": {
+      "badge": "Tlogomoyo Hamlet",
+      "welcome": "Welcome to",
+      "portalTitle": "Official Information Portal",
+      "hamletName": "Tlogomoyo Hamlet",
+      "desc": "Find demographic profile, geographical features, agricultural potentials, local MSMEs, and cultural heritage of Tlogomoyo Hamlet, Candi Village, Pacitan.",
+      "btnPotential": "Explore Potential",
+      "btnContact": "Contact Village Head",
+      "stats": {
+        "pop": "Population",
+        "kk": "Households",
+        "lahan": "Farmland",
+        "umkm": "Local MSMEs"
+      }
+    },
+    "weather": {
+      "title": "Live Weather Tlogomoyo & Pacitan",
+      "subtitle": "Real-time weather condition for agriculture & local activities monitoring",
+      "temp": "Actual Temp",
+      "feels": "Feels Like",
+      "wind": "Wind",
+      "humidity": "Humidity",
+      "loading": "Fetching live satellite weather...",
+      "error": "Failed to load live weather",
+      "goodCondition": "☀️ Sunny and perfect conditions for agricultural activities & crop drying!",
+      "cloudyCondition": "⛅ Pleasant cloudy weather, highly comfortable for field farming.",
+      "rainCondition": "🌧️ Currently rainy/windy, secure water protection for harvested crops.",
+      "codes": {
+        "0": "Clear Sky",
+        "1": "Mainly Clear",
+        "2": "Partly Cloudy",
+        "3": "Overcast",
+        "45": "Foggy",
+        "48": "Depositing Rime Fog",
+        "51": "Light Drizzle",
+        "53": "Moderate Drizzle",
+        "55": "Dense Drizzle",
+        "60": "Rain Showers",
+        "61": "Slight Rain",
+        "63": "Moderate Rain",
+        "65": "Heavy Rain",
+        "95": "Thunderstorm"
+      }
+    },
+    "map": {
+      "sectionBadge": "Digital Map",
+      "sectionTitle": "Area & Facilities Map",
+      "sectionDesc": "Navigate your way to the hamlet administrative center, agricultural zones, and local MSME hubs of Tlogomoyo.",
+      "selectHotspot": "Select Map Location:",
+      "openMaps": "Open Route in Google Maps",
+      "selectedPoint": "Selected Point",
+      "gpsCoords": "GPS Coordinates",
+      "spotLabels": {
+        "pertanian": "Agricultural Zone",
+        "balai": "Hamlet Hall & Center",
+        "umkm": "MSME & Craft Hub"
+      },
+      "locations": {
+        "balai": {
+          "name": "Tlogomoyo Hamlet Hall & Center",
+          "desc": "The primary hub for community administration, public services, village gatherings, and coordination of local development programs in Tlogomoyo.",
+          "coords": "-8.2239, 111.0172"
+        },
+        "pertanian": {
+          "name": "Agricultural Zone & Nuju Makmur XII Farmer Group",
+          "desc": "Fertile agricultural fields managed by the Nuju Makmur XII Farmer Group, serving as the central zone for growing cassava, organic spices, and coconut trees.",
+          "coords": "-8.2250, 111.0190"
+        },
+        "umkm": {
+          "name": "Creative MSME & Craft Center",
+          "desc": "The neighborhood area of home-based creative industries, producing traditional woven bamboo crafts (besek), crunchy cassava chips, and organic coconut sugar.",
+          "coords": "-8.2220, 111.0150"
+        }
+      }
+    },
+    "profil": {
+      "title": "Hamlet Profile",
+      "subtitle": "Discover the geography, history, rich cultural heritage, agricultural potential, and neighborhood institutional structures of Tlogomoyo Hamlet. A serene haven in southern Pacitan.",
+      "breadcrumb": "Hamlet Profile"
+    },
+    "kkn": {
+      "title": "About KKN Program",
+      "subtitle": "Group profile, collaborative work programs, and individual initiatives of the KKN Team in Tlogomoyo Hamlet.",
+      "breadcrumb": "About & KKN"
+    },
+    "footer": {
+      "desc": "Official Information Portal of Tlogomoyo Hamlet, Candi Village, Pringkuku District, Pacitan Regency, East Java. Building a digital village based on local potential.",
+      "quickLinks": "Quick Links",
+      "contact": "Contact & Address",
+      "address": "Tlogomoyo Hamlet Hall, Candi Village, Pringkuku District, Pacitan Regency, East Java 63552",
+      "copyright": "Copyright © 2026 Tlogomoyo Hamlet Government.",
+      "kknGroup": "Tlogomoyo Hamlet"
+    },
+    "homeSections": {
+      "potensiBadge": "Featured Potential",
+      "potensiTitle": "Hamlet Assets & Potential",
+      "potensiDesc": "Tlogomoyo Hamlet is blessed with fertile karst hills, a rich diversity of local crops, and resident creativity in developing quality MSME products.",
+      "cards": [
+        {
+          "title": "Agriculture & Plantations",
+          "desc": "Major producer of coconuts, cassava, corn, and rain-fed paddy rice. Residents also cultivate perennials such as cloves and mahogany."
+        },
+        {
+          "title": "Livestock & Farm Harvests",
+          "desc": "Integration of farming with household goat, cattle, and free-range chicken husbandry to sustain organic fertilizer cycles and enhance family food security."
+        },
+        {
+          "title": "MSMEs & Handicrafts",
+          "desc": "Production of processed farm goods such as cassava chips, coconut palm sugar, and traditional woven bamboo handicrafts."
+        }
+      ],
+      "kknBadge": "Community Service",
+      "kknTitle": "Tlogomoyo Hamlet",
+      "kknDesc": "The Student Community Service Team from Duta Wacana Christian University collaborates with the Tlogomoyo Hamlet Government on digitalization, village promotion, and eco-friendly sustainable environment development.",
+      "kknBtn": "View Program & Member Details",
+      "keunggulanBadge": "Key Advantages",
+      "keunggulanTitle": "Why Tlogomoyo?",
+      "keunggulanCards": [
+        {
+          "title": "Strategic Location",
+          "desc": "Located in Pacitan Regency, East Java an area renowned for its natural beauty. Access to the hamlet is easily reachable from the city center."
+        },
+        {
+          "title": "Pristine & Safe Environment",
+          "desc": "Surrounded by lush green hills and fresh air. The serene and safe environment makes this hamlet ideal for academic activities, research, and KKN."
+        },
+        {
+          "title": "Local Wisdom & Heritage",
+          "desc": "Preserved community traditions and customs provide an authentic experience for anyone visiting and looking to learn about rural village life."
+        }
+      ]
+    },
+    "umkm": {
+      "badge": "Digital E-Catalog & Resident Empowerment",
+      "title": "Tlogomoyo MSME Product Catalog",
+      "subtitle": "Support the local economy by purchasing organic processed food, traditional herbs, and handicrafts directly from Tlogomoyo Hamlet residents.",
+      "searchPlaceholder": "Search snacks, herbal drinks, or sellers...",
+      "searchEmpty": "No Products Found",
+      "searchEmptyAdvice": "Sorry, no matching products found. Try another keyword or select All Products.",
+      "viewAllBtn": "View All Products",
+      "cats": {
+        "semua": "🌟 All Products",
+        "makanan": "🍟 Food & Snacks",
+        "minuman": "☕ Herbs & Drinks",
+        "kerajinan": "🧺 Handicrafts",
+        "hasil-bumi": "🌾 Farm Produce"
+      },
+      "orderBtn": "Buy via WhatsApp",
+      "orderDirectBtn": "Order Directly via WhatsApp",
+      "backBtn": "Back"
+    },
+    "sambutan": {
+      "role": "Hamlet Head",
+      "name": "Mr. Hamlet Head",
+      "gov": "Tlogomoyo Hamlet Government",
+      "badge": "👑 Official Message & Welcome",
+      "quote": "Assalamu'alaikum Warahmatullahi Wabarakatuh. Greetings of peace to us all. Welcome to the Official Digital Information Portal of Tlogomoyo Hamlet, Candi Village. This website serves as a digitalization effort and a bridge of information for the wider public wishing to explore our agricultural potential, local craftsmanship, and our warm hospitality.",
+      "footer": "Presented for village advancement & transparency"
+    },
+    "heroBottom": {
+      "openFor": "Open for",
+      "kknVisit": "KKN & Visits"
+    },
+    "potensiPage": {
+      "badge": "Earthly Riches & Agriculture",
+      "title": "Wealth & Crops",
+      "subtitle": "Explore the diverse natural harvests and premier agricultural commodities cultivated productively by Tlogomoyo Hamlet residents.",
+      "items": [
+        {
+          "id": "pertanian",
+          "title": "Cassava & Rice Farming",
+          "desc": "Cassava and paddy/upland rice are the primary food commodities for Tlogomoyo residents. These crops serve as the main pillars of family food security and are processed traditionally to sustain daily livelihood."
+        },
+        {
+          "id": "makanan",
+          "title": "Coconut & Sap Tapping",
+          "desc": "Coconut trees grow abundantly across Tlogomoyo hills. Residents harvest coconuts and regularly tap sweet coconut palm sap to traditionally process it into pure molded palm sugar."
+        },
+        {
+          "id": "kerajinan",
+          "title": "Corn & Palawija Agriculture",
+          "desc": "Corn is cultivated in dry fields seasonally. It serves as an important supporting crop, used both for alternative family consumption and as high-quality feed for local livestock."
+        },
+        {
+          "id": "peternakan",
+          "title": "Banana Horticulture",
+          "desc": "Resident yards and orchards are filled with various local banana varieties. Bananas are abundant year-round, serving as a daily vitamin source and a supplement to family income."
+        }
+      ]
+    },
+    "profilContent": {
+      "stats": [
+        {
+          "label": "Regency",
+          "value": "Pacitan"
+        },
+        {
+          "label": "District",
+          "value": "Pringkuku"
+        },
+        {
+          "label": "Village",
+          "value": "Candi"
+        },
+        {
+          "label": "Province",
+          "value": "East Java"
+        }
+      ],
+      "geoBadge": "Geography & Topography",
+      "geoTitle": "Geographical Location",
+      "geoP1": "Tlogomoyo Hamlet is located in Candi Village, Pringkuku District, Pacitan Regency, East Java Province. Candi Village itself is about 10 km from the district capital and covers one of the largest territories in Pringkuku District.",
+      "geoP2": "The topography is dominated by rocky mountains forming part of the Thousand Mountains (Gunung Sewu) landscape. To the south, Candi Village directly borders the Indian Ocean, creating a breathtaking blend of green hills and stunning coastlines.",
+      "geoP3": "The geographical coordinates of the hamlet are around 8.2239°S, 111.0172°E, with elevations varying from coastal shores to highland hills.",
+      "batasTitle": "Candi Village Boundaries",
+      "batas": [
+        {
+          "arah": "North",
+          "batas": "Pringkuku Village"
+        },
+        {
+          "arah": "East",
+          "batas": "Poko Village"
+        },
+        {
+          "arah": "South",
+          "batas": "Indian Ocean"
+        },
+        {
+          "arah": "West",
+          "batas": "Jlubang Village"
+        }
+      ],
+      "ctaHeading": "Interested in Learning More?",
+      "ctaTitle": "About KKN & Our Programs",
+      "ctaBack": "Back to Home",
+      "ctaDesc": "Learn more about student activities and collaborative KKN work programs currently taking place in Tlogomoyo Hamlet."
+    },
+    "kknContent": {
+      "stats": [
+        {
+          "label": "Team Members",
+          "value": "7 Members"
+        },
+        {
+          "label": "Group Work Program",
+          "value": "1 Program"
+        },
+        {
+          "label": "Individual Programs",
+          "value": "7 Programs"
+        },
+        {
+          "label": "Target Village",
+          "value": "Tlogomoyo"
+        }
+      ],
+      "tabs": {
+        "profil": "Group & Supervisor Profile",
+        "kelompok": "Group Work Programs",
+        "individu": "Individual Programs"
+      },
+      "dplTitle": "Field Academic Supervisor",
+      "dplRole": "Supervisor of KKN Group 28",
+      "groupTitle": "History & Vision of Group 28",
+      "ctaTitle": "Support Tlogomoyo Hamlet Development",
+      "ctaDesc": "Explore local potential and support resident MSMEs through our official digital catalog.",
+      "ctaBtn": "Visit MSME Catalog"
+    },
+    "umkmProducts": {
+      "wayang-yono": {
+        "name": "Pak Yono's Wayang Puppets",
+        "badge": "Art Piece 🎨",
+        "desc": "Traditional hand-carved leather puppets crafted beautifully by Pak Yono."
+      },
+      "cemilan-ismi": {
+        "name": "Bu Ismi's Snack Assortment",
+        "badge": "Best Seller 🔥",
+        "desc": "Traditional dry snacks such as crispy chips, onion cakes, and dumplings made by Bu Ismi."
+      },
+      "bawang-yani": {
+        "name": "Bu Yani's Fried Shallots",
+        "badge": "Crispy & Savory 💨",
+        "desc": "Crispy and savory home-style fried shallots without preservatives by Bu Yani."
+      },
+      "tempe-yanti": {
+        "name": "Bu Yanti's Leaf-Wrapped Tempeh",
+        "badge": "Traditional 🍃",
+        "desc": "Traditional soybean tempeh wrapped in fresh teak or banana leaves by Bu Yanti."
+      },
+      "kerupuk-suharmi": {
+        "name": "Bu Suharmi's Dry Crackers",
+        "badge": "Extra Crispy ✨",
+        "desc": "Crispy raw crackers ready to fry produced locally by Bu Suharmi."
+      },
+      "sale-suharmi": {
+        "name": "Bu Suharmi's Fried Banana Sale",
+        "badge": "Pacitan Style 🍌",
+        "desc": "Sweet and crispy fried banana sale, a Pacitan specialty snack by Bu Suharmi."
+      },
+      "roti-maya": {
+        "name": "Bu Maya's Sweet Breads",
+        "badge": "Fresh from Oven 🍞",
+        "desc": "Soft sweet buns and stuffed breads freshly baked daily by Bu Maya."
+      }
+    },
+    "heroCard": {
+      "province": "East Java",
+      "title": "Village Profile",
+      "location": "Tlogomoyo, Pacitan",
+      "items": [
+        {
+          "name": "Agricultural Potential",
+          "detail": "Cassava, Herbal Spices, Coconut"
+        },
+        {
+          "name": "Strategic Location",
+          "detail": "East Java, Indonesia"
+        },
+        {
+          "name": "Friendly Community",
+          "detail": "Mutual Cooperation & Local Culture"
+        }
+      ],
+      "openFor": "Open for",
+      "kknVisit": "KKN & Visits"
+    },
+    "profilFull": {
+      "sec2Badge": "Agriculture & Natural Resources",
+      "sec2Title": "Natural Wealth of",
+      "sec2TitleHighlight": "Tlogomoyo",
+      "sec2Desc": "The fertile hilly topography makes this area rich in various agricultural commodities and natural products. The people of Tlogomoyo actively organize in agriculture, one of which is through farmer groups (such as Nuju Makmur XII Farmer Group) which serve as the driving force for local food security and economy.",
+      "lahan": [
+        {
+          "value": "~650 ha",
+          "label": "Farmland & Fields",
+          "desc": "Main area for cultivating cassava, herbal spices, and other food crops."
+        },
+        {
+          "value": "~451 ha",
+          "label": "Community Forest",
+          "desc": "Forest managed by the community, producing timber, coconut, and forestry products."
+        },
+        {
+          "value": "~12.5 ha",
+          "label": "Rice Fields",
+          "desc": "Relatively small rice field area that remains productive for local food needs."
+        }
+      ],
+      "komoditasTitle": "Featured Commodities",
+      "komoditas": [
+        {
+          "name": "Cassava",
+          "desc": "Main staple crop"
+        },
+        {
+          "name": "Rice",
+          "desc": "Primary staple crop"
+        },
+        {
+          "name": "Coconut",
+          "desc": "Featured plantation yield"
+        },
+        {
+          "name": "Corn",
+          "desc": "Supporting secondary crop"
+        },
+        {
+          "name": "Banana",
+          "desc": "Backyard orchard horticulture"
+        }
+      ],
+      "sec3Badge": "Culture & Tradition",
+      "sec3Title": "Preserved",
+      "sec3TitleHighlight": "Local Wisdom",
+      "sec3Desc": "The Tlogomoyo community preserves noble collective values passed down through generations to strengthen harmony among residents.",
+      "bannerBadge": "Core Value",
+      "bannerTitle": "Spirit of Mutual Cooperation & Agrarian Culture",
+      "bannerDesc": "From routine community work building the village together with warm local hospitality.",
+      "cards": [
+        {
+          "title": "Mutual Cooperation (Gotong Royong)",
+          "desc": "A deeply ingrained collective work tradition in Tlogomoyo. Residents routinely collaborate on hamlet infrastructure construction, road repairs, environmental cleanups, and helping neighbors."
+        }
+      ],
+      "sec4Badge": "History & Origins",
+      "sec4Title": "Historical Roots & Name Origin of",
+      "sec4TitleHighlight": "Tlogomoyo",
+      "sec4Desc": "Explore the historic path of settlement in Tlogomoyo and the philosophical meaning behind the hamlet's name.",
+      "asalUsul": {
+        "title": "Origin of the Name Tlogomoyo",
+        "subtitle": "The Life-giving Spring in Dry Karst Hills",
+        "p1": "The name Tlogomoyo originates from 'Tlogo' (pond/water spring) and 'Moyo' (reflection or inner peace). Historically, early settlers discovered a small natural spring with pristine water nestled among the arid karst hills. This spring became the primary lifeline for domestic needs and agriculture, leading elders to name the settlement Tlogomoyo as a symbol of life-giving peace.",
+        "details": [
+          {
+            "label": "Meaning of 'Tlogo'",
+            "detail": "Spring of Life"
+          },
+          {
+            "label": "Meaning of 'Moyo'",
+            "detail": "Inner Peace"
+          },
+          {
+            "label": "Soil Terrain",
+            "detail": "Karst Hills of Gunung Sewu"
+          },
+          {
+            "label": "Primary Pillar",
+            "detail": "Local Water Resource"
+          }
+        ],
+        "acts": [
+          "Natural Harmony",
+          "Local Wisdom",
+          "Spring Preservation",
+          "Water Conservation"
+        ]
+      },
+      "sejarah": {
+        "title": "History of Agrarian Development",
+        "subtitle": "Land Clearing and Independent Food Security",
+        "p1": "The settlement of Tlogomoyo was established by early pioneers who migrated in search of fertile soils in southern Pacitan. Due to the rocky soil, they developed rain-fed farming methods. Over generations, these efforts successfully established cassava cultivation, organic herbal spice farming, and coconut sap tapping, which remain the primary pillars of the hamlet's identity.",
+        "details": [
+          {
+            "label": "Pioneering Era",
+            "detail": "Rain-fed Agriculture"
+          },
+          {
+            "label": "Early Crops",
+            "detail": "Cassava & Coconut"
+          },
+          {
+            "label": "Social Pattern",
+            "detail": "Sambatan Cooperation"
+          },
+          {
+            "label": "Modern Era",
+            "detail": "Digital & Creative MSMEs"
+          }
+        ],
+        "acts": [
+          "Land Clearing",
+          "Traditional Farming",
+          "Sambatan System",
+          "Food Self-sufficiency"
+        ]
+      },
+      "sec5Title": "Community Characteristics",
+      "sec5Chars": [
+        {
+          "title": "Heterogeneous & Diverse",
+          "desc": "Pringkuku District's population is known for diverse socio-economic backgrounds and educational levels."
+        },
+        {
+          "title": "Agrarian Independence",
+          "desc": "The majority of residents work as farmers, managing fields independently with sustainable cultivation."
+        },
+        {
+          "title": "Friendly & Welcoming",
+          "desc": "The community is exceptionally friendly toward newcomers, KKN students, and guests. Mutual cooperation values remain strong."
+        },
+        {
+          "title": "MSME & Farm Synergy",
+          "desc": "Candi Village transforms by synergizing raw agricultural produce into high-value processed goods through resident-owned MSMEs."
+        }
+      ],
+      "sec5RightBadge": "Social & Economy",
+      "sec5RightTitle": "Community",
+      "sec5RightHighlight": "Life",
+      "sec5P1": "Residents of Tlogomoyo Hamlet and Candi Village generally live in harmony with nature. Agriculture remains the economic backbone, particularly cultivating cassava, herbal spices, coconut, and horticulture.",
+      "sec5P2": "Alongside the development of resident creativity in processing agricultural yields, many individuals now actively manage local MSME groups. From producing crispy cassava chips, converting coconut sap into molded palm sugar, to weaving high-art bamboo crafts. This business diversification has successfully raised family incomes and enhanced the hamlet's economic resilience.",
+      "sec5P3": "Pringkuku District records approximately 32,347 residents (2024 data) across 13 diverse villages. Candi Village comprises 15 hamlets, with Tlogomoyo actively engaged in development programs.",
+      "sec6Badge": "Institutions & Community Leaders",
+      "sec6Title": "Organizational Structure of",
+      "sec6Highlight": "Hamlet Government",
+      "sec6Desc": "Tlogomoyo Hamlet government operates under Candi Village Government. Here are the dedicated leaders serving the community through mutual cooperation.",
+      "govCards": [
+        {
+          "jabatan": "Village Head of Candi",
+          "nama": "Candi Village Government",
+          "desc": "Highest village-level leader in Pringkuku District overseeing 15 hamlets, including Tlogomoyo.",
+          "badge": "Area Supervisor"
+        },
+        {
+          "jabatan": "Hamlet Head (Kasun)",
+          "nama": "Mr. Head of Tlogomoyo Hamlet",
+          "desc": "Main coordinator of Tlogomoyo Hamlet serving as the frontline for administrative services and public aspirations.",
+          "badge": "Hamlet Leader"
+        },
+        {
+          "jabatan": "Head of Community Association (RW)",
+          "nama": "Head of RW Tlogomoyo",
+          "desc": "Environmental order coordinator and communication bridge among RTs throughout Tlogomoyo.",
+          "badge": "Neighborhood Coord."
+        },
+        {
+          "jabatan": "Head of RT 01",
+          "nama": "RT 01 Management",
+          "desc": "Supervising and serving 35 households (KK) in the southern/western sector of Tlogomoyo Hamlet.",
+          "badge": "35 Households"
+        },
+        {
+          "jabatan": "Head of RT 02",
+          "nama": "RT 02 Management",
+          "desc": "Supervising and serving 36 households (KK) in the northern/eastern sector of Tlogomoyo Hamlet.",
+          "badge": "36 Households"
+        },
+        {
+          "jabatan": "Farmer Group",
+          "nama": "Nuju Makmur XII",
+          "desc": "Driving force for food security, cultivating organic cassava and herbal spices supporting resident economy.",
+          "badge": "Agrarian Institution"
+        }
+      ],
+      "sec7Badge": "Village Open Data",
+      "sec7Title": "Demographic Infographics of",
+      "sec7Highlight": "Tlogomoyo Hamlet",
+      "sec7Desc": "Transparent population statistics of Tlogomoyo Hamlet based on updated RT 01 and RT 02 regional directories.",
+      "infografis": [
+        {
+          "label": "Total Population",
+          "val": "~190 Residents",
+          "desc": "Estimated active population"
+        },
+        {
+          "label": "Households",
+          "val": "71 Households",
+          "desc": "35 KK (RT 01) + 36 KK (RT 02)"
+        },
+        {
+          "label": "Neighborhoods (RT)",
+          "val": "2 Active RTs",
+          "desc": "100% mutual cooperation"
+        },
+        {
+          "label": "Leading Sector",
+          "val": "Agriculture",
+          "desc": "Cassava, Rice, Coconut, Corn, Banana"
+        }
+      ],
+      "dirTitle": "Household Directory",
+      "dirHighlight": "RT 01 & RT 02",
+      "dirDesc": "List of household heads supporting harmony among residents.",
+      "rt1Title": "RT 01 Area",
+      "rt1Sub": "35 Households",
+      "rt2Title": "RT 02 Area",
+      "rt2Sub": "36 Households",
+      "rtActive": "Active"
+    },
+    "infoKknFull": {
+      "labels": {
+        "duration": "Duration",
+        "durationVal": "29 Days",
+        "sec1Title": "Get to Know",
+        "sec1Highlight": "Our Team",
+        "sec1Desc": "The KKN group assigned to Tlogomoyo Hamlet consists of 7 students from diverse majors ready to collaborate with the community.",
+        "univ": "University",
+        "period": "Period",
+        "loc": "Location",
+        "dpl": "Supervisor",
+        "apl": "Field Coordinator",
+        "theme": "KKN Theme",
+        "sec2Badge": "Work Program",
+        "sec2Title": "Group",
+        "sec2Highlight": "Program",
+        "sec2Desc": "Collaborative work program executed by all members of the KKN student group during their assignment in Tlogomoyo Hamlet.",
+        "prokerKelompokHeader": "Group Work Program",
+        "prokerKelompokSub": "Executed by all members",
+        "target": "Target Achievement",
+        "pelaksana": "Executors",
+        "pelaksanaVal": "All 7 KKN group members",
+        "sec3Badge": "Individual Programs",
+        "sec3Title": "Individual",
+        "sec3Highlight": "Work Programs",
+        "sec3Desc": "Each member executes one specialized individual work program aligned with their respective field of study.",
+        "targetMini": "Target"
+      },
+      "kelompokData": {
+        "nama": "KKN Group 28",
+        "universitas": "Duta Wacana Christian University",
+        "fakultas": "Interdisciplinary",
+        "periode": "June 24 - July 23, 2026",
+        "lokasi": "Tlogomoyo Hamlet, Candi Village, Pringkuku Dist., Pacitan Reg.",
+        "dpl": {
+          "nama": "Eka Adhi Wibowo, SE, M.Sc"
+        },
+        "apl": {
+          "nama": "Stefanus Andy Kurniawan"
+        },
+        "tema": "Community Capacity Building in Tourism, Digitalization, and Environmental Health Based on Local Potential"
+      },
+      "prokerKelompok": {
+        "judul": "Low-Smoke Waste Incinerator Innovation (Eco-Friendly Rocket Stove)",
+        "deskripsi": "Construction and social training of Rocket Stove incinerators for households in Tlogomoyo Hamlet. This program is designed as a sustainable solution to open backyard trash burning, reducing harmful smoke fumes and maintaining pristine highland air quality.",
+        "target": "Reduce household trash open burning smoke emissions and promote low-pollution incineration methods",
+        "status": "Completed"
+      },
+      "jabatans": {
+        "Ketua": "Chairperson",
+        "Sekretaris": "Secretary",
+        "Bendahara": "Treasurer",
+        "Humas": "Public Relations",
+        "PDD": "Design & Pub.",
+        "Perlengkapan": "Logistics"
+      },
+      "anggota": [
+        {
+          "nama": "Giovanni",
+          "nim": "41220663",
+          "prodi": "Medicine",
+          "jabatan": "Chairperson",
+          "proker": {
+            "judul": "SATRIA (Active Screening for Sugar, Cholesterol & Gout Risk)",
+            "deskripsi": "Free health checkups covering blood sugar, gout, and cholesterol testing for Tlogomoyo Hamlet residents.",
+            "target": ">80% target residents screened",
+            "status": "Completed"
+          }
+        },
+        {
+          "nama": "Skolastika Puspa Wulandari",
+          "nim": "81230167",
+          "prodi": "English Education",
+          "jabatan": "Secretary",
+          "proker": {
+            "judul": "English Fun for Kids",
+            "deskripsi": "Interactive and joyful Basic English training for elementary school children in Tlogomoyo Hamlet.",
+            "target": "Children able to use basic English vocabulary",
+            "status": "Completed"
+          }
+        },
+        {
+          "nama": "Sarniati Simon",
+          "nim": "11231408",
+          "prodi": "Management",
+          "jabatan": "Treasurer",
+          "proker": {
+            "judul": "Entrepreneurship & Creativity Training for Children",
+            "deskripsi": "Providing hands-on entrepreneurship and creative crafting workshops making beaded accessories for elementary students.",
+            "target": "Independent creation of crafted accessories",
+            "status": "Completed"
+          }
+        },
+        {
+          "nama": "Kadek Nadya",
+          "nim": "11221249",
+          "prodi": "Management",
+          "jabatan": "Public Relations",
+          "proker": {
+            "judul": "Children's Financial Literacy Education",
+            "deskripsi": "Educating the importance of saving money as an early financial literacy step, alongside distributing target savings boxes.",
+            "target": "At least 7 children achieve savings targets",
+            "status": "Completed"
+          }
+        },
+        {
+          "nama": "Rachel Sry Bunga Redjeki",
+          "nim": "61230816",
+          "prodi": "Architecture",
+          "jabatan": "Design & Pub.",
+          "proker": {
+            "judul": "Canva Design Education",
+            "deskripsi": "Teaching Canva application to residents so they can independently design promotional materials such as posters and banners.",
+            "target": "Residents able to design promotional materials",
+            "status": "Completed"
+          }
+        },
+        {
+          "nama": "James Marvin Santoso",
+          "nim": "71230971",
+          "prodi": "Informatika",
+          "jabatan": "Design & Pub.",
+          "proker": {
+            "judul": "Village Digital Information Portal Development",
+            "deskripsi": "Designing and developing an official information website for Tlogomoyo Hamlet as a digital medium for village profile, local potential, and public info.",
+            "target": "1 active responsive website with domain",
+            "status": "Completed"
+          }
+        },
+        {
+          "nama": "Sadrakh Satria Wibowo",
+          "nim": "71220939",
+          "prodi": "Informatics",
+          "jabatan": "Logistics",
+          "proker": {
+            "judul": "Quick Data Operation (QDO) Using Microsoft Excel",
+            "deskripsi": "Training on basic Excel formulas for financial and business data processing for participants and hamlet residents.",
+            "target": "Participants able to use basic Excel formulas",
+            "status": "Completed"
+          }
+        }
+      ]
+    }
+  }
+}

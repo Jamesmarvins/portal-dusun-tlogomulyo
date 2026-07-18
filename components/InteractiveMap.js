@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useLanguage } from "./LanguageProvider";
+import EditButton from "./EditButton";
 
 export default function InteractiveMap() {
   const { t } = useLanguage();
@@ -25,10 +26,13 @@ export default function InteractiveMap() {
     <section className="py-14 sm:py-18 lg:py-22 bg-earth-50 dark:bg-slate-900 hero-pattern border-t border-slate-200 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 animate-fade-in-up">
-          <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 dark:bg-primary-950 px-4 py-1.5 rounded-full border border-primary-200 dark:border-primary-800">
-            {t.map.sectionBadge}
-          </span>
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 animate-fade-in-up space-y-2">
+          <div className="flex items-center justify-center gap-3">
+            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 dark:bg-primary-950 px-4 py-1.5 rounded-full border border-primary-200 dark:border-primary-800">
+              {t.map.sectionBadge}
+            </span>
+            <EditButton section="map" label="Edit Info Peta" />
+          </div>
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
             {t.map.sectionTitle}
           </h2>

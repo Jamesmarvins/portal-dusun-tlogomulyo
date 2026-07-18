@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/components/LanguageProvider";
+import EditButton from "@/components/EditButton";
 
 /* ============================
    DATA Ganti dengan data asli
@@ -188,9 +189,12 @@ export default function InfoKKNPage() {
               </ol>
             </nav>
 
-            <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 tracking-tight">
-              {t?.kkn?.title || "Tentang KKN"} <span className="gradient-text">Tlogomoyo</span>
-            </h1>
+            <div className="flex items-center gap-3 flex-wrap mb-4">
+              <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+                {t?.kkn?.title || "Tentang KKN"} <span className="gradient-text">Tlogomoyo</span>
+              </h1>
+              <EditButton section="kkn" label="Edit Header KKN" />
+            </div>
             <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed text-justify">
               {t?.kkn?.subtitle || "Profil kelompok, program kerja kelompok, dan program kerja individu Tim KKN di Dusun Tlogomoyo."}
             </p>
@@ -224,10 +228,13 @@ export default function InfoKKNPage() {
       <section className="py-12 sm:py-16 lg:py-20 bg-earth-50 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up">
-            <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest mb-3 bg-primary-50 px-4 py-1.5 rounded-full">
-              {t?.kknContent?.tabs?.profil || "Profil Kelompok"}
-            </span>
+          <div className="text-center mb-10 sm:mb-14 animate-fade-in-up space-y-2">
+            <div className="flex items-center justify-center gap-3 flex-wrap">
+              <span className="inline-block text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-widest bg-primary-50 px-4 py-1.5 rounded-full">
+                {t?.kknContent?.tabs?.profil || "Profil Kelompok"}
+              </span>
+              <EditButton section="infoKknFull" label="Edit Detail Kelompok & Anggota" />
+            </div>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
               {activeLabels.sec1Title || "Kenali"} <span className="gradient-text">{activeLabels.sec1Highlight || "Tim Kami"}</span>
             </h2>
