@@ -12,8 +12,8 @@ const paths = {
 
 // Helper to run Redis command on Vercel KV via REST API
 async function runKVCommand(command) {
-  const kvUrl = process.env.KV_REST_API_URL;
-  const kvToken = process.env.KV_REST_API_TOKEN;
+  const kvUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+  const kvToken = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
   
   if (!kvUrl || !kvToken) return null;
 
@@ -47,7 +47,8 @@ export async function GET(request) {
     let beritaData = null;
     let umkmData = null;
 
-    const hasKV = !!(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
+    const hasKV = !!((process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL) && 
+                     (process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN));
 
     if (hasKV) {
       // Try to load from Vercel KV
@@ -125,7 +126,8 @@ export async function POST(request) {
       );
     }
 
-    const hasKV = !!(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
+    const hasKV = !!((process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL) && 
+                     (process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN));
 
     if (hasKV) {
       // Save directly to Vercel KV
