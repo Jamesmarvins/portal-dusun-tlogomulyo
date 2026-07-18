@@ -701,7 +701,7 @@ export default function AdminPage() {
                 </div>
                 <div className="p-4 bg-gradient-to-br from-amber-50 to-amber-100 dark:from-slate-850 dark:to-slate-800 rounded-2xl border border-amber-100 dark:border-slate-700 text-center">
                   <p className="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase">Sandi Aktif</p>
-                  <p className="text-xs font-extrabold text-amber-800 dark:text-white mt-4 bg-white/50 dark:bg-slate-900/50 py-1.5 px-3.5 rounded-xl border border-amber-250 truncate">tlogomoyo2026</p>
+                  <p className="text-xs font-extrabold text-amber-800 dark:text-white mt-4 bg-white/50 dark:bg-slate-900/50 py-1.5 px-3.5 rounded-xl border border-amber-250 truncate">Tlogomoyokunomor1selalu</p>
                 </div>
               </div>
 

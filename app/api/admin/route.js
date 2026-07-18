@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "tlogomoyo2026";
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "Tlogomoyokunomor1selalu";
 
 const paths = {
   translations: path.join(/*turbopackIgnore: true*/ process.cwd(), "data", "translations.json"),

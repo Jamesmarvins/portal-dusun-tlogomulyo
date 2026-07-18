@@ -65,7 +65,7 @@ export function LanguageProvider({ children }) {
   // Verify and update Admin status on mount or password changes
   const checkAdminStatus = (pass = null) => {
     const password = pass || localStorage.getItem("tlogomoyo_admin_pass");
-    if (password === "tlogomoyo2026") {
+    if (password === "Tlogomoyokunomor1selalu") {
       setIsAdmin(true);
       return true;
     }

@@ -80,7 +80,7 @@ export default function QuickEditor() {
     e.preventDefault();
     setLoginError("");
     
-    if (password === "tlogomoyo2026") {
+    if (password === "Tlogomoyokunomor1selalu") {
       localStorage.setItem("tlogomoyo_admin_pass", password);
       setIsAdmin(true);
       setEditMode(true);
