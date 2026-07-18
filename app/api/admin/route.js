@@ -91,6 +91,9 @@ export async function GET(request) {
         berita: beritaData,
         umkm: umkmData,
       },
+      debugEnvKeys: Object.keys(process.env).filter(
+        k => k.includes("KV") || k.includes("REDIS") || k.includes("URL") || k.includes("TOKEN") || k.includes("UPSTASH")
+      ),
     });
   } catch (error) {
     return NextResponse.json(
