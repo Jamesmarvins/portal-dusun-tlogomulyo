@@ -12,6 +12,7 @@ export const viewport = {
 };
 
 export const metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://tlogomoyo-candi.vercel.app"),
   title: "Portal Informasi Dusun Tlogomoyo Desa Candi, Pacitan",
   description:
     "Portal informasi resmi Dusun Tlogomoyo, Desa Candi, Kec. Pringkuku, Kab. Pacitan, Jawa Timur. Kenali potensi dusun, informasi KKN, dan hubungi perangkat desa.",
@@ -36,6 +37,9 @@ export const metadata = {
     follow: true,
   },
   manifest: "/manifest.json",
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+  },
 };
 
 import { ThemeProvider } from "@/components/ThemeProvider";
