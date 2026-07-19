@@ -1,6 +1,6 @@
 export default function sitemap() {
   // Gunakan environment variable NEXT_PUBLIC_SITE_URL jika ada, jika tidak, gunakan default URL desa.
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tlogomoyo-candi.vercel.app";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://portal-dusun-tlogomulyo.vercel.app";
 
   const routes = [
     "",
