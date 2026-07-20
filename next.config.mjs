@@ -4,8 +4,8 @@ const nextConfig = {
   async headers() {
     return [
       {
-        // Terapkan ke semua route
-        source: "/(.*)",
+        // Terapkan ke semua route kecuali sitemap.xml, robots.txt, manifest.json, sw.js, api, _next, dan favicon
+        source: "/((?!api|_next/static|_next/image|favicon\\.ico|sitemap\\.xml|robots\\.txt|manifest\\.json|sw\\.js).*)",
         headers: [
           // Mencegah clickjacking — web tidak bisa di-embed di iframe situs lain
           {
