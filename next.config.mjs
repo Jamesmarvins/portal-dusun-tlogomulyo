@@ -50,7 +50,7 @@ const nextConfig = {
               "media-src 'self' https: data: blob:",
               "worker-src 'self' blob:",
               "connect-src 'self' https:",
-              "frame-src 'self' https://www.google.com https://maps.google.com",
+              "frame-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://youtube.com",
               "frame-ancestors 'self'",
               "base-uri 'self'",
               "form-action 'self'",
