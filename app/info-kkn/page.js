@@ -434,6 +434,46 @@ export default function InfoKKNPage() {
         </div>
       </section>
 
+      {/* ===== SECTION: VIDEO DOKUMENTASI ===== */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-slate-900 text-white relative overflow-hidden">
+        {/* Ambient glow backgrounds */}
+        <div className="absolute inset-0 pointer-events-none opacity-20">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-primary-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-500 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-10 sm:mb-14 space-y-2">
+            <div className="flex items-center justify-center gap-3 flex-wrap">
+              <span className="inline-block text-xs sm:text-sm font-semibold text-primary-400 uppercase tracking-widest bg-primary-950/80 px-4 py-1.5 rounded-full border border-primary-800/50">
+                {activeLabels.secVideoBadge || "Dokumentasi Video"}
+              </span>
+              <EditButton section="infoKknFull" label="Edit Dokumentasi Video" />
+            </div>
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-4">
+              {activeLabels.secVideoTitle || "Aftermovie Kegiatan"}{" "}
+              <span className="gradient-text">{activeLabels.secVideoHighlight || "KKN"}</span>
+            </h2>
+            <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed text-center">
+              {activeLabels.secVideoDesc || "Tonton video dokumentasi kegiatan dan keseruan program kerja Kelompok 28 KKN UKDW di Dusun Tlogomoyo."}
+            </p>
+          </div>
+
+          {/* YouTube Video Wrapper */}
+          <div className="relative aspect-video rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-slate-800 group">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/ZXRB0LNMYm0"
+              title="Aftermovie KKN Kelompok 28"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* ===== SECTION 3: PROGRAM KERJA INDIVIDU (7 proker) ===== */}
       <section className="py-12 sm:py-16 lg:py-20 bg-earth-50 dark:bg-slate-900 hero-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -582,7 +582,11 @@
         "sec3Title": "Program Kerja",
         "sec3Highlight": "Individu",
         "sec3Desc": "Setiap anggota memiliki satu program kerja individu sesuai bidang keahlian masing-masing.",
-        "targetMini": "Target"
+        "targetMini": "Target",
+        "secVideoBadge": "Dokumentasi Video",
+        "secVideoTitle": "Aftermovie Kegiatan",
+        "secVideoHighlight": "KKN",
+        "secVideoDesc": "Tonton video dokumentasi kegiatan dan keseruan program kerja Kelompok 28 KKN UKDW di Dusun Tlogomoyo."
       },
       "kelompokData": {
         "nama": "KKN Kelompok 28",
@@ -1283,7 +1287,11 @@
         "sec3Title": "Individual",
         "sec3Highlight": "Work Programs",
         "sec3Desc": "Each member executes one specialized individual work program aligned with their respective field of study.",
-        "targetMini": "Target"
+        "targetMini": "Target",
+        "secVideoBadge": "Video Documentation",
+        "secVideoTitle": "Activity",
+        "secVideoHighlight": "Aftermovie",
+        "secVideoDesc": "Watch the activity and work program video documentation of KKN Group 28 UKDW in Tlogomoyo Hamlet."
       },
       "kelompokData": {
         "nama": "KKN Group 28",
